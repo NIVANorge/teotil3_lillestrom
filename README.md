@@ -2,6 +2,14 @@
 
 Using monitoring and modelling to assess water quality in catchments draining to Lillestrøm kommune.
 
+## Quick links
+
+ * [Notebook 01: Catchment maps](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/01_catchment_properties.ipynb)
+ * [Notebook 02: Data download](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb)
+ * [Notebook 03: Annual concentrations](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03_annual_concs.ipynb)
+ * [Notebook 04: Annual loads](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04_annual_loads.ipynb)
+ * [Notebook 05: Preliminary TEOTIL3 results](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_compare_teotil3.ipynb)
+   
 ## 1. Scope
 
 This project aims to:
@@ -371,9 +379,9 @@ From the proposal:
 >
 > Lillestrøm kommune vil gi veiledning om de beste overvåkingsstasjonene/tidsseriene for sine nedbørfelt. Overvåkingsdata som ikke allerede er tilgjengelige via Vannmiljø kan også leveres av kommunen, om ønskelig (f.eks. ved bruk av en standard Excel-mal).
 
- * **Notebook 02** ([here](./code/02_vannmiljo_vann-nett_nve.ipynb)) downloads relevant data from Vannmiljø, Vann-Nett and NVE.
+ * **Notebook 02** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb)) downloads relevant data from Vannmiljø, Vann-Nett and NVE.
    
- * Monitoring stations suggested by Lillestrøm kommune are in the Excel file [here](./data/lillestrom_monitoring_sites.xlsx).
+ * Monitoring stations suggested by Lillestrøm kommune are in the Excel file [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/data/lillestrom_monitoring_sites.xlsx).
 
 ### 4.2. Task 2: Monitored nutrient inputs
 
@@ -385,11 +393,11 @@ From the proposal:
 > 
 > Årlig næringsstofftilførsler vil bli beregnet fra målte konsentrasjoner og daglig vannføring ved hjelp av den robuste OSPAR-metodikken (samme metoden som brukes for årlig rapportering til OSPAR og innenfor f.eks. Elveovervåkingsprogrammet).
 
- * **Notebook 02** ([here](./code/02_vannmiljo_vann-nett_nve.ipynb)) compares NVE's measured data for Sagelva to simulated discharge obtained from the GTS API.
+ * **Notebook 02** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb)) compares NVE's measured data for Sagelva to simulated discharge obtained from the GTS API.
 
- * **Notebook 03** ([here](./code/03_annual_concs.ipynb)) quality checks the Vannmiljø data by removing large outliers, then calculates annual mean concentrations for years with at least 12 samples per year. The Mann-Kendall and Sen's slope tests are used to investigate **trends in concentration**.
+ * **Notebook 03** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03_annual_concs.ipynb)) quality checks the Vannmiljø data by removing large outliers, then calculates annual mean concentrations for years with at least 12 samples per year. The Mann-Kendall and Sen's slope tests are used to investigate **trends in concentration**.
 
- * **Notebook 04** ([here](./code/04_annual_loads.ipynb)) estimates annual loads from the cleaned concentration data using the OSPAR method. The Mann-Kendall and Sen's slope tests are used to investigate **trends in annual loads**.
+ * **Notebook 04** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04_annual_loads.ipynb)) estimates annual loads from the cleaned concentration data using the OSPAR method. The Mann-Kendall and Sen's slope tests are used to investigate **trends in annual loads**.
 
 ### 4.3. Task 3: Customise TEOTIL3 to use local datasets
 
@@ -415,7 +423,7 @@ From the proposal:
 > 
 > **Merk:** TEOTIL3 er egnet for vurderinger i store nedbørfelt som dekker flere REGINE-enheter. Noen av nedbørfeltene fremhevet av Lillestrøm kommune er enten svært små (f.eks. Jeksla, 17 km2) eller opptar bare én REGINE-enhet (Rømua og Åa) – se Tabell 1. TEOTIL3 forventes ikke å gi gode resultater for disse nedbørfeltene, men modellen vil bli brukt så langt det er rimelig for å evaluere de viktigste næringsstoffkildene.
 
- * **Notebook 05** ([here](./code/05_compare_teotil3.ipynb)) compares measured loads to those simulated by TEOTIL3. Note that, so far, I am using the "standard" version of TEOTIL3, not the customised version (Task 3).
+ * **Notebook 05** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_compare_teotil3.ipynb)) compares measured loads to those simulated by TEOTIL3. Note that, so far, I am using the "standard" version of TEOTIL3, not the customised version (Task 3).
 
 ### 4.5. Task 5: Scenarios of reduced nutrient inputs
 
