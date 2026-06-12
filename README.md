@@ -156,12 +156,49 @@ The map and table below show land cover proportions for each catchment.
 
 ### 3.2. Point sources
 
-Major point sources are shown in the table below.
+Major point sources are shown in the table below. Nutrient inputs are the mean of reported discharges during the period from 2013 to 2023 (in tonnes).
 
  * The largest single point source is **Nedre Romerike avløpsanlegg (NRA)**, which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at **Rotnes** and **Åneby**, further upstream. In Leira, significant wastewater discharges include **Gardermoen sentralrenseanlegg** and **Kløfta renseanlegg**, both in the lower-central part of the catchment.
    
  * The largest industrial point source is **Dynea Lillestrøm**, a manufacturer of adhesives and industrial coatings.
 
+<style>
+  .table-container {
+    max-height: 400px;          /* adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+  }
+
+  .table-container table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.85em;          /* smaller font */
+  }
+
+  .table-container th,
+  .table-container td {
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+  }
+
+  .table-container th {
+    position: sticky;           /* keeps header visible while scrolling */
+    top: 0;
+    background: #f9f9f9;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .table-container td:first-child {
+    text-align: center;
+  }
+
+  .table-container td:not(:first-child) {
+    text-align: right;
+  }
+</style>
+
+<div class="table-container">
 <table border="1" cellspacing="0" cellpadding="6">
   <thead>
     <tr>
@@ -169,10 +206,10 @@ Major point sources are shown in the table below.
       <th>Navn</th>
       <th>Sektor</th>
       <th>Type</th>
-      <th style="text-align:right;">TOTN</th>
-      <th style="text-align:right;">TOTP</th>
-      <th style="text-align:right;">TOC</th>
-      <th style="text-align:right;">SS</th>
+      <th style="text-align:right;">TOTN (tonn)</th>
+      <th style="text-align:right;">TOTP (tonn)</th>
+      <th style="text-align:right;">TOC (tonn)</th>
+      <th style="text-align:right;">SS (tonn)</th>
     </tr>
   </thead>
   <tbody>
@@ -368,6 +405,9 @@ Major point sources are shown in the table below.
     </tr>
   </tbody>
 </table>
+</div>
+
+
 
 ## 4. Workflow
 
