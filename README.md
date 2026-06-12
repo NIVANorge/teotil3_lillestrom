@@ -41,7 +41,7 @@ The map and table below show land cover proportions for each catchment.
 
  * Forest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.
    
- * Agriculture is the dominant class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).
+ * Agriculture is the dominant land cover class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).
 
  * Sagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).
 
@@ -150,9 +150,9 @@ The map and table below show land cover proportions for each catchment.
 
 Major point sources are shown in the table below.
 
- * The largest single point source is Nedre Romerike avløpsanlegg (NRA), which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at Rotnes and Åneby, further upstream. In Leira, significant wastewater discharges include Gardermoen sentralrenseanlegg and Kløfta renseanlegg, both in the lower-central part of the catchment.
+ * The largest single point source is **Nedre Romerike avløpsanlegg (NRA)**, which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at **Rotnes** and **Åneby**, further upstream. In Leira, significant wastewater discharges include **Gardermoen sentralrenseanlegg** and **Kløfta renseanlegg**, both in the lower-central part of the catchment.
    
- * The largest industrial point source is Dynea Lillestrøm, a manufacturer of adhesives and industrial coatings.
+ * The largest industrial point source is **Dynea Lillestrøm**, a manufacturer of adhesives and industrial coatings.
 
 <table border="1" cellspacing="0" cellpadding="6">
   <thead>
@@ -371,7 +371,68 @@ From the proposal:
 >
 > Lillestrøm kommune vil gi veiledning om de beste overvåkingsstasjonene/tidsseriene for sine nedbørfelt. Overvåkingsdata som ikke allerede er tilgjengelige via Vannmiljø kan også leveres av kommunen, om ønskelig (f.eks. ved bruk av en standard Excel-mal).
 
- * **Notebook 01** ([here](./code/01_catchment_properties.ipynb))downloads relevant data from Vannmiljø, Vann-Nett and NVE.
+ * **Notebook 02** ([here](./code/02_vannmiljo_vann-nett_nve.ipynb)) downloads relevant data from Vannmiljø, Vann-Nett and NVE.
    
  * Monitoring stations suggested by Lillestrøm kommune are in the Excel file [here](./data/lillestrom_monitoring_sites.xlsx).
- 
+
+### 4.2. Task 2: Monitored nutrient inputs
+
+From the proposal:
+
+> Årlig næringsstofftilførsler i hvert nedbørfelt vil bli estimert ved å kombinere målte kjemiske konsentrasjoner (Oppgave 1) med vannføringsdata fra NVE.
+> 
+> Der kjemiske målestasjoner er i nærheten av NVE-stasjoner, vil vannføringsdata lastes ned via NVEs HydAPI og skaleres for å matche nedbørfeltet til den kjemiske målestasjonen. Der vannføringsovervåking ikke er tilgjengelig, vil vannføring bli estimert ved hjelp av modellresultater fra NVEs GTS API (med kvalitetskontroll mot observerte data, der det er mulig).
+> 
+> Årlig næringsstofftilførsler vil bli beregnet fra målte konsentrasjoner og daglig vannføring ved hjelp av den robuste OSPAR-metodikken (samme metoden som brukes for årlig rapportering til OSPAR og innenfor f.eks. Elveovervåkingsprogrammet).
+
+ * **Notebook 02** ([here](./code/02_vannmiljo_vann-nett_nve.ipynb)) compares NVE's measured data for Sagelva to simulated discharge obtained from the GTS API.
+
+ * **Notebook 03** ([here](./code/03_annual_concs.ipynb)) quality checks the Vannmiljø data by removing large outliers, then calculates annual mean concentrations for years with at least 12 samples per year. The Mann-Kendall and Sen's slope tests are used to investigate **trends in concentration**.
+
+ * **Notebook 04** ([here](./code/04_annual_loads.ipynb)) estimates annual loads from the cleaned concentration data using the OSPAR method. The Mann-Kendall and Sen's slope tests are used to investigate **trends in annual loads**.
+
+### 4.3. Task 3: Customise TEOTIL3 to use local datasets
+
+From the proposal:
+
+> Lillestrøm kommune vil levere data som beskriver (i) regnvann- og nød-overløp fra avløpsnettet, og (ii) utslipp fra private avløpsrenseanlegg. Data vil bli levert for så mange år og parametere som mulig.
+> 
+> Datasettene vil bli renset og utvidet til å inkludere alle hovedparameterne som er relevante for TEOTIL3 (TOTN, TOTP, TOC og SS). Hull i tidsseriene vil bli fylt ved interpolasjon og, om mulig, ekstrapolert til å dekke perioden fra 2013 til 2023.
+> 
+> For regine-enheter i Lillestrøm kommune vil det rensede datasettet som beskriver regnvann- og nød-overløp bli brukt til å forbedre de enkle, fast-prosent overløpsestimatene som ble antatt under Oslofjordprosjektet. Tilsvarende vil de detaljerte dataene for private avløpsrenseanlegg erstatte standard TEOTIL3-estimatene for utslipp fra «spredt avløp» (som er basert på aggregerte data).
+
+ * **Not yet done.**
+
+### 4.4. Task 4: Source-apportioned nutrient inputs from TEOTIL3
+
+From the proposal:
+
+> For nedbørfeltene i Tabell 1 vil årlige næringsstofftilførselen simulert av TEOTIL3 fra 2013 til 2023 bli sammenlignet med estimater basert på overvåkingsdata (Oppgave 2). Modellens ytelse vil bli evaluert, og viktige usikkerheter og begrensninger vil bli diskutert. Der modellens ytelse er tilstrekkelig, vil TEOTIL3 bli brukt til å gi en oversikt over de viktigste næringsstoffkildene i hvert nedbørfelt (naturlig, avløpsrensing, jordbruk osv.).
+> 
+> I tillegg vil det bli levert et datasett som viser kildefordelte tilførsler til hver regine-enhet i Lillestrøm kommune i henhold til TEOTIL3. Merk at dette datasettet vil være basert på modellinndata (dvs. før transport, akkumulering og retensjon i det hydrologiske nettverket) og inneholder betydelig usikkerhet på regine-skala.
+> 
+> Viktige punktkilder til næringsstoffer fra avløps- og industri-anlegg i hvert nedbørfelt vil bli identifisert ved hjelp av TEOTIL3-databasen (Figur 1). For avløpsanlegg vil typiske renseeffekter bli beregnet basert på historiske inn- og ut-strømninger rapportert til Miljødirektoratet via ALTINN. Dagens effektivitet vil bli diskutert i sammenheng med nye krav i det oppdaterte avløpsdirektivet og scenariene som er vurdert i det nylig gjennomførte modelleringsprosjektet for Oslofjorden.
+> 
+> **Merk:** TEOTIL3 er egnet for vurderinger i store nedbørfelt som dekker flere REGINE-enheter. Noen av nedbørfeltene fremhevet av Lillestrøm kommune er enten svært små (f.eks. Jeksla, 17 km2) eller opptar bare én REGINE-enhet (Rømua og Åa) – se Tabell 1. TEOTIL3 forventes ikke å gi gode resultater for disse nedbørfeltene, men modellen vil bli brukt så langt det er rimelig for å evaluere de viktigste næringsstoffkildene.
+
+ * **Notebook 05** ([here](./code/05_compare_teotil3.ipynb)) compares measured loads to those simulated by TEOTIL3. Note that, so far, I am using the "standard" version of TEOTIL3, not the customised version (Task 3).
+
+### 4.5. Task 5: Scenarios of reduced nutrient inputs
+
+From the proposal:
+
+> Scenarioene som er utviklet for Oslofjord-modelleringsprosjektet vil bli brukt til å undersøke hvor mye næringsstofftilførselen til nedbørfeltene i Tabell 1 og regine-enheter i Lillestrøm kommune kan endre seg under (i) et scenario med middels ambisjon, og (ii) et scenario med høy ambisjon. Scenariene vurderer oppgraderinger av avløpsrenseanlegg og tiltakspakker for å redusere næringsstofftap fra jordbruk.
+> 
+> **Merk:** Jordbrukstiltak simulert av NIBIO for Oslofjord-prosjektet er underbygd av grove romlige datasett. Tildelingen av jordbrukstap til spesifikke REGINE-enheter er derfor usikker. Scenarieresultater for større nedbørfelt (Nitelva og Leira) vil sannsynligvis være robust. For nedbørfelt som dekker bare en REGINE-enhet (Rømua og Åa) representerer imidlertid resultatene fra jordbruksmodelleringen gjennomsnittlige forhold i regionen og fanger derfor ikke opp lokale effekter.
+
+ * **Not yet done.**
+
+### 4.6. Task 6: Load reductions for Good Ecological Status
+
+From the proposal:
+
+> For nedbørfelt der ytelsen til TEOTIL3 er tilstrekkelig, vil modellen bli brukt til å estimere avlastningsbehovet for God Økologisk Tilstand i henhold til Vanndirektivet. Fordi TEOTIL3 bare simulerer næringsstofftilførsler (nitrogen, fosfor, organisk materiale osv.), vil avlastningsbehovene kun beregnes for de viktigste fysisk-kjemiske vannkvalitetselementene, og ikke for biologiske elementer som bunnfauna, alger osv.
+> 
+> Merk at TEOTIL3 bare kan brukes til å estimere avlastningsbehov der (i) modellen kan simulere dagens forhold på en tilstrekkelig måte (evaluert i oppgave 4), og (ii) for vannforekomster med et tilstrekkelig stort oppstrøms område (dvs. de vannforekomstene som ligger lengst nedstrøms i hvert nedbørfelt av interesse).
+
+ * **Not yet done.**
