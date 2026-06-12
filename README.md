@@ -2,7 +2,21 @@
 
 Using monitoring and modelling to assess water quality in catchments draining to Lillestrøm kommune.
 
-The following catchments are of interest:
+## 1. Scope
+
+This project aims to:
+
+ * Summarise available monitoring data for catchments around Lillestrøm kommune.
+   
+ * Describe present-day water quality status and observed trends over time.
+
+ * Use modelling to identify the main sources of nutrients in each catchment.
+
+ * Describe the potential for reducing nutrient loads in each catchment using measures targeting wastewater and agriculture (based on recent modelling of the Oslofjord catchment undertaken by NIVA for Miljødirekotratet).
+
+## 2. Area of interest
+
+The table and map below show the catchments of interest.
 
 | Catchment ID | Name    | Outlet lon | Outlet lat | Comment                                                      |
 |--------------|---------|------------|------------|--------------------------------------------------------------|
@@ -18,3 +32,346 @@ The following catchments are of interest:
   <img src="./plots/catchments_with_point_sources_labelled.png" width="600"><br>
   <em>Lillestrøm kommune (black outline) and the seven catchments considered in this analysis (red outlines). Yellow squares mark catchment outlets; red circles are point source discharges from industry; grey circles are discharges from municipal wastewater plants (with capacity >50 pe).</em>
 </p>
+
+## 3. Sources of nutrients
+
+### 3.1. Diffuse sources
+
+The map and table below show land cover proportions for each catchment.
+
+ * Forest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.
+   
+ * Agriculture is the dominant class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).
+
+ * Sagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).
+
+<p align="center">
+  <img src="./plots/catchment_land_cover_labelled.png" width="600"><br>
+  <em>Land cover based on the ‘ARTYPE’ classifications from NIBIO’s AR50 dataset.</em>
+</p>
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th rowspan="2" style="text-align:center;">AR50 klasse</th>
+      <th colspan="2">Leira</th>
+      <th colspan="2">Nitelva</th>
+      <th colspan="2">Sagelva</th>
+      <th colspan="2">Rømua</th>
+      <th colspan="2">Åa</th>
+      <th colspan="2">Gansåa</th>
+      <th colspan="2">Jeksla</th>
+    </tr>
+    <tr>
+      <th>km²</th><th>%</th>
+      <th>km²</th><th>%</th>
+      <th>km²</th><th>%</th>
+      <th>km²</th><th>%</th>
+      <th>km²</th><th>%</th>
+      <th>km²</th><th>%</th>
+      <th>km²</th><th>%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center;">Bebygd</td>
+      <td style="text-align:right;">46.5</td><td style="text-align:right;">7</td>
+      <td style="text-align:right;">45.3</td><td style="text-align:right;">9</td>
+      <td style="text-align:right;">17.6</td><td style="text-align:right;">16</td>
+      <td style="text-align:right;">9.8</td><td style="text-align:right;">5</td>
+      <td style="text-align:right;">2.0</td><td style="text-align:right;">2</td>
+      <td style="text-align:right;">0.8</td><td style="text-align:right;">3</td>
+      <td style="text-align:right;">3.8</td><td style="text-align:right;">23</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Jordbruk</td>
+      <td style="text-align:right;">132.0</td><td style="text-align:right;">20</td>
+      <td style="text-align:right;">36.1</td><td style="text-align:right;">8</td>
+      <td style="text-align:right;">6.8</td><td style="text-align:right;">6</td>
+      <td style="text-align:right;">103.3</td><td style="text-align:right;">49</td>
+      <td style="text-align:right;">29.6</td><td style="text-align:right;">23</td>
+      <td style="text-align:right;">3.4</td><td style="text-align:right;">13</td>
+      <td style="text-align:right;">6.6</td><td style="text-align:right;">39</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Skog</td>
+      <td style="text-align:right;">436.0</td><td style="text-align:right;">65</td>
+      <td style="text-align:right;">363.9</td><td style="text-align:right;">75</td>
+      <td style="text-align:right;">77.0</td><td style="text-align:right;">71</td>
+      <td style="text-align:right;">92.9</td><td style="text-align:right;">44</td>
+      <td style="text-align:right;">93.8</td><td style="text-align:right;">72</td>
+      <td style="text-align:right;">18.6</td><td style="text-align:right;">73</td>
+      <td style="text-align:right;">6.5</td><td style="text-align:right;">38</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Snaumark</td>
+      <td style="text-align:right;">2.2</td><td style="text-align:right;">0</td>
+      <td style="text-align:right;">3.8</td><td style="text-align:right;">1</td>
+      <td style="text-align:right;">1.2</td><td style="text-align:right;">1</td>
+      <td style="text-align:right;">1.2</td><td style="text-align:right;">1</td>
+      <td style="text-align:right;">0.0</td><td style="text-align:right;">0</td>
+      <td style="text-align:right;">0.1</td><td style="text-align:right;">0</td>
+      <td style="text-align:right;">0.1</td><td style="text-align:right;">1</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Myr</td>
+      <td style="text-align:right;">27.6</td><td style="text-align:right;">4</td>
+      <td style="text-align:right;">9.1</td><td style="text-align:right;">2</td>
+      <td style="text-align:right;">0.7</td><td style="text-align:right;">1</td>
+      <td style="text-align:right;">4.1</td><td style="text-align:right;">2</td>
+      <td style="text-align:right;">3.0</td><td style="text-align:right;">2</td>
+      <td style="text-align:right;">1.8</td><td style="text-align:right;">7</td>
+      <td style="text-align:right;">0.0</td><td style="text-align:right;">0</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Ferskvann</td>
+      <td style="text-align:right;">23.8</td><td style="text-align:right;">4</td>
+      <td style="text-align:right;">25.7</td><td style="text-align:right;">5</td>
+      <td style="text-align:right;">5.6</td><td style="text-align:right;">5</td>
+      <td style="text-align:right;">0.5</td><td style="text-align:right;">0</td>
+      <td style="text-align:right;">2.3</td><td style="text-align:right;">2</td>
+      <td style="text-align:right;">0.7</td><td style="text-align:right;">3</td>
+      <td style="text-align:right;">0.0</td><td style="text-align:right;">0</td>
+    </tr>
+    <tr style="font-weight:bold;">
+      <td style="text-align:center;">Totalt</td>
+      <td style="text-align:right;">668.1</td><td style="text-align:right;">100</td>
+      <td style="text-align:right;">483.9</td><td style="text-align:right;">100</td>
+      <td style="text-align:right;">108.9</td><td style="text-align:right;">100</td>
+      <td style="text-align:right;">211.8</td><td style="text-align:right;">100</td>
+      <td style="text-align:right;">130.7</td><td style="text-align:right;">100</td>
+      <td style="text-align:right;">25.4</td><td style="text-align:right;">100</td>
+      <td style="text-align:right;">17.0</td><td style="text-align:right;">100</td>
+    </tr>
+  </tbody>
+</table>
+
+### 3.2. Point sources
+
+Major point sources are shown in the table below.
+
+ * The largest single point source is Nedre Romerike avløpsanlegg (NRA), which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at Rotnes and Åneby, further upstream. In Leira, significant wastewater discharges include Gardermoen sentralrenseanlegg and Kløfta renseanlegg, both in the lower-central part of the catchment.
+   
+ * The largest industrial point source is Dynea Lillestrøm, a manufacturer of adhesives and industrial coatings.
+
+<table border="1" cellspacing="0" cellpadding="6">
+  <thead>
+    <tr>
+      <th style="text-align:center;">Nedbørfelt</th>
+      <th>Navn</th>
+      <th>Sektor</th>
+      <th>Type</th>
+      <th style="text-align:right;">TOTN</th>
+      <th style="text-align:right;">TOTP</th>
+      <th style="text-align:right;">TOC</th>
+      <th style="text-align:right;">SS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center;">Sagelva</td>
+      <td>Mariholtet sportsstue, renseanlegg</td>
+      <td>Avløp</td>
+      <td>Naturbasert</td>
+      <td style="text-align:right;">0.01</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">0.01</td>
+      <td style="text-align:right;">0.01</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Nitelva</td>
+      <td>Dynea Lillestrøm</td>
+      <td>Industri</td>
+      <td>Kjemisk industri</td>
+      <td style="text-align:right;">27.89</td>
+      <td style="text-align:right;">0.12</td>
+      <td style="text-align:right;">18.13</td>
+      <td style="text-align:right;">5.99</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Nitelva</td>
+      <td>NRA (Nedre Romerike avløpsanlegg)</td>
+      <td>Avløp</td>
+      <td>Kjemisk-biologisk m/N-fjerning</td>
+      <td style="text-align:right;">180.39</td>
+      <td style="text-align:right;">5.21</td>
+      <td style="text-align:right;">218.70</td>
+      <td style="text-align:right;">154.27</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Nitelva</td>
+      <td>Rotnes renseanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">24.59</td>
+      <td style="text-align:right;">0.39</td>
+      <td style="text-align:right;">20.76</td>
+      <td style="text-align:right;">16.04</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Nitelva</td>
+      <td>Slattum renseanlegg (Nedlagt)</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">25.25</td>
+      <td style="text-align:right;">0.42</td>
+      <td style="text-align:right;">54.56</td>
+      <td style="text-align:right;">30.44</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Nitelva</td>
+      <td>Åneby renseanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">18.14</td>
+      <td style="text-align:right;">0.15</td>
+      <td style="text-align:right;">12.47</td>
+      <td style="text-align:right;">6.73</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Nitelva</td>
+      <td>Harestua renseanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk-biologisk</td>
+      <td style="text-align:right;">11.39</td>
+      <td style="text-align:right;">0.13</td>
+      <td style="text-align:right;">6.50</td>
+      <td style="text-align:right;">12.45</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Leira</td>
+      <td>Tuen renseanlegg (Nedlagt)</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">0.01</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">0.01</td>
+      <td style="text-align:right;">0.01</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Leira</td>
+      <td>Kløfta renseanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">36.32</td>
+      <td style="text-align:right;">0.18</td>
+      <td style="text-align:right;">38.07</td>
+      <td style="text-align:right;">15.61</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Leira</td>
+      <td>Avinor avd. Oslo Lufthavn Gardermoen</td>
+      <td>Industri</td>
+      <td>Flyplass</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">1.27</td>
+      <td style="text-align:right;">0.00</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Leira</td>
+      <td>Gardermoen sentralrenseanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk-biologisk m/N-fjerning</td>
+      <td style="text-align:right;">48.34</td>
+      <td style="text-align:right;">1.03</td>
+      <td style="text-align:right;">36.47</td>
+      <td style="text-align:right;">46.68</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Leira</td>
+      <td>Gjerdrum renseanlegg (Nedlagt)</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">17.72</td>
+      <td style="text-align:right;">0.07</td>
+      <td style="text-align:right;">14.74</td>
+      <td style="text-align:right;">12.15</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Leira</td>
+      <td>Åsgreina renseanlegg (Nedlagt)</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">1.58</td>
+      <td style="text-align:right;">0.02</td>
+      <td style="text-align:right;">1.61</td>
+      <td style="text-align:right;">1.41</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Leira</td>
+      <td>Fagerli renseanlegg</td>
+      <td>Avløp</td>
+      <td>Biologisk</td>
+      <td style="text-align:right;">0.36</td>
+      <td style="text-align:right;">0.04</td>
+      <td style="text-align:right;">0.27</td>
+      <td style="text-align:right;">0.38</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Rømua</td>
+      <td>Onsrud leir renseanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk-biologisk</td>
+      <td style="text-align:right;">0.18</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">0.14</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Rømua</td>
+      <td>Onsrud rekkehus</td>
+      <td>Avløp</td>
+      <td>Kjemisk-biologisk</td>
+      <td style="text-align:right;">0.12</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">0.06</td>
+      <td style="text-align:right;">0.10</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Rømua</td>
+      <td>Ingjersmyr avløpsanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk-biologisk</td>
+      <td style="text-align:right;">0.12</td>
+      <td style="text-align:right;">0.00</td>
+      <td style="text-align:right;">0.04</td>
+      <td style="text-align:right;">0.09</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Åa</td>
+      <td>Hogset renseanlegg (Nedlagt)</td>
+      <td>Avløp</td>
+      <td>Kjemisk-biologisk</td>
+      <td style="text-align:right;">3.13</td>
+      <td style="text-align:right;">0.02</td>
+      <td style="text-align:right;">1.03</td>
+      <td style="text-align:right;">1.66</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Gansåa</td>
+      <td>Dalen renseanlegg</td>
+      <td>Avløp</td>
+      <td>Kjemisk</td>
+      <td style="text-align:right;">3.07</td>
+      <td style="text-align:right;">0.03</td>
+      <td style="text-align:right;">1.41</td>
+      <td style="text-align:right;">2.46</td>
+    </tr>
+  </tbody>
+</table>
+
+## 4. Workflow
+
+### 4.1 Task 1: Download monitoring data
+
+From the proposal:
+
+> Relevante overvåkingsdata for nedbørfeltene vil bli lastet ned fra Vannmiljø og koblet til informasjon om vannkvalitetstilstand hentet fra Vann-Nett. Datasettene vil bli standardisert og kvalitetssjekket (f.eks. for å fjerne ekstreme avvik).
+>
+> Lillestrøm kommune vil gi veiledning om de beste overvåkingsstasjonene/tidsseriene for sine nedbørfelt. Overvåkingsdata som ikke allerede er tilgjengelige via Vannmiljø kan også leveres av kommunen, om ønskelig (f.eks. ved bruk av en standard Excel-mal).
+
+ * **Notebook 01** ([here](./code/01_catchment_properties.ipynb))downloads relevant data from Vannmiljø, Vann-Nett and NVE.
+   
+ * Monitoring stations suggested by Lillestrøm kommune are in the Excel file [here](./data/lillestrom_monitoring_sites.xlsx).
+ 
