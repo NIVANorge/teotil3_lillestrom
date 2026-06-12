@@ -206,10 +206,10 @@ Major point sources are shown in the table below. Nutrient inputs are the mean o
       <th>Navn</th>
       <th>Sektor</th>
       <th>Type</th>
-      <th style="text-align:right;">TOTN (tonn)</th>
-      <th style="text-align:right;">TOTP (tonn)</th>
-      <th style="text-align:right;">TOC (tonn)</th>
-      <th style="text-align:right;">SS (tonn)</th>
+      <th>TOTN (tonn)</th>
+      <th>TOTP (tonn)</th>
+      <th>TOC (tonn)</th>
+      <th>SS (tonn)</th>
     </tr>
   </thead>
   <tbody>
