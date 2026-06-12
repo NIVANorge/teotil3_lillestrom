@@ -15,6 +15,6 @@ The following catchments are of interest:
 | 7            | Gansåa  | 11.22130   | 59.86080   | Not resolved by REGINE network                               |
 
 <p align="center">
-  <img src="../plots/catchments_with_point_sources_labelled.png" width="600"><br>
+  <img src="./plots/catchments_with_point_sources_labelled.png" width="600"><br>
   <em>Lillestrøm kommune (black outline) and the seven catchments considered in this analysis (red outlines). Yellow squares mark catchment outlets; red circles are point source discharges from industry; grey circles are discharges from municipal wastewater plants (with capacity >50 pe).</em>
 </p>
