@@ -473,7 +473,7 @@ From the proposal:
  * **Notebooks 07a and 07b** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07a_compare_teotil3_stations.ipynb) and [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07b_compare_teotil3_waterbodies.ipynb)) compare measured loads to source-apportioned annual fluxes simulated by TEOTIL3 (see example below for Leira).
 
 <p align="center">
-  <img src="./plots/modelled/mod_vs_obs_Leira_station_002-29659.png" width="600"><br>
+  <img src="./plots/modelled/mod_vs_obs_Leira_station_002-29659.png" width="800"><br>
   <em>Source-apportioned annual fluxes for Leira simulated by TEOTIL3 (stacked bars) compared to annual loads estimated from monitoring data at Vannmiljø station 002-29659 (Leira ved Borgen bru; black line).</em>
 </p>
 
