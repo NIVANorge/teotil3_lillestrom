@@ -6,9 +6,14 @@ Using monitoring and modelling to assess water quality in catchments draining to
 
  * [Notebook 01: Catchment maps](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/01_catchment_properties.ipynb)
  * [Notebook 02: Data download](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb)
- * [Notebook 03: Annual concentrations](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03_annual_concs.ipynb)
- * [Notebook 04: Annual loads](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04_annual_loads.ipynb)
- * [Notebook 05: Preliminary TEOTIL3 results](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_compare_teotil3.ipynb)
+ * [Notebook 03a: Annual concentrations for stations](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb)
+ * [Notebook 03b: Annual concentrations for waterbodies](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb)
+ * [Notebook 04a: Annual loads for stations](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb)
+ * [Notebook 04b: Annual loads for waterbodies](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb)
+ * [Notebook 05: Estimates inputs from "spredt" and wastewater overflows](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb)
+ * [Notebook 06: Build model input files and run TEOTIL3](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb)
+ * [Notebook 07a: Compare TEOTIL3 to observed data for monitoring stations](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07a_compare_teotil3_stations.ipynb)
+ * [Notebook 07b: Compare TEOTIL3 to observed data for waterbodies](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07b_compare_teotil3_waterbodies.ipynb)
    
 ## 1. Scope
 
@@ -435,9 +440,9 @@ From the proposal:
 
  * **Notebook 02** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb)) compares NVE's measured data for Sagelva to simulated discharge obtained from the GTS API.
 
- * **Notebook 03** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03_annual_concs.ipynb)) quality checks the Vannmiljø data by removing large outliers, then calculates annual mean concentrations for years with at least 12 samples per year. The Mann-Kendall and Sen's slope tests are used to investigate **trends in concentration**.
+ * **Notebooks 03a and 03b** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb) and [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb)) quality check the Vannmiljø data by removing large outliers, then calculate annual mean concentrations for years with at least 12 samples per year. The Mann-Kendall and Sen's slope tests are used to investigate **trends in concentration**.
 
- * **Notebook 04** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04_annual_loads.ipynb)) estimates annual loads from the cleaned concentration data using the OSPAR method. The Mann-Kendall and Sen's slope tests are used to investigate **trends in annual loads**.
+ * **Notebooks 04a and 04b** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb) and [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb)) estimate annual loads from the cleaned concentration data using the OSPAR method. The Mann-Kendall and Sen's slope tests are used to investigate **trends in annual loads**.
 
 ### 4.3. Task 3: Customise TEOTIL3 to use local datasets
 
@@ -449,7 +454,9 @@ From the proposal:
 > 
 > For regine-enheter i Lillestrøm kommune vil det rensede datasettet som beskriver regnvann- og nød-overløp bli brukt til å forbedre de enkle, fast-prosent overløpsestimatene som ble antatt under Oslofjordprosjektet. Tilsvarende vil de detaljerte dataene for private avløpsrenseanlegg erstatte standard TEOTIL3-estimatene for utslipp fra «spredt avløp» (som er basert på aggregerte data).
 
- * **Not yet done.**
+ * **Notebook 05** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb)) estimates nutrient inputs from spredt and wastewater overflows using site-specific data provided by Lillestrøm kommune. New estimates are compared to aggregated data previously provided by SSB.
+
+ * **Notebook 06** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb)) builds input files for TEOTIL3 using Lillestrøm kommune's site-specific spredt and overflow data, and then runs the model.
 
 ### 4.4. Task 4: Source-apportioned nutrient inputs from TEOTIL3
 
@@ -463,7 +470,12 @@ From the proposal:
 > 
 > **Merk:** TEOTIL3 er egnet for vurderinger i store nedbørfelt som dekker flere REGINE-enheter. Noen av nedbørfeltene fremhevet av Lillestrøm kommune er enten svært små (f.eks. Jeksla, 17 km2) eller opptar bare én REGINE-enhet (Rømua og Åa) – se Tabell 1. TEOTIL3 forventes ikke å gi gode resultater for disse nedbørfeltene, men modellen vil bli brukt så langt det er rimelig for å evaluere de viktigste næringsstoffkildene.
 
- * **Notebook 05** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_compare_teotil3.ipynb)) compares measured loads to those simulated by TEOTIL3. Note that, so far, I am using the "standard" version of TEOTIL3, not the customised version (Task 3).
+ * **Notebooks 07a and 07b** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07a_compare_teotil3_stations.ipynb) and [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07b_compare_teotil3_waterbodies.ipynb)) compare measured loads to source-apportioned annual fluxes simulated by TEOTIL3 (see example below for Leira).
+
+<p align="center">
+  <img src="./plots/modelled/mod_vs_obs_Leira_station_002-29659.png" width="600"><br>
+  <em>Source-apportioned annual fluxes for Leira simulated by TEOTIL3 (stacked bars) compared to annual loads estimated from monitoring data at Vannmiljø station 002-29659 (Leira ved Borgen bru; black line).</em>
+</p>
 
 ### 4.5. Task 5: Scenarios of reduced nutrient inputs
 
