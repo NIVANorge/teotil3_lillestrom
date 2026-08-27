@@ -4,6 +4,7 @@ execute:
   freeze: auto
 website:
   title: "TEOTIL3 Lillestrøm"
+  site-url: https://nivanorge.github.io/teotil3_lillestrom/index.html
   navbar:
     left:
       - text: "Introduction"
