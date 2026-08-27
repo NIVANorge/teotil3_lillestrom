@@ -9,7 +9,6 @@ book:
 
   chapters:
     - index.qmd
-    - intro.qmd
     - data-sources-models.qmd
     - method.qmd
     - part: Results
