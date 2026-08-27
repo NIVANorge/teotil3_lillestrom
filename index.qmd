@@ -37,7 +37,7 @@ This project aims to:
 
 ### Diffuse sources {#sec-diff-sources}
 
-The map and table below show land cover proportions for each catchment.
+@tbl-land-cover and @fig-land-cover show land cover proportions for each catchment.
 
  * Forest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.
    
@@ -45,7 +45,7 @@ The map and table below show land cover proportions for each catchment.
 
  * Sagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).
 
-![Land cover based on the ‘ARTYPE’ classifications from NIBIO’s AR50 dataset](./plots/catchment_land_cover_labelled.png){#fig-cat-land-cover width=600 fig-align="center"}
+![Land cover based on the ‘ARTYPE’ classifications from NIBIO’s AR50 dataset](./plots/catchment_land_cover_labelled.png){#fig-land-cover width=600 fig-align="center"}
 
 ```{python}
 #| label: tbl-land-cover
@@ -95,5 +95,47 @@ df.style.format(fmt).set_table_styles(
 ).map(lambda _: "font-weight: bold;", subset=pd.IndexSlice[["Totalt"], :])
 ```
 
+### Point sources {#sec-pt-sources}
 
+Major point sources are shown in @tbl-pt-sources. Nutrient inputs are the mean of reported discharges during the period from 2013 to 2023 (in tonnes).
+
+ * The largest single point source is **Nedre Romerike avløpsanlegg (NRA)**, which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at **Rotnes** and **Åneby**, further upstream. In Leira, significant wastewater discharges include **Gardermoen sentralrenseanlegg** and **Kløfta renseanlegg**, both in the lower-central part of the catchment.
+   
+ * The largest industrial point source is **Dynea Lillestrøm**, a manufacturer of adhesives and industrial coatings.
+
+```{python}
+#| label: tbl-pt-sources
+#| tbl-cap: "Main point sources of nutrients within the study area."
+#| echo: false
+
+import pandas as pd
+
+# Read point source data
+df = pd.read_excel(r"./data/point_discharges.xlsx", sheet_name="point_locs")
+
+# Convert to tonnes
+pars = ["TOTN", "TOTP", "TOC", "SS"]
+for par in pars:
+    df[f"{par} (tonn)"] = df[f"{par}_kg"] / 1000
+
+# Tidy
+rename_dict = {
+    "name": "Nedbørfelt",
+    "site_name": "Navn",
+    "sector": "Sektor",
+    "type": "Type",
+}
+df = df.rename(columns=rename_dict)
+val_cols = [f"{par} (tonn)" for par in pars]
+text_cols = list(rename_dict.values())
+df = df[text_cols + val_cols]
+
+# Format and style
+fmt = {c: "{:.2f}" for c in val_cols}
+df.style.format(fmt).hide(axis="index").set_properties(
+    subset=text_cols, **{"text-align": "center"}
+).set_table_styles(
+    [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
+)
+```
 
