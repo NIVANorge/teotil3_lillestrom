@@ -29,7 +29,7 @@ website:
       - icon: github
         menu:
           - text: GitHub repository
-            url:  https://github.com/NIVANorge/teotil3_lillestrom
+            url:  https://github.com/NIVANorge/teotil3_lillestrom/blob/main/README.md
     contents:
       - text: "Introduction"
         file: index.qmd
