@@ -271,8 +271,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-scope" id="toc-sec-scope" class="nav-link active" data-scroll-target="#sec-scope"><span class="header-section-number">1</span> Scope</a></li>
+  <li><a href="#sec-aoi" id="toc-sec-aoi" class="nav-link" data-scroll-target="#sec-aoi"><span class="header-section-number">2</span> Area of interest</a></li>
+  <li><a href="#sec-nut-sources" id="toc-sec-nut-sources" class="nav-link" data-scroll-target="#sec-nut-sources"><span class="header-section-number">3</span> Sources of nutrients</a>
+  <ul class="collapse">
+  <li><a href="#sec-diff-sources" id="toc-sec-diff-sources" class="nav-link" data-scroll-target="#sec-diff-sources"><span class="header-section-number">3.1</span> Diffuse sources</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -296,8 +307,300 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="sec-scope" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="sec-scope"><span class="header-section-number">1</span> Scope</h2>
+<p>This project aims to:</p>
+<ul>
+<li><p>Summarise available monitoring data for catchments around Lillestrøm kommune.</p></li>
+<li><p>Describe present-day water quality status and observed trends over time.</p></li>
+<li><p>Use modelling to identify the main sources of nutrients in each catchment.</p></li>
+<li><p>Describe the potential for reducing nutrient loads in each catchment using measures targeting wastewater and agriculture (based on recent modelling of the Oslofjord catchment undertaken by NIVA and NIBIO for Miljødirekotratet).</p></li>
+</ul>
+</section>
+<section id="sec-aoi" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-aoi"><span class="header-section-number">2</span> Area of interest</h2>
+<p><a href="#tbl-catchments" class="quarto-xref">Table&nbsp;1</a> and <a href="#fig-catchments" class="quarto-xref">Figure&nbsp;1</a> show the catchments of interest.</p>
+<div id="tbl-catchments" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-catchments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Catchments considered in this study.
+</figcaption>
+<div aria-describedby="tbl-catchments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 8%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Catchment ID</th>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Outlet lon</th>
+<th style="text-align: center;">Outlet lat</th>
+<th style="text-align: center;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">Sagelva</td>
+<td style="text-align: center;">11.02384</td>
+<td style="text-align: center;">59.95745</td>
+<td style="text-align: center;">Tributary to Nitelva</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">Nitelva</td>
+<td style="text-align: center;">11.07092</td>
+<td style="text-align: center;">59.93806</td>
+<td style="text-align: center;">Just upstream of confluence with Leira</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">Leira</td>
+<td style="text-align: center;">11.07367</td>
+<td style="text-align: center;">59.93905</td>
+<td style="text-align: center;">Just upstream of confluence with Nitelva</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">Rømua</td>
+<td style="text-align: center;">11.20984</td>
+<td style="text-align: center;">59.99055</td>
+<td style="text-align: center;">Single REGINE; no lakes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">Jeksla</td>
+<td style="text-align: center;">11.09281</td>
+<td style="text-align: center;">59.99753</td>
+<td style="text-align: center;">Small sub-catchment of Leira; not resolved by REGINE network</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">Åa</td>
+<td style="text-align: center;">11.28279</td>
+<td style="text-align: center;">59.99649</td>
+<td style="text-align: center;">Single REGINE; few lakes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">Gansåa</td>
+<td style="text-align: center;">11.22130</td>
+<td style="text-align: center;">59.86080</td>
+<td style="text-align: center;">Not resolved by REGINE network</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-catchments" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-catchments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./plots/catchments_with_point_sources_labelled.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-catchments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Lillestrøm kommune (black outline) and the seven catchments considered in this analysis (red outlines). Yellow squares mark catchment outlets; red circles are point source discharges from industry; grey circles are discharges from municipal wastewater plants (with capacity &gt;50 pe).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-nut-sources" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-nut-sources"><span class="header-section-number">3</span> Sources of nutrients</h2>
+<section id="sec-diff-sources" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="sec-diff-sources"><span class="header-section-number">3.1</span> Diffuse sources</h3>
+<p>The map and table below show land cover proportions for each catchment.</p>
+<ul>
+<li><p>Forest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.</p></li>
+<li><p>Agriculture is the dominant land cover class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).</p></li>
+<li><p>Sagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).</p></li>
+</ul>
+<div id="fig-cat-land-cover" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cat-land-cover-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./plots/catchment_land_cover_labelled.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cat-land-cover-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Land cover based on the ‘ARTYPE’ classifications from NIBIO’s AR50 dataset
+</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 7%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+<col style="width: 6%">
+<col style="width: 4%">
+</colgroup>
+<thead>
+<tr class="header">
+<th rowspan="2" style="text-align: center;">AR50 klasse</th>
+<th colspan="2" style="text-align: right;">Leira</th>
+<th colspan="2" style="text-align: right;">Nitelva</th>
+<th colspan="2" style="text-align: right;">Sagelva</th>
+<th colspan="2" style="text-align: right;">Rømua</th>
+<th colspan="2" style="text-align: right;"><pre><code>Åa</code></pre></th>
+<th colspan="2" style="text-align: right;">Gansåa</th>
+<th colspan="2" style="text-align: right;">Jeksla</th>
+</tr>
+<tr class="even">
+<th style="text-align: right;">km²</th>
+<th style="text-align: right;">%</th>
+<th style="text-align: right;">km²</th>
+<th style="text-align: right;">%</th>
+<th style="text-align: right;">km²</th>
+<th style="text-align: right;">%</th>
+<th style="text-align: right;">km²</th>
+<th style="text-align: right;">%</th>
+<th style="text-align: right;">km²</th>
+<th style="text-align: right;">%</th>
+<th style="text-align: right;">km²</th>
+<th style="text-align: right;">%</th>
+<th style="text-align: right;">km²</th>
+<th style="text-align: right;">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Bebygd</td>
+<td style="text-align: right;">46.5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">45.3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">17.6</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">9.8</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.8</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: right;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Jordbruk</td>
+<td style="text-align: right;">132.0</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">36.1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">6.8</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">103.3</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">29.6</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">6.6</td>
+<td style="text-align: right;">39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Skog</td>
+<td style="text-align: right;">436.0</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">363.9</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">77.0</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">92.9</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">93.8</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">18.6</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">6.5</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Snaumark</td>
+<td style="text-align: right;">2.2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3.8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Myr</td>
+<td style="text-align: right;">27.6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9.1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4.1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.8</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Ferskvann</td>
+<td style="text-align: right;">23.8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">25.7</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2.3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>Totalt</strong></td>
+<td style="text-align: right;">668.1</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">483.9</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">108.9</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">211.8</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">130.7</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">25.4</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">17.0</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
