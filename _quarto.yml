@@ -6,7 +6,8 @@ website:
   title: "TEOTIL3 Lillestrøm"
   navbar:
     left:
-      - intro.qmd
+      - text: "Introduction"
+        file: index.qmd
       - data-sources-models.qmd
       - method.qmd
       - text: "Results"
@@ -29,7 +30,8 @@ website:
           - text: GitHub repository
             url:  https://github.com/NIVANorge/teotil3_lillestrom
     contents:
-      - intro.qmd
+      - text: "Introduction"
+        file: index.qmd
       - data-sources-models.qmd
       - method.qmd
       - section: "Results"
