@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>TEOTIL3 for Lillestrøm kommune – TEOTIL3 Lillestrøm</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -58,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -71,10 +77,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bce83624dd429190d13db9bf62533269.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d5382f61a7c05c0e60b360404eaa31c2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,12 +108,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -120,7 +126,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -157,8 +163,8 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../intro.html" aria-current="page"> 
-<span class="menu-text">TEOTIL3 Lillestrøm</span></a>
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Introduction</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data-sources-models.html"> 
@@ -246,8 +252,8 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">TEOTIL3 Lillestrøm</span></a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -365,7 +371,7 @@ window.Quarto = {
 
 
 <div id="0f6e894c-267a-467f-9626-d1becd1aa1c4" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nivapy3 <span class="im">as</span> nivapy</span>
@@ -373,7 +379,7 @@ window.Quarto = {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>warnings.simplefilter(<span class="st">"ignore"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">"ggplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">"ggplot"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <section id="notebook-03-annual-mean-concentrations" class="level1">
 <h1>Notebook 03: Annual mean concentrations</h1>
@@ -386,25 +392,25 @@ window.Quarto = {
 <section id="user-options" class="level2">
 <h2 class="anchored" data-anchor-id="user-options">1. User options</h2>
 <div id="064b76ea-e1d9-472e-b499-9d606a2f5d07" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Threshold for marking outliers. Smaller values identify more outliers</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Threshold for marking outliers. Smaller values identify more outliers</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>out_thresh <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Threshold based on number of samples per year</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>min_samps_per_year <span class="op">=</span> <span class="dv">12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>min_samps_per_year <span class="op">=</span> <span class="dv">12</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="sites-of-interest" class="level2">
 <h2 class="anchored" data-anchor-id="sites-of-interest">2. Sites of interest</h2>
 <div id="9e81fe13-c84e-4d7e-a409-4cbef2c7558c" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read site data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read site data</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>xl_path <span class="op">=</span> <span class="vs">r"</span><span class="dv">..</span><span class="vs">/data/lillestrom_monitoring_sites</span><span class="dv">.</span><span class="vs">xlsx"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>stn_df <span class="op">=</span> pd.read_excel(xl_path, sheet_name<span class="op">=</span><span class="st">"chem_stns"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>stn_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>stn_df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -421,7 +427,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>Sagelva</td>
 <td>002-46599</td>
 <td>Sagelva ved Skjetten bro (F3)</td>
@@ -433,7 +439,7 @@ window.Quarto = {
 <td>Downstream</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>Sagelva</td>
 <td>002-63540</td>
 <td>Fjellhammarelva (F10)</td>
@@ -445,7 +451,7 @@ window.Quarto = {
 <td>Slightly upstream</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>Nitelva</td>
 <td>002-30586</td>
 <td>Rud Nitelva (N8 )</td>
@@ -457,7 +463,7 @@ window.Quarto = {
 <td>Downstream</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>Nitelva</td>
 <td>002-30578</td>
 <td>Kjellerholen Nitelva (N6)</td>
@@ -469,7 +475,7 @@ window.Quarto = {
 <td>Slightly upstream</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>Leira</td>
 <td>002-29659</td>
 <td>Leira ved Borgen bru (L5)</td>
@@ -481,7 +487,7 @@ window.Quarto = {
 <td>Downstream</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
+<th data-quarto-table-cell-role="th">5</th>
 <td>Leira</td>
 <td>002-30584</td>
 <td>Leira ved Leirsund (L8)</td>
@@ -493,7 +499,7 @@ window.Quarto = {
 <td>Slightly upstream</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
+<th data-quarto-table-cell-role="th">6</th>
 <td>Rømua</td>
 <td>002-28960</td>
 <td>Rømua ved Lørenfallet - RØM1</td>
@@ -505,7 +511,7 @@ window.Quarto = {
 <td>Downstream</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
+<th data-quarto-table-cell-role="th">7</th>
 <td>Jeksla</td>
 <td>002-30593</td>
 <td>Jeksla ved Haugli, J14</td>
@@ -517,7 +523,7 @@ window.Quarto = {
 <td>Downstream. Small part of regine</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
+<th data-quarto-table-cell-role="th">8</th>
 <td>Åa</td>
 <td>002-60929</td>
 <td>Fossåa ved Sylta (ÅA1)</td>
@@ -529,7 +535,7 @@ window.Quarto = {
 <td>Downstream</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
+<th data-quarto-table-cell-role="th">9</th>
 <td>Åa</td>
 <td>002-60963</td>
 <td>Sloråa ved Bruvollen (ÅA3)</td>
@@ -541,7 +547,7 @@ window.Quarto = {
 <td>Upstream. North branch</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
+<th data-quarto-table-cell-role="th">10</th>
 <td>Åa</td>
 <td>002-60964</td>
 <td>Kauserudåa før samløp Sloråa (ÅA4)</td>
@@ -553,7 +559,7 @@ window.Quarto = {
 <td>Upstream. South branch</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">11</td>
+<th data-quarto-table-cell-role="th">11</th>
 <td>Gansåa</td>
 <td>002-60933</td>
 <td>Gansåa nedstrøms Dalen RA (BD)</td>
@@ -574,7 +580,7 @@ window.Quarto = {
 <section id="water-chemistry-data" class="level2">
 <h2 class="anchored" data-anchor-id="water-chemistry-data">3. Water chemistry data</h2>
 <div id="216def95-d218-436f-ab0e-3f01ce7168eb" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw chem from Vannmiljø</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw chem from Vannmiljø</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>xl_path <span class="op">=</span> <span class="vs">r"</span><span class="dv">..</span><span class="vs">/data/vannmiljo_data_waterbodies</span><span class="dv">.</span><span class="vs">xlsx"</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>wc_df <span class="op">=</span> pd.read_excel(xl_path, sheet_name<span class="op">=</span><span class="st">"data_wide"</span>)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -587,12 +593,12 @@ window.Quarto = {
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>val_cols <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> wc_df.columns <span class="cf">if</span> col.endswith(<span class="st">"g/l"</span>)]</span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>wc_df <span class="op">=</span> wc_df[id_cols <span class="op">+</span> val_cols].groupby(id_cols).mean().reset_index()</span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>wc_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>wc_df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -614,7 +620,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-02</td>
@@ -631,7 +637,7 @@ window.Quarto = {
 <td>690.00</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-09</td>
@@ -648,7 +654,7 @@ window.Quarto = {
 <td>760.00</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-16</td>
@@ -665,7 +671,7 @@ window.Quarto = {
 <td>780.00</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-23</td>
@@ -682,7 +688,7 @@ window.Quarto = {
 <td>1.31</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-30</td>
@@ -708,7 +714,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="plot-raw-data">3.1. Plot raw data</h3>
 <p>With “outliers” marked in red.</p>
 <div id="c78e8813-0014-44d2-b5ae-321dbee45d66" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot raw concs</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot raw concs</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>col_order <span class="op">=</span> [</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOTN_µg/l"</span>,</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"NO3_µg/l"</span>,</span>
@@ -744,7 +750,7 @@ window.Quarto = {
 <span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
 <span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    png_path <span class="op">=</span> <span class="ss">f"../plots/concs/waterbody_</span><span class="sc">{</span>wb_id<span class="sc">}</span><span class="ss">.png"</span></span>
 <span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    plt.savefig(png_path, dpi<span class="op">=</span><span class="dv">200</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    plt.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Looking at the raw data for each site, we have:</p>
 <ul>
@@ -758,7 +764,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="outliers">3.2. Outliers</h3>
 <p>The plots below show the raw series for each site, with outliers marked in red.</p>
 <div id="52ea0865-958c-441c-928f-0b4aac0b9e3a" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot outliers</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot outliers</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>col_order <span class="op">=</span> [</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOTN_µg/l"</span>,</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOTP_µg/l"</span>,</span>
@@ -785,7 +791,7 @@ window.Quarto = {
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>        axes[row_idx, col_idx].set_title(<span class="ss">f"</span><span class="sc">{</span>par<span class="sc">}</span><span class="ss"> at </span><span class="sc">{</span>wb_id<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>png_path <span class="op">=</span> <span class="vs">r"</span><span class="dv">..</span><span class="vs">/plots/concs/all_waterbodies_main_pars</span><span class="dv">.</span><span class="vs">png"</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>plt.savefig(png_path, dpi<span class="op">=</span><span class="dv">200</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>plt.savefig(png_path, dpi<span class="op">=</span><span class="dv">200</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -795,7 +801,7 @@ window.Quarto = {
 </div>
 </div>
 <div id="96f114a2-f58c-4829-be0e-9709ebe3efe6" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove outliers</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove outliers</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>val_cols <span class="op">=</span> [</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOTN_µg/l"</span>,</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOTP_µg/l"</span>,</span>
@@ -813,12 +819,12 @@ window.Quarto = {
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="kw">del</span> wb_wc_df[<span class="st">"outlier"</span>]</span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    df_list.append(wb_wc_df)</span>
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>clean_wc_df <span class="op">=</span> pd.concat(df_list, axis<span class="op">=</span><span class="st">"rows"</span>)</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>clean_wc_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>clean_wc_df.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -833,7 +839,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-02</td>
@@ -843,7 +849,7 @@ window.Quarto = {
 <td>3.7</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-09</td>
@@ -853,7 +859,7 @@ window.Quarto = {
 <td>3.7</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-16</td>
@@ -863,7 +869,7 @@ window.Quarto = {
 <td>3.3</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-23</td>
@@ -873,7 +879,7 @@ window.Quarto = {
 <td>5.4</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-30</td>
@@ -893,7 +899,7 @@ window.Quarto = {
 <section id="filter-based-on-sampling-frequency-and-calculate-annual-means" class="level2">
 <h2 class="anchored" data-anchor-id="filter-based-on-sampling-frequency-and-calculate-annual-means">3.3. Filter based on sampling frequency and calculate annual means</h2>
 <div id="0efebda7-bae6-46f8-8c50-2f19c91a92c3" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get mask for sampling frequency</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get mask for sampling frequency</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>clean_wc_df[<span class="st">"year"</span>] <span class="op">=</span> clean_wc_df[<span class="st">"sample_date"</span>].dt.year</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>group <span class="op">=</span> clean_wc_df.groupby([<span class="st">"waterbody_id"</span>, <span class="st">"waterbody_name"</span>, <span class="st">"year"</span>])</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> group[val_cols].count()</span>
@@ -949,7 +955,7 @@ window.Quarto = {
 <span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>display(ann_df.head())</span>
 <span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Filtered raw data:"</span>)</span>
-<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>display(filt_wc_df.head())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>display(filt_wc_df.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Annual means:</code></pre>
 </div>
@@ -957,7 +963,7 @@ window.Quarto = {
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -972,7 +978,7 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995</td>
@@ -982,7 +988,7 @@ window.Quarto = {
 <td>3.716667</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1996</td>
@@ -992,7 +998,7 @@ window.Quarto = {
 <td>4.789796</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1997</td>
@@ -1002,7 +1008,7 @@ window.Quarto = {
 <td>4.442373</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1998</td>
@@ -1012,7 +1018,7 @@ window.Quarto = {
 <td>4.698000</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1999</td>
@@ -1034,7 +1040,7 @@ Filtered raw data:</code></pre>
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th">parameter</th>
@@ -1050,7 +1056,7 @@ Filtered raw data:</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-02</td>
@@ -1061,7 +1067,7 @@ Filtered raw data:</code></pre>
 <td>16.0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-09</td>
@@ -1072,7 +1078,7 @@ Filtered raw data:</code></pre>
 <td>9.0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-16</td>
@@ -1083,7 +1089,7 @@ Filtered raw data:</code></pre>
 <td>10.0</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-23</td>
@@ -1094,7 +1100,7 @@ Filtered raw data:</code></pre>
 <td>15.0</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
 <td>1995-01-30</td>
@@ -1118,7 +1124,7 @@ Filtered raw data:</code></pre>
 <li>Dashed lines show non-significant trends</li>
 </ul>
 <div id="c3b77ea4-5064-48bc-8c94-6cdd5716f619" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>col_order <span class="op">=</span> [</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>col_order <span class="op">=</span> [</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOTN_µg/l"</span>,</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOTP_µg/l"</span>,</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SS_mg/l"</span>,</span>
@@ -1202,7 +1208,7 @@ Filtered raw data:</code></pre>
 <span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span> stat_df[<span class="st">"waterbody_id"</span>]</span>
 <span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a>stat_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a>stat_df</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>WARNING: The data series has fewer than 10 non-null values. Significance estimates may be unreliable.
 WARNING: The data series has fewer than 10 non-null values. Significance estimates may be unreliable.
@@ -1217,7 +1223,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1235,7 +1241,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
+<th data-quarto-table-cell-role="th">0</th>
 <td>Nitelva</td>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
@@ -1248,7 +1254,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-19.240741</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
+<th data-quarto-table-cell-role="th">1</th>
 <td>Nitelva</td>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
@@ -1261,7 +1267,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.715224</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
+<th data-quarto-table-cell-role="th">2</th>
 <td>Nitelva</td>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
@@ -1274,7 +1280,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.227450</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
+<th data-quarto-table-cell-role="th">3</th>
 <td>Nitelva</td>
 <td>002-1638-R</td>
 <td>Nitelva Slattum-Kjeller</td>
@@ -1287,7 +1293,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>0.033444</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
+<th data-quarto-table-cell-role="th">4</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1300,7 +1306,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-7.155754</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
+<th data-quarto-table-cell-role="th">5</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1313,7 +1319,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-7.155754</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
+<th data-quarto-table-cell-role="th">6</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1326,7 +1332,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.505743</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
+<th data-quarto-table-cell-role="th">7</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1339,7 +1345,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.505743</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
+<th data-quarto-table-cell-role="th">8</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1352,7 +1358,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.040437</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
+<th data-quarto-table-cell-role="th">9</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1365,7 +1371,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.040437</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">10</td>
+<th data-quarto-table-cell-role="th">10</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1378,7 +1384,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>0.041847</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">11</td>
+<th data-quarto-table-cell-role="th">11</th>
 <td>Leira</td>
 <td>002-3384-R</td>
 <td>Leira nedstrøms Krokfoss</td>
@@ -1391,7 +1397,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>0.041847</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">12</td>
+<th data-quarto-table-cell-role="th">12</th>
 <td>Gansåa</td>
 <td>002-3655-R</td>
 <td>Gansåa</td>
@@ -1404,7 +1410,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-60.772222</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">13</td>
+<th data-quarto-table-cell-role="th">13</th>
 <td>Gansåa</td>
 <td>002-3655-R</td>
 <td>Gansåa</td>
@@ -1417,7 +1423,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-2.253077</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">14</td>
+<th data-quarto-table-cell-role="th">14</th>
 <td>Gansåa</td>
 <td>002-3655-R</td>
 <td>Gansåa</td>
@@ -1430,7 +1436,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.359022</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">15</td>
+<th data-quarto-table-cell-role="th">15</th>
 <td>Gansåa</td>
 <td>002-3655-R</td>
 <td>Gansåa</td>
@@ -1443,7 +1449,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.385739</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">16</td>
+<th data-quarto-table-cell-role="th">16</th>
 <td>Rømua</td>
 <td>002-3659-R</td>
 <td>Rømua</td>
@@ -1456,7 +1462,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-31.416800</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">17</td>
+<th data-quarto-table-cell-role="th">17</th>
 <td>Rømua</td>
 <td>002-3659-R</td>
 <td>Rømua</td>
@@ -1469,7 +1475,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.404711</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">18</td>
+<th data-quarto-table-cell-role="th">18</th>
 <td>Rømua</td>
 <td>002-3659-R</td>
 <td>Rømua</td>
@@ -1482,7 +1488,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.769192</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">19</td>
+<th data-quarto-table-cell-role="th">19</th>
 <td>Rømua</td>
 <td>002-3659-R</td>
 <td>Rømua</td>
@@ -1495,7 +1501,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>0.029783</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">20</td>
+<th data-quarto-table-cell-role="th">20</th>
 <td>Åa</td>
 <td>002-3685-R</td>
 <td>Fossåa</td>
@@ -1508,7 +1514,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-52.962963</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">21</td>
+<th data-quarto-table-cell-role="th">21</th>
 <td>Åa</td>
 <td>002-3685-R</td>
 <td>Fossåa</td>
@@ -1521,7 +1527,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.452048</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">22</td>
+<th data-quarto-table-cell-role="th">22</th>
 <td>Åa</td>
 <td>002-3685-R</td>
 <td>Fossåa</td>
@@ -1534,7 +1540,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.314580</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">23</td>
+<th data-quarto-table-cell-role="th">23</th>
 <td>Åa</td>
 <td>002-3685-R</td>
 <td>Fossåa</td>
@@ -1547,7 +1553,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.338647</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">24</td>
+<th data-quarto-table-cell-role="th">24</th>
 <td>Åa</td>
 <td>002-3687-R</td>
 <td>Sloråa</td>
@@ -1560,7 +1566,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-194.046053</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">25</td>
+<th data-quarto-table-cell-role="th">25</th>
 <td>Åa</td>
 <td>002-3687-R</td>
 <td>Sloråa</td>
@@ -1573,7 +1579,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-16.130882</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">26</td>
+<th data-quarto-table-cell-role="th">26</th>
 <td>Åa</td>
 <td>002-3687-R</td>
 <td>Sloråa</td>
@@ -1586,7 +1592,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-9.348824</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">27</td>
+<th data-quarto-table-cell-role="th">27</th>
 <td>Åa</td>
 <td>002-3687-R</td>
 <td>Sloråa</td>
@@ -1599,7 +1605,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.585294</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">28</td>
+<th data-quarto-table-cell-role="th">28</th>
 <td>Nitelva</td>
 <td>002-3891-R</td>
 <td>Nedre Nitelva</td>
@@ -1612,7 +1618,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-57.231404</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">29</td>
+<th data-quarto-table-cell-role="th">29</th>
 <td>Nitelva</td>
 <td>002-3891-R</td>
 <td>Nedre Nitelva</td>
@@ -1625,7 +1631,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.770711</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">30</td>
+<th data-quarto-table-cell-role="th">30</th>
 <td>Nitelva</td>
 <td>002-3891-R</td>
 <td>Nedre Nitelva</td>
@@ -1638,7 +1644,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.368808</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">31</td>
+<th data-quarto-table-cell-role="th">31</th>
 <td>Nitelva</td>
 <td>002-3891-R</td>
 <td>Nedre Nitelva</td>
@@ -1651,7 +1657,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>0.002556</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">32</td>
+<th data-quarto-table-cell-role="th">32</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1664,7 +1670,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-14.536616</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">33</td>
+<th data-quarto-table-cell-role="th">33</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1677,7 +1683,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-14.536616</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">34</td>
+<th data-quarto-table-cell-role="th">34</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1690,7 +1696,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.303377</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">35</td>
+<th data-quarto-table-cell-role="th">35</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1703,7 +1709,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.303377</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">36</td>
+<th data-quarto-table-cell-role="th">36</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1716,7 +1722,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.148059</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">37</td>
+<th data-quarto-table-cell-role="th">37</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1729,7 +1735,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.148059</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">38</td>
+<th data-quarto-table-cell-role="th">38</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1742,7 +1748,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>0.058077</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">39</td>
+<th data-quarto-table-cell-role="th">39</th>
 <td>Sagelva</td>
 <td>002-3899-R</td>
 <td>Fjellhamarelva - Sagelva</td>
@@ -1755,7 +1761,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>0.058077</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">40</td>
+<th data-quarto-table-cell-role="th">40</th>
 <td>Jeksla</td>
 <td>002-599-R</td>
 <td>Jeksla</td>
@@ -1768,7 +1774,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-42.986111</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">41</td>
+<th data-quarto-table-cell-role="th">41</th>
 <td>Jeksla</td>
 <td>002-599-R</td>
 <td>Jeksla</td>
@@ -1781,7 +1787,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-1.210256</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">42</td>
+<th data-quarto-table-cell-role="th">42</th>
 <td>Jeksla</td>
 <td>002-599-R</td>
 <td>Jeksla</td>
@@ -1794,7 +1800,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 <td>-0.758170</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">43</td>
+<th data-quarto-table-cell-role="th">43</th>
 <td>Jeksla</td>
 <td>002-599-R</td>
 <td>Jeksla</td>
@@ -1820,12 +1826,12 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
 </div>
 </div>
 <div id="dff7feb8-c65f-46c3-b17e-02708c4843a0" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>xl_path <span class="op">=</span> <span class="vs">r"</span><span class="dv">..</span><span class="vs">/data/cleaned_concs_waterbodies</span><span class="dv">.</span><span class="vs">xlsx"</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> pd.ExcelWriter(xl_path) <span class="im">as</span> writer:</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    filt_wc_df.to_excel(writer, sheet_name<span class="op">=</span><span class="st">"cleaned_chem"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    ann_df.to_excel(writer, sheet_name<span class="op">=</span><span class="st">"annual_avgs"</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    stat_df.to_excel(writer, sheet_name<span class="op">=</span><span class="st">"conc_trends"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    stat_df.to_excel(writer, sheet_name<span class="op">=</span><span class="st">"conc_trends"</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
@@ -1885,13 +1891,14 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
@@ -1906,7 +1913,7 @@ WARNING: The data series has fewer than 10 non-null values. Significance estimat
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/NIVANorge\.github\.io\/teotil3_lillestrom\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
