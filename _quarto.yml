@@ -1,50 +1,26 @@
 project:
-  type: website
+  type: book
 execute:
   freeze: auto
-website:
+book:
   title: "TEOTIL3 Lillestrøm"
-  site-url: https://nivanorge.github.io/teotil3_lillestrom/index.html
-  navbar:
-    left:
-      - text: "Introduction"
-        file: index.qmd
-      - data-sources-models.qmd
-      - method.qmd
-      - text: "Results"
-        menu:
-          - sagelva.qmd
-          - nitelva.qmd
-          - leira.qmd
-          - romua.qmd
-          - jeksla.qmd
-          - aa.qmd
-          - gansaa.qmd
-      - summary.qmd
+  site-url: https://nivanorge.github.io/teotil3_lillestrom/
+  repo-url: https://github.com/NIVANorge/teotil3_lillestrom/blob/main/README.md
 
-  sidebar:
-    style: "docked"
-    search: true
-    tools:
-      - icon: github
-        menu:
-          - text: GitHub repository
-            url:  https://github.com/NIVANorge/teotil3_lillestrom/blob/main/README.md
-    contents:
-      - text: "Introduction"
-        file: index.qmd
-      - data-sources-models.qmd
-      - method.qmd
-      - section: "Results"
-        contents:
-          - sagelva.qmd
-          - nitelva.qmd
-          - leira.qmd
-          - romua.qmd
-          - jeksla.qmd
-          - aa.qmd
-          - gansaa.qmd
-      - summary.qmd
+  chapters:
+    - index.qmd
+    - data-sources-models.qmd
+    - method.qmd
+    - part: Results
+      chapters:
+        - sagelva.qmd
+        - nitelva.qmd
+        - leira.qmd
+        - romua.qmd
+        - jeksla.qmd
+        - aa.qmd
+        - gansaa.qmd
+    - summary.qmd
 
 format:
   html:
