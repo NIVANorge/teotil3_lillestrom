@@ -1,0 +1,50 @@
+project:
+  type: website
+execute:
+  freeze: auto
+website:
+  title: "TEOTIL3 Lillestrøm"
+  navbar:
+    left:
+      - intro.qmd
+      - data-sources-models.qmd
+      - method.qmd
+      - text: "Results"
+        menu:
+          - sagelva.qmd
+          - nitelva.qmd
+          - leira.qmd
+          - romua.qmd
+          - jeksla.qmd
+          - aa.qmd
+          - gansaa.qmd
+      - summary.qmd
+
+  sidebar:
+    style: "docked"
+    search: true
+    tools:
+      - icon: github
+        menu:
+          - text: GitHub repository
+            url:  https://github.com/NIVANorge/teotil3_lillestrom
+    contents:
+      - intro.qmd
+      - data-sources-models.qmd
+      - method.qmd
+      - section: "Results"
+        contents:
+          - sagelva.qmd
+          - nitelva.qmd
+          - leira.qmd
+          - romua.qmd
+          - jeksla.qmd
+          - aa.qmd
+          - gansaa.qmd
+      - summary.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
