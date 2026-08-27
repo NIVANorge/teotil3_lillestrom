@@ -1,83 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/method.html</loc>
-    <lastmod>2026-08-27T08:54:06.004Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/method.html</loc>
+    <lastmod>2026-08-27T09:01:19.682Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/data-sources-models.html</loc>
-    <lastmod>2026-08-27T08:54:05.878Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/data-sources-models.html</loc>
+    <lastmod>2026-08-27T09:01:19.550Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/jeksla.html</loc>
-    <lastmod>2026-08-27T08:54:06.004Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/jeksla.html</loc>
+    <lastmod>2026-08-27T09:01:19.682Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/aa.html</loc>
-    <lastmod>2026-08-27T08:54:05.812Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/romua.html</loc>
+    <lastmod>2026-08-27T09:01:19.874Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/01_catchment_properties.html</loc>
-    <lastmod>2026-08-27T08:54:05.820Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/summary.html</loc>
+    <lastmod>2026-08-27T09:01:19.874Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/02_vannmiljo_vann-nett_nve.html</loc>
-    <lastmod>2026-08-27T08:54:05.829Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/03b_annual_concs_waterbodies.html</loc>
+    <lastmod>2026-08-27T09:01:19.533Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/05_estimate_overflows_and_spredt.html</loc>
-    <lastmod>2026-08-27T08:54:05.876Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/04b_annual_loads_waterbodies.html</loc>
+    <lastmod>2026-08-27T09:01:19.545Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/03a_annual_concs_stations.html</loc>
-    <lastmod>2026-08-27T08:54:05.845Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/Untitled.html</loc>
+    <lastmod>2026-08-27T09:01:19.550Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/04a_annual_loads_stations.html</loc>
-    <lastmod>2026-08-27T08:54:05.869Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/07a_compare_teotil3_stations.html</loc>
+    <lastmod>2026-08-27T09:01:19.548Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/06_build_input_run_model.html</loc>
-    <lastmod>2026-08-27T08:54:05.876Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/07b_compare_teotil3_waterbodies.html</loc>
+    <lastmod>2026-08-27T09:01:19.548Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/sagelva.html</loc>
-    <lastmod>2026-08-27T08:54:06.184Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/sagelva.html</loc>
+    <lastmod>2026-08-27T09:01:19.874Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/07b_compare_teotil3_waterbodies.html</loc>
-    <lastmod>2026-08-27T08:54:05.876Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/leira.html</loc>
+    <lastmod>2026-08-27T09:01:19.682Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/07a_compare_teotil3_stations.html</loc>
-    <lastmod>2026-08-27T08:54:05.876Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/06_build_input_run_model.html</loc>
+    <lastmod>2026-08-27T09:01:19.548Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/Untitled.html</loc>
-    <lastmod>2026-08-27T08:54:05.878Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/04a_annual_loads_stations.html</loc>
+    <lastmod>2026-08-27T09:01:19.541Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/04b_annual_loads_waterbodies.html</loc>
-    <lastmod>2026-08-27T08:54:05.873Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/03a_annual_concs_stations.html</loc>
+    <lastmod>2026-08-27T09:01:19.515Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/code/03b_annual_concs_waterbodies.html</loc>
-    <lastmod>2026-08-27T08:54:05.862Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/05_estimate_overflows_and_spredt.html</loc>
+    <lastmod>2026-08-27T09:01:19.547Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/summary.html</loc>
-    <lastmod>2026-08-27T08:54:06.184Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/02_vannmiljo_vann-nett_nve.html</loc>
+    <lastmod>2026-08-27T09:01:19.498Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/romua.html</loc>
-    <lastmod>2026-08-27T08:54:06.184Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/code/01_catchment_properties.html</loc>
+    <lastmod>2026-08-27T09:01:19.488Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/gansaa.html</loc>
-    <lastmod>2026-08-27T08:54:06.004Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/aa.html</loc>
+    <lastmod>2026-08-27T09:01:19.478Z</lastmod>
   </url>
   <url>
-    <loc>https://NIVANorge.github.io/teotil3_lillestrom/index.html</loc>
-    <lastmod>2026-08-27T08:54:06.004Z</lastmod>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/nitelva.html</loc>
+    <lastmod>2026-08-27T09:01:19.682Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/gansaa.html</loc>
+    <lastmod>2026-08-27T09:01:19.682Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nivanorge.github.io/teotil3_lillestrom/index.html/index.html</loc>
+    <lastmod>2026-08-27T09:01:19.682Z</lastmod>
   </url>
 </urlset>
