@@ -4,39 +4,49 @@
     "href": "index.html",
     "title": "TEOTIL3 Lillestrøm",
     "section": "",
-    "text": "0.1 Scope\nThis project aims to:",
+    "text": "Using monitoring and modelling to assess water quality in catchments draining to Lillestrøm kommune.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
     ]
   },
   {
-    "objectID": "index.html#sec-scope",
-    "href": "index.html#sec-scope",
-    "title": "TEOTIL3 Lillestrøm",
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  TEOTIL3 Lillestrøm",
+    "section": "",
+    "text": "2.1 Scope\nThis project aims to:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#sec-scope",
+    "href": "intro.html#sec-scope",
+    "title": "2  TEOTIL3 Lillestrøm",
     "section": "",
     "text": "Summarise available monitoring data for catchments around Lillestrøm kommune.\nDescribe present-day water quality status and observed trends over time.\nUse modelling to identify the main sources of nutrients in each catchment.\nDescribe the potential for reducing nutrient loads in each catchment using measures targeting wastewater and agriculture (based on recent modelling of the Oslofjord catchment undertaken by NIVA and NIBIO for Miljødirekotratet).",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
     ]
   },
   {
-    "objectID": "index.html#sec-aoi",
-    "href": "index.html#sec-aoi",
-    "title": "TEOTIL3 Lillestrøm",
-    "section": "0.2 Area of interest",
-    "text": "0.2 Area of interest\nTable 1 and Figure 1 show the catchments of interest.\n\n\n\nTable 1: Catchments considered in this study.\n\n\n\n\n\n\n\n\n\n\n\n\nCatchment ID\nName\nOutlet lon\nOutlet lat\nComment\n\n\n\n\n1\nSagelva\n11.02384\n59.95745\nTributary to Nitelva\n\n\n2\nNitelva\n11.07092\n59.93806\nJust upstream of confluence with Leira\n\n\n3\nLeira\n11.07367\n59.93905\nJust upstream of confluence with Nitelva\n\n\n4\nRømua\n11.20984\n59.99055\nSingle REGINE; no lakes\n\n\n5\nJeksla\n11.09281\n59.99753\nSmall sub-catchment of Leira; not resolved by REGINE network\n\n\n6\nÅa\n11.28279\n59.99649\nSingle REGINE; few lakes\n\n\n7\nGansåa\n11.22130\n59.86080\nNot resolved by REGINE network\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: Lillestrøm kommune (black outline) and the seven catchments considered in this analysis (red outlines). Yellow squares mark catchment outlets; red circles are point source discharges from industry; grey circles are discharges from municipal wastewater plants (with capacity &gt;50 pe).",
+    "objectID": "intro.html#sec-aoi",
+    "href": "intro.html#sec-aoi",
+    "title": "2  TEOTIL3 Lillestrøm",
+    "section": "2.2 Area of interest",
+    "text": "2.2 Area of interest\nTable 2.1 and Figure 2.1 show the catchments of interest.\n\n\n\nTable 2.1: Catchments considered in this study.\n\n\n\n\n\n\n\n\n\n\n\n\nCatchment ID\nName\nOutlet lon\nOutlet lat\nComment\n\n\n\n\n1\nSagelva\n11.02384\n59.95745\nTributary to Nitelva\n\n\n2\nNitelva\n11.07092\n59.93806\nJust upstream of confluence with Leira\n\n\n3\nLeira\n11.07367\n59.93905\nJust upstream of confluence with Nitelva\n\n\n4\nRømua\n11.20984\n59.99055\nSingle REGINE; no lakes\n\n\n5\nJeksla\n11.09281\n59.99753\nSmall sub-catchment of Leira; not resolved by REGINE network\n\n\n6\nÅa\n11.28279\n59.99649\nSingle REGINE; few lakes\n\n\n7\nGansåa\n11.22130\n59.86080\nNot resolved by REGINE network\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.1: Lillestrøm kommune (black outline) and the seven catchments considered in this analysis (red outlines). Yellow squares mark catchment outlets; red circles are point source discharges from industry; grey circles are discharges from municipal wastewater plants (with capacity &gt;50 pe).",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
     ]
   },
   {
-    "objectID": "index.html#sec-nut-sources",
-    "href": "index.html#sec-nut-sources",
-    "title": "TEOTIL3 Lillestrøm",
-    "section": "0.3 Sources of nutrients",
-    "text": "0.3 Sources of nutrients\n\n0.3.1 Diffuse sources\nTable 2 and Figure 2 show land cover proportions for each catchment.\n\nForest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.\nAgriculture is the dominant land cover class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).\nSagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).\n\n\n\n\n\n\n\nFigure 2: Land cover based on the ‘ARTYPE’ classifications from NIBIO’s AR50 dataset\n\n\n\n\n\n\n\nTable 2: Land cover proportions based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nSagelva\nNitelva\nLeira\nRømua\nJeksla\nÅa\nGansåa\n\n\nAR50 klasse\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\n\n\n\n\nBebygd\n17.6\n16\n45.3\n9\n46.5\n7\n9.8\n5\n3.8\n22\n2.0\n2\n0.8\n3\n\n\nJordbruk\n6.8\n6\n36.1\n8\n132.0\n20\n103.3\n49\n6.6\n39\n29.6\n23\n3.4\n13\n\n\nSkog\n77.0\n71\n363.9\n75\n436.0\n65\n92.9\n44\n6.5\n38\n93.8\n72\n18.6\n73\n\n\nSnaumark\n1.2\n1\n3.8\n1\n2.2\n0\n1.2\n1\n0.1\n1\n0.0\n0\n0.1\n0\n\n\nMyr\n0.7\n1\n9.1\n2\n27.6\n4\n4.1\n2\n0.0\n0\n3.0\n2\n1.8\n7\n\n\nFerskvann\n5.6\n5\n25.7\n5\n23.8\n4\n0.5\n0\n0.0\n0\n2.3\n2\n0.7\n3\n\n\nTotalt\n108.9\n100\n483.9\n100\n668.1\n100\n211.8\n100\n17.0\n100\n130.7\n100\n25.4\n100\n\n\n\n\n\n\n\n\n\n\n0.3.2 Point sources\nMajor point sources are shown in Table 3. Nutrient inputs are the mean of reported discharges during the period from 2013 to 2023 (in tonnes).\n\nThe largest single point source is Nedre Romerike avløpsanlegg (NRA), which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at Rotnes and Åneby, further upstream. In Leira, significant wastewater discharges include Gardermoen sentralrenseanlegg and Kløfta renseanlegg, both in the lower-central part of the catchment.\nThe largest industrial point source is Dynea Lillestrøm, a manufacturer of adhesives and industrial coatings.\n\n\n\n\n\nTable 3: Main point sources of nutrients within the study area.\n\n\n\n\n\n\n\n\nNedbørfelt\nNavn\nSektor\nType\nTOTN (tonn)\nTOTP (tonn)\nTOC (tonn)\nSS (tonn)\n\n\n\n\nSagelva\nMariholtet sportsstue, renseanlegg\nKommunalt avløp (&gt;50 pe)\nNaturbasert\n0.01\n0.00\n0.01\n0.01\n\n\nNitelva\nDynea Lillestrøm\nIndustrianlegg\nKjemisk industri\n27.89\n0.12\n18.13\n5.99\n\n\nNitelva\nNRA (Nedre Romerike avløpsanlegg)\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk m/N-fjerning\n180.39\n5.21\n218.70\n154.27\n\n\nNitelva\nRotnes renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n24.59\n0.39\n20.76\n16.04\n\n\nNitelva\nSlattum renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n25.25\n0.42\n54.56\n30.44\n\n\nNitelva\nÅneby renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n18.14\n0.15\n12.47\n6.73\n\n\nNitelva\nHarestua renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n11.39\n0.13\n6.50\n12.45\n\n\nLeira\nTuen renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n0.01\n0.00\n0.01\n0.01\n\n\nLeira\nKløfta renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n36.32\n0.18\n38.07\n15.61\n\n\nLeira\nAvinor avd. Oslo Lufthavn Gardermoen\nIndustrianlegg\nFlyplass\nnan\nnan\n1.27\nnan\n\n\nLeira\nGardermoen sentralrenseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk m/N-fjerning\n48.34\n1.03\n36.47\n46.68\n\n\nLeira\nGjerdrum renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n17.72\n0.07\n14.74\n12.15\n\n\nLeira\nÅsgreina renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n1.58\n0.02\n1.61\n1.41\n\n\nLeira\nFagerli renseanlegg\nKommunalt avløp (&gt;50 pe)\nBiologisk\n0.36\n0.04\n0.27\n0.38\n\n\nRømua\nOnsrud leir renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n0.18\n0.00\nnan\n0.14\n\n\nRømua\nOnsrud rekkehus\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n0.12\n0.00\n0.06\n0.10\n\n\nRømua\nIngjersmyr avløpsanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n0.12\n0.00\n0.04\n0.09\n\n\nÅa\nHogset renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n3.13\n0.02\n1.03\n1.66\n\n\nGansåa\nDalen renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n3.07\n0.03\n1.41\n2.46",
+    "objectID": "intro.html#sec-nut-sources",
+    "href": "intro.html#sec-nut-sources",
+    "title": "2  TEOTIL3 Lillestrøm",
+    "section": "2.3 Sources of nutrients",
+    "text": "2.3 Sources of nutrients\n\n2.3.1 Diffuse sources\nTable 2.2 and Figure 2.2 show land cover proportions for each catchment.\n\nForest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.\nAgriculture is the dominant land cover class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).\nSagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).\n\n\n\n\n\n\n\nFigure 2.2: Land cover based on the ‘ARTYPE’ classifications from NIBIO’s AR50 dataset\n\n\n\n\n\n\n\nTable 2.2: Land cover proportions based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nSagelva\nNitelva\nLeira\nRømua\nJeksla\nÅa\nGansåa\n\n\nAR50 klasse\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\nkm²\n%\n\n\n\n\nBebygd\n17.6\n16\n45.3\n9\n46.5\n7\n9.8\n5\n3.8\n22\n2.0\n2\n0.8\n3\n\n\nJordbruk\n6.8\n6\n36.1\n8\n132.0\n20\n103.3\n49\n6.6\n39\n29.6\n23\n3.4\n13\n\n\nSkog\n77.0\n71\n363.9\n75\n436.0\n65\n92.9\n44\n6.5\n38\n93.8\n72\n18.6\n73\n\n\nSnaumark\n1.2\n1\n3.8\n1\n2.2\n0\n1.2\n1\n0.1\n1\n0.0\n0\n0.1\n0\n\n\nMyr\n0.7\n1\n9.1\n2\n27.6\n4\n4.1\n2\n0.0\n0\n3.0\n2\n1.8\n7\n\n\nFerskvann\n5.6\n5\n25.7\n5\n23.8\n4\n0.5\n0\n0.0\n0\n2.3\n2\n0.7\n3\n\n\nTotalt\n108.9\n100\n483.9\n100\n668.1\n100\n211.8\n100\n17.0\n100\n130.7\n100\n25.4\n100\n\n\n\n\n\n\n\n\n\n\n2.3.2 Point sources\nMajor point sources are shown in Table 2.3. Nutrient inputs are the mean of reported discharges during the period from 2013 to 2023 (in tonnes).\n\nThe largest single point source is Nedre Romerike avløpsanlegg (NRA), which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at Rotnes and Åneby, further upstream. In Leira, significant wastewater discharges include Gardermoen sentralrenseanlegg and Kløfta renseanlegg, both in the lower-central part of the catchment.\nThe largest industrial point source is Dynea Lillestrøm, a manufacturer of adhesives and industrial coatings.\n\n\n\n\n\nTable 2.3: Main point sources of nutrients within the study area.\n\n\n\n\n\n\n\n\nNedbørfelt\nNavn\nSektor\nType\nTOTN (tonn)\nTOTP (tonn)\nTOC (tonn)\nSS (tonn)\n\n\n\n\nSagelva\nMariholtet sportsstue, renseanlegg\nKommunalt avløp (&gt;50 pe)\nNaturbasert\n0.01\n0.00\n0.01\n0.01\n\n\nNitelva\nDynea Lillestrøm\nIndustrianlegg\nKjemisk industri\n27.89\n0.12\n18.13\n5.99\n\n\nNitelva\nNRA (Nedre Romerike avløpsanlegg)\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk m/N-fjerning\n180.39\n5.21\n218.70\n154.27\n\n\nNitelva\nRotnes renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n24.59\n0.39\n20.76\n16.04\n\n\nNitelva\nSlattum renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n25.25\n0.42\n54.56\n30.44\n\n\nNitelva\nÅneby renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n18.14\n0.15\n12.47\n6.73\n\n\nNitelva\nHarestua renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n11.39\n0.13\n6.50\n12.45\n\n\nLeira\nTuen renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n0.01\n0.00\n0.01\n0.01\n\n\nLeira\nKløfta renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n36.32\n0.18\n38.07\n15.61\n\n\nLeira\nAvinor avd. Oslo Lufthavn Gardermoen\nIndustrianlegg\nFlyplass\nnan\nnan\n1.27\nnan\n\n\nLeira\nGardermoen sentralrenseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk m/N-fjerning\n48.34\n1.03\n36.47\n46.68\n\n\nLeira\nGjerdrum renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n17.72\n0.07\n14.74\n12.15\n\n\nLeira\nÅsgreina renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk\n1.58\n0.02\n1.61\n1.41\n\n\nLeira\nFagerli renseanlegg\nKommunalt avløp (&gt;50 pe)\nBiologisk\n0.36\n0.04\n0.27\n0.38\n\n\nRømua\nOnsrud leir renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n0.18\n0.00\nnan\n0.14\n\n\nRømua\nOnsrud rekkehus\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n0.12\n0.00\n0.06\n0.10\n\n\nRømua\nIngjersmyr avløpsanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n0.12\n0.00\n0.04\n0.09\n\n\nÅa\nHogset renseanlegg (Nedlagt)\nKommunalt avløp (&gt;50 pe)\nKjemisk-biologisk\n3.13\n0.02\n1.03\n1.66\n\n\nGansåa\nDalen renseanlegg\nKommunalt avløp (&gt;50 pe)\nKjemisk\n3.07\n0.03\n1.41\n2.46",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
     ]
   }
 ]
