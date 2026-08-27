@@ -1,4 +1,4 @@
 ---
-title: "Index"
+title: "TEOTIL3 Lillestrøm"
 number-sections: false
 ---
