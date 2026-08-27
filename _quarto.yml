@@ -8,6 +8,7 @@ book:
   repo-url: https://github.com/NIVANorge/teotil3_lillestrom/blob/main/README.md
 
   chapters:
+    - index.qmd
     - intro.qmd
     - data-sources-models.qmd
     - method.qmd
