@@ -2,3 +2,70 @@
 title: "TEOTIL3 Lillestrøm"
 number-sections: true
 ---
+
+## Scope {#sec-scope}
+
+This project aims to:
+
+ * Summarise available monitoring data for catchments around Lillestrøm kommune.
+   
+ * Describe present-day water quality status and observed trends over time.
+
+ * Use modelling to identify the main sources of nutrients in each catchment.
+
+ * Describe the potential for reducing nutrient loads in each catchment using measures targeting wastewater and agriculture (based on recent modelling of the Oslofjord catchment undertaken by NIVA and NIBIO for Miljødirekotratet).
+
+## Area of interest {#sec-aoi}
+
+@tbl-catchments and @fig-catchments show the catchments of interest.
+
+| Catchment ID |   Name  | Outlet lon | Outlet lat |                            Comment                           |
+|:------------:|:-------:|:----------:|:----------:|:------------------------------------------------------------:|
+|       1      | Sagelva |  11.02384  |  59.95745  |                     Tributary to Nitelva                     |
+|       2      | Nitelva |  11.07092  |  59.93806  |            Just upstream of confluence with Leira            |
+|       3      |  Leira  |  11.07367  |  59.93905  |           Just upstream of confluence with Nitelva           |
+|       4      |  Rømua  |  11.20984  |  59.99055  |                    Single REGINE; no lakes                   |
+|       5      |  Jeksla |  11.09281  |  59.99753  | Small sub-catchment of Leira; not resolved by REGINE network |
+|       6      |    Åa   |  11.28279  |  59.99649  |                   Single REGINE; few lakes                   |
+|       7      |  Gansåa |  11.22130  |  59.86080  |                Not resolved by REGINE network                |
+
+: Catchments considered in this study. {#tbl-catchments .striped .hover}
+
+![Lillestrøm kommune (black outline) and the seven catchments considered in this analysis (red outlines). Yellow squares mark catchment outlets; red circles are point source discharges from industry; grey circles are discharges from municipal wastewater plants (with capacity >50 pe).](./plots/catchments_with_point_sources_labelled.png){#fig-catchments width=600 fig-align="center"}
+
+## Sources of nutrients {#sec-nut-sources}
+
+### Diffuse sources {#sec-diff-sources}
+
+The map and table below show land cover proportions for each catchment.
+
+ * Forest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.
+   
+ * Agriculture is the dominant land cover class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).
+
+ * Sagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).
+
+![Land cover based on the ‘ARTYPE’ classifications from NIBIO’s AR50 dataset](./plots/catchment_land_cover_labelled.png){#fig-cat-land-cover width=600 fig-align="center"}
+
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+| AR50       |    Leira    |   Nitelva    |    Sagelva    |    Rømua    |     Åa      |    Gansåa    |    Jeksla    |
+| klasse     +-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+|            | km²   | %   | km²    | %   | km²     | %   | km²   | %   | km²   | %   | km²    | %   | km²    | %   |
++:==========:+======:+====:+=======:+====:+========:+====:+======:+====:+======:+====:+=======:+====:+=======:+====:+
+| Bebygd     | 46.5  | 7   | 45.3   | 9   | 17.6    | 16  | 9.8   | 5   | 2.0   | 2   | 0.8    | 3   | 3.8    | 23  |
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+| Jordbruk   | 132.0 | 20  | 36.1   | 8   | 6.8     | 6   | 103.3 | 49  | 29.6  | 23  | 3.4    | 13  | 6.6    | 39  |
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+| Skog       | 436.0 | 65  | 363.9  | 75  | 77.0    | 71  | 92.9  | 44  | 93.8  | 72  | 18.6   | 73  | 6.5    | 38  |
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+| Snaumark   | 2.2   | 0   | 3.8    | 1   | 1.2     | 1   | 1.2   | 1   | 0.0   | 0   | 0.1    | 0   | 0.1    | 1   |
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+| Myr        | 27.6  | 4   | 9.1    | 2   | 0.7     | 1   | 4.1   | 2   | 3.0   | 2   | 1.8    | 7   | 0.0    | 0   |
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+| Ferskvann  | 23.8  | 4   | 25.7   | 5   | 5.6     | 5   | 0.5   | 0   | 2.3   | 2   | 0.7    | 3   | 0.0    | 0   |
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+| **Totalt** | 668.1 | 100 | 483.9  | 100 | 108.9   | 100 | 211.8 | 100 | 130.7 | 100 | 25.4   | 100 | 17.0   | 100 |
++------------+-------+-----+--------+-----+---------+-----+-------+-----+-------+-----+--------+-----+--------+-----+
+
+
+
