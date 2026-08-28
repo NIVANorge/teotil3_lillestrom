@@ -1,5 +1,45 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "TEOTIL3 Lillestrøm",
+    "section": "",
+    "text": "Preface\nIn April 2026, NIVA published a report (https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/) describing a range of scenarios for reducing nutrient loading to the Oslofjord. The study evaluated nutrient reductions that could be achieved across different parts of the Oslofjord catchment through various combinations of wastewater treatment and agricultural mitigation measures.\nLillestrøm kommune is currently developing River Basin Management Plans for catchments that discharge within the municipal boundary. Since all these catchments form part of the wider Oslofjord catchment, NIVA’s recent modelling provides a valuable foundation for local planning. The aim of this project is to refine the broad-scale modelling already undertaken by NIVA using local monitoring data and Lillestrøm-specific datasets. Results will support development of Lillestrøm’s catchment management plans by documenting present-day water quality, trends over time, and the potential to reduce nutrient loads using combinations of measures.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-authors",
+    "href": "index.html#sec-authors",
+    "title": "TEOTIL3 Lillestrøm",
+    "section": "Authors",
+    "text": "Authors\nJames E Sample is a Senior Engineer within the Data Science section of the Norwegian Institute for Water Research (NIVA).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-citation",
+    "href": "index.html#sec-citation",
+    "title": "TEOTIL3 Lillestrøm",
+    "section": "Citation",
+    "text": "Citation\nSample JE. 2026. Water quality trends in catchments draining to Lillestrøm kommune: analysis of monitoring and model data. NIVA project 260150. Available online.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#sec-licence",
+    "href": "index.html#sec-licence",
+    "title": "TEOTIL3 Lillestrøm",
+    "section": "Licence",
+    "text": "Licence\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>TEOTIL3 Lillestrøm</span>"
+    ]
+  },
+  {
     "objectID": "intro.html",
     "href": "intro.html",
     "title": "2  Introduction",
