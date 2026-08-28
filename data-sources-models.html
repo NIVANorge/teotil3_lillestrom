@@ -224,10 +224,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-urban" id="toc-sec-urban" class="nav-link" data-scroll-target="#sec-urban"><span class="header-section-number">3.3.5</span> Urban</a></li>
   <li><a href="#sec-background" id="toc-sec-background" class="nav-link" data-scroll-target="#sec-background"><span class="header-section-number">3.3.6</span> Background</a></li>
   </ul></li>
-  <li><a href="#water-quality-models-sec-models" id="toc-water-quality-models-sec-models" class="nav-link" data-scroll-target="#water-quality-models-sec-models"><span class="header-section-number">3.4</span> Water quality models {sec-models}</a>
+  <li><a href="#sec-models" id="toc-sec-models" class="nav-link" data-scroll-target="#sec-models"><span class="header-section-number">3.4</span> Water quality models</a>
   <ul class="collapse">
-  <li><a href="#agritil-sec-agritil" id="toc-agritil-sec-agritil" class="nav-link" data-scroll-target="#agritil-sec-agritil"><span class="header-section-number">3.4.1</span> AGRITIL {sec-agritil}</a></li>
-  <li><a href="#teotil3-sec-teotil3" id="toc-teotil3-sec-teotil3" class="nav-link" data-scroll-target="#teotil3-sec-teotil3"><span class="header-section-number">3.4.2</span> TEOTIL3 {sec-teotil3}</a></li>
+  <li><a href="#sec-agritil" id="toc-sec-agritil" class="nav-link" data-scroll-target="#sec-agritil"><span class="header-section-number">3.4.1</span> AGRITIL</a></li>
+  <li><a href="#sec-teotil3" id="toc-sec-teotil3" class="nav-link" data-scroll-target="#sec-teotil3"><span class="header-section-number">3.4.2</span> TEOTIL3</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -258,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="3.1" class="anchored" data-anchor-id="sec-water-chem"><span class="header-section-number">3.1</span> Water chemistry</h2>
 <p>Water chemistry data are available from <a href="https://vannmiljo.miljodirektoratet.no/">Vannmiljø</a>, the national water chemistry database maintained by Miljødirektoratet. At the start of this project, Lillestrøm kommune provided a list monitoring stations with good quality data within each of the catchments of interest. Catchments in Norway are also divided into waterbodies according to Vannforskriften, which is Norway’s implementation of the EU Water Framework Directive (WFD). The <a href="https://vann-nett.no/">Vann-nett</a> portal uses data from Vannmiljø to assign each waterbody a status (high, good, moderate, poor, bad) using thresholds defined in Vannforskriften for each parameter or quality element.</p>
 <p><a href="#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a> lists the main monitoring stations in each catchment and identifies corresponding WFD waterbodies for each station. The WFD status for a waterbody displayed in Vann-nett may combine data from multiple stations, so for this analysis two sets of data were downloaded: (i) monitoring data for the specific stations suggested by Lillestrøm kommune, and (ii) all monitoring data used to assign status for each waterbody in Vann-nett. The first dataset provides the best available time series for individual points, whereas the second offers a more aggregated assessment (often with greater variability) and includes all data used by water managers to set water quality targets.</p>
-<p>All water chemistry data were downloaded programmatically via Python using the Vannmiljø and Vann-nett Application Programming Interfaces (APIs). See <a href="./code/02_vannmiljo_vann-nett_nve.ipynb">notebook 02</a> for details.</p>
+<p>All water chemistry data were downloaded programmatically via Python using the Vannmiljø and Vann-nett Application Programming Interfaces (APIs). See <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb">notebook 02</a> for details.</p>
 <div class="cell" data-execution_count="1">
 <div id="tbl-chem-mon" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -268,150 +268,150 @@ Table&nbsp;3.1: Water chemistry monitoring stations within the catchments of int
 <div aria-describedby="tbl-chem-mon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <style type="text/css">
-#T_c6bf4 th.col_heading {
+#T_ef554 th.col_heading {
   text-align: center;
 }
-#T_c6bf4_row0_col0, #T_c6bf4_row0_col1, #T_c6bf4_row0_col2, #T_c6bf4_row0_col3, #T_c6bf4_row0_col4, #T_c6bf4_row0_col5, #T_c6bf4_row1_col0, #T_c6bf4_row1_col1, #T_c6bf4_row1_col2, #T_c6bf4_row1_col3, #T_c6bf4_row1_col4, #T_c6bf4_row1_col5, #T_c6bf4_row2_col0, #T_c6bf4_row2_col1, #T_c6bf4_row2_col2, #T_c6bf4_row2_col3, #T_c6bf4_row2_col4, #T_c6bf4_row2_col5, #T_c6bf4_row3_col0, #T_c6bf4_row3_col1, #T_c6bf4_row3_col2, #T_c6bf4_row3_col3, #T_c6bf4_row3_col4, #T_c6bf4_row3_col5, #T_c6bf4_row4_col0, #T_c6bf4_row4_col1, #T_c6bf4_row4_col2, #T_c6bf4_row4_col3, #T_c6bf4_row4_col4, #T_c6bf4_row4_col5, #T_c6bf4_row5_col0, #T_c6bf4_row5_col1, #T_c6bf4_row5_col2, #T_c6bf4_row5_col3, #T_c6bf4_row5_col4, #T_c6bf4_row5_col5, #T_c6bf4_row6_col0, #T_c6bf4_row6_col1, #T_c6bf4_row6_col2, #T_c6bf4_row6_col3, #T_c6bf4_row6_col4, #T_c6bf4_row6_col5, #T_c6bf4_row7_col0, #T_c6bf4_row7_col1, #T_c6bf4_row7_col2, #T_c6bf4_row7_col3, #T_c6bf4_row7_col4, #T_c6bf4_row7_col5, #T_c6bf4_row8_col0, #T_c6bf4_row8_col1, #T_c6bf4_row8_col2, #T_c6bf4_row8_col3, #T_c6bf4_row8_col4, #T_c6bf4_row8_col5, #T_c6bf4_row9_col0, #T_c6bf4_row9_col1, #T_c6bf4_row9_col2, #T_c6bf4_row9_col3, #T_c6bf4_row9_col4, #T_c6bf4_row9_col5, #T_c6bf4_row10_col0, #T_c6bf4_row10_col1, #T_c6bf4_row10_col2, #T_c6bf4_row10_col3, #T_c6bf4_row10_col4, #T_c6bf4_row10_col5, #T_c6bf4_row11_col0, #T_c6bf4_row11_col1, #T_c6bf4_row11_col2, #T_c6bf4_row11_col3, #T_c6bf4_row11_col4, #T_c6bf4_row11_col5 {
+#T_ef554_row0_col0, #T_ef554_row0_col1, #T_ef554_row0_col2, #T_ef554_row0_col3, #T_ef554_row0_col4, #T_ef554_row0_col5, #T_ef554_row1_col0, #T_ef554_row1_col1, #T_ef554_row1_col2, #T_ef554_row1_col3, #T_ef554_row1_col4, #T_ef554_row1_col5, #T_ef554_row2_col0, #T_ef554_row2_col1, #T_ef554_row2_col2, #T_ef554_row2_col3, #T_ef554_row2_col4, #T_ef554_row2_col5, #T_ef554_row3_col0, #T_ef554_row3_col1, #T_ef554_row3_col2, #T_ef554_row3_col3, #T_ef554_row3_col4, #T_ef554_row3_col5, #T_ef554_row4_col0, #T_ef554_row4_col1, #T_ef554_row4_col2, #T_ef554_row4_col3, #T_ef554_row4_col4, #T_ef554_row4_col5, #T_ef554_row5_col0, #T_ef554_row5_col1, #T_ef554_row5_col2, #T_ef554_row5_col3, #T_ef554_row5_col4, #T_ef554_row5_col5, #T_ef554_row6_col0, #T_ef554_row6_col1, #T_ef554_row6_col2, #T_ef554_row6_col3, #T_ef554_row6_col4, #T_ef554_row6_col5, #T_ef554_row7_col0, #T_ef554_row7_col1, #T_ef554_row7_col2, #T_ef554_row7_col3, #T_ef554_row7_col4, #T_ef554_row7_col5, #T_ef554_row8_col0, #T_ef554_row8_col1, #T_ef554_row8_col2, #T_ef554_row8_col3, #T_ef554_row8_col4, #T_ef554_row8_col5, #T_ef554_row9_col0, #T_ef554_row9_col1, #T_ef554_row9_col2, #T_ef554_row9_col3, #T_ef554_row9_col4, #T_ef554_row9_col5, #T_ef554_row10_col0, #T_ef554_row10_col1, #T_ef554_row10_col2, #T_ef554_row10_col3, #T_ef554_row10_col4, #T_ef554_row10_col5, #T_ef554_row11_col0, #T_ef554_row11_col1, #T_ef554_row11_col2, #T_ef554_row11_col3, #T_ef554_row11_col4, #T_ef554_row11_col5 {
   text-align: center;
 }
-#T_c6bf4_row0_col6, #T_c6bf4_row0_col7, #T_c6bf4_row1_col6, #T_c6bf4_row1_col7, #T_c6bf4_row2_col6, #T_c6bf4_row2_col7, #T_c6bf4_row3_col6, #T_c6bf4_row3_col7, #T_c6bf4_row4_col6, #T_c6bf4_row4_col7, #T_c6bf4_row5_col6, #T_c6bf4_row5_col7, #T_c6bf4_row6_col6, #T_c6bf4_row6_col7, #T_c6bf4_row7_col6, #T_c6bf4_row7_col7, #T_c6bf4_row8_col6, #T_c6bf4_row8_col7, #T_c6bf4_row9_col6, #T_c6bf4_row9_col7, #T_c6bf4_row10_col6, #T_c6bf4_row10_col7, #T_c6bf4_row11_col6, #T_c6bf4_row11_col7 {
+#T_ef554_row0_col6, #T_ef554_row0_col7, #T_ef554_row1_col6, #T_ef554_row1_col7, #T_ef554_row2_col6, #T_ef554_row2_col7, #T_ef554_row3_col6, #T_ef554_row3_col7, #T_ef554_row4_col6, #T_ef554_row4_col7, #T_ef554_row5_col6, #T_ef554_row5_col7, #T_ef554_row6_col6, #T_ef554_row6_col7, #T_ef554_row7_col6, #T_ef554_row7_col7, #T_ef554_row8_col6, #T_ef554_row8_col7, #T_ef554_row9_col6, #T_ef554_row9_col7, #T_ef554_row10_col6, #T_ef554_row10_col7, #T_ef554_row11_col6, #T_ef554_row11_col7 {
   text-align: right;
 }
 </style>
 
-<table id="T_c6bf4" class="cell caption-top table table-sm table-striped small">
+<table id="T_ef554" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_c6bf4_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Nedbørfelt</th>
-<th id="T_c6bf4_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Vannmiljø-ID</th>
-<th id="T_c6bf4_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Stasjonsnavn</th>
-<th id="T_c6bf4_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">REGINE-ID</th>
-<th id="T_c6bf4_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Vannforekomst-ID</th>
-<th id="T_c6bf4_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Vannforekomstnavn</th>
-<th id="T_c6bf4_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Lengdegrad</th>
-<th id="T_c6bf4_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">Breddegrad</th>
+<th id="T_ef554_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Nedbørfelt</th>
+<th id="T_ef554_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Vannmiljø-ID</th>
+<th id="T_ef554_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Stasjonsnavn</th>
+<th id="T_ef554_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">REGINE-ID</th>
+<th id="T_ef554_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Vannforekomst-ID</th>
+<th id="T_ef554_level0_col5" class="col_heading level0 col5" data-quarto-table-cell-role="th">Vannforekomstnavn</th>
+<th id="T_ef554_level0_col6" class="col_heading level0 col6" data-quarto-table-cell-role="th">Lengdegrad</th>
+<th id="T_ef554_level0_col7" class="col_heading level0 col7" data-quarto-table-cell-role="th">Breddegrad</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_c6bf4_row0_col0" class="data row0 col0">Sagelva</td>
-<td id="T_c6bf4_row0_col1" class="data row0 col1">002-46599</td>
-<td id="T_c6bf4_row0_col2" class="data row0 col2">Sagelva ved Skjetten bro (F3)</td>
-<td id="T_c6bf4_row0_col3" class="data row0 col3">002.CBA0</td>
-<td id="T_c6bf4_row0_col4" class="data row0 col4">002-3899-R</td>
-<td id="T_c6bf4_row0_col5" class="data row0 col5">Fjellhamarelva - Sagelva</td>
-<td id="T_c6bf4_row0_col6" class="data row0 col6">11.016950</td>
-<td id="T_c6bf4_row0_col7" class="data row0 col7">59.958500</td>
+<td id="T_ef554_row0_col0" class="data row0 col0">Sagelva</td>
+<td id="T_ef554_row0_col1" class="data row0 col1">002-46599</td>
+<td id="T_ef554_row0_col2" class="data row0 col2">Sagelva ved Skjetten bro (F3)</td>
+<td id="T_ef554_row0_col3" class="data row0 col3">002.CBA0</td>
+<td id="T_ef554_row0_col4" class="data row0 col4">002-3899-R</td>
+<td id="T_ef554_row0_col5" class="data row0 col5">Fjellhamarelva - Sagelva</td>
+<td id="T_ef554_row0_col6" class="data row0 col6">11.016950</td>
+<td id="T_ef554_row0_col7" class="data row0 col7">59.958500</td>
 </tr>
 <tr class="even">
-<td id="T_c6bf4_row1_col0" class="data row1 col0">Sagelva</td>
-<td id="T_c6bf4_row1_col1" class="data row1 col1">002-63540</td>
-<td id="T_c6bf4_row1_col2" class="data row1 col2">Fjellhammarelva (F10)</td>
-<td id="T_c6bf4_row1_col3" class="data row1 col3">002.CBA0</td>
-<td id="T_c6bf4_row1_col4" class="data row1 col4">002-3899-R</td>
-<td id="T_c6bf4_row1_col5" class="data row1 col5">Fjellhamarelva - Sagelva</td>
-<td id="T_c6bf4_row1_col6" class="data row1 col6">10.996170</td>
-<td id="T_c6bf4_row1_col7" class="data row1 col7">59.944190</td>
+<td id="T_ef554_row1_col0" class="data row1 col0">Sagelva</td>
+<td id="T_ef554_row1_col1" class="data row1 col1">002-63540</td>
+<td id="T_ef554_row1_col2" class="data row1 col2">Fjellhammarelva (F10)</td>
+<td id="T_ef554_row1_col3" class="data row1 col3">002.CBA0</td>
+<td id="T_ef554_row1_col4" class="data row1 col4">002-3899-R</td>
+<td id="T_ef554_row1_col5" class="data row1 col5">Fjellhamarelva - Sagelva</td>
+<td id="T_ef554_row1_col6" class="data row1 col6">10.996170</td>
+<td id="T_ef554_row1_col7" class="data row1 col7">59.944190</td>
 </tr>
 <tr class="odd">
-<td id="T_c6bf4_row2_col0" class="data row2 col0">Nitelva</td>
-<td id="T_c6bf4_row2_col1" class="data row2 col1">002-30586</td>
-<td id="T_c6bf4_row2_col2" class="data row2 col2">Rud Nitelva (N8 )</td>
-<td id="T_c6bf4_row2_col3" class="data row2 col3">002.CB0</td>
-<td id="T_c6bf4_row2_col4" class="data row2 col4">002-3891-R</td>
-<td id="T_c6bf4_row2_col5" class="data row2 col5">Nedre Nitelva</td>
-<td id="T_c6bf4_row2_col6" class="data row2 col6">11.057000</td>
-<td id="T_c6bf4_row2_col7" class="data row2 col7">59.945530</td>
+<td id="T_ef554_row2_col0" class="data row2 col0">Nitelva</td>
+<td id="T_ef554_row2_col1" class="data row2 col1">002-30586</td>
+<td id="T_ef554_row2_col2" class="data row2 col2">Rud Nitelva (N8 )</td>
+<td id="T_ef554_row2_col3" class="data row2 col3">002.CB0</td>
+<td id="T_ef554_row2_col4" class="data row2 col4">002-3891-R</td>
+<td id="T_ef554_row2_col5" class="data row2 col5">Nedre Nitelva</td>
+<td id="T_ef554_row2_col6" class="data row2 col6">11.057000</td>
+<td id="T_ef554_row2_col7" class="data row2 col7">59.945530</td>
 </tr>
 <tr class="even">
-<td id="T_c6bf4_row3_col0" class="data row3 col0">Nitelva</td>
-<td id="T_c6bf4_row3_col1" class="data row3 col1">002-30578</td>
-<td id="T_c6bf4_row3_col2" class="data row3 col2">Kjellerholen Nitelva (N6)</td>
-<td id="T_c6bf4_row3_col3" class="data row3 col3">002.CC0</td>
-<td id="T_c6bf4_row3_col4" class="data row3 col4">002-1638-R</td>
-<td id="T_c6bf4_row3_col5" class="data row3 col5">Nitelva Slattum-Kjeller</td>
-<td id="T_c6bf4_row3_col6" class="data row3 col6">11.008500</td>
-<td id="T_c6bf4_row3_col7" class="data row3 col7">59.979250</td>
+<td id="T_ef554_row3_col0" class="data row3 col0">Nitelva</td>
+<td id="T_ef554_row3_col1" class="data row3 col1">002-30578</td>
+<td id="T_ef554_row3_col2" class="data row3 col2">Kjellerholen Nitelva (N6)</td>
+<td id="T_ef554_row3_col3" class="data row3 col3">002.CC0</td>
+<td id="T_ef554_row3_col4" class="data row3 col4">002-1638-R</td>
+<td id="T_ef554_row3_col5" class="data row3 col5">Nitelva Slattum-Kjeller</td>
+<td id="T_ef554_row3_col6" class="data row3 col6">11.008500</td>
+<td id="T_ef554_row3_col7" class="data row3 col7">59.979250</td>
 </tr>
 <tr class="odd">
-<td id="T_c6bf4_row4_col0" class="data row4 col0">Leira</td>
-<td id="T_c6bf4_row4_col1" class="data row4 col1">002-29659</td>
-<td id="T_c6bf4_row4_col2" class="data row4 col2">Leira ved Borgen bru (L5)</td>
-<td id="T_c6bf4_row4_col3" class="data row4 col3">002.CAA0</td>
-<td id="T_c6bf4_row4_col4" class="data row4 col4">002-3384-R</td>
-<td id="T_c6bf4_row4_col5" class="data row4 col5">Leira nedstrøms Krokfoss</td>
-<td id="T_c6bf4_row4_col6" class="data row4 col6">11.100320</td>
-<td id="T_c6bf4_row4_col7" class="data row4 col7">59.950360</td>
+<td id="T_ef554_row4_col0" class="data row4 col0">Leira</td>
+<td id="T_ef554_row4_col1" class="data row4 col1">002-29659</td>
+<td id="T_ef554_row4_col2" class="data row4 col2">Leira ved Borgen bru (L5)</td>
+<td id="T_ef554_row4_col3" class="data row4 col3">002.CAA0</td>
+<td id="T_ef554_row4_col4" class="data row4 col4">002-3384-R</td>
+<td id="T_ef554_row4_col5" class="data row4 col5">Leira nedstrøms Krokfoss</td>
+<td id="T_ef554_row4_col6" class="data row4 col6">11.100320</td>
+<td id="T_ef554_row4_col7" class="data row4 col7">59.950360</td>
 </tr>
 <tr class="even">
-<td id="T_c6bf4_row5_col0" class="data row5 col0">Leira</td>
-<td id="T_c6bf4_row5_col1" class="data row5 col1">002-30584</td>
-<td id="T_c6bf4_row5_col2" class="data row5 col2">Leira ved Leirsund (L8)</td>
-<td id="T_c6bf4_row5_col3" class="data row5 col3">002.CAA0</td>
-<td id="T_c6bf4_row5_col4" class="data row5 col4">002-3384-R</td>
-<td id="T_c6bf4_row5_col5" class="data row5 col5">Leira nedstrøms Krokfoss</td>
-<td id="T_c6bf4_row5_col6" class="data row5 col6">11.088490</td>
-<td id="T_c6bf4_row5_col7" class="data row5 col7">59.997550</td>
+<td id="T_ef554_row5_col0" class="data row5 col0">Leira</td>
+<td id="T_ef554_row5_col1" class="data row5 col1">002-30584</td>
+<td id="T_ef554_row5_col2" class="data row5 col2">Leira ved Leirsund (L8)</td>
+<td id="T_ef554_row5_col3" class="data row5 col3">002.CAA0</td>
+<td id="T_ef554_row5_col4" class="data row5 col4">002-3384-R</td>
+<td id="T_ef554_row5_col5" class="data row5 col5">Leira nedstrøms Krokfoss</td>
+<td id="T_ef554_row5_col6" class="data row5 col6">11.088490</td>
+<td id="T_ef554_row5_col7" class="data row5 col7">59.997550</td>
 </tr>
 <tr class="odd">
-<td id="T_c6bf4_row6_col0" class="data row6 col0">Rømua</td>
-<td id="T_c6bf4_row6_col1" class="data row6 col1">002-28960</td>
-<td id="T_c6bf4_row6_col2" class="data row6 col2">Rømua ved Lørenfallet - RØM1</td>
-<td id="T_c6bf4_row6_col3" class="data row6 col3">002.D2Z</td>
-<td id="T_c6bf4_row6_col4" class="data row6 col4">002-3659-R</td>
-<td id="T_c6bf4_row6_col5" class="data row6 col5">Rømua</td>
-<td id="T_c6bf4_row6_col6" class="data row6 col6">11.220990</td>
-<td id="T_c6bf4_row6_col7" class="data row6 col7">60.021630</td>
+<td id="T_ef554_row6_col0" class="data row6 col0">Rømua</td>
+<td id="T_ef554_row6_col1" class="data row6 col1">002-28960</td>
+<td id="T_ef554_row6_col2" class="data row6 col2">Rømua ved Lørenfallet - RØM1</td>
+<td id="T_ef554_row6_col3" class="data row6 col3">002.D2Z</td>
+<td id="T_ef554_row6_col4" class="data row6 col4">002-3659-R</td>
+<td id="T_ef554_row6_col5" class="data row6 col5">Rømua</td>
+<td id="T_ef554_row6_col6" class="data row6 col6">11.220990</td>
+<td id="T_ef554_row6_col7" class="data row6 col7">60.021630</td>
 </tr>
 <tr class="even">
-<td id="T_c6bf4_row7_col0" class="data row7 col0">Jeksla</td>
-<td id="T_c6bf4_row7_col1" class="data row7 col1">002-30593</td>
-<td id="T_c6bf4_row7_col2" class="data row7 col2">Jeksla ved Haugli, J14</td>
-<td id="T_c6bf4_row7_col3" class="data row7 col3">002.CAA0</td>
-<td id="T_c6bf4_row7_col4" class="data row7 col4">002-599-R</td>
-<td id="T_c6bf4_row7_col5" class="data row7 col5">Jeksla</td>
-<td id="T_c6bf4_row7_col6" class="data row7 col6">11.106370</td>
-<td id="T_c6bf4_row7_col7" class="data row7 col7">60.001990</td>
+<td id="T_ef554_row7_col0" class="data row7 col0">Jeksla</td>
+<td id="T_ef554_row7_col1" class="data row7 col1">002-30593</td>
+<td id="T_ef554_row7_col2" class="data row7 col2">Jeksla ved Haugli, J14</td>
+<td id="T_ef554_row7_col3" class="data row7 col3">002.CAA0</td>
+<td id="T_ef554_row7_col4" class="data row7 col4">002-599-R</td>
+<td id="T_ef554_row7_col5" class="data row7 col5">Jeksla</td>
+<td id="T_ef554_row7_col6" class="data row7 col6">11.106370</td>
+<td id="T_ef554_row7_col7" class="data row7 col7">60.001990</td>
 </tr>
 <tr class="odd">
-<td id="T_c6bf4_row8_col0" class="data row8 col0">Åa</td>
-<td id="T_c6bf4_row8_col1" class="data row8 col1">002-60929</td>
-<td id="T_c6bf4_row8_col2" class="data row8 col2">Fossåa ved Sylta (ÅA1)</td>
-<td id="T_c6bf4_row8_col3" class="data row8 col3">002.D3Z</td>
-<td id="T_c6bf4_row8_col4" class="data row8 col4">002-3685-R</td>
-<td id="T_c6bf4_row8_col5" class="data row8 col5">Fossåa</td>
-<td id="T_c6bf4_row8_col6" class="data row8 col6">11.300180</td>
-<td id="T_c6bf4_row8_col7" class="data row8 col7">59.992090</td>
+<td id="T_ef554_row8_col0" class="data row8 col0">Åa</td>
+<td id="T_ef554_row8_col1" class="data row8 col1">002-60929</td>
+<td id="T_ef554_row8_col2" class="data row8 col2">Fossåa ved Sylta (ÅA1)</td>
+<td id="T_ef554_row8_col3" class="data row8 col3">002.D3Z</td>
+<td id="T_ef554_row8_col4" class="data row8 col4">002-3685-R</td>
+<td id="T_ef554_row8_col5" class="data row8 col5">Fossåa</td>
+<td id="T_ef554_row8_col6" class="data row8 col6">11.300180</td>
+<td id="T_ef554_row8_col7" class="data row8 col7">59.992090</td>
 </tr>
 <tr class="even">
-<td id="T_c6bf4_row9_col0" class="data row9 col0">Åa</td>
-<td id="T_c6bf4_row9_col1" class="data row9 col1">002-60963</td>
-<td id="T_c6bf4_row9_col2" class="data row9 col2">Sloråa ved Bruvollen (ÅA3)</td>
-<td id="T_c6bf4_row9_col3" class="data row9 col3">002.D3Z</td>
-<td id="T_c6bf4_row9_col4" class="data row9 col4">002-3687-R</td>
-<td id="T_c6bf4_row9_col5" class="data row9 col5">Sloråa</td>
-<td id="T_c6bf4_row9_col6" class="data row9 col6">11.348070</td>
-<td id="T_c6bf4_row9_col7" class="data row9 col7">59.985120</td>
+<td id="T_ef554_row9_col0" class="data row9 col0">Åa</td>
+<td id="T_ef554_row9_col1" class="data row9 col1">002-60963</td>
+<td id="T_ef554_row9_col2" class="data row9 col2">Sloråa ved Bruvollen (ÅA3)</td>
+<td id="T_ef554_row9_col3" class="data row9 col3">002.D3Z</td>
+<td id="T_ef554_row9_col4" class="data row9 col4">002-3687-R</td>
+<td id="T_ef554_row9_col5" class="data row9 col5">Sloråa</td>
+<td id="T_ef554_row9_col6" class="data row9 col6">11.348070</td>
+<td id="T_ef554_row9_col7" class="data row9 col7">59.985120</td>
 </tr>
 <tr class="odd">
-<td id="T_c6bf4_row10_col0" class="data row10 col0">Åa</td>
-<td id="T_c6bf4_row10_col1" class="data row10 col1">002-60964</td>
-<td id="T_c6bf4_row10_col2" class="data row10 col2">Kauserudåa før samløp Sloråa (ÅA4)</td>
-<td id="T_c6bf4_row10_col3" class="data row10 col3">002.D3Z</td>
-<td id="T_c6bf4_row10_col4" class="data row10 col4">002-3692-R</td>
-<td id="T_c6bf4_row10_col5" class="data row10 col5">Stensrudåa - Korsåa</td>
-<td id="T_c6bf4_row10_col6" class="data row10 col6">11.348230</td>
-<td id="T_c6bf4_row10_col7" class="data row10 col7">59.983910</td>
+<td id="T_ef554_row10_col0" class="data row10 col0">Åa</td>
+<td id="T_ef554_row10_col1" class="data row10 col1">002-60964</td>
+<td id="T_ef554_row10_col2" class="data row10 col2">Kauserudåa før samløp Sloråa (ÅA4)</td>
+<td id="T_ef554_row10_col3" class="data row10 col3">002.D3Z</td>
+<td id="T_ef554_row10_col4" class="data row10 col4">002-3692-R</td>
+<td id="T_ef554_row10_col5" class="data row10 col5">Stensrudåa - Korsåa</td>
+<td id="T_ef554_row10_col6" class="data row10 col6">11.348230</td>
+<td id="T_ef554_row10_col7" class="data row10 col7">59.983910</td>
 </tr>
 <tr class="even">
-<td id="T_c6bf4_row11_col0" class="data row11 col0">Gansåa</td>
-<td id="T_c6bf4_row11_col1" class="data row11 col1">002-60933</td>
-<td id="T_c6bf4_row11_col2" class="data row11 col2">Gansåa nedstrøms Dalen RA (BD)</td>
-<td id="T_c6bf4_row11_col3" class="data row11 col3">002.C5</td>
-<td id="T_c6bf4_row11_col4" class="data row11 col4">002-3655-R</td>
-<td id="T_c6bf4_row11_col5" class="data row11 col5">Gansåa</td>
-<td id="T_c6bf4_row11_col6" class="data row11 col6">11.222750</td>
-<td id="T_c6bf4_row11_col7" class="data row11 col7">59.861390</td>
+<td id="T_ef554_row11_col0" class="data row11 col0">Gansåa</td>
+<td id="T_ef554_row11_col1" class="data row11 col1">002-60933</td>
+<td id="T_ef554_row11_col2" class="data row11 col2">Gansåa nedstrøms Dalen RA (BD)</td>
+<td id="T_ef554_row11_col3" class="data row11 col3">002.C5</td>
+<td id="T_ef554_row11_col4" class="data row11 col4">002-3655-R</td>
+<td id="T_ef554_row11_col5" class="data row11 col5">Gansåa</td>
+<td id="T_ef554_row11_col6" class="data row11 col6">11.222750</td>
+<td id="T_ef554_row11_col7" class="data row11 col7">59.861390</td>
 </tr>
 </tbody>
 </table>
@@ -425,15 +425,15 @@ Table&nbsp;3.1: Water chemistry monitoring stations within the catchments of int
 <h2 data-number="3.2" class="anchored" data-anchor-id="sec-discharge"><span class="header-section-number">3.2</span> Water discharge</h2>
 <p>Water discharge is monitored by Norges vassdrags- og energidirektorat (NVE). However, discharge monitoring for the water chemistry station of interest (<a href="#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a>) is limited. The outflow of Sagelva is monitored by NVE discharge station <code>2.1185.0</code>, which corresponds directly to Vannmiljø station ID <code>002-46599</code>. The only other NVE station with data within the catchments of interest is at Kråkfoss (<code>2.279.0</code>) on Leira, but this is much further upstream than any of the chemistry monitoring stations.</p>
 <p>In cases where direct monitoring of discharge is not available, NVE publishes modelled estimates of daily discharge via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">Grid Time Series (GTS) API</a>. Simulations are based on a spatially distributed version of the <a href="https://www.nve.no/vann-og-vassdrag/vannets-kretsloep/analysemetoder-og-modeller/hbv-modellen/">HBV model</a> developed by <a href="https://hess.copernicus.org/articles/7/304/2003/hess-7-304-2003.html">Beldring et. al (2003)</a>. For catchments without direct monitoring, the GTS API provides the best available estimates of river flow, but NVE’s model does not include detailed flow-routing or water transfers between catchments (e.g.&nbsp;for drinking water or hydropower). It is therefore necessary to evaluate the GTS API for catchments around Lillestrøm kommune.</p>
-<p><span class="quarto-unresolved-ref">?fig-nve-target-plot</span> compares discharge simulated by NVE’s model with observed discharge at stations <code>2.1185.0</code> (Sagelva) and <code>2.279.0</code> (Kråkfoss, Leira). The comparison period extends from 2015 to 2025 for Sagelva and from 1980 to 2025 for Kråkfoss. Overall, the model performs reasonably well, with Nash-Sutcliffe efficiencies of approximately 0.6 at both sites. However, results indicate a slight negative systematic bias, suggesting that the model tends to underpredict discharge on average. The principal limitation is that the model underestimates discharge variability, producing a smoother signal with a lower standard deviation than observed series. This tendency is common in hydrological models.</p>
-<p>Based on this assessment, NVE’s modelled discharge appears suitable for estimating nutrient loads at monitoring stations where direct discharge measurements are not available (i.e.&nbsp;all stations listed in <a href="#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a> except <code>002-46599</code>).</p>
-<div id="fig-catchments" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<p><a href="#fig-nve-target-plot" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> compares discharges simulated by NVE’s model with observed discharge at stations <code>2.1185.0</code> (Sagelva) and <code>2.279.0</code> (Kråkfoss, Leira). The comparison period extends from 2015 to 2025 for Sagelva and from 1980 to 2025 for Kråkfoss. Overall, the model performs reasonably well, with Nash-Sutcliffe efficiencies of approximately 0.6 at both sites. However, results indicate a slight negative systematic bias (y-axis), suggesting that NVE’s model tends to underpredict discharge on average. The principal limitation is that the model underestimates discharge variability (x-axis), producing a smoother signal with a lower standard deviation than observed series. This tendency is common in hydrological models.</p>
+<p>Based on this assessment, NVE’s modelled discharge appears suitable for estimating nutrient loads at monitoring stations where direct discharge measurements are not available i.e.&nbsp;all stations listed in <a href="#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a> except <code>002-46599</code>.</p>
+<div id="fig-nve-target-plot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-catchments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-nve-target-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="./plots/nve_target_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-catchments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3.1: Target plot comparing NVE’s discharge simulations to measured discharge at NVE stations <code>2.1185.0</code> (Sagelva) and <code>2.279.0</code> (Kråkfoss, Leira). The y-axis shows normalised bias between simulated and observed. The x-axis is the unbiased, normalised root mean square difference (RMSD) between simulated and observed data. The distance between a point and the origin is total RMSD. RMSD = 1 is shown by the solid circle (any point within this has positively correlated simulated and observed data and positive Nash Sutcliffe scores); the dashed circle marks RMSD = 0.7. Normalised unbiased root mean squared deviation is a useful way of comparing standard deviations of the observed and modelled datasets.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nve-target-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Target plot comparing NVE’s discharge simulations to measured discharge at NVE stations <code>2.1185.0</code> (Sagelva) and <code>2.279.0</code> (Kråkfoss, Leira). The y-axis shows normalised bias between simulated and observed. The x-axis is the unbiased, normalised root mean square difference (RMSD) between simulated and observed data. The distance between a point and the origin is total RMSD. RMSD = 1 is shown by the solid circle (any point within this has positively correlated simulated and observed data and positive Nash Sutcliffe scores); the dashed circle marks RMSD = 0.7.
 </figcaption>
 </figure>
 </div>
@@ -443,14 +443,14 @@ Figure&nbsp;3.1: Target plot comparing NVE’s discharge simulations to measured
 <p>In addition to monitoring data, source-specific nutrient inputs have been estimated from available national and regional datasets.</p>
 <section id="sec-large-wastewater" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="sec-large-wastewater"><span class="header-section-number">3.3.1</span> Municipal wastewater</h3>
-<p>Municipal wastewater treatment plants with capacity ≥50 person equivalents (p.e.) are required to monitor and report nutrient discharges to Miljødirektoratet via ALTINN. These data are made available to NIVA as part of national scale modelling using TEOTIL3 (<span class="quarto-unresolved-ref">?sec-teotil3</span>).</p>
-<p>Raw data are cleaned and statistically interpolated using a methodology based Statistisk Sentralbyrå’s (SSB’s) procedure for national wastewater statistics (e.g.&nbsp;<a href="https://www.ssb.no/natur-og-miljo/vann-og-avlop/artikler/kommunale-avlop-2023.ressursinnsats-gebyrer-utslipp-rensing-og-slamdisponering">Berge &amp; Hjertaas, 2024</a>). Where wastewater discharges are monitored, these are used directly. Otherwise, discharges are estimated based on plant capacity (number of people connected, in p.e.) and assumed default treatment efficiencies that vary according to treatment type (provided by Miljødirektoratet; see <a href="https://github.com/NIVANorge/teotil3/blob/main/data/treatment_efficiencies_large_wastewater.csv">here</a>).</p>
+<p>Municipal wastewater treatment plants with capacity ≥50 person equivalents (p.e.) are required to monitor and report nutrient discharges to Miljødirektoratet via ALTINN. These data are made available to NIVA as part of national scale modelling using TEOTIL3 (<a href="#sec-teotil3" class="quarto-xref"><span>Section 3.4.2</span></a>).</p>
+<p>Raw data are cleaned and statistically interpolated using a methodology based Statistisk Sentralbyrå’s (SSB’s) procedure for national wastewater statistics (e.g.&nbsp;<a href="https://www.ssb.no/natur-og-miljo/vann-og-avlop/artikler/kommunale-avlop-2023.ressursinnsats-gebyrer-utslipp-rensing-og-slamdisponering">Berge &amp; Hjertaas, 2024</a>). Where wastewater discharges are monitored, these are used directly. Otherwise, discharges are estimated based on plant capacity (number of people connected, in p.e.) and assumed default treatment efficiencies that vary according to treatment type (provided by Miljødirektoratet; <a href="https://github.com/NIVANorge/teotil3/blob/main/data/treatment_efficiencies_large_wastewater.csv">here</a>).</p>
 </section>
 <section id="sec-small-wastewater" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="sec-small-wastewater"><span class="header-section-number">3.3.2</span> Other wastewater</h3>
-<p>For small wastewater treatment plants (capacity &lt;50 p.e.) and systems that are not connected to the municipal wastewater network (e.g.&nbsp;septic tanks), Statistics Norway (SSB) compiles aggregated discharge statistics at municipality level. These sources are commonly referred to as “spredt avløp” (scattered wastewater discharges). For this project, Lillestrøm kommune provided a more detailed dataset, including locations of individual septic tanks and small treatment plants (minirenseanlegg), as well as information on stormwater and emergency overflows from the municipal wastewater network within the municipality.</p>
+<p>For small wastewater treatment plants (capacity &lt;50 p.e.) and systems that are not connected to the municipal wastewater network (e.g.&nbsp;septic tanks), SSB compiles aggregated discharge statistics at municipality level. These sources are commonly referred to as “spredt avløp” (scattered wastewater discharges). For this project, Lillestrøm kommune provided a more detailed dataset, including locations of individual septic tanks and small treatment plants (minirenseanlegg), as well as information on stormwater and emergency overflows from the municipal wastewater network within the municipality.</p>
 <p>For the modelling in this project, SSB data were used for all municipalities except Lillestrøm, where the more detailed, site-specific dataset was used instead. It should be noted, however, that SSB’s dataset covers a longer time period than the Lillestrøm-specific data. Consequently, the spredt dataset prepared for this project provides higher spatial resolution within Lillestrøm kommune than standard national datasets, but with slightly reduced temporal resolution.</p>
-<p>A detailed comparison of the national and Lillestrøm-specific spredt datasets is provided in <a href="./code/05_estimate_overflows_and_spredt.ipynb">notebook 05</a>.</p>
+<p>A detailed comparison of the national and Lillestrøm-specific spredt datasets is provided in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb">notebook 05</a>.</p>
 </section>
 <section id="sec-industry" class="level3" data-number="3.3.3">
 <h3 data-number="3.3.3" class="anchored" data-anchor-id="sec-industry"><span class="header-section-number">3.3.3</span> Industry</h3>
@@ -465,13 +465,13 @@ Figure&nbsp;3.1: Target plot comparing NVE’s discharge simulations to measured
 <h3 data-number="3.3.6" class="anchored" data-anchor-id="sec-background"><span class="header-section-number">3.3.6</span> Background</h3>
 </section>
 </section>
-<section id="water-quality-models-sec-models" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="water-quality-models-sec-models"><span class="header-section-number">3.4</span> Water quality models {sec-models}</h2>
-<section id="agritil-sec-agritil" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="agritil-sec-agritil"><span class="header-section-number">3.4.1</span> AGRITIL {sec-agritil}</h3>
+<section id="sec-models" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-models"><span class="header-section-number">3.4</span> Water quality models</h2>
+<section id="sec-agritil" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="sec-agritil"><span class="header-section-number">3.4.1</span> AGRITIL</h3>
 </section>
-<section id="teotil3-sec-teotil3" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="teotil3-sec-teotil3"><span class="header-section-number">3.4.2</span> TEOTIL3 {sec-teotil3}</h3>
+<section id="sec-teotil3" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="sec-teotil3"><span class="header-section-number">3.4.2</span> TEOTIL3</h3>
 
 
 </section>
