@@ -41,7 +41,7 @@ This project aims to:
 
  * Forest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.
    
- * Agriculture is the dominant land cover class for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).
+ * Agriculture is the dominant land cover for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).
 
  * Sagelva and Jeksla have significant urban areas (16 % and 23 %, respectively).
 
