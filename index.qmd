@@ -3,6 +3,8 @@ title: "TEOTIL3 Lillestrøm"
 number-sections: false
 ---
 
+*Using monitoring and modelling to assess water quality in catchments draining to Lillestrøm kommune.*
+
 ## Preface {#sec-preface}
 
 In April 2026, NIVA published a report ([Wallhead *et al.*, 2026](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/)) describing a range of scenarios for reducing nutrient loading to the Oslofjord. The study evaluated nutrient reductions that could be achieved across different parts of the Oslofjord catchment through various combinations of wastewater treatment and agricultural mitigation measures.
@@ -16,6 +18,10 @@ Lillestrøm kommune is currently developing River Basin Management Plans for cat
 ## Citation {#sec-citation}
 
 Sample JE. 2026. *Water quality trends in catchments draining to Lillestrøm kommune: analysis of monitoring and model data*. NIVA project 260150. [Available online](https://nivanorge.github.io/teotil3_lillestrom/).
+
+## Proposal {#sec-proposal}
+
+An overview of tasks defined in the project proposal is [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/README.md#project-tasks).
 
 ## Licence {#sec-licence}
 
