@@ -9,11 +9,11 @@ number-sections: false
 
 In April 2026, NIVA published a report ([Wallhead *et al.*, 2026](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/)) describing a range of scenarios for reducing nutrient loading to the Oslofjord. The study evaluated nutrient reductions that could be achieved across different parts of the Oslofjord catchment through various combinations of wastewater treatment and agricultural mitigation measures.
 
-Lillestrøm kommune is currently developing River Basin Management Plans for catchments that discharge within the municipal boundary. Since all these catchments form part of the wider Oslofjord catchment, NIVA's recent modelling provides a valuable foundation for local planning. The aim of this project is to refine the broad-scale modelling already undertaken by NIVA using local monitoring data and Lillestrøm-specific datasets. Results will support development of Lillestrøm's catchment management plans by documenting present-day water quality, trends over time, and the potential to reduce nutrient loads using combinations of measures.
+Lillestrøm kommune is currently developing River Basin Management Plans for catchments that discharge within the municipal boundary. Since all these catchments form part of the wider Oslofjord catchment, NIVA's recent modelling provides a valuable foundation for local planning. The aim of this project is to refine the broad-scale modelling already undertaken by NIVA using local monitoring and Lillestrøm-specific datasets. Results will support development of Lillestrøm's catchment management plans by documenting present-day water quality, trends over time, and the potential to reduce nutrient loads using combinations of measures.
 
 ## Authors {#sec-authors}
 
-[James E Sample](https://www.niva.no/en/employees/james-edward-sample) is a Senior Engineer within the Data Science section of the [Norwegian Institute for Water Research (NIVA)](https://www.niva.no/en).
+[James E Sample](https://www.niva.no/en/employees/james-edward-sample) is a Senior Engineer in the Data Science section at the [Norwegian Institute for Water Research (NIVA)](https://www.niva.no/en).
 
 ## Citation {#sec-citation}
 
