@@ -60,7 +60,7 @@ Annual loads for stations are calculated in [notebook 04a](https://github.com/NI
 
 Trends in annual mean concentrations and annual loads were evaluated using the Mann-Kendall test and Sen's slope estimator (e.g. [Helsel *et al.*, 2020](https://pubs.usgs.gov/publication/tm4A3)). The Mann-Kendall test is a non-parametric method that assesses the statistical significance of monotonic trends without assuming a specific data distribution. Sen's slope estimator provides a robust estimate of the rate of change over time and is less sensitive to outliers than ordinary least squares regression. Together, these methods are widely applied in water quality studies because environmental monitoring data are often non-normally distributed, contain censored or extreme values, and may violate the assumptions of parametric trend analyses. 
 
-In this report, trends are considered statistically "significant" for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing *tendencies*.
+In this report, trends are considered statistically "significant" for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing "tendencies".
 
 Trends tests for stations are applied in [notebook 04a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb) and for waterbodies in [notebook 04b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb).
 
@@ -68,9 +68,9 @@ Trends tests for stations are applied in [notebook 04a](https://github.com/NIVAN
 
 TEOTIL3 is applied annually at national scale as part of modelling work funded by Miljødirektoratet. For this project, standard TEOTIL3 input files were modified to include more detailed data for spredt and wastewater overflows provided by Lillestrøm kommune (see @sec-small-wastewater). TEOTIL3 was then run using the modified input files for the period from 2013 to 2024.
 
-### Lillestrøm-specific wastewater inputs {sec-lillestrom-data}
+### Lillestrøm-specific wastewater inputs {#sec-lillestrom-data}
 
-The **wastewater overflows** data provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:
+The **wastewater overflow** dataset provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:
 
 $$ 
 D = \frac{C \times P \times H}{24 \times 1000}
@@ -78,10 +78,10 @@ $$ {#eq-overflow}
 
 where $D$ is the nutrient discharge in kg; $C$ is the overflow capacity in p.e.; $P$ is the nutrient discharge per person per day in g; and $H$ is the number of hours of operation per year.
 
-Values for $P$, the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (@tlb-nuts-per-pers).
+Values for $P$, the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (@tbl-nuts-per-pers).
 
 ```{python}
-#| label: tlb-nuts-per-pers
+#| label: tbl-nuts-per-pers
 #| tbl-cap: "Typical nutrient discharges per person per day. Based on data compiled by Norsk Vann."
 #| echo: false
 
@@ -125,15 +125,15 @@ where $D$ is the annual nutrient discharge in kg; $C$ is the capacity in p.e.; $
 
 The treatment efficiency, $E$, is calculated from data published by NIBIO ([Hensel & Mæhlum, 2025](https://nva.sikt.no/registration/0198cc7ed733-fcfcf849-8d97-4f41-995b-a9dfd63846f5)):
 
-$$E = E_{ideal} \times (1 - R)$$
+$$
+E = E_{ideal} \times (1 - R)
+$$ {#eq-spredt-eff}
 
 where $E_{ideal}$ is the best-case efficiency of a new or well-maintained plant, and $R$ is a reduction factor representing how much the efficiency declines for a plant of typical age and condition.
 
 It is important to note that the site-specific spredt dataset provided by Lillestrøm kommune represents a single point in time, whereas TEOTIL3 requires input data from 2013 to 2024. The Lillestrøm-specific spredt data therefore provides better spatial resolution than the standard TEOTIL3 input files, but with the downside that the model no longer captures changes in spredt inputs over time.
 
-Code to estimate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in [notebook 05](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb). [Notebook 06](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb) updates the standard TEOTIL3 annual input files with the Lillestrøm-specific data and then runs TEOTIL3 for the period from 2013 to 2024.
-
-### Source apportionment {#sec-teo-src-app}
+Code to estimate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in [notebook 05](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb). [Notebook 06](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb) updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.
 
 ### Avlastningsbehov {#sec-teo-avlast}
 

@@ -33,7 +33,7 @@ This work is licensed under a <a rel="license" href="https://creativecommons.org
 
 ```{python}
 #| label: tbl-abbreviations
-#| tbl-cap: "Abbreviations are used in this document."
+#| tbl-cap: "Abbreviations used in this document."
 #| echo: false
 
 import pandas as pd
