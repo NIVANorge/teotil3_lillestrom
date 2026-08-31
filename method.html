@@ -254,10 +254,9 @@ window.Quarto = {
   <li><a href="#sec-trend-tests" id="toc-sec-trend-tests" class="nav-link" data-scroll-target="#sec-trend-tests"><span class="header-section-number">4.4</span> Tests for trends</a></li>
   <li><a href="#sec-teotil3-modelling" id="toc-sec-teotil3-modelling" class="nav-link" data-scroll-target="#sec-teotil3-modelling"><span class="header-section-number">4.5</span> TEOTIL3 modelling</a>
   <ul class="collapse">
-  <li><a href="#lillestrøm-specific-wastewater-inputs-sec-lillestrom-data" id="toc-lillestrøm-specific-wastewater-inputs-sec-lillestrom-data" class="nav-link" data-scroll-target="#lillestrøm-specific-wastewater-inputs-sec-lillestrom-data"><span class="header-section-number">4.5.1</span> Lillestrøm-specific wastewater inputs {sec-lillestrom-data}</a></li>
-  <li><a href="#sec-teo-src-app" id="toc-sec-teo-src-app" class="nav-link" data-scroll-target="#sec-teo-src-app"><span class="header-section-number">4.5.2</span> Source apportionment</a></li>
-  <li><a href="#sec-teo-avlast" id="toc-sec-teo-avlast" class="nav-link" data-scroll-target="#sec-teo-avlast"><span class="header-section-number">4.5.3</span> Avlastningsbehov</a></li>
-  <li><a href="#sec-teo-scens" id="toc-sec-teo-scens" class="nav-link" data-scroll-target="#sec-teo-scens"><span class="header-section-number">4.5.4</span> Scenarios</a></li>
+  <li><a href="#sec-lillestrom-data" id="toc-sec-lillestrom-data" class="nav-link" data-scroll-target="#sec-lillestrom-data"><span class="header-section-number">4.5.1</span> Lillestrøm-specific wastewater inputs</a></li>
+  <li><a href="#sec-teo-avlast" id="toc-sec-teo-avlast" class="nav-link" data-scroll-target="#sec-teo-avlast"><span class="header-section-number">4.5.2</span> Avlastningsbehov</a></li>
+  <li><a href="#sec-teo-scens" id="toc-sec-teo-scens" class="nav-link" data-scroll-target="#sec-teo-scens"><span class="header-section-number">4.5.3</span> Scenarios</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -420,65 +419,73 @@ L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
 <section id="sec-trend-tests" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="sec-trend-tests"><span class="header-section-number">4.4</span> Tests for trends</h2>
 <p>Trends in annual mean concentrations and annual loads were evaluated using the Mann-Kendall test and Sen’s slope estimator (e.g.&nbsp;<a href="https://pubs.usgs.gov/publication/tm4A3">Helsel <em>et al.</em>, 2020</a>). The Mann-Kendall test is a non-parametric method that assesses the statistical significance of monotonic trends without assuming a specific data distribution. Sen’s slope estimator provides a robust estimate of the rate of change over time and is less sensitive to outliers than ordinary least squares regression. Together, these methods are widely applied in water quality studies because environmental monitoring data are often non-normally distributed, contain censored or extreme values, and may violate the assumptions of parametric trend analyses.</p>
-<p>In this report, trends are considered statistically “significant” for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing <em>tendencies</em>.</p>
+<p>In this report, trends are considered statistically “significant” for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing “tendencies”.</p>
 <p>Trends tests for stations are applied in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb">notebook 04a</a> and for waterbodies in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb">notebook 04b</a>.</p>
 </section>
 <section id="sec-teotil3-modelling" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="sec-teotil3-modelling"><span class="header-section-number">4.5</span> TEOTIL3 modelling</h2>
 <p>TEOTIL3 is applied annually at national scale as part of modelling work funded by Miljødirektoratet. For this project, standard TEOTIL3 input files were modified to include more detailed data for spredt and wastewater overflows provided by Lillestrøm kommune (see <a href="data-sources-models.html#sec-small-wastewater" class="quarto-xref"><span>Section 3.3.2</span></a>). TEOTIL3 was then run using the modified input files for the period from 2013 to 2024.</p>
-<section id="lillestrøm-specific-wastewater-inputs-sec-lillestrom-data" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="lillestrøm-specific-wastewater-inputs-sec-lillestrom-data"><span class="header-section-number">4.5.1</span> Lillestrøm-specific wastewater inputs {sec-lillestrom-data}</h3>
-<p>The <strong>wastewater overflows</strong> data provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:</p>
+<section id="sec-lillestrom-data" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="sec-lillestrom-data"><span class="header-section-number">4.5.1</span> Lillestrøm-specific wastewater inputs</h3>
+<p>The <strong>wastewater overflow</strong> dataset provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:</p>
 <p><span id="eq-overflow"><span class="math display">\[
 D = \frac{C \times P \times H}{24 \times 1000}
 \tag{4.2}\]</span></span></p>
 <p>where <span class="math inline">\(D\)</span> is the nutrient discharge in kg; <span class="math inline">\(C\)</span> is the overflow capacity in p.e.; <span class="math inline">\(P\)</span> is the nutrient discharge per person per day in g; and <span class="math inline">\(H\)</span> is the number of hours of operation per year.</p>
-<p>Values for <span class="math inline">\(P\)</span>, the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (<span class="citation" data-cites="tlb-nuts-per-pers">@tlb-nuts-per-pers</span>).</p>
-<div class="cell" data-tbl-cap="Typical nutrient discharges per person per day. Based on data compiled by Norsk Vann." data-execution_count="1">
-<div id="tlb-nuts-per-pers" class="cell-output cell-output-display" data-execution_count="1">
+<p>Values for <span class="math inline">\(P\)</span>, the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (<a href="#tbl-nuts-per-pers" class="quarto-xref">Table&nbsp;<span>4.2</span></a>).</p>
+<div class="cell" data-execution_count="1">
+<div id="tbl-nuts-per-pers" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nuts-per-pers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.2: Typical nutrient discharges per person per day. Based on data compiled by Norsk Vann.
+</figcaption>
+<div aria-describedby="tbl-nuts-per-pers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <style type="text/css">
-#T_43d02 th.col_heading {
+#T_ea510 th.col_heading {
   text-align: center;
 }
-#T_43d02_row0_col0, #T_43d02_row1_col0, #T_43d02_row2_col0, #T_43d02_row3_col0, #T_43d02_row4_col0 {
+#T_ea510_row0_col0, #T_ea510_row1_col0, #T_ea510_row2_col0, #T_ea510_row3_col0, #T_ea510_row4_col0 {
   text-align: center;
 }
-#T_43d02_row0_col1, #T_43d02_row1_col1, #T_43d02_row2_col1, #T_43d02_row3_col1, #T_43d02_row4_col1 {
+#T_ea510_row0_col1, #T_ea510_row1_col1, #T_ea510_row2_col1, #T_ea510_row3_col1, #T_ea510_row4_col1 {
   text-align: right;
 }
 </style>
 
-<table id="T_43d02" class="caption-top table table-sm table-striped small">
-<caption>Typical nutrient discharges per person per day. Based on data compiled by Norsk Vann.</caption>
+<table id="T_ea510" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_43d02_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
-<th id="T_43d02_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
+<th id="T_ea510_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
+<th id="T_ea510_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_43d02_row0_col0" class="data row0 col0">TOTN</td>
-<td id="T_43d02_row0_col1" class="data row0 col1">12.0</td>
+<td id="T_ea510_row0_col0" class="data row0 col0">TOTN</td>
+<td id="T_ea510_row0_col1" class="data row0 col1">12.0</td>
 </tr>
 <tr class="even">
-<td id="T_43d02_row1_col0" class="data row1 col0">TOTP</td>
-<td id="T_43d02_row1_col1" class="data row1 col1">1.8</td>
+<td id="T_ea510_row1_col0" class="data row1 col0">TOTP</td>
+<td id="T_ea510_row1_col1" class="data row1 col1">1.8</td>
 </tr>
 <tr class="odd">
-<td id="T_43d02_row2_col0" class="data row2 col0">BOF5</td>
-<td id="T_43d02_row2_col1" class="data row2 col1">60.0</td>
+<td id="T_ea510_row2_col0" class="data row2 col0">BOF5</td>
+<td id="T_ea510_row2_col1" class="data row2 col1">60.0</td>
 </tr>
 <tr class="even">
-<td id="T_43d02_row3_col0" class="data row3 col0">KOF</td>
-<td id="T_43d02_row3_col1" class="data row3 col1">120.0</td>
+<td id="T_ea510_row3_col0" class="data row3 col0">KOF</td>
+<td id="T_ea510_row3_col1" class="data row3 col1">120.0</td>
 </tr>
 <tr class="odd">
-<td id="T_43d02_row4_col0" class="data row4 col0">SS</td>
-<td id="T_43d02_row4_col1" class="data row4 col1">70.0</td>
+<td id="T_ea510_row4_col0" class="data row4 col0">SS</td>
+<td id="T_ea510_row4_col1" class="data row4 col1">70.0</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</figure>
 </div>
 </div>
 <p>Equation <a href="#eq-overflow" class="quarto-xref">Equation&nbsp;<span>4.2</span></a> can be used to estimate annual overflows for TOTN, TOTP, BOF5, KOF and SS. To estimate TOC, and fractions of N and P, we use the factors for <code>Urenset</code> wastewater from the <a href="https://github.com/NIVANorge/teotil3/blob/main/data/point_source_treatment_types.csv">TEOTIL3 database</a>.</p>
@@ -488,19 +495,18 @@ D = \frac{365.25 \times C \times P \times (1 - E)}{1000}
 \tag{4.3}\]</span></span></p>
 <p>where <span class="math inline">\(D\)</span> is the annual nutrient discharge in kg; <span class="math inline">\(C\)</span> is the capacity in p.e.; <span class="math inline">\(P\)</span> is the nutrient discharge per person per day in g (from <span class="citation" data-cites="tlb-nuts-per-pers">@tlb-nuts-per-pers</span>); and <span class="math inline">\(E\)</span> is the plant treatment efficiency (a dimensionless value between 0 and 1).</p>
 <p>The treatment efficiency, <span class="math inline">\(E\)</span>, is calculated from data published by NIBIO (<a href="https://nva.sikt.no/registration/0198cc7ed733-fcfcf849-8d97-4f41-995b-a9dfd63846f5">Hensel &amp; Mæhlum, 2025</a>):</p>
-<p><span class="math display">\[E = E_{ideal} \times (1 - R)\]</span></p>
+<p><span id="eq-spredt-eff"><span class="math display">\[
+E = E_{ideal} \times (1 - R)
+\tag{4.4}\]</span></span></p>
 <p>where <span class="math inline">\(E_{ideal}\)</span> is the best-case efficiency of a new or well-maintained plant, and <span class="math inline">\(R\)</span> is a reduction factor representing how much the efficiency declines for a plant of typical age and condition.</p>
 <p>It is important to note that the site-specific spredt dataset provided by Lillestrøm kommune represents a single point in time, whereas TEOTIL3 requires input data from 2013 to 2024. The Lillestrøm-specific spredt data therefore provides better spatial resolution than the standard TEOTIL3 input files, but with the downside that the model no longer captures changes in spredt inputs over time.</p>
-<p>Code to estimate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb">notebook 05</a>. <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb">Notebook 06</a> updates the standard TEOTIL3 annual input files with the Lillestrøm-specific data and then runs TEOTIL3 for the period from 2013 to 2024.</p>
+<p>Code to estimate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb">notebook 05</a>. <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb">Notebook 06</a> updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.</p>
 </section>
-<section id="sec-teo-src-app" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-teo-src-app"><span class="header-section-number">4.5.2</span> Source apportionment</h3>
+<section id="sec-teo-avlast" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-teo-avlast"><span class="header-section-number">4.5.2</span> Avlastningsbehov</h3>
 </section>
-<section id="sec-teo-avlast" class="level3" data-number="4.5.3">
-<h3 data-number="4.5.3" class="anchored" data-anchor-id="sec-teo-avlast"><span class="header-section-number">4.5.3</span> Avlastningsbehov</h3>
-</section>
-<section id="sec-teo-scens" class="level3" data-number="4.5.4">
-<h3 data-number="4.5.4" class="anchored" data-anchor-id="sec-teo-scens"><span class="header-section-number">4.5.4</span> Scenarios</h3>
+<section id="sec-teo-scens" class="level3" data-number="4.5.3">
+<h3 data-number="4.5.3" class="anchored" data-anchor-id="sec-teo-scens"><span class="header-section-number">4.5.3</span> Scenarios</h3>
 
 
 </section>
