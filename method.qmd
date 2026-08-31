@@ -40,16 +40,15 @@ To assess trends in concentration, outliers were removed from the dataset and an
 
 ## Annual loads {#sec-ann-loads}
 
-Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e. after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site was downloaded from NVE via the GTS API (@sec-discharge).
+Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e. after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site was downloaded from NVE via the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (see @sec-discharge).
 
-Estimates of annual riverine loads were calculated according to Equation \@ref(eq:ospar-annual-load), following the recommendations in OSPAR Agreement 2014:04 (§6.13b). The method accounts for irregular sampling frequency and allows flood samples to be included in the annual load calculations.
+Estimates of annual riverine loads were calculated according to Equation @eq-ospar-annual following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling frequencies and the influence of high-flow events.
 
-\begin{equation}
+$$
 L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
-\label{eq:ospar-annual-load}
-\end{equation}
+$$ {#eq-ospar-annual}
 
-where $Q_i$ represents the water discharge on sampling day $i$; $C_i$ is the concentration measured on day $i$; $t_i$ is the time period from the midpoint between day $(i-1)$ and day $i$ to the midpoint between day $i$ and day $(i+1)$, that is, half the number of days between the previous and subsequent sampling events; and $Q_r$ is the annual water volume.
+where $L$ is the annual load; $Q_i$ represents the water discharge on sampling day $i$; $C_i$ is the concentration measured on day $i$; $t_i$ is the time period from the midpoint between day $(i-1)$ and day $i$ to the midpoint between day $i$ and day $(i+1)$, that is, half the number of days between the previous and subsequent sampling events; and $Q_r$ is the annual water volume.
 
 
 
