@@ -88,19 +88,53 @@ A detailed comparison of the national and Lillestrøm-specific spredt datasets i
 
 ### Industry {#sec-industry}
 
+Data describing industrial discharges has been provided by Miljødirektoratet. Data collection is based on self-reporting from industry and reflects the
+components regulated in the respective discharge permits. Data are consistent with the information made publicly available via the [Norske utslipp](https://www.norskeutslipp.no/) website.
+
 ### Agriculture {#sec-agriculture}
+
+Annual estimates of nutrient losses from agriculture are made by NIBIO using the AGRITIL models (Kværnø *et al.*, 2024). These calculate losses of soil particles, phosphorus, nitrogen and organic carbon from agricultural land to first order streams. The models are based on empirical relationships developed using data from the [Agricultural Environmental Monitoring Programme (JOVA)](https://www.nibio.no/tema/miljo/jord-og-vannovervaking-i-landbruket).
 
 ### Urban {#sec-urban}
 
+Estimates of nutrient runoff from urban areas have been made using typical runoff coefficients for Norwegian built-up areas taken from [Åstebøl *et al.* (2012)](https://www.miljodirektoratet.no/sharepoint/downloaditem?id=01FM3LD2XYMQWENJOBOVEL2YIHX3PUTEYP).
+
 ### Background {#sec-background}
+
+Estimates of annual nutrient inputs from runoff in forest and upland areas are made by NIVA using long-term national monitoring data. Key datasets include the Norwegian "1000 Lakes" surveys in 1995 and 2019, and the "Trend lakes" project. See e.g. [de Wit et al. (2023)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GB007509) for an overview.  
 
 ## Water quality models {#sec-models}
 
 ### AGRITIL {#sec-agritil}
 
+The AGRITIL models ([Kværnø *et al.*, 2024](https://nva.sikt.no/registration/0198cc63853e-ba89c1b2-539a-4fca-9592-b458c68496e2)) have been used to estimate nutrient losses from agricultural land to first-order streams. AGRITIL provides source-specific input data for agricultural runoff to TEOTIL3 (@sec-teotil3) and consists of separate empirical models for nitrogen (AGRITIL-N) and for suspended sediment, phosphorus and organic carbon (AGRITIL-SPC). The models are calibrated using data from Norwegian agricultural monitoring catchments (e.g. the [JOVA programme](https://www.nibio.no/tema/miljo/jord-og-vannovervaking-i-landbruket)) and are designed to quantify gross nutrient and sediment losses from agricultural areas under varying environmental conditions and management practices.
+
+AGRITIL-N simulates losses of total nitrogen (TOTN) and nitrate (NO3) from agricultural land. Predicted nitrogen losses are influenced by factors such as runoff, nitrogen balance, soil type, climatic conditions, and the implementation of mitigation measures including winter vegetation cover, catch crops and reduced tillage.
+
+AGRITIL-SPC simulates losses of suspended sediment (SS), total phosphorus (TOTP), phosphate (PO4) and total organic carbon (TOC). Model estimates are based on relationships between nutrient and sediment losses, hydrological conditions, soil properties, land use, erosion risk, and agricultural management practices.
+
+AGRITIL estimates losses from agricultural land at the edge-of-field or first-order stream scale and does not account for nutrient retention occurring downstream. Downstream transport and retention processes are subsequently represented within TEOTIL3.
+
 ### TEOTIL3 {#sec-teotil3}
 
+The TEOTIL3 model ([Sample *et al.*, 2024](https://www.miljodirektoratet.no/publikasjoner/2024/juli-2024/teotil3-en-modell-for-beregning-av--kildebaserte-tilforsler-via-elver-og--direktetilforsler-til-kyst/)) has been used to simulate source-apportioned nutrient inputs for each catchment of interest. TEOTIL3 was also used to estimate the load reductions required for Good Ecological Status (GES) under the Water Framework Directive, as well as the extent to which reductions might be achieved using combinations of measures (based on [Wallhead *et al.*, 2026](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/)).
 
+TEOTIL3 is an annual mass balance model that simulates the following nutrients:
 
+ * Total nitrogen (TOTN) and the main fractions of nitrogen: dissolved inorganic nitrogen (DIN) and total organic nitrogen (TON).
+ * Total phosphorus (TOTP) and the main fraction of phosphorus: total dissolved phosphorus (TDP) and total particulate phosphorus (TPP).
+ * Total organic carbon (TOC).
+ * Suspended sediment (particles; SS).
 
+TEOTIL3 includes a simple hydrological transport module that simulates nutrient retention in lakes, but not in rivers. The model considers nutrients from the following sources (using datasets described in @sec-nutrient-inputs):
 
+ * Inputs from agriculture simulated by NIBIO using the AGRITIL models.
+ * Discharges from large wastewater treatment plants (≥50 p.e.).
+ * Direct inputs from industrial plants not connected to the municipal wastewater network.
+ * Discharges from small wastewater treatment plants (<50 p.e.; referred to as "spredt avløp").
+ * Nutrient runoff from urban areas.
+ * Nutrient losses from aquaculture in seawater (not relevant for Lillestrøm kommune).
+ * Atmospheric deposition of nitrogen directly to lake surfaces.
+ * Natural background runoff from forest, upland and glacier areas.
+
+TEOTIL3 does not include temporary sources of nutrients, such as construction sites or road building. The standard version of the model also omits overflows from the municipal wastewater network, but for this project the model has been extended to include overflow data provided by Lillestrøm kommune (see @sec-small-wastewater).
