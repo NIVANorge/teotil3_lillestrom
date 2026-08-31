@@ -128,5 +128,15 @@
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Data sources and models</span>"
     ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "13  References",
+    "section": "",
+    "text": "Beldring S, Engeland K, Roald LA, Sælthun NR, Voksø A. 2003. Estimation of parameters in a distributed precipitation-runoff model for Norway. Hydrology and Earth System Sciences 7 (3) 304-316. Tilgjengelig på nett.\nKværnø S, Fischer F, Bechmann M. 2024. AGRITIL - Nutrient loss model for agriculture - Modelling soil, organic carbon, nitrogen and phosphorus losses from Norwegian agricultural areas to water. NIBIO rapport 10-43-2024. Tilgjengelig på nett.\nSample JE, Jackson-Blake LA, Vogelsang C, Kaste Ø. 2024. TEOTIL3: En modell for beregning av kildebaserte tilførsler via elver og direktetilførsler til kyst. NIVA rapport 7996-2024. Tilgjengelig på nett.\nWallhead P, Staalstrøm A, Jackson-Blake LA, Kvile K, Frigstad H, Norling M, Rinde E, Murray C, Sample JE, Yakushev E, Ramon P, Christensen KH, Kristensen NM, Simonsen M, Kværnø SH, Fischer F, Bechmann M. 2026. Modellering av Oslofjorden: scenarier med redusert menneskelig belastning for å oppnå god økologisk tilstand. NIVA rapport 8186-2026. Tilgjengelig på nett.",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>References</span>"
+    ]
   }
 ]
