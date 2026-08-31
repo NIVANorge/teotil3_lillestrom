@@ -396,13 +396,12 @@ Figure&nbsp;4.1: Concentrations measured at Vannmiljø station <code>002-29659</
 </section>
 <section id="sec-ann-loads" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="sec-ann-loads"><span class="header-section-number">4.3</span> Annual loads</h2>
-<p>Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e.&nbsp;after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site was downloaded from NVE via the GTS API (<a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
-<p>Estimates of annual riverine loads were calculated according to Equation @ref(eq:ospar-annual-load), following the recommendations in OSPAR Agreement 2014:04 (§6.13b). The method accounts for irregular sampling frequency and allows flood samples to be included in the annual load calculations.</p>
-<p><span class="math display">\[\begin{equation}
+<p>Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e.&nbsp;after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site was downloaded from NVE via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (see <a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
+<p>Estimates of annual riverine loads were calculated according to Equation <a href="#eq-ospar-annual" class="quarto-xref">Equation&nbsp;<span>4.1</span></a> following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling frequencies and the influence of high-flow events.</p>
+<p><span id="eq-ospar-annual"><span class="math display">\[
 L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
-\label{eq:ospar-annual-load}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(Q_i\)</span> represents the water discharge on sampling day <span class="math inline">\(i\)</span>; <span class="math inline">\(C_i\)</span> is the concentration measured on day <span class="math inline">\(i\)</span>; <span class="math inline">\(t_i\)</span> is the time period from the midpoint between day <span class="math inline">\((i-1)\)</span> and day <span class="math inline">\(i\)</span> to the midpoint between day <span class="math inline">\(i\)</span> and day <span class="math inline">\((i+1)\)</span>, that is, half the number of days between the previous and subsequent sampling events; and <span class="math inline">\(Q_r\)</span> is the annual water volume.</p>
+\tag{4.1}\]</span></span></p>
+<p>where <span class="math inline">\(L\)</span> is the annual load; <span class="math inline">\(Q_i\)</span> represents the water discharge on sampling day <span class="math inline">\(i\)</span>; <span class="math inline">\(C_i\)</span> is the concentration measured on day <span class="math inline">\(i\)</span>; <span class="math inline">\(t_i\)</span> is the time period from the midpoint between day <span class="math inline">\((i-1)\)</span> and day <span class="math inline">\(i\)</span> to the midpoint between day <span class="math inline">\(i\)</span> and day <span class="math inline">\((i+1)\)</span>, that is, half the number of days between the previous and subsequent sampling events; and <span class="math inline">\(Q_r\)</span> is the annual water volume.</p>
 
 
 </section>
