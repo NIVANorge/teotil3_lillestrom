@@ -31,33 +31,25 @@ This work is licensed under a <a rel="license" href="https://creativecommons.org
 
 ## Abbreviations {#sec-abbreviations}
 
-The following abbreviations are used in this document:
+```{python}
+#| label: tbl-abbreviations
+#| tbl-cap: "Abbreviations are used in this document."
+#| echo: false
 
-| **Abbreviation** |                                         **Meaning**                                        |
-|:----------------:|:------------------------------------------------------------------------------------------:|
-|      **API**     |                              Application programming interface                             |
-|     **AR50**     |                   NIBIO's national land cover dataset with 50 m resolution                 |
-|     **BOF5**     |             Biological oxygen demand over 5 days ("biokjemisk oksygenforbruk")             |
-|       **C**      |                                           Carbon                                           |
-|      **DIN**     |                                Dissolved inorganic nitrogen                                |
-|      **DOC**     |                                  Dissolved organic carbon                                  |
-|     **EMEP**     |                        European Monitoring and Evaluation Programme                        |
-|      **GES**     |                                   Good Ecological Status                                   |
-|      **KOF**     |                      Chemical oxygen demand ("kjemisk oksygenforbruk")                     |
-|       **N**      |                                          Nitrogen                                          |
-|     **NIBIO**    |                               Norsk institutt for bioøkonomi                               |
-|     **NIVA**     |                              Norsk institutt for vannforskning                             |
-|      **NVE**     |                            Norges vassdrags- og energidirektorat                           |
-|     **OSPAR**    | Oslo-Paris agreement to protect the marine environment of the North-eastern Atlantic Ocean |
-|       **P**      |                                         Phosphorus                                         |
-|     **p.e.**     |                                     Person equivalents                                     |
-|     **RMSE**     |                                   Root mean square error                                   |
-|      **SS**      |                                     Suspended sediment                                     |
-|      **SSB**     |                                   Statistisk Sentralbyrå                                   |
-|      **TDP**     |                                 Total dissolved phosphorus                                 |
-|      **TOC**     |                                    Total organic carbon                                    |
-|      **TON**     |                                   Total organic nitrogen                                   |
-|     **TOTN**     |                                       Total nitrogen                                       |
-|     **TOTP**     |                                      Total phosphorus                                      |
-|      **TPP**     |                                Total particulate phosphorus                                |
-|      **WFD**     |                    European Water Framework Directive (Vannforskriften)                    |
+import pandas as pd
+
+# Read site data
+csv_path = r"./data/abbreviations.csv"
+df = pd.read_csv(csv_path)
+
+# Style
+(
+    df.style.hide(axis="index")
+    # Center column headers
+    .set_table_styles(
+        [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
+    )
+    # Center text columns
+    .set_properties(**{"text-align": "center"})
+)
+```
