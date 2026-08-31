@@ -76,6 +76,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -211,8 +240,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-data-prep" id="toc-sec-data-prep" class="nav-link active" data-scroll-target="#sec-data-prep"><span class="header-section-number">4.1</span> Data preparation and cleaning</a></li>
+  <li><a href="#sec-ann-concs" id="toc-sec-ann-concs" class="nav-link" data-scroll-target="#sec-ann-concs"><span class="header-section-number">4.2</span> Annual mean concentrations</a></li>
+  <li><a href="#sec-ann-loads" id="toc-sec-ann-loads" class="nav-link" data-scroll-target="#sec-ann-loads"><span class="header-section-number">4.3</span> Annual loads</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -236,8 +273,139 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="sec-data-prep" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-data-prep"><span class="header-section-number">4.1</span> Data preparation and cleaning</h2>
+<p>Data was downloaded for all stations and waterbodies listed in <a href="data-sources-models.html#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a> using the <a href="https://vannmiljokoder.miljodirektoratet.no/api">Vannmiljø API</a>. <a href="#tbl-par-map" class="quarto-xref">Table&nbsp;<span>4.1</span></a> shows how parameter names in Vannmiljø have been converted to standardised names and units consistent with the parameters modelled by TEOTIL3.</p>
+<div id="tbl-par-map" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-par-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: Mapping between parameter names used in Vannmiljø and standardised names and units used in this report.
+</figcaption>
+<div aria-describedby="tbl-par-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table-striped table-hover caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 19%">
+<col style="width: 34%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>Vannmiljø</strong></th>
+<th style="text-align: center;"><strong>Standardised</strong></th>
+<th style="text-align: center;"><strong>Description</strong></th>
+<th style="text-align: center;"><strong>Standardised unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">N-TOT (ufiltrert)</td>
+<td style="text-align: center;">TOTN</td>
+<td style="text-align: center;">Total nitrogen</td>
+<td style="text-align: center;">µg-N/l</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">N-NO3 (filtrert)</td>
+<td style="text-align: center;">NO3</td>
+<td style="text-align: center;">Nitrate</td>
+<td style="text-align: center;">µg-N/l</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">N-NO3 (ufiltrert)</td>
+<td style="text-align: center;">NO3</td>
+<td style="text-align: center;">Nitrate</td>
+<td style="text-align: center;">µg-N/l</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">N-NH4 (ufiltrert)</td>
+<td style="text-align: center;">NH4</td>
+<td style="text-align: center;">Ammonium</td>
+<td style="text-align: center;">µg-N/l</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">P-TOT (filtrert)</td>
+<td style="text-align: center;">TDP</td>
+<td style="text-align: center;">Total dissolved phosphorus</td>
+<td style="text-align: center;">µg-P/l</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">P-TOT (ufiltrert)</td>
+<td style="text-align: center;">TOTP</td>
+<td style="text-align: center;">Total phosphorus</td>
+<td style="text-align: center;">µg-P/l</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">P-ORTO (filtrert)</td>
+<td style="text-align: center;">SRP</td>
+<td style="text-align: center;">Soluble reactive phosphorus</td>
+<td style="text-align: center;">µg-P/l</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">P-ORTO (ufiltrert)</td>
+<td style="text-align: center;">TRP</td>
+<td style="text-align: center;">Total reactive phosphorus</td>
+<td style="text-align: center;">µg-P/l</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">P-PO4 (filtrert)</td>
+<td style="text-align: center;">DIP</td>
+<td style="text-align: center;">Dissolved inorganic phosphorus</td>
+<td style="text-align: center;">µg-P/l</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">P-PO4 (ufiltrert)</td>
+<td style="text-align: center;">TIP</td>
+<td style="text-align: center;">Total inorganic phosphorus</td>
+<td style="text-align: center;">µg-P/l</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">STS (ufiltrert)</td>
+<td style="text-align: center;">SS</td>
+<td style="text-align: center;">Suspended sediment</td>
+<td style="text-align: center;">mg/l</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">TOC (ufiltrert)</td>
+<td style="text-align: center;">TOC</td>
+<td style="text-align: center;">Total organic carbon</td>
+<td style="text-align: center;">mg-C/l</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers.</p>
+<p>A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a conservative screening criterion. As a result, only the most extreme departures from the typical behaviour of the time series are identified as outliers, minimising the risk of incorrectly flagging valid observations.</p>
+<p><a href="#fig-leira-water-chem" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> shows raw water chemistry data from the lower Leira catchment at station 002-29659 (Leira ved Borgen bru). Measurements identified as outliers are highlighted in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.</p>
+<p>The absence of consistent long-term monitoring of nitrogen and phosphorus fractions limits the ability to assess annual trends in concentrations and loads for these parameters. Consequently, analysis of the observed data in this project has been restricted to TOTN, TOTP, TOC and SS. A matrix plot of the raw data for all stations is available <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/plots/concs/all_stations_main_pars.png">here</a>.</p>
+<div id="fig-leira-water-chem" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-leira-water-chem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./plots/concs/station_002-29659.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="800">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-leira-water-chem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: Concentrations measured at Vannmiljø station <code>002-29659</code> (Leira ved Borgen bru). Measurements identified as outliers using the “double median absolute deviation” method are shown in red
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-ann-concs" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-ann-concs"><span class="header-section-number">4.2</span> Annual mean concentrations</h2>
+<p>To assess trends in concentration, outliers were removed from the dataset and annual mean concentrations calculated for each site and waterbody. To avoid biases due to limited monitoring, annual means were only calculated for years with at least 12 data points (i.e.&nbsp;at least 12 samples per year per station or waterbody).</p>
+</section>
+<section id="sec-ann-loads" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-ann-loads"><span class="header-section-number">4.3</span> Annual loads</h2>
+<p>Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e.&nbsp;after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site was downloaded from NVE via the GTS API (<a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
+<p>Estimates of annual riverine loads were calculated according to Equation @ref(eq:ospar-annual-load), following the recommendations in OSPAR Agreement 2014:04 (§6.13b). The method accounts for irregular sampling frequency and allows flood samples to be included in the annual load calculations.</p>
+<p><span class="math display">\[\begin{equation}
+L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
+\label{eq:ospar-annual-load}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(Q_i\)</span> represents the water discharge on sampling day <span class="math inline">\(i\)</span>; <span class="math inline">\(C_i\)</span> is the concentration measured on day <span class="math inline">\(i\)</span>; <span class="math inline">\(t_i\)</span> is the time period from the midpoint between day <span class="math inline">\((i-1)\)</span> and day <span class="math inline">\(i\)</span> to the midpoint between day <span class="math inline">\(i\)</span> and day <span class="math inline">\((i+1)\)</span>, that is, half the number of days between the previous and subsequent sampling events; and <span class="math inline">\(Q_r\)</span> is the annual water volume.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
