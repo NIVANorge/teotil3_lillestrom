@@ -93,7 +93,7 @@ components regulated in the respective discharge permits. Data are consistent wi
 
 ### Agriculture {#sec-agriculture}
 
-Annual estimates of nutrient losses from agriculture are made by NIBIO using the AGRITIL models (Kværnø *et al.*, 2024). These calculate losses of soil particles, phosphorus, nitrogen and organic carbon from agricultural land to first order streams. The models are based on empirical relationships developed using data from the [Agricultural Environmental Monitoring Programme (JOVA)](https://www.nibio.no/tema/miljo/jord-og-vannovervaking-i-landbruket).
+Annual estimates of nutrient losses from agriculture are made by NIBIO using the AGRITIL models ([Kværnø *et al.*, 2024](https://nva.sikt.no/registration/0198cc63853e-ba89c1b2-539a-4fca-9592-b458c68496e2)). See @sec-agritil.
 
 ### Urban {#sec-urban}
 
@@ -101,13 +101,13 @@ Estimates of nutrient runoff from urban areas have been made using typical runof
 
 ### Background {#sec-background}
 
-Estimates of annual nutrient inputs from runoff in forest and upland areas are made by NIVA using long-term national monitoring data. Key datasets include the Norwegian "1000 Lakes" surveys in 1995 and 2019, and the "Trend lakes" project. See e.g. [de Wit et al. (2023)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GB007509) for an overview.  
+Estimates of annual nutrient inputs from runoff in forest and upland areas are made by NIVA using long-term national monitoring data. Key datasets include the Norwegian "1000 Lakes" surveys in 1995 and 2019, and the ongoing "Trend lakes" project. See [de Wit et al. (2023)](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2022GB007509) for an overview.  
 
 ## Water quality models {#sec-models}
 
 ### AGRITIL {#sec-agritil}
 
-The AGRITIL models ([Kværnø *et al.*, 2024](https://nva.sikt.no/registration/0198cc63853e-ba89c1b2-539a-4fca-9592-b458c68496e2)) have been used to estimate nutrient losses from agricultural land to first-order streams. AGRITIL provides source-specific input data for agricultural runoff to TEOTIL3 (@sec-teotil3) and consists of separate empirical models for nitrogen (AGRITIL-N) and for suspended sediment, phosphorus and organic carbon (AGRITIL-SPC). The models are calibrated using data from Norwegian agricultural monitoring catchments (e.g. the [JOVA programme](https://www.nibio.no/tema/miljo/jord-og-vannovervaking-i-landbruket)) and are designed to quantify gross nutrient and sediment losses from agricultural areas under varying environmental conditions and management practices.
+The AGRITIL models ([Kværnø *et al.*, 2024](https://nva.sikt.no/registration/0198cc63853e-ba89c1b2-539a-4fca-9592-b458c68496e2)) have been used to estimate nutrient losses from agricultural land to first-order streams. AGRITIL provides source-specific input data for agricultural runoff to TEOTIL3 (@sec-teotil3) and consists of separate empirical models for nitrogen (AGRITIL-N) and for suspended sediment, phosphorus and organic carbon (AGRITIL-SPC). The models are calibrated using data from the [Norwegian Agricultural Environmental Monitoring Programme (JOVA)](https://www.nibio.no/tema/miljo/jord-og-vannovervaking-i-landbruket) and are designed to quantify gross nutrient and sediment losses from agricultural areas under varying environmental conditions and management practices.
 
 AGRITIL-N simulates losses of total nitrogen (TOTN) and nitrate (NO3) from agricultural land. Predicted nitrogen losses are influenced by factors such as runoff, nitrogen balance, soil type, climatic conditions, and the implementation of mitigation measures including winter vegetation cover, catch crops and reduced tillage.
 
