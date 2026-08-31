@@ -8,6 +8,8 @@ css: styles.css
 
 Beldring S, Engeland K, Roald LA, Sælthun NR, Voksø A. 2003. *Estimation of parameters in a distributed precipitation-runoff model for Norway*. Hydrology and Earth System Sciences 7 (3) 304-316. [Tilgjengelig på nett](https://hess.copernicus.org/articles/7/304/2003/hess-7-304-2003.html).
 
+Hensel GR & Mæhlum T. 2025. *Mindre avløpsanlegg i spredt bebyggelse - Renseeffekt og reduksjonsfaktorer* NIBIO rapport 11 41. [Tilgjengelig på nett](https://hdl.handle.net/11250/3183748).
+
 Kværnø S, Fischer F, Bechmann M. 2024. *AGRITIL - Nutrient loss model for agriculture - Modelling soil, organic carbon, nitrogen and phosphorus losses from Norwegian agricultural areas to water*. NIBIO rapport 10-43-2024. [Tilgjengelig på nett](https://nva.sikt.no/registration/0198cc63853e-ba89c1b2-539a-4fca-9592-b458c68496e2).
 
 Sample JE, Jackson-Blake LA, Vogelsang C, Kaste Ø. 2024. *TEOTIL3: En modell for beregning av kildebaserte tilførsler via elver og direktetilførsler til kyst*. NIVA rapport 7996-2024. [Tilgjengelig på nett](https://www.miljodirektoratet.no/publikasjoner/2024/juli-2024/teotil3-en-modell-for-beregning-av--kildebaserte-tilforsler-via-elver-og--direktetilforsler-til-kyst/).

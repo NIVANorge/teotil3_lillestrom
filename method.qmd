@@ -24,19 +24,23 @@ Data was downloaded for all stations and waterbodies listed in @tbl-chem-mon usi
 
 : Mapping between parameter names used in Vannmiljø and standardised names and units used in this report. {#tbl-par-map .striped .hover}
 
-Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers.
+Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis.
 
-A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a conservative screening criterion. As a result, only the most extreme departures from the typical behaviour of the time series are identified as outliers, minimising the risk of incorrectly flagging valid observations.
+A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.
 
-@fig-leira-water-chem shows raw water chemistry data from the lower Leira catchment at station 002-29659 (Leira ved Borgen bru). Measurements identified as outliers are highlighted in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.
-
-The absence of consistent long-term monitoring of nitrogen and phosphorus fractions limits the ability to assess annual trends in concentrations and loads for these parameters. Consequently, analysis of the observed data in this project has been restricted to TOTN, TOTP, TOC and SS. A matrix plot of the raw data for all stations is available [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/plots/concs/all_stations_main_pars.png).
+@fig-leira-water-chem shows raw water chemistry data from the lower Leira catchment at station 002-29659 (Leira ved Borgen bru). Measurements identified as outliers are shown in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.
 
 ![Concentrations measured at Vannmiljø station `002-29659` (Leira ved Borgen bru). Measurements identified as outliers using the "double median absolute deviation" method are shown in red](./plots/concs/station_002-29659.png){#fig-leira-water-chem width=800 fig-align="center"}
+
+The absence of consistent long-term monitoring of nitrogen and phosphorus fractions limits the ability to assess annual trends in concentrations and loads for these parameters. Consequently, analysis of the observed data in this project has been restricted to TOTN, TOTP, TOC and SS. A matrix plot of the raw data for these parameters for all stations is available [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/plots/concs/all_stations_main_pars.png).
+
+Code to download the raw data is provided in [notebook 02](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb), while outliers are flagged in [notebook 03a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb) and [notebook 03b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb).
 
 ## Annual mean concentrations {#sec-ann-concs}
 
 To assess trends in concentration, outliers were removed from the dataset and annual mean concentrations calculated for each site and waterbody. To avoid biases due to limited monitoring, annual means were only calculated for years with at least 12 data points (i.e. at least 12 samples per year per station or waterbody).
+
+Annual mean concentrations for stations are calculated in [notebook 03a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb) and for waterbodies in [notebook 03b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb).
 
 ## Annual loads {#sec-ann-loads}
 
@@ -49,6 +53,92 @@ L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
 $$ {#eq-ospar-annual}
 
 where $L$ is the annual load; $Q_i$ represents the water discharge on sampling day $i$; $C_i$ is the concentration measured on day $i$; $t_i$ is the time period from the midpoint between day $(i-1)$ and day $i$ to the midpoint between day $i$ and day $(i+1)$, that is, half the number of days between the previous and subsequent sampling events; and $Q_r$ is the annual water volume.
+
+Annual loads for stations are calculated in [notebook 04a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb) and for waterbodies in [notebook 04b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb).
+
+## Tests for trends {#sec-trend-tests}
+
+Trends in annual mean concentrations and annual loads were evaluated using the Mann-Kendall test and Sen's slope estimator (e.g. [Helsel *et al.*, 2020](https://pubs.usgs.gov/publication/tm4A3)). The Mann-Kendall test is a non-parametric method that assesses the statistical significance of monotonic trends without assuming a specific data distribution. Sen's slope estimator provides a robust estimate of the rate of change over time and is less sensitive to outliers than ordinary least squares regression. Together, these methods are widely applied in water quality studies because environmental monitoring data are often non-normally distributed, contain censored or extreme values, and may violate the assumptions of parametric trend analyses. 
+
+In this report, trends are considered statistically "significant" for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing *tendencies*.
+
+Trends tests for stations are applied in [notebook 04a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb) and for waterbodies in [notebook 04b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb).
+
+## TEOTIL3 modelling {#sec-teotil3-modelling}
+
+TEOTIL3 is applied annually at national scale as part of modelling work funded by Miljødirektoratet. For this project, standard TEOTIL3 input files were modified to include more detailed data for spredt and wastewater overflows provided by Lillestrøm kommune (see @sec-small-wastewater). TEOTIL3 was then run using the modified input files for the period from 2013 to 2024.
+
+### Lillestrøm-specific wastewater data {sec-lillestrom-data}
+
+The **overflow** data provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. The annual discharge from each overflow can therefore be estimated as:
+
+$$ 
+D = \frac{C \times P \times H}{24 \times 1000}
+$$ {#eq-overflow}
+
+where $D$ is the nutrient discharge in kg; $C$ is the overflow capacity in p.e.; $P$ is the nutrient discharge per person per day in g; and $H$ is the number of hours of operation per year.
+
+Values for $P$, the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (@tlb-nuts-per-pers).
+
+```{python}
+#| label: tlb-nuts-per-pers
+#| tbl-cap: "Typical nutrient discharges per person per day. Based on data compiled by Norsk Vann."
+#| echo: false
+
+import pandas as pd
+
+# Read site data
+csv_path = r"https://raw.githubusercontent.com/NIVANorge/teotil3/refs/heads/main/data/nutrient_discharges_per_person.csv"
+df = pd.read_csv(csv_path).rename(
+    columns={"parameter": "Parameter", "g_per_pers_per_day": "Discharge (g/pers/døgn)"}
+)
+
+# Format
+df["Parameter"] = df["Parameter"].str.upper()
+num_cols = ["Discharge (g/pers/døgn)"]
+txt_cols = [c for c in df.columns if c not in num_cols]
+fmt = {c: "{:.1f}" for c in num_cols}
+
+# Style
+(
+    df.style.format(fmt).hide(axis="index")
+    # Center column headers
+    .set_table_styles(
+        [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
+    )
+    # Center text columns
+    .set_properties(subset=txt_cols, **{"text-align": "center"})
+    # Right-align numeric columns
+    .set_properties(subset=num_cols, **{"text-align": "right"})
+)
+```
+
+Equation @eq-overflow can be used to estimate annual overflows for TOTN, TOTP, BOF5, KOF and SS. To estimate TOC, and fractions of N and P, we use the factors for `Urenset` wastewater from the [TEOTIL3 database](https://github.com/NIVANorge/teotil3/blob/main/data/point_source_treatment_types.csv).
+
+Site-specific **spredt** inputs for Lillestrøm kommune were estimated in a similar way:
+
+$$
+D = \frac{365.25 \times C \times P \times (1 - E)}{1000}
+$$ {#eq-spredt}
+
+where $D$ is the annual nutrient discharge in kg; $C$ is the capacity in p.e.; $P$ is the nutrient discharge per person per day in g (from @tlb-nuts-per-pers); and $E$ is the plant treatment efficiency (a dimensionless value between 0 and 1).
+
+The treatment efficiency, $E$, is calculated from data published by NIBIO ([Hensel & Mæhlum, 2025](https://nva.sikt.no/registration/0198cc7ed733-fcfcf849-8d97-4f41-995b-a9dfd63846f5)) as:
+
+$$E = E_{ideal} \times (1 - R)$$
+
+where $E_{ideal}$ is the best-case efficiency of a new or well-maintained plant, and $R$ is a reduction factor representing how much the efficiency declines for a plant of typical age and condition.
+
+It is important to note that the site-specific spredt dataset provided by Lillestrøm kommune is for a single point in time, whereas TEOTIL3 requires input data from 2013 to 2024. The Lillestrøm-specific data therefore provides better spatial resolution than the standard model, but the downside is that the model no longer captures changes in spredt inputs over time.
+
+Code to estimate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is provided in [notebook 05](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb).
+
+### Source apportionment {#sec-teo-src-app}
+
+### Avlastningsbehov {#sec-teo-avlast}
+
+### Scenarios {#sec-teo-scens}
+
 
 
 
