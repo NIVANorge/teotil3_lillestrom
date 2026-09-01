@@ -33,7 +33,7 @@ This chapter defines the area of interest for this project and provides a high l
 |       6      |    Åa   |  11.28279  |  59.99649  |                   Single REGINE; few lakes                   |
 |       7      |  Gansåa |  11.22130  |  59.86080  |                Not resolved by REGINE network                |
 
-: Catchments considered in this study. {#tbl-catchments .striped .hover}
+: Catchments considered in this study. {#tbl-catchments .striped}
 
 ![Lillestrøm kommune (black outline) and the seven catchments considered in this analysis (red outlines). Yellow squares mark catchment outlets; red circles are point source discharges from industry; grey circles are discharges from municipal wastewater plants (with capacity >50 pe).](./plots/catchments_with_point_sources_labelled.png){#fig-catchments width=600 fig-align="center"}
 

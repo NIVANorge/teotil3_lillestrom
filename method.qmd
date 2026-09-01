@@ -22,7 +22,7 @@ Data was downloaded for all stations and waterbodies listed in @tbl-chem-mon usi
 |   STS (ufiltrert)  |        SS        |       Suspended sediment       |          mg/l         |
 |   TOC (ufiltrert)  |        TOC       |      Total organic carbon      |         mg-C/l        |
 
-: Mapping between parameter names used in Vannmiljø and standardised names and units used in this report. {#tbl-par-map .striped .hover}
+: Mapping between parameter names used in Vannmiljø and standardised names and units used in this report. {#tbl-par-map .striped}
 
 Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis.
 
@@ -121,7 +121,7 @@ $$
 D = \frac{365.25 \times C \times P \times (1 - E)}{1000}
 $$ {#eq-spredt}
 
-where $D$ is the annual nutrient discharge in kg; $C$ is the capacity in p.e.; $P$ is the nutrient discharge per person per day in g (from @tlb-nuts-per-pers); and $E$ is the plant treatment efficiency (a dimensionless value between 0 and 1).
+where $D$ is the annual nutrient discharge in kg; $C$ is the capacity in p.e.; $P$ is the nutrient discharge per person per day in g (from @tbl-nuts-per-pers); and $E$ is the plant treatment efficiency (a dimensionless value between 0 and 1).
 
 The treatment efficiency, $E$, is calculated from data published by NIBIO ([Hensel & Mæhlum, 2025](https://nva.sikt.no/registration/0198cc7ed733-fcfcf849-8d97-4f41-995b-a9dfd63846f5)):
 
@@ -133,7 +133,7 @@ where $E_{ideal}$ is the best-case efficiency of a new or well-maintained plant,
 
 It is important to note that the site-specific spredt dataset provided by Lillestrøm kommune represents a single point in time, whereas TEOTIL3 requires input data from 2013 to 2024. The Lillestrøm-specific spredt data therefore provides better spatial resolution than the standard TEOTIL3 input files, but with the downside that the model no longer captures changes in spredt inputs over time.
 
-Code to estimate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in [notebook 05](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb). [Notebook 06](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb) updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.
+Code to calculate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in [notebook 05](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb). [Notebook 06](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb) updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.
 
 ### Avlastningsbehov {#sec-teo-avlast}
 
