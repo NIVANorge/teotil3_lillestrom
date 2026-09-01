@@ -204,9 +204,86 @@
     "href": "method.html#sec-teotil3-modelling",
     "title": "4  Methodology",
     "section": "4.5 TEOTIL3 modelling",
-    "text": "4.5 TEOTIL3 modelling\nTEOTIL3 is applied annually at national scale as part of modelling work funded by Miljødirektoratet. For this project, standard TEOTIL3 input files were modified to include more detailed data for spredt and wastewater overflows provided by Lillestrøm kommune (see Section 3.3.2). TEOTIL3 was then run using the modified input files for the period from 2013 to 2024.\n\n4.5.1 Lillestrøm-specific wastewater inputs\nThe wastewater overflow dataset provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:\n\\[\nD = \\frac{C \\times P \\times H}{24 \\times 1000}\n\\tag{4.2}\\]\nwhere \\(D\\) is the nutrient discharge in kg; \\(C\\) is the overflow capacity in p.e.; \\(P\\) is the nutrient discharge per person per day in g; and \\(H\\) is the number of hours of operation per year.\nValues for \\(P\\), the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (Table 4.2).\n\n\n\n\nTable 4.2: Typical nutrient discharges per person per day. Based on data compiled by Norsk Vann.\n\n\n\n\n\n\n\n\nParameter\nDischarge (g/pers/døgn)\n\n\n\n\nTOTN\n12.0\n\n\nTOTP\n1.8\n\n\nBOF5\n60.0\n\n\nKOF\n120.0\n\n\nSS\n70.0\n\n\n\n\n\n\n\n\nEquation Equation 4.2 can be used to estimate annual overflows for TOTN, TOTP, BOF5, KOF and SS. To estimate TOC, and fractions of N and P, we use the factors for Urenset wastewater from the TEOTIL3 database.\nSite-specific spredt inputs for Lillestrøm kommune were estimated in a similar way:\n\\[\nD = \\frac{365.25 \\times C \\times P \\times (1 - E)}{1000}\n\\tag{4.3}\\]\nwhere \\(D\\) is the annual nutrient discharge in kg; \\(C\\) is the capacity in p.e.; \\(P\\) is the nutrient discharge per person per day in g (from @tlb-nuts-per-pers); and \\(E\\) is the plant treatment efficiency (a dimensionless value between 0 and 1).\nThe treatment efficiency, \\(E\\), is calculated from data published by NIBIO (Hensel & Mæhlum, 2025):\n\\[\nE = E_{ideal} \\times (1 - R)\n\\tag{4.4}\\]\nwhere \\(E_{ideal}\\) is the best-case efficiency of a new or well-maintained plant, and \\(R\\) is a reduction factor representing how much the efficiency declines for a plant of typical age and condition.\nIt is important to note that the site-specific spredt dataset provided by Lillestrøm kommune represents a single point in time, whereas TEOTIL3 requires input data from 2013 to 2024. The Lillestrøm-specific spredt data therefore provides better spatial resolution than the standard TEOTIL3 input files, but with the downside that the model no longer captures changes in spredt inputs over time.\nCode to estimate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in notebook 05. Notebook 06 updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.\n\n\n4.5.2 Avlastningsbehov\n\n\n4.5.3 Scenarios",
+    "text": "4.5 TEOTIL3 modelling\nTEOTIL3 is applied annually at national scale as part of modelling work funded by Miljødirektoratet. For this project, standard TEOTIL3 input files were modified to include more detailed data for spredt and wastewater overflows provided by Lillestrøm kommune (see Section 3.3.2). TEOTIL3 was then run using the modified input files for the period from 2013 to 2024.\n\n4.5.1 Lillestrøm-specific wastewater inputs\nThe wastewater overflow dataset provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:\n\\[\nD = \\frac{C \\times P \\times H}{24 \\times 1000}\n\\tag{4.2}\\]\nwhere \\(D\\) is the nutrient discharge in kg; \\(C\\) is the overflow capacity in p.e.; \\(P\\) is the nutrient discharge per person per day in g; and \\(H\\) is the number of hours of operation per year.\nValues for \\(P\\), the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (Table 4.2).\n\n\n\n\nTable 4.2: Typical nutrient discharges per person per day. Based on data compiled by Norsk Vann.\n\n\n\n\n\n\n\n\nParameter\nDischarge (g/pers/døgn)\n\n\n\n\nTOTN\n12.0\n\n\nTOTP\n1.8\n\n\nBOF5\n60.0\n\n\nKOF\n120.0\n\n\nSS\n70.0\n\n\n\n\n\n\n\n\nEquation Equation 4.2 can be used to estimate annual overflows for TOTN, TOTP, BOF5, KOF and SS. To estimate TOC, and fractions of N and P, we use the factors for Urenset wastewater from the TEOTIL3 database.\nSite-specific spredt inputs for Lillestrøm kommune were estimated in a similar way:\n\\[\nD = \\frac{365.25 \\times C \\times P \\times (1 - E)}{1000}\n\\tag{4.3}\\]\nwhere \\(D\\) is the annual nutrient discharge in kg; \\(C\\) is the capacity in p.e.; \\(P\\) is the nutrient discharge per person per day in g (from Table 4.2); and \\(E\\) is the plant treatment efficiency (a dimensionless value between 0 and 1).\nThe treatment efficiency, \\(E\\), is calculated from data published by NIBIO (Hensel & Mæhlum, 2025):\n\\[\nE = E_{ideal} \\times (1 - R)\n\\tag{4.4}\\]\nwhere \\(E_{ideal}\\) is the best-case efficiency of a new or well-maintained plant, and \\(R\\) is a reduction factor representing how much the efficiency declines for a plant of typical age and condition.\nIt is important to note that the site-specific spredt dataset provided by Lillestrøm kommune represents a single point in time, whereas TEOTIL3 requires input data from 2013 to 2024. The Lillestrøm-specific spredt data therefore provides better spatial resolution than the standard TEOTIL3 input files, but with the downside that the model no longer captures changes in spredt inputs over time.\nCode to calculate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in notebook 05. Notebook 06 updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.\n\n\n4.5.2 Avlastningsbehov\n\n\n4.5.3 Scenarios",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methodology</span>"
+    ]
+  },
+  {
+    "objectID": "sagelva.html",
+    "href": "sagelva.html",
+    "title": "5  Sagelva",
+    "section": "",
+    "text": "Figure 5.1: Maps of the Sagelva catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 5.1: Land cover proportions for Sagelva based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nSagelva\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n17.6\n16\n\n\nJordbruk\n6.8\n6\n\n\nSkog\n77.0\n71\n\n\nSnaumark\n1.2\n1\n\n\nMyr\n0.7\n1\n\n\nFerskvann\n5.6\n5\n\n\nTotalt\n108.9\n100",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sagelva</span>"
+    ]
+  },
+  {
+    "objectID": "nitelva.html",
+    "href": "nitelva.html",
+    "title": "6  Nitelva (including Sagelva)",
+    "section": "",
+    "text": "Figure 6.1: Maps of the Nitelva catchment (including Sagelva). Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 6.1: Land cover proportions for Nitelva (including Sagelva) based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nNitelva\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n45.3\n9\n\n\nJordbruk\n36.1\n8\n\n\nSkog\n363.9\n75\n\n\nSnaumark\n3.8\n1\n\n\nMyr\n9.1\n2\n\n\nFerskvann\n25.7\n5\n\n\nTotalt\n483.9\n100",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Nitelva (including Sagelva)</span>"
+    ]
+  },
+  {
+    "objectID": "leira.html",
+    "href": "leira.html",
+    "title": "7  Leira",
+    "section": "",
+    "text": "Figure 7.1: Maps of the Leira catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 7.1: Land cover proportions for Leira based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nLeira\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n46.5\n7\n\n\nJordbruk\n132.0\n20\n\n\nSkog\n436.0\n65\n\n\nSnaumark\n2.2\n0\n\n\nMyr\n27.6\n4\n\n\nFerskvann\n23.8\n4\n\n\nTotalt\n668.1\n100",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira</span>"
+    ]
+  },
+  {
+    "objectID": "romua.html",
+    "href": "romua.html",
+    "title": "8  Rømua",
+    "section": "",
+    "text": "Figure 8.1: Maps of the Rømua catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 8.1: Land cover proportions for Rømua based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nRømua\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n9.8\n5\n\n\nJordbruk\n103.3\n49\n\n\nSkog\n92.9\n44\n\n\nSnaumark\n1.2\n1\n\n\nMyr\n4.1\n2\n\n\nFerskvann\n0.5\n0\n\n\nTotalt\n211.8\n100",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Rømua</span>"
+    ]
+  },
+  {
+    "objectID": "jeksla.html",
+    "href": "jeksla.html",
+    "title": "9  Jeksla",
+    "section": "",
+    "text": "Figure 9.1: Maps of the Jeksla catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 9.1: Land cover proportions for Jeksla based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nJeksla\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n3.8\n22\n\n\nJordbruk\n6.6\n39\n\n\nSkog\n6.5\n38\n\n\nSnaumark\n0.1\n1\n\n\nMyr\n0.0\n0\n\n\nFerskvann\n0.0\n0\n\n\nTotalt\n17.0\n100",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Jeksla</span>"
+    ]
+  },
+  {
+    "objectID": "aa.html",
+    "href": "aa.html",
+    "title": "10  Åa",
+    "section": "",
+    "text": "Figure 10.1: Maps of the Åa catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 10.1: Land cover proportions for Åa based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nÅa\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n2.0\n2\n\n\nJordbruk\n29.6\n23\n\n\nSkog\n93.8\n72\n\n\nSnaumark\n0.0\n0\n\n\nMyr\n3.0\n2\n\n\nFerskvann\n2.3\n2\n\n\nTotalt\n130.7\n100",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Åa</span>"
+    ]
+  },
+  {
+    "objectID": "gansaa.html",
+    "href": "gansaa.html",
+    "title": "11  Gansåa",
+    "section": "",
+    "text": "Figure 11.1: Maps of the Gansåa catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 11.1: Land cover proportions for Gansåa based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nGansåa\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n0.8\n3\n\n\nJordbruk\n3.4\n13\n\n\nSkog\n18.6\n73\n\n\nSnaumark\n0.1\n0\n\n\nMyr\n1.8\n7\n\n\nFerskvann\n0.7\n3\n\n\nTotalt\n25.4\n100",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gansåa</span>"
     ]
   },
   {

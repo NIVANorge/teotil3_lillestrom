@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -75,6 +75,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -159,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./nitelva.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Nitelva</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Nitelva (including Sagelva)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -236,6 +239,94 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div id="fig-romua" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-romua-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./plots/rømua.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-romua-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.1: Maps of the Rømua catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).
+</figcaption>
+</figure>
+</div>
+<div class="cell" data-execution_count="1">
+<div id="tbl-romua-land-cover" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-romua-land-cover-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8.1: Land cover proportions for Rømua based on NIBIO’s AR50 dataset.
+</figcaption>
+<div aria-describedby="tbl-romua-land-cover-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="1">
+<style type="text/css">
+#T_509d8 th.col_heading {
+  text-align: center;
+}
+#T_509d8 th.col_heading.level0 {
+  text-align: center;
+}
+#T_509d8 th.col_heading.level1 {
+  text-align: center;
+}
+#T_509d8_row6_col0, #T_509d8_row6_col1 {
+  font-weight: bold;
+}
+</style>
+
+<table id="T_509d8" class="cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="index_name level0" data-quarto-table-cell-role="th">Nedbørfelt</th>
+<th colspan="2" id="T_509d8_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Rømua</th>
+</tr>
+<tr class="even">
+<th class="index_name level1" data-quarto-table-cell-role="th">AR50 klasse</th>
+<th id="T_509d8_level1_col0" class="col_heading level1 col0" data-quarto-table-cell-role="th">km²</th>
+<th id="T_509d8_level1_col1" class="col_heading level1 col1" data-quarto-table-cell-role="th">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th id="T_509d8_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">Bebygd</th>
+<td id="T_509d8_row0_col0" class="data row0 col0">9.8</td>
+<td id="T_509d8_row0_col1" class="data row0 col1">5</td>
+</tr>
+<tr class="even">
+<th id="T_509d8_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">Jordbruk</th>
+<td id="T_509d8_row1_col0" class="data row1 col0">103.3</td>
+<td id="T_509d8_row1_col1" class="data row1 col1">49</td>
+</tr>
+<tr class="odd">
+<th id="T_509d8_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">Skog</th>
+<td id="T_509d8_row2_col0" class="data row2 col0">92.9</td>
+<td id="T_509d8_row2_col1" class="data row2 col1">44</td>
+</tr>
+<tr class="even">
+<th id="T_509d8_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">Snaumark</th>
+<td id="T_509d8_row3_col0" class="data row3 col0">1.2</td>
+<td id="T_509d8_row3_col1" class="data row3 col1">1</td>
+</tr>
+<tr class="odd">
+<th id="T_509d8_level0_row4" class="row_heading level0 row4" data-quarto-table-cell-role="th">Myr</th>
+<td id="T_509d8_row4_col0" class="data row4 col0">4.1</td>
+<td id="T_509d8_row4_col1" class="data row4 col1">2</td>
+</tr>
+<tr class="even">
+<th id="T_509d8_level0_row5" class="row_heading level0 row5" data-quarto-table-cell-role="th">Ferskvann</th>
+<td id="T_509d8_row5_col0" class="data row5 col0">0.5</td>
+<td id="T_509d8_row5_col1" class="data row5 col1">0</td>
+</tr>
+<tr class="odd">
+<th id="T_509d8_level0_row6" class="row_heading level0 row6" data-quarto-table-cell-role="th">Totalt</th>
+<td id="T_509d8_row6_col0" class="data row6 col0">211.8</td>
+<td id="T_509d8_row6_col1" class="data row6 col1">100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 
 
 
