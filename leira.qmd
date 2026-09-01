@@ -3,7 +3,7 @@ title: "Leira"
 number-sections: true
 ---
 
-![Maps of the Leira catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/leira.png){#fig-leira width=500 fig-align="center"}
+![Maps of the Leira catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/leira.png){#fig-leira width=800 fig-align="center"}
 
 ```{python}
 #| label: tbl-leira-land-cover

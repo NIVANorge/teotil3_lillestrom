@@ -3,7 +3,7 @@ title: "Rømua"
 number-sections: true
 ---
 
-![Maps of the Rømua catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/rømua.png){#fig-romua width=500 fig-align="center"}
+![Maps of the Rømua catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/rømua.png){#fig-romua width=800 fig-align="center"}
 
 ```{python}
 #| label: tbl-romua-land-cover

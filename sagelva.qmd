@@ -3,7 +3,7 @@ title: "Sagelva"
 number-sections: true
 ---
 
-![Maps of the Sagelva catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/sagelva.png){#fig-sagelva width=500 fig-align="center"}
+![Maps of the Sagelva catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/sagelva.png){#fig-sagelva width=800 fig-align="center"}
 
 ```{python}
 #| label: tbl-sagelva-land-cover
