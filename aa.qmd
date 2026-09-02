@@ -53,3 +53,49 @@ df.style.format(fmt).set_table_styles(
     ]
 ).map(lambda _: "font-weight: bold;", subset=pd.IndexSlice[["Totalt"], :])
 ```
+
+
+```{python}
+#| label: tbl-aa-pt-sources
+#| tbl-cap: "Point sources of nutrients within the Åa catchment."
+#| echo: false
+
+import pandas as pd
+
+cat_list = ["Åa"]
+
+# Read point source data
+df = pd.read_excel(r"./data/point_discharges.xlsx", sheet_name="point_locs").query(
+    "name in @cat_list"
+)
+
+# Convert to tonnes
+pars = ["TOTN", "TOTP", "TOC", "SS"]
+for par in pars:
+    df[f"{par} (tonn)"] = df[f"{par}_kg"] / 1000
+
+# Tidy
+rename_dict = {
+    "site_name": "Navn",
+    "sector": "Sektor",
+    "type": "Type",
+}
+df = df.rename(columns=rename_dict)
+val_cols = [f"{par} (tonn)" for par in pars]
+text_cols = list(rename_dict.values())
+df = df[text_cols + val_cols]
+
+# Format and style
+fmt = {c: "{:.2f}" for c in val_cols}
+df.style.format(fmt).hide(axis="index").set_properties(
+    subset=text_cols, **{"text-align": "center"}
+).set_table_styles(
+    [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
+)
+```
+
+## Monitoring data {#sec-aa-monitoring}
+
+![Trends in annual mean concentrations for waterbody `002-3685-R` (Fossåa). Solid red lines show statistically significant linear trends ($p ≤ 0.05$); dashed red lines indicate weak evidence of a linear trend ($0.05 < p ≤ 0.10$); and dashed black lines indicate no statistically significant trend ($p > 0.10$). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (*bad*, *poor*, *moderate*, *good* and *high*).](./plots/concs/ann_trends_waterbodies_002-3685-R.png){#fig-aa-ann-concs width=800 fig-align="center"}
+
+## Source apportionment {#sec-aa-sources}

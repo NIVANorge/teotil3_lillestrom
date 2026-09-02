@@ -108,3 +108,7 @@ The best monitoring data for Sagelva comes from Vannmiljø stations `002-46599` 
 In terms of water quality status, concentrations of TOTN have improved from the middle of the *moderate* class in 2010 to close to the boundary between *moderate* and *good* in 2023-25. If this trend continues, waterbody `002-3899-R` will likely achieve Good Ecological Status (GES) for TOTN in the coming years. For TOTP, concentrations are broadly stable at around 40 μg-P/l. This corresponds to approximately *moderate* status, although TOTP thresholds for this waterbody are not officially defined in Vann-Nett. For TOC, there appears to be a step-change increase in concentrations between 2012 and 2013. This may be due to changes in water sampling or analysis protocols, although according to Vannmiljø the reporting lab has not changed.
 
 ![Trends in annual mean concentrations for waterbody `002-3899-R` (Fjellhamarelva - Sagelva). Solid red lines show statistically significant linear trends ($p ≤ 0.05$); dashed red lines indicate weak evidence of a linear trend ($0.05 < p ≤ 0.10$); and dashed black lines indicate no statistically significant trend ($p > 0.10$). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (*bad*, *poor*, *moderate*, *good* and *high*).](./plots/concs/ann_trends_waterbodies_002-3899-R.png){#fig-sagelva-ann-concs width=800 fig-align="center"}
+
+## Source apportionment {#sec-sagelva-sources}
+
+
