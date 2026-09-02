@@ -243,11 +243,44 @@
     ]
   },
   {
+    "objectID": "sagelva.html#sec-sagelva-sources",
+    "href": "sagelva.html#sec-sagelva-sources",
+    "title": "5  Sagelva",
+    "section": "5.3 Source apportionment",
+    "text": "5.3 Source apportionment",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sagelva</span>"
+    ]
+  },
+  {
     "objectID": "nitelva.html",
     "href": "nitelva.html",
     "title": "6  Nitelva (including Sagelva)",
     "section": "",
-    "text": "Figure 6.1: Maps of the Nitelva catchment (including Sagelva). Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 6.1: Land cover proportions for Nitelva (including Sagelva) based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nNitelva\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n45.3\n9\n\n\nJordbruk\n36.1\n8\n\n\nSkog\n363.9\n75\n\n\nSnaumark\n3.8\n1\n\n\nMyr\n9.1\n2\n\n\nFerskvann\n25.7\n5\n\n\nTotalt\n483.9\n100",
+    "text": "6.1 Monitoring data",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Nitelva (including Sagelva)</span>"
+    ]
+  },
+  {
+    "objectID": "nitelva.html#sec-nitelva-monitoring",
+    "href": "nitelva.html#sec-nitelva-monitoring",
+    "title": "6  Nitelva (including Sagelva)",
+    "section": "",
+    "text": "Figure 6.2: Trends in annual mean concentrations for waterbody 002-3891-R (Nedre Nitelva). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Nitelva (including Sagelva)</span>"
+    ]
+  },
+  {
+    "objectID": "nitelva.html#sec-nitelva-sources",
+    "href": "nitelva.html#sec-nitelva-sources",
+    "title": "6  Nitelva (including Sagelva)",
+    "section": "6.2 Source apportionment",
+    "text": "6.2 Source apportionment",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Nitelva (including Sagelva)</span>"
@@ -258,7 +291,29 @@
     "href": "leira.html",
     "title": "7  Leira",
     "section": "",
-    "text": "Figure 7.1: Maps of the Leira catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 7.1: Land cover proportions for Leira based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nLeira\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n46.5\n7\n\n\nJordbruk\n132.0\n20\n\n\nSkog\n436.0\n65\n\n\nSnaumark\n2.2\n0\n\n\nMyr\n27.6\n4\n\n\nFerskvann\n23.8\n4\n\n\nTotalt\n668.1\n100",
+    "text": "7.1 Monitoring data",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira</span>"
+    ]
+  },
+  {
+    "objectID": "leira.html#sec-leira-monitoring",
+    "href": "leira.html#sec-leira-monitoring",
+    "title": "7  Leira",
+    "section": "",
+    "text": "Figure 7.2: Trends in annual mean concentrations for waterbody 002-3384-R (Leira nedstrøms Krokfoss). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira</span>"
+    ]
+  },
+  {
+    "objectID": "leira.html#sec-leira-sources",
+    "href": "leira.html#sec-leira-sources",
+    "title": "7  Leira",
+    "section": "7.2 Source apportionment",
+    "text": "7.2 Source apportionment",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira</span>"
@@ -269,7 +324,29 @@
     "href": "romua.html",
     "title": "8  Rømua",
     "section": "",
-    "text": "Figure 8.1: Maps of the Rømua catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 8.1: Land cover proportions for Rømua based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nRømua\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n9.8\n5\n\n\nJordbruk\n103.3\n49\n\n\nSkog\n92.9\n44\n\n\nSnaumark\n1.2\n1\n\n\nMyr\n4.1\n2\n\n\nFerskvann\n0.5\n0\n\n\nTotalt\n211.8\n100",
+    "text": "8.1 Monitoring data",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Rømua</span>"
+    ]
+  },
+  {
+    "objectID": "romua.html#sec-romua-monitoring",
+    "href": "romua.html#sec-romua-monitoring",
+    "title": "8  Rømua",
+    "section": "",
+    "text": "Figure 8.2: Trends in annual mean concentrations for waterbody 002-3659-R (Rømua). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Rømua</span>"
+    ]
+  },
+  {
+    "objectID": "romua.html#sec-romua-sources",
+    "href": "romua.html#sec-romua-sources",
+    "title": "8  Rømua",
+    "section": "8.2 Source apportionment",
+    "text": "8.2 Source apportionment",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Rømua</span>"
@@ -280,7 +357,29 @@
     "href": "jeksla.html",
     "title": "9  Jeksla",
     "section": "",
-    "text": "Figure 9.1: Maps of the Jeksla catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 9.1: Land cover proportions for Jeksla based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nJeksla\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n3.8\n22\n\n\nJordbruk\n6.6\n39\n\n\nSkog\n6.5\n38\n\n\nSnaumark\n0.1\n1\n\n\nMyr\n0.0\n0\n\n\nFerskvann\n0.0\n0\n\n\nTotalt\n17.0\n100",
+    "text": "9.1 Monitoring data",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Jeksla</span>"
+    ]
+  },
+  {
+    "objectID": "jeksla.html#sec-jeksla-monitoring",
+    "href": "jeksla.html#sec-jeksla-monitoring",
+    "title": "9  Jeksla",
+    "section": "",
+    "text": "Figure 9.2: Trends in annual mean concentrations for waterbody 002-599-R (Jeksla). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Jeksla</span>"
+    ]
+  },
+  {
+    "objectID": "jeksla.html#sec-jeksla-sources",
+    "href": "jeksla.html#sec-jeksla-sources",
+    "title": "9  Jeksla",
+    "section": "9.2 Source apportionment",
+    "text": "9.2 Source apportionment",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Jeksla</span>"
@@ -291,7 +390,29 @@
     "href": "aa.html",
     "title": "10  Åa",
     "section": "",
-    "text": "Figure 10.1: Maps of the Åa catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 10.1: Land cover proportions for Åa based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nÅa\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n2.0\n2\n\n\nJordbruk\n29.6\n23\n\n\nSkog\n93.8\n72\n\n\nSnaumark\n0.0\n0\n\n\nMyr\n3.0\n2\n\n\nFerskvann\n2.3\n2\n\n\nTotalt\n130.7\n100",
+    "text": "10.1 Monitoring data",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Åa</span>"
+    ]
+  },
+  {
+    "objectID": "aa.html#sec-aa-monitoring",
+    "href": "aa.html#sec-aa-monitoring",
+    "title": "10  Åa",
+    "section": "",
+    "text": "Figure 10.2: Trends in annual mean concentrations for waterbody 002-3685-R (Fossåa). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Åa</span>"
+    ]
+  },
+  {
+    "objectID": "aa.html#sec-aa-sources",
+    "href": "aa.html#sec-aa-sources",
+    "title": "10  Åa",
+    "section": "10.2 Source apportionment",
+    "text": "10.2 Source apportionment",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Åa</span>"
@@ -302,7 +423,29 @@
     "href": "gansaa.html",
     "title": "11  Gansåa",
     "section": "",
-    "text": "Figure 11.1: Maps of the Gansåa catchment. Left: Land cover based NIBIO’s AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).\n\n\n\n\n\n\n\nTable 11.1: Land cover proportions for Gansåa based on NIBIO’s AR50 dataset.\n\n\n\n\n\n\n\n\nNedbørfelt\nGansåa\n\n\nAR50 klasse\nkm²\n%\n\n\n\n\nBebygd\n0.8\n3\n\n\nJordbruk\n3.4\n13\n\n\nSkog\n18.6\n73\n\n\nSnaumark\n0.1\n0\n\n\nMyr\n1.8\n7\n\n\nFerskvann\n0.7\n3\n\n\nTotalt\n25.4\n100",
+    "text": "11.1 Monitoring data",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gansåa</span>"
+    ]
+  },
+  {
+    "objectID": "gansaa.html#sec-gansaa-monitoring",
+    "href": "gansaa.html#sec-gansaa-monitoring",
+    "title": "11  Gansåa",
+    "section": "",
+    "text": "Figure 11.2: Trends in annual mean concentrations for waterbody 002-3655-R (Gansåa). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gansåa</span>"
+    ]
+  },
+  {
+    "objectID": "gansaa.html#sec-gansaa-sources",
+    "href": "gansaa.html#sec-gansaa-sources",
+    "title": "11  Gansåa",
+    "section": "11.2 Source apportionment",
+    "text": "11.2 Source apportionment",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gansåa</span>"
