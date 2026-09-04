@@ -9,7 +9,7 @@ Water chemistry data are available from [Vannmiljø](https://vannmiljo.miljodire
 
 Catchments in Norway are also divided into waterbodies according to Vannforskriften, which is Norway's implementation of the EU Water Framework Directive (WFD). The [Vann-nett portal](https://vann-nett.no/) uses data from Vannmiljø to assign each waterbody a status (*high*, *good*, *moderate*, *poor* or *bad*) based thresholds defined in Vannforskriften for each parameter or quality element.
 
-@tbl-chem-mon lists the main monitoring stations in each catchment and identifies the corresponding WFD waterbody for each station. The WFD status for a waterbody displayed in Vann-nett may combine data from multiple stations, so for this analysis two sets of data were downloaded: (i) monitoring data for the specific stations suggested by Lillestrøm kommune, and (ii) all monitoring data used to assign status for each waterbody in Vann-nett. The first dataset provides the best available time series for individual points, whereas the second offers a more aggregated assessment (often with greater variability) and reflects the data used by water managers to set water quality targets.
+@tbl-chem-mon lists the main monitoring stations in each catchment and identifies the corresponding WFD waterbody for each station. The WFD status for a waterbody displayed in Vann-nett may combine data from multiple stations, so for this analysis two sets of data were downloaded: (i) monitoring data for the specific stations suggested by Lillestrøm kommune, and (ii) all monitoring data used to assign status for each waterbody in Vann-nett. The first dataset provides the best available time series for individual points, whereas the second offers a more aggregated assessment (often with greater variability) and reflects the data used by water managers to assess water quality status.
 
 All water chemistry data were downloaded programmatically via Python using the Vannmiljø and Vann-nett Application Programming Interfaces (APIs). See [notebook 02](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb) for details.
 
@@ -45,6 +45,52 @@ fmt = {c: "{:.6f}" for c in num_cols}
 # Style
 (
     df.style.format(fmt).hide(axis="index")
+    # Center column headers
+    .set_table_styles(
+        [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
+    )
+    # Center text columns
+    .set_properties(subset=txt_cols, **{"text-align": "center"})
+    # Right-align numeric columns
+    .set_properties(subset=num_cols, **{"text-align": "right"})
+)
+```
+
+Waterbody status classes are missing in Vann-Nett for many of the waterbodies listed in @tbl-chem-mon. This is because all catchments of interest except Gansåa are classified as *leirpåvirket* (national waterbody type `R111`; see @sec-diff-sources and @tbl-marine-clay), which means they are expected to have naturally high concentrations of particulate and total phosphorus. At present, there is no widely accepted set of class boundaries for TOTP status in catchments of type `R111`. However, thresholds for the boundary between *good* and *moderate* status have been proposed, based on the percentage cover of marine clay deposits in each catchment (e.g. [Meland *et al.*, 2023](https://elveliv.no/wp-content/uploads/2022-vannovervaking-i-vo-leira-nitelva.pdf)). Following this approach, @tbl-leir-totp-bounds shows the TOTP concentrations assumed in this report to mark the boundary between *good* and *moderate* status for each waterbody of type `R111`.
+
+```{python}
+#| label: tbl-leir-totp-bounds
+#| tbl-cap: "Assumed boundary between *moderate* and *good* status for TOTP concentrations in catchments classified as *leirpåvirket* (clay-influenced; national waterbody type `R111`). After [Meland *et al.*, 2023](https://elveliv.no/wp-content/uploads/2022-vannovervaking-i-vo-leira-nitelva.pdf)"
+#| echo: false
+
+import pandas as pd
+
+# Read site data
+xl_path = r"./data/leirvassdrag_totp_god-mod_boundaries.xlsx"
+df = (
+    pd.read_excel(xl_path)
+    .drop(columns=["type", "totp_nat_ugpl"])
+    .query("wb_id != '002-3692-R'")
+)
+
+# Tidy
+names_dict = {
+    "wb_id": "Vannforekomst ID",
+    "wb_name": "Vannforekomstnavn",
+    "leirdekkningsgrad_pct": "Leirdekkningsgrad (%)",
+    "totp_mod-god_ugpl": "God/moderat grense for TOTP (μg/l)",
+}
+df = df.rename(columns=names_dict)
+
+# Format
+num_cols = ["Leirdekkningsgrad (%)", "God/moderat grense for TOTP (μg/l)"]
+txt_cols = [c for c in df.columns if c not in num_cols]
+for col in num_cols:
+    df[col] = df[col].round().astype(int)
+
+# Style
+(
+    df.style.hide(axis="index")
     # Center column headers
     .set_table_styles(
         [{"selector": "th.col_heading", "props": [("text-align", "center")]}]

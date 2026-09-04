@@ -101,7 +101,7 @@ df.style.format(fmt).set_table_styles(
 
 All catchments of interest contain substantial areas of marine deposits (@fig-marine-clay; @tbl-marine-clay), and all except Gansåa are classified as *leirpåvirket* (clay-influenced) under the Water Framework Directive. Marine clays contain apatite, a phosphorus-rich mineral that contributes to naturally elevated phosphorus concentrations. Consequently, background levels of phosphorus - particularly particulate phosphorus - are expected to be high in these rivers. A comparison of @fig-marine-clay and @fig-land-cover shows that agricultural land is concentrated predominantly in areas underlain by marine clays.
 
-![Extent of marine deposits based on NGU's surface geology data (*løsmasserkartet*). ](./plots/catchment_marine_cover_labelled.png){#fig-marine-clay width=600 fig-align="center"}
+![Extent of marine deposits based on NGU's surface geology data (*løsmasserkart*). ](./plots/catchment_marine_cover_labelled.png){#fig-marine-clay width=600 fig-align="center"}
 
 ```{python}
 #| label: tbl-marine-clay
