@@ -99,9 +99,46 @@ df.style.format(fmt).set_table_styles(
 ).map(lambda _: "font-weight: bold;", subset=pd.IndexSlice[["Totalt"], :])
 ```
 
+All catchments of interest contain substantial areas of marine deposits (@fig-marine-clay; @tbl-marine-clay), and all except Gansåa are classified as *leirpåvirket* (clay-influenced) under the Water Framework Directive. Marine clays contain apatite, a phosphorus-rich mineral that contributes to naturally elevated phosphorus concentrations. Consequently, background levels of phosphorus - particularly particulate phosphorus - are expected to be high in these rivers. A comparison of @fig-marine-clay and @fig-land-cover shows that agricultural land is concentrated predominantly in areas underlain by marine clays.
+
+![Extent of marine deposits based on NGU's surface geology data (*løsmasserkartet*). ](./plots/catchment_marine_cover_labelled.png){#fig-marine-clay width=600 fig-align="center"}
+
+```{python}
+#| label: tbl-marine-clay
+#| tbl-cap: "Proportions of each catchment that are (i) below the marine limit, and (ii) covered by marine deposits. Based on NGU's *løsmassekart*."
+#| echo: false
+
+import pandas as pd
+
+# Read land cover data
+df = pd.read_excel(r"./data/catchment_marine_cover.xlsx").drop(columns='cat_id')
+
+names_dict = {
+    "name": "Nedbørfelt",
+    "area_km2": "Totalt areal (km²)",
+    "area_below_marine_limit_km2": "Under marin grense (km²)",
+    "pct_below_marine_limit": "Under marin grense (%)",
+    "marine_deposits_km2": "Marine avsetninger (km²)",
+    "pct_marine_deposits": "Marine avsetninger (%)",
+}
+df = df.rename(columns=names_dict).set_index("Nedbørfelt")
+
+# Format
+km2_cols = [c for c in df.columns if c.endswith("(km²)")]
+pct_cols = [c for c in df.columns if c.endswith("(%)")]
+for col in pct_cols:
+    df[col] = df[col].round().astype(int)
+fmt = {c: "{:.1f}" for c in km2_cols}
+
+# Style
+df.style.format(fmt).set_table_styles(
+    [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
+)
+```
+
 ### Point sources {#sec-pt-sources}
 
-Major point sources are shown in @tbl-pt-sources. Nutrient inputs are the mean of reported discharges during the period from 2013 to 2023 (in tonnes).
+Major point sources are shown in @tbl-pt-sources. Nutrient inputs are the mean of reported discharges during the period from 2013 to 2024 (in tonnes).
 
  * The largest single point source is **Nedre Romerike avløpsanlegg (NRA)**, which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at **Rotnes** and **Åneby**, further upstream. In Leira, significant wastewater discharges include **Gardermoen sentralrenseanlegg** and **Kløfta renseanlegg**, both in the lower-central part of the catchment.
    

@@ -5,7 +5,7 @@ number-sections: true
 
 ## Data preparation and cleaning {#sec-data-prep}
 
-Data was downloaded for all stations and waterbodies listed in @tbl-chem-mon using the [Vannmiljø API](https://vannmiljokoder.miljodirektoratet.no/api). @tbl-par-map shows how parameter names in Vannmiljø have been converted to standardised names and units consistent with the parameters modelled by TEOTIL3.
+Data were downloaded for all stations and waterbodies listed in @tbl-chem-mon using the [Vannmiljø API](https://vannmiljokoder.miljodirektoratet.no/api). @tbl-par-map shows how parameter names in Vannmiljø have been converted to standardised names and units consistent with the parameters modelled by TEOTIL3.
 
 |    **Vannmiljø**   | **Standardised** |         **Description**        | **Standardised unit** |
 |:------------------:|:----------------:|:------------------------------:|:---------------------:|
@@ -24,9 +24,7 @@ Data was downloaded for all stations and waterbodies listed in @tbl-chem-mon usi
 
 : Mapping between parameter names used in Vannmiljø and standardised names and units used in this report. {#tbl-par-map .striped}
 
-Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis.
-
-A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.
+Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis. A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.
 
 @fig-leira-water-chem shows raw water chemistry data from the lower Leira catchment at station 002-29659 (Leira ved Borgen bru). Measurements identified as outliers are shown in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.
 
@@ -34,7 +32,7 @@ A threshold of 10 is substantially higher than the commonly used value of 3.5 an
 
 The absence of consistent long-term monitoring of nitrogen and phosphorus fractions limits the ability to assess annual trends in concentrations and loads for these parameters. Consequently, analysis of the observed data in this project has been restricted to TOTN, TOTP, TOC and SS. A matrix plot of the raw data for these parameters for all stations is available [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/plots/concs/all_stations_main_pars.png).
 
-Code to download the raw data is provided in [notebook 02](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb), while outliers are flagged in [notebook 03a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb) and [notebook 03b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb).
+Code to download the raw data is provided in [notebook 02](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb), while outliers are flagged in notebooks [03a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb) and [03b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb).
 
 ## Annual mean concentrations {#sec-ann-concs}
 
@@ -44,7 +42,7 @@ Annual mean concentrations for stations are calculated in [notebook 03a](https:/
 
 ## Annual loads {#sec-ann-loads}
 
-Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e. after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site was downloaded from NVE via the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (see @sec-discharge).
+Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e. after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (see @sec-discharge).
 
 Estimates of annual riverine loads were calculated according to Equation @eq-ospar-annual following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling frequencies and the influence of high-flow events.
 
