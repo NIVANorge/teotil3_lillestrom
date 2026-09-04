@@ -285,7 +285,7 @@ window.Quarto = {
 
 <section id="sec-data-prep" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="sec-data-prep"><span class="header-section-number">4.1</span> Data preparation and cleaning</h2>
-<p>Data was downloaded for all stations and waterbodies listed in <a href="data-sources-models.html#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a> using the <a href="https://vannmiljokoder.miljodirektoratet.no/api">Vannmiljø API</a>. <a href="#tbl-par-map" class="quarto-xref">Table&nbsp;<span>4.1</span></a> shows how parameter names in Vannmiljø have been converted to standardised names and units consistent with the parameters modelled by TEOTIL3.</p>
+<p>Data were downloaded for all stations and waterbodies listed in <a href="data-sources-models.html#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a> using the <a href="https://vannmiljokoder.miljodirektoratet.no/api">Vannmiljø API</a>. <a href="#tbl-par-map" class="quarto-xref">Table&nbsp;<span>4.1</span></a> shows how parameter names in Vannmiljø have been converted to standardised names and units consistent with the parameters modelled by TEOTIL3.</p>
 <div id="tbl-par-map" class="striped quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-par-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -385,8 +385,7 @@ Table&nbsp;4.1: Mapping between parameter names used in Vannmiljø and standardi
 </div>
 </figure>
 </div>
-<p>Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis.</p>
-<p>A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.</p>
+<p>Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis. A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.</p>
 <p><a href="#fig-leira-water-chem" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> shows raw water chemistry data from the lower Leira catchment at station 002-29659 (Leira ved Borgen bru). Measurements identified as outliers are shown in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.</p>
 <div id="fig-leira-water-chem" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
@@ -399,7 +398,7 @@ Figure&nbsp;4.1: Concentrations measured at Vannmiljø station <code>002-29659</
 </figure>
 </div>
 <p>The absence of consistent long-term monitoring of nitrogen and phosphorus fractions limits the ability to assess annual trends in concentrations and loads for these parameters. Consequently, analysis of the observed data in this project has been restricted to TOTN, TOTP, TOC and SS. A matrix plot of the raw data for these parameters for all stations is available <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/plots/concs/all_stations_main_pars.png">here</a>.</p>
-<p>Code to download the raw data is provided in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb">notebook 02</a>, while outliers are flagged in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb">notebook 03a</a> and <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb">notebook 03b</a>.</p>
+<p>Code to download the raw data is provided in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/02_vannmiljo_vann-nett_nve.ipynb">notebook 02</a>, while outliers are flagged in notebooks <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb">03a</a> and <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb">03b</a>.</p>
 </section>
 <section id="sec-ann-concs" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="sec-ann-concs"><span class="header-section-number">4.2</span> Annual mean concentrations</h2>
@@ -408,7 +407,7 @@ Figure&nbsp;4.1: Concentrations measured at Vannmiljø station <code>002-29659</
 </section>
 <section id="sec-ann-loads" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="sec-ann-loads"><span class="header-section-number">4.3</span> Annual loads</h2>
-<p>Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e.&nbsp;after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site was downloaded from NVE via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (see <a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
+<p>Annual loads were estimated from the monitoring data for each station and waterbody using the cleaned concentration dataset i.e.&nbsp;after removing outliers and only including years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (see <a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
 <p>Estimates of annual riverine loads were calculated according to Equation <a href="#eq-ospar-annual" class="quarto-xref">Equation&nbsp;<span>4.1</span></a> following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling frequencies and the influence of high-flow events.</p>
 <p><span id="eq-ospar-annual"><span class="math display">\[
 L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
@@ -442,44 +441,44 @@ Table&nbsp;4.2: Typical nutrient discharges per person per day. Based on data co
 <div aria-describedby="tbl-nuts-per-pers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <style type="text/css">
-#T_4e905 th.col_heading {
+#T_01178 th.col_heading {
   text-align: center;
 }
-#T_4e905_row0_col0, #T_4e905_row1_col0, #T_4e905_row2_col0, #T_4e905_row3_col0, #T_4e905_row4_col0 {
+#T_01178_row0_col0, #T_01178_row1_col0, #T_01178_row2_col0, #T_01178_row3_col0, #T_01178_row4_col0 {
   text-align: center;
 }
-#T_4e905_row0_col1, #T_4e905_row1_col1, #T_4e905_row2_col1, #T_4e905_row3_col1, #T_4e905_row4_col1 {
+#T_01178_row0_col1, #T_01178_row1_col1, #T_01178_row2_col1, #T_01178_row3_col1, #T_01178_row4_col1 {
   text-align: right;
 }
 </style>
 
-<table id="T_4e905" class="cell caption-top table table-sm table-striped small">
+<table id="T_01178" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_4e905_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
-<th id="T_4e905_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
+<th id="T_01178_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
+<th id="T_01178_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_4e905_row0_col0" class="data row0 col0">TOTN</td>
-<td id="T_4e905_row0_col1" class="data row0 col1">12.0</td>
+<td id="T_01178_row0_col0" class="data row0 col0">TOTN</td>
+<td id="T_01178_row0_col1" class="data row0 col1">12.0</td>
 </tr>
 <tr class="even">
-<td id="T_4e905_row1_col0" class="data row1 col0">TOTP</td>
-<td id="T_4e905_row1_col1" class="data row1 col1">1.8</td>
+<td id="T_01178_row1_col0" class="data row1 col0">TOTP</td>
+<td id="T_01178_row1_col1" class="data row1 col1">1.8</td>
 </tr>
 <tr class="odd">
-<td id="T_4e905_row2_col0" class="data row2 col0">BOF5</td>
-<td id="T_4e905_row2_col1" class="data row2 col1">60.0</td>
+<td id="T_01178_row2_col0" class="data row2 col0">BOF5</td>
+<td id="T_01178_row2_col1" class="data row2 col1">60.0</td>
 </tr>
 <tr class="even">
-<td id="T_4e905_row3_col0" class="data row3 col0">KOF</td>
-<td id="T_4e905_row3_col1" class="data row3 col1">120.0</td>
+<td id="T_01178_row3_col0" class="data row3 col0">KOF</td>
+<td id="T_01178_row3_col1" class="data row3 col1">120.0</td>
 </tr>
 <tr class="odd">
-<td id="T_4e905_row4_col0" class="data row4 col0">SS</td>
-<td id="T_4e905_row4_col1" class="data row4 col1">70.0</td>
+<td id="T_01178_row4_col0" class="data row4 col0">SS</td>
+<td id="T_01178_row4_col1" class="data row4 col1">70.0</td>
 </tr>
 </tbody>
 </table>
