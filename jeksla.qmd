@@ -59,3 +59,8 @@ df.style.format(fmt).set_table_styles(
 ![Trends in annual mean concentrations for waterbody `002-599-R` (Jeksla). Solid red lines show statistically significant linear trends ($p ≤ 0.05$); dashed red lines indicate weak evidence of a linear trend ($0.05 < p ≤ 0.10$); and dashed black lines indicate no statistically significant trend ($p > 0.10$). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (*bad*, *poor*, *moderate*, *good* and *high*).](./plots/concs/ann_trends_waterbodies_002-599-R.png){#fig-jeksla-ann-concs width=800 fig-align="center"}
 
 ## Source apportionment {#sec-jeksla-sources}
+
+![Annual nutrient fluxes for waterbody `002-599-R` (Jeksla). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_Jeksla_waterbody_002-599-R.png){#fig-teotil3-jeksla width=800 fig-align="center"}
+
+
+![Mean source-apportionment for waterbody `002-599-R` (Jeksla) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_Jeksla_waterbody_002-599-R.png){#fig-jeksla-src-app width=800 fig-align="center"}
