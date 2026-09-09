@@ -184,7 +184,7 @@
     "href": "method.html#sec-ann-loads",
     "title": "4  Methodology",
     "section": "4.3 Annual loads",
-    "text": "4.3 Annual loads\nAnnual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the GTS API (see Section 3.2).\nEstimates of annual riverine loads were calculated according to Equation Equation 4.1 following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.\n\\[\nL = Q_r \\frac{\\sum_{i=1}^{n} C_i Q_i t_i}{\\sum_{i=1}^{n} Q_i t_i}\n\\tag{4.1}\\]\nwhere \\(L\\) is the annual load; \\(Q_i\\) represents the water discharge on sampling day \\(i\\); \\(C_i\\) is the concentration measured on day \\(i\\); \\(t_i\\) is the time period from the midpoint between day \\((i-1)\\) and day \\(i\\) to the midpoint between day \\(i\\) and day \\((i+1)\\), that is, half the number of days between the previous and subsequent sampling events; and \\(Q_r\\) is the annual water volume.\nAnnual nutrient loads estimated from manual sampling are subject to considerable uncertainty, particularly when sampling frequencies are low. This is especially true for particle-bound parameters such as TPP and SS, for which a substantial proportion of the annual load may be transported during a small number of high-flow events. The uncertainty associated with load estimates depends primarily on (i) sampling frequency, (ii) the parameter of interest, and (iii) catchment characteristics that influence the speed and magnitude of hydrological responses. In general, more frequent sampling yields more accurate load estimates, and dissolved constituents such as DIN can typically be estimated with greater accuracy than particulate-bound constituents (TPP and SS), because their concentrations usually vary less during storm events. Similarly, load estimates are often more reliable for large catchments than for small ones, because larger catchments generally respond more slowly, reducing the likelihood that major transport events occur between sampling dates (Slabon & Hoffman, 2024). As an example, Skarbøvik et al. (2012) analysed data from the Numedalslågen catchment (5,500 km²) and found that SS loads estimated from manual sampling at frequencies ranging from weekly to monthly typically underestimated the true annual load by 30 to 70 %. The catchments considered in this study are substantially smaller than Numedalslågen (17 to 668 km²; Table 2.2), while sampling frequencies vary from approximately weekly to less than monthly. It is therefore likely that annual loads of particulate-bound parameters calculated from measured data will underestimate true fluxes.\nAnnual loads for stations are calculated in notebook 04a and for waterbodies in notebook 04b.",
+    "text": "4.3 Annual loads\nAnnual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the GTS API (see Section 3.2).\nEstimates of annual riverine loads were calculated according to Equation 4.1 following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.\n\\[\nL = Q_r \\frac{\\sum_{i=1}^{n} C_i Q_i t_i}{\\sum_{i=1}^{n} Q_i t_i}\n\\tag{4.1}\\]\nwhere \\(L\\) is the annual load; \\(Q_i\\) represents the water discharge on sampling day \\(i\\); \\(C_i\\) is the concentration measured on day \\(i\\); \\(t_i\\) is the time period from the midpoint between day \\((i-1)\\) and day \\(i\\) to the midpoint between day \\(i\\) and day \\((i+1)\\), that is, half the number of days between the previous and subsequent sampling events; and \\(Q_r\\) is the annual water volume.\nAnnual nutrient loads estimated from manual sampling are subject to considerable uncertainty, particularly when sampling frequencies are low. This is especially true for particle-bound parameters such as TPP and SS, for which a substantial proportion of the total annual load may be transported during a small number of high-flow events. The uncertainty associated with load estimates depends primarily on (i) sampling frequency, (ii) the parameter of interest, and (iii) catchment characteristics that influence the speed and magnitude of hydrological responses. In general, more frequent sampling yields more accurate load estimates, and dissolved constituents such as DIN can be estimated with greater accuracy than particulate-bound constituents (TPP and SS), because their concentrations vary less during storm events. Similarly, load estimates are often more reliable for large catchments than for small ones, because larger catchments respond more slowly, reducing the likelihood that major transport events occur between sampling dates (Slabon & Hoffman, 2024). As an example, Skarbøvik et al. (2012) analysed data from the Numedalslågen catchment (5,500 km²) and found that SS loads estimated from manual sampling at frequencies ranging from weekly to monthly typically underestimated true annual loads by 30 to 70 %. The catchments considered in this study are substantially smaller than Numedalslågen (17 to 668 km²; Table 2.2), while sampling frequencies vary from approximately weekly to less than monthly. It is therefore likely that annual loads for particulate-bound parameters calculated from the measured data will underestimate true fluxes.\nAnnual loads for stations are calculated in notebook 04a and for waterbodies in notebook 04b.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Methodology</span>"
     ]
@@ -247,7 +247,7 @@
     "href": "sagelva.html#sec-sagelva-sources",
     "title": "5  Sagelva",
     "section": "5.3 Source apportionment",
-    "text": "5.3 Source apportionment\nFigure 5.3 shows nutrient fluxes estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). TEOTIL3’s simulations for TOTN are broadly in agreement with the monitoring data, and results for TOC are also reasonable. For TOTP and - especially - SS, annual fluxes simulated by TEOTIL3 are higher than the estimates based on monitoring data. It is possible that TEOTIL3 is overestimating losses of particulate material (SS and TPP) in this catchment. However, it is also likely that particulate fluxes (TPP and SS) estimated from infrequent sampling data underestimate the true nutrient load (see Section 4.3).\nGiven the uncertainties in both monitoring and modelling, it is reasonable to suggest that nutrient fluxes from Sagelva are approximately 40 to 60 tonnes/year for TOTN, 2 to 4 tonnes/year for TOTP, 300 to 600 tonnes/year for TOC, and 1000 to 2000 tonnes/year for SS.\n\n\n\n\n\n\nFigure 5.3: Annual nutrient fluxes for waterbody 002-3899-R (Fjellhamarelva - Sagelva). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\nFigure 5.4 shows the mean percentage contribution from each source to annual fluxes for the period from 2020 to 2024. According to TEOTIL3, agriculture is the dominant source of TOTN, TOTP and SS, but there are significant contributions from urban runoff in the lower part of the catchment, which is densely populated. TOC fluxes are dominated by background inputs from forest areas in the south of the catchment (Figure 5.1). The contribution from wastewater discharges in this catchment is small: about 5 % for TOTP and less than 3 % for TOTN, TOC and SS. There are no large municipal wastewater plants in this catchment, so the wastewater contribution to TOTP simulated by TEOTIL3 comes from spredt (1 %) and wastewater overflows (4 %). It is important to note, however, that the overflow dataset provided by Lillestrøm kommune only records discharges within the kommune boundary, which only covers the northern-most part of the Sagelva catchment (Figure 2.1). The true contribution from wastewater overflows may be greater if discharges from neighbouring kommuner, such as Lørenskog, are also included.\n\n\n\n\n\n\nFigure 5.4: Mean source-apportionment for waterbody 002-3899-R (Fjellhamarelva - Sagelva) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
+    "text": "5.3 Source apportionment\nFigure 5.3 shows nutrient fluxes estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). TEOTIL3’s simulations for TOTN are broadly in agreement with the monitoring data, and results for TOC are also reasonable. For TOTP and - especially - SS, annual fluxes simulated by TEOTIL3 are higher than the estimates based on monitoring data. It is possible that TEOTIL3 is overestimating losses of particulate material (SS and TPP) in this catchment. However, it is also likely that particulate fluxes (TPP and SS) estimated from infrequent sampling data underestimate the true nutrient load (see Section 4.3).\nGiven the uncertainties in both monitoring and modelling, it is reasonable to suggest that nutrient fluxes from Sagelva are approximately:\n\n40 to 60 tonnes/year for TOTN\n2 to 4 tonnes/year for TOTP\n300 to 600 tonnes/year for TOC\n1000 to 2000 tonnes/year for SS\n\n\n\n\n\n\n\nFigure 5.3: Annual nutrient fluxes for waterbody 002-3899-R (Fjellhamarelva - Sagelva). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\nFigure 5.4 shows the mean percentage contribution from each source to annual fluxes for the period from 2020 to 2024. According to TEOTIL3, agriculture is the dominant source of TOTN, TOTP and SS, but there are significant contributions from urban runoff in the lower part of the catchment, which is densely populated. TOC fluxes are dominated by background inputs from forest areas in the south of the catchment (Figure 5.1). The contribution from wastewater discharges in this catchment is small: about 5 % for TOTP and less than 3 % for TOTN, TOC and SS. There are no large municipal wastewater plants in this catchment, so the wastewater contribution to TOTP simulated by TEOTIL3 comes from spredt (1 %) and wastewater overflows (4 %). It is important to note, however, that the overflow dataset provided by Lillestrøm kommune only includes discharges within the kommune boundary, which only covers the northern-most part of the Sagelva catchment (Figure 2.1). The true contribution from wastewater overflows could be greater if discharges from neighbouring kommuner, such as Lørenskog, were included.\n\n\n\n\n\n\nFigure 5.4: Mean source-apportionment for waterbody 002-3899-R (Fjellhamarelva - Sagelva) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sagelva</span>"
@@ -289,100 +289,100 @@
   {
     "objectID": "leira.html",
     "href": "leira.html",
-    "title": "7  Leira",
+    "title": "7  Leira (including Jeksla)",
     "section": "",
     "text": "7.1 Monitoring data",
     "crumbs": [
       "Results",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira (including Jeksla)</span>"
     ]
   },
   {
     "objectID": "leira.html#sec-leira-monitoring",
     "href": "leira.html#sec-leira-monitoring",
-    "title": "7  Leira",
+    "title": "7  Leira (including Jeksla)",
     "section": "",
     "text": "Figure 7.2: Trends in annual mean concentrations for waterbody 002-3384-R (Leira nedstrøms Krokfoss). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
     "crumbs": [
       "Results",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira (including Jeksla)</span>"
     ]
   },
   {
     "objectID": "leira.html#sec-leira-sources",
     "href": "leira.html#sec-leira-sources",
-    "title": "7  Leira",
+    "title": "7  Leira (including Jeksla)",
     "section": "7.2 Source apportionment",
     "text": "7.2 Source apportionment\n\n\n\n\n\n\nFigure 7.3: Annual nutrient fluxes for waterbody 002-3384-R (Leira nedstrøms Krokfoss). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 7.4: Mean source-apportionment for waterbody 002-3384-R (Leira nedstrøms Krokfoss) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
     "crumbs": [
       "Results",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira</span>"
-    ]
-  },
-  {
-    "objectID": "romua.html",
-    "href": "romua.html",
-    "title": "8  Rømua",
-    "section": "",
-    "text": "8.1 Monitoring data",
-    "crumbs": [
-      "Results",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Rømua</span>"
-    ]
-  },
-  {
-    "objectID": "romua.html#sec-romua-monitoring",
-    "href": "romua.html#sec-romua-monitoring",
-    "title": "8  Rømua",
-    "section": "",
-    "text": "Figure 8.2: Trends in annual mean concentrations for waterbody 002-3659-R (Rømua). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
-    "crumbs": [
-      "Results",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Rømua</span>"
-    ]
-  },
-  {
-    "objectID": "romua.html#sec-romua-sources",
-    "href": "romua.html#sec-romua-sources",
-    "title": "8  Rømua",
-    "section": "8.2 Source apportionment",
-    "text": "8.2 Source apportionment\n\n\n\n\n\n\nFigure 8.3: Annual nutrient fluxes for waterbody 002-3659-R (Rømua). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 8.4: Mean source-apportionment for waterbody 002-3659-R (Rømua) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
-    "crumbs": [
-      "Results",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Rømua</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira (including Jeksla)</span>"
     ]
   },
   {
     "objectID": "jeksla.html",
     "href": "jeksla.html",
-    "title": "9  Jeksla",
+    "title": "8  Jeksla",
     "section": "",
-    "text": "9.1 Monitoring data",
+    "text": "8.1 Monitoring data",
     "crumbs": [
       "Results",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Jeksla</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Jeksla</span>"
     ]
   },
   {
     "objectID": "jeksla.html#sec-jeksla-monitoring",
     "href": "jeksla.html#sec-jeksla-monitoring",
-    "title": "9  Jeksla",
+    "title": "8  Jeksla",
     "section": "",
-    "text": "Figure 9.2: Trends in annual mean concentrations for waterbody 002-599-R (Jeksla). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "text": "Figure 8.2: Trends in annual mean concentrations for waterbody 002-599-R (Jeksla). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
     "crumbs": [
       "Results",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Jeksla</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Jeksla</span>"
     ]
   },
   {
     "objectID": "jeksla.html#sec-jeksla-sources",
     "href": "jeksla.html#sec-jeksla-sources",
-    "title": "9  Jeksla",
-    "section": "9.2 Source apportionment",
-    "text": "9.2 Source apportionment\n\n\n\n\n\n\nFigure 9.3: Annual nutrient fluxes for waterbody 002-599-R (Jeksla). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 9.4: Mean source-apportionment for waterbody 002-599-R (Jeksla) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
+    "title": "8  Jeksla",
+    "section": "8.2 Source apportionment",
+    "text": "8.2 Source apportionment\n\n\n\n\n\n\nFigure 8.3: Annual nutrient fluxes for waterbody 002-599-R (Jeksla). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 8.4: Mean source-apportionment for waterbody 002-599-R (Jeksla) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
     "crumbs": [
       "Results",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Jeksla</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Jeksla</span>"
+    ]
+  },
+  {
+    "objectID": "romua.html",
+    "href": "romua.html",
+    "title": "9  Rømua",
+    "section": "",
+    "text": "9.1 Monitoring data",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Rømua</span>"
+    ]
+  },
+  {
+    "objectID": "romua.html#sec-romua-monitoring",
+    "href": "romua.html#sec-romua-monitoring",
+    "title": "9  Rømua",
+    "section": "",
+    "text": "Figure 9.2: Trends in annual mean concentrations for waterbody 002-3659-R (Rømua). Solid red lines show statistically significant linear trends (\\(p ≤ 0.05\\)); dashed red lines indicate weak evidence of a linear trend (\\(0.05 &lt; p ≤ 0.10\\)); and dashed black lines indicate no statistically significant trend (\\(p &gt; 0.10\\)). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (bad, poor, moderate, good and high).",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Rømua</span>"
+    ]
+  },
+  {
+    "objectID": "romua.html#sec-romua-sources",
+    "href": "romua.html#sec-romua-sources",
+    "title": "9  Rømua",
+    "section": "9.2 Source apportionment",
+    "text": "9.2 Source apportionment\n\n\n\n\n\n\nFigure 9.3: Annual nutrient fluxes for waterbody 002-3659-R (Rømua). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 9.4: Mean source-apportionment for waterbody 002-3659-R (Rømua) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Rømua</span>"
     ]
   },
   {

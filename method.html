@@ -197,19 +197,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./leira.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Leira</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./romua.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Rømua</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Leira (including Jeksla)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jeksla.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Jeksla</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Jeksla</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./romua.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Rømua</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -408,12 +408,12 @@ Figure&nbsp;4.1: Concentrations measured at Vannmiljø station <code>002-29659</
 <section id="sec-ann-loads" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="sec-ann-loads"><span class="header-section-number">4.3</span> Annual loads</h2>
 <p>Annual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (see <a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
-<p>Estimates of annual riverine loads were calculated according to Equation <a href="#eq-ospar-annual" class="quarto-xref">Equation&nbsp;<span>4.1</span></a> following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.</p>
+<p>Estimates of annual riverine loads were calculated according to <a href="#eq-ospar-annual" class="quarto-xref">Equation&nbsp;<span>4.1</span></a> following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.</p>
 <p><span id="eq-ospar-annual"><span class="math display">\[
 L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
 \tag{4.1}\]</span></span></p>
 <p>where <span class="math inline">\(L\)</span> is the annual load; <span class="math inline">\(Q_i\)</span> represents the water discharge on sampling day <span class="math inline">\(i\)</span>; <span class="math inline">\(C_i\)</span> is the concentration measured on day <span class="math inline">\(i\)</span>; <span class="math inline">\(t_i\)</span> is the time period from the midpoint between day <span class="math inline">\((i-1)\)</span> and day <span class="math inline">\(i\)</span> to the midpoint between day <span class="math inline">\(i\)</span> and day <span class="math inline">\((i+1)\)</span>, that is, half the number of days between the previous and subsequent sampling events; and <span class="math inline">\(Q_r\)</span> is the annual water volume.</p>
-<p>Annual nutrient loads estimated from manual sampling are subject to considerable uncertainty, particularly when sampling frequencies are low. This is especially true for particle-bound parameters such as TPP and SS, for which a substantial proportion of the annual load may be transported during a small number of high-flow events. The uncertainty associated with load estimates depends primarily on (i) sampling frequency, (ii) the parameter of interest, and (iii) catchment characteristics that influence the speed and magnitude of hydrological responses. In general, more frequent sampling yields more accurate load estimates, and dissolved constituents such as DIN can typically be estimated with greater accuracy than particulate-bound constituents (TPP and SS), because their concentrations usually vary less during storm events. Similarly, load estimates are often more reliable for large catchments than for small ones, because larger catchments generally respond more slowly, reducing the likelihood that major transport events occur between sampling dates (<a href="https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2022WR032628">Slabon &amp; Hoffman, 2024</a>). As an example, <a href="https://www.sciencedirect.com/science/article/pii/S0048969712009059?via%3Dihub">Skarbøvik <em>et al.</em> (2012)</a> analysed data from the Numedalslågen catchment (5,500 km²) and found that SS loads estimated from manual sampling at frequencies ranging from weekly to monthly typically underestimated the true annual load by 30 to 70 %. The catchments considered in this study are substantially smaller than Numedalslågen (17 to 668 km²; <a href="intro.html#tbl-land-cover" class="quarto-xref">Table&nbsp;<span>2.2</span></a>), while sampling frequencies vary from approximately weekly to less than monthly. It is therefore likely that annual loads of particulate-bound parameters calculated from measured data will underestimate true fluxes.</p>
+<p>Annual nutrient loads estimated from manual sampling are subject to considerable uncertainty, particularly when sampling frequencies are low. This is especially true for particle-bound parameters such as TPP and SS, for which a substantial proportion of the total annual load may be transported during a small number of high-flow events. The uncertainty associated with load estimates depends primarily on (i) sampling frequency, (ii) the parameter of interest, and (iii) catchment characteristics that influence the speed and magnitude of hydrological responses. In general, more frequent sampling yields more accurate load estimates, and dissolved constituents such as DIN can be estimated with greater accuracy than particulate-bound constituents (TPP and SS), because their concentrations vary less during storm events. Similarly, load estimates are often more reliable for large catchments than for small ones, because larger catchments respond more slowly, reducing the likelihood that major transport events occur between sampling dates (<a href="https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2022WR032628">Slabon &amp; Hoffman, 2024</a>). As an example, <a href="https://www.sciencedirect.com/science/article/pii/S0048969712009059?via%3Dihub">Skarbøvik <em>et al.</em> (2012)</a> analysed data from the Numedalslågen catchment (5,500 km²) and found that SS loads estimated from manual sampling at frequencies ranging from weekly to monthly typically underestimated true annual loads by 30 to 70 %. The catchments considered in this study are substantially smaller than Numedalslågen (17 to 668 km²; <a href="intro.html#tbl-land-cover" class="quarto-xref">Table&nbsp;<span>2.2</span></a>), while sampling frequencies vary from approximately weekly to less than monthly. It is therefore likely that annual loads for particulate-bound parameters calculated from the measured data will underestimate true fluxes.</p>
 <p>Annual loads for stations are calculated in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb">notebook 04a</a> and for waterbodies in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb">notebook 04b</a>.</p>
 </section>
 <section id="sec-trend-tests" class="level2" data-number="4.4">
@@ -442,44 +442,44 @@ Table&nbsp;4.2: Typical nutrient discharges per person per day. Based on data co
 <div aria-describedby="tbl-nuts-per-pers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <style type="text/css">
-#T_d8038 th.col_heading {
+#T_e7c0a th.col_heading {
   text-align: center;
 }
-#T_d8038_row0_col0, #T_d8038_row1_col0, #T_d8038_row2_col0, #T_d8038_row3_col0, #T_d8038_row4_col0 {
+#T_e7c0a_row0_col0, #T_e7c0a_row1_col0, #T_e7c0a_row2_col0, #T_e7c0a_row3_col0, #T_e7c0a_row4_col0 {
   text-align: center;
 }
-#T_d8038_row0_col1, #T_d8038_row1_col1, #T_d8038_row2_col1, #T_d8038_row3_col1, #T_d8038_row4_col1 {
+#T_e7c0a_row0_col1, #T_e7c0a_row1_col1, #T_e7c0a_row2_col1, #T_e7c0a_row3_col1, #T_e7c0a_row4_col1 {
   text-align: right;
 }
 </style>
 
-<table id="T_d8038" class="cell caption-top table table-sm table-striped small">
+<table id="T_e7c0a" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_d8038_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
-<th id="T_d8038_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
+<th id="T_e7c0a_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
+<th id="T_e7c0a_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_d8038_row0_col0" class="data row0 col0">TOTN</td>
-<td id="T_d8038_row0_col1" class="data row0 col1">12.0</td>
+<td id="T_e7c0a_row0_col0" class="data row0 col0">TOTN</td>
+<td id="T_e7c0a_row0_col1" class="data row0 col1">12.0</td>
 </tr>
 <tr class="even">
-<td id="T_d8038_row1_col0" class="data row1 col0">TOTP</td>
-<td id="T_d8038_row1_col1" class="data row1 col1">1.8</td>
+<td id="T_e7c0a_row1_col0" class="data row1 col0">TOTP</td>
+<td id="T_e7c0a_row1_col1" class="data row1 col1">1.8</td>
 </tr>
 <tr class="odd">
-<td id="T_d8038_row2_col0" class="data row2 col0">BOF5</td>
-<td id="T_d8038_row2_col1" class="data row2 col1">60.0</td>
+<td id="T_e7c0a_row2_col0" class="data row2 col0">BOF5</td>
+<td id="T_e7c0a_row2_col1" class="data row2 col1">60.0</td>
 </tr>
 <tr class="even">
-<td id="T_d8038_row3_col0" class="data row3 col0">KOF</td>
-<td id="T_d8038_row3_col1" class="data row3 col1">120.0</td>
+<td id="T_e7c0a_row3_col0" class="data row3 col0">KOF</td>
+<td id="T_e7c0a_row3_col1" class="data row3 col1">120.0</td>
 </tr>
 <tr class="odd">
-<td id="T_d8038_row4_col0" class="data row4 col0">SS</td>
-<td id="T_d8038_row4_col1" class="data row4 col1">70.0</td>
+<td id="T_e7c0a_row4_col0" class="data row4 col0">SS</td>
+<td id="T_e7c0a_row4_col1" class="data row4 col1">70.0</td>
 </tr>
 </tbody>
 </table>
