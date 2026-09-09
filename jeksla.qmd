@@ -60,7 +60,7 @@ df.style.format(fmt).set_table_styles(
 
 ## Source apportionment {#sec-jeksla-sources}
 
-![Annual nutrient fluxes for waterbody `002-599-R` (Jeksla). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_Jeksla_waterbody_002-599-R.png){#fig-teotil3-jeksla width=800 fig-align="center"}
+![Annual nutrient fluxes for waterbody `002-599-R` (Jeksla). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Jeksla_waterbody_002-599-R.png){#fig-teotil3-jeksla width=800 fig-align="center"}
 
 
-![Mean source-apportionment for waterbody `002-599-R` (Jeksla) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_Jeksla_waterbody_002-599-R.png){#fig-jeksla-src-app width=800 fig-align="center"}
+![Mean source-apportionment for waterbody `002-599-R` (Jeksla) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Jeksla_waterbody_002-599-R.png){#fig-jeksla-src-app width=800 fig-align="center"}

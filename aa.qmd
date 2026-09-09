@@ -100,7 +100,7 @@ df.style.format(fmt).hide(axis="index").set_properties(
 
 ## Source apportionment {#sec-aa-sources}
 
-![Annual nutrient fluxes for waterbody `002-3685-R` (Fossåa). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_Åa_waterbody_002-3685-R.png){#fig-teotil3-aa width=800 fig-align="center"}
+![Annual nutrient fluxes for waterbody `002-3685-R` (Fossåa). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Åa_waterbody_002-3685-R.png){#fig-teotil3-aa width=800 fig-align="center"}
 
 
-![Mean source-apportionment for waterbody `002-3685-R` (Fossåa) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_Åa_waterbody_002-3685-R.png){#fig-aa-src-app width=800 fig-align="center"}
+![Mean source-apportionment for waterbody `002-3685-R` (Fossåa) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Åa_waterbody_002-3685-R.png){#fig-aa-src-app width=800 fig-align="center"}

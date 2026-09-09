@@ -100,7 +100,7 @@ df.style.format(fmt).hide(axis="index").set_properties(
 
 ## Source apportionment {#sec-nitelva-sources}
 
-![Annual nutrient fluxes for waterbody `002-3891-R` (Nedre Nitelva). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_Nitelva_waterbody_002-3891-R.png){#fig-teotil3-nitelva width=800 fig-align="center"}
+![Annual nutrient fluxes for waterbody `002-3891-R` (Nedre Nitelva). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Nitelva_waterbody_002-3891-R.png){#fig-teotil3-nitelva width=800 fig-align="center"}
 
 
-![Mean source-apportionment for waterbody `002-3891-R` (Nedre Nitelva) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_Nitelva_waterbody_002-3891-R.png){#fig-nitelva-src-app width=800 fig-align="center"}
+![Mean source-apportionment for waterbody `002-3891-R` (Nedre Nitelva) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Nitelva_waterbody_002-3891-R.png){#fig-nitelva-src-app width=800 fig-align="center"}

@@ -99,7 +99,7 @@ df.style.format(fmt).hide(axis="index").set_properties(
 
 ## Source apportionment {#sec-gansaa-sources}
 
-![Annual nutrient fluxes for waterbody `002-3655-R` (Gansåa). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_Gansåa_waterbody_002-3655-R.png){#fig-teotil3-gansaa width=800 fig-align="center"}
+![Annual nutrient fluxes for waterbody `002-3655-R` (Gansåa). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Gansåa_waterbody_002-3655-R.png){#fig-teotil3-gansaa width=800 fig-align="center"}
 
 
-![Mean source-apportionment for waterbody `002-3655-R` (Gansåa) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_Gansåa_waterbody_002-3655-R.png){#fig-gansaa-src-app width=800 fig-align="center"}
+![Mean source-apportionment for waterbody `002-3655-R` (Gansåa) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Gansåa_waterbody_002-3655-R.png){#fig-gansaa-src-app width=800 fig-align="center"}
