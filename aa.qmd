@@ -109,7 +109,7 @@ df.style.format(fmt).hide(axis="index").set_properties(
 
 ![Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.](./plots/modelled/avlast_Åa_waterbody_002-3685-R.png){#fig-aa-avlast width=800 fig-align="center"}
 
-![Load reductions achieved in the Åa catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-aa-avlast).](./plots/modelled/Åa.png){#fig-aa-scens width=800 fig-align="center"}
+![Load reductions achieved in the Åa catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-aa-avlast).](./plots/modelled/oslomod_scens_Åa.png){#fig-aa-scens width=800 fig-align="center"}
 
 ```{python}
 #| label: tbl-scen_summary-aa
