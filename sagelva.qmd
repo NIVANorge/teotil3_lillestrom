@@ -115,7 +115,7 @@ In terms of water quality status, concentrations of TOTN have improved from the 
 
 Given the uncertainties in both monitoring and modelling, it is reasonable to suggest that nutrient fluxes from Sagelva are approximately:
 
- * 40 to 60 tonnes/year for TOTN
+ * 40 to 80 tonnes/year for TOTN
  * 2 to 4 tonnes/year for TOTP
  * 300 to 600 tonnes/year for TOC
  * 1000 to 2000 tonnes/year for SS
