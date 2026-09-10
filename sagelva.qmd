@@ -127,3 +127,11 @@ Given the uncertainties in both monitoring and modelling, it is reasonable to su
 ![Mean source-apportionment for waterbody `002-3899-R` (Fjellhamarelva - Sagelva) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Sagelva_waterbody_002-3899-R.png){#fig-sagelva-src-app width=800 fig-align="center"}
 
 ## Load reductions and scenarios {#sec-sagelva-avlast}
+
+During the decade from 2015 to 2024, the median annual flow volume from Sagelva (station `002-46599`) was 46 Mm³/year. Taking the maximum concentrations for GES of 775 μg/l for N and 40 μg/l for P, the maximum annual load for "good" status is approximately 36 tonnes for TOTN and 1.8 tonnes for TOTP. These values are at the lower limit of nutrient loads measured in recent years (@fig-teotil3-sagelva). Using the same GES thresholds and the annual flow time series from NVE, we can calculate an avlastningsbehov for each year from 2015 to 2024, using both observed nutrient loads (black lines on @fig-teotil3-sagelva) and loads modelled using TEOTIL3 (stacked bars on @fig-teotil3-sagelva).
+
+@fig-sagelva-avlast shows the distribution of annual avlastningsbehovene for the period from 2015 to 2024... 
+
+![Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.](./plots/modelled/avlast_Sagelva_waterbody_002-3899-R.png){#fig-sagelva-avlast width=800 fig-align="center"}
+
+![Load reductions achieved in the Sagelva catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-sagelva-avlast).](./plots/modelled/oslomod_scens_Sagelva.png){#fig-sagelva-scens width=800 fig-align="center"}
