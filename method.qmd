@@ -24,9 +24,9 @@ Data were downloaded for all stations and waterbodies listed in @tbl-chem-mon us
 
 : Mapping between parameter names used in Vannmiljø and standardised names and units used in this report. {#tbl-par-map .striped}
 
-Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis. A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.
+Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 20. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 20 were flagged as outliers and removed from subsequent analysis. A threshold of 20 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.
 
-@fig-leira-water-chem shows raw water chemistry data from the lower Leira catchment at station 002-29659 (Leira ved Borgen bru). Measurements identified as outliers are shown in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.
+@fig-leira-water-chem shows raw water chemistry data from the lower Leira catchment at station `002-29659` (Leira ved Borgen bru). Measurements identified as outliers are shown in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.
 
 ![Concentrations measured at Vannmiljø station `002-29659` (Leira ved Borgen bru). Measurements identified as outliers using the "double median absolute deviation" method are shown in red](./plots/concs/station_002-29659.png){#fig-leira-water-chem width=800 fig-align="center"}
 
@@ -153,7 +153,11 @@ Code to calculate spredt inputs and wastewater overflows using data provided by 
 
 ### Avlastningsbehov {#sec-teo-avlast}
 
+**Add details of method for avlastningsbehov...**
+
 ### Scenarios {#sec-teo-scens}
+
+**Describe scenarios...**
 
 
 
