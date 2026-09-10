@@ -268,7 +268,7 @@
     "href": "sagelva.html#sec-sagelva-avlast",
     "title": "5  Sagelva",
     "section": "5.4 Load reductions and scenarios",
-    "text": "5.4 Load reductions and scenarios\nDuring the decade from 2015 to 2024, the median annual flow volume from Sagelva (station 002-46599) was 46 Mm³/year. Taking the maximum concentrations for GES of 775 μg/l for N and 40 μg/l for P, the maximum annual load for “good” status is approximately 36 tonnes for TOTN and 1.8 tonnes for TOTP. These values are at the lower limit of nutrient loads measured in recent years (Figure 5.3). Using the same GES thresholds and the annual flow time series from NVE, we can calculate an avlastningsbehov for each year from 2015 to 2024, using both observed nutrient loads (black lines on Figure 5.3) and loads modelled using TEOTIL3 (stacked bars on Figure 5.3).\nFigure 5.5 shows the distribution of annual avlastningsbehovene for the period from 2015 to 2024…\n\n\n\n\n\n\nFigure 5.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 5.6: Load reductions achieved in the Sagelva catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 5.5).",
+    "text": "5.4 Load reductions and scenarios\nDuring the decade from 2015 to 2024, the median annual flow volume from Sagelva (station 002-46599) was 46 Mm³/year. Taking the maximum concentrations for GES of 775 μg/l for N and 40 μg/l for P, the maximum annual load for “good” status is approximately 36 tonnes for TOTN and 1.8 tonnes for TOTP. These values are at the lower limit of nutrient loads measured in recent years (Figure 5.3). Using the same GES thresholds and the annual flow time series from NVE, we can calculate an avlastningsbehov for each year from 2015 to 2024, using both observed nutrient loads (black lines on Figure 5.3) and loads modelled using TEOTIL3 (stacked bars on Figure 5.3).\nFigure 5.5 shows the distribution of annual avlastningsbehovene for the period from 2015 to 2024…\n\n\n\n\n\n\nFigure 5.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 5.6: Load reductions achieved in the Sagelva catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 5.5).\n\n\n\n\n\n\n\nTable 5.3: Summary of avlastningsbehov and scenario results for Sagelva.\n\n\n\n\n\n\n\n\nNedbørfelt\nVannforekomst ID\nParameter\nVann-Nett tilstand\nAvlastningsbehov fra observert data (%)\nAvlastningsbehov fra modellert data (%)\nReduksjon ScA (%)\nReduksjon ScB (%)\n\n\n\n\nSagelva\n002-3899-R\nSS\nUndefined\n\n\n-50\n-58\n\n\nSagelva\n002-3899-R\nTOC\nUndefined\n\n\n-2\n-2\n\n\nSagelva\n002-3899-R\nTOTN\nModerate\n-19\n-8\n-2\n-19\n\n\nSagelva\n002-3899-R\nTOTP\nModerate\n-3\n-40\n-26\n-36",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sagelva</span>"
@@ -308,6 +308,17 @@
     ]
   },
   {
+    "objectID": "nitelva.html#sec-nitelva-avlast",
+    "href": "nitelva.html#sec-nitelva-avlast",
+    "title": "6  Nitelva (including Sagelva)",
+    "section": "6.3 Load reductions and scenarios",
+    "text": "6.3 Load reductions and scenarios\n\n\n\n\n\n\nFigure 6.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 6.6: Load reductions achieved in the Nitelva catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 6.5).\n\n\n\n\n\n\n\nTable 6.3: Summary of avlastningsbehov and scenario results for Nitelva.\n\n\n\n\n\n\n\n\nNedbørfelt\nVannforekomst ID\nParameter\nVann-Nett tilstand\nAvlastningsbehov fra observert data (%)\nAvlastningsbehov fra modellert data (%)\nReduksjon ScA (%)\nReduksjon ScB (%)\n\n\n\n\nNitelva\n002-3891-R\nSS\nUndefined\n\n\n-57\n-65\n\n\nNitelva\n002-3891-R\nTOC\nUndefined\n\n\n-6\n-7\n\n\nNitelva\n002-3891-R\nTOTN\nModerate\n-48\n-45\n-21\n-29\n\n\nNitelva\n002-3891-R\nTOTP\nModerate\n-3\n-42\n-20\n-31",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Nitelva (including Sagelva)</span>"
+    ]
+  },
+  {
     "objectID": "leira.html",
     "href": "leira.html",
     "title": "7  Leira (including Jeksla)",
@@ -335,6 +346,17 @@
     "title": "7  Leira (including Jeksla)",
     "section": "7.2 Source apportionment",
     "text": "7.2 Source apportionment\n\n\n\n\n\n\nFigure 7.3: Annual nutrient fluxes for waterbody 002-3384-R (Leira nedstrøms Krokfoss). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 7.4: Mean source-apportionment for waterbody 002-3384-R (Leira nedstrøms Krokfoss) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira (including Jeksla)</span>"
+    ]
+  },
+  {
+    "objectID": "leira.html#sec-leira-avlast",
+    "href": "leira.html#sec-leira-avlast",
+    "title": "7  Leira (including Jeksla)",
+    "section": "7.3 Load reductions and scenarios",
+    "text": "7.3 Load reductions and scenarios\n\n\n\n\n\n\nFigure 7.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 7.6: Load reductions achieved in the Leira catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 7.5).\n\n\n\n\n\n\n\nTable 7.3: Summary of avlastningsbehov and scenario results for Leira.\n\n\n\n\n\n\n\n\nNedbørfelt\nVannforekomst ID\nParameter\nVann-Nett tilstand\nAvlastningsbehov fra observert data (%)\nAvlastningsbehov fra modellert data (%)\nReduksjon ScA (%)\nReduksjon ScB (%)\n\n\n\n\nLeira\n002-3384-R\nSS\nUndefined\n\n\n-64\n-73\n\n\nLeira\n002-3384-R\nTOC\nUndefined\n\n\n-3\n-4\n\n\nLeira\n002-3384-R\nTOTN\nModerate\n-42\n-55\n-6\n-25\n\n\nLeira\n002-3384-R\nTOTP\nModerate\n-54\n-55\n-40\n-53",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Leira (including Jeksla)</span>"
@@ -374,6 +396,17 @@
     ]
   },
   {
+    "objectID": "jeksla.html#sec-jeksla-avlast",
+    "href": "jeksla.html#sec-jeksla-avlast",
+    "title": "8  Jeksla",
+    "section": "8.3 Load reductions and scenarios",
+    "text": "8.3 Load reductions and scenarios\n\n\n\n\n\n\nFigure 8.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 8.6: Load reductions achieved in the Jeksla catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 8.5).\n\n\n\n\n\n\n\nTable 8.2: Summary of avlastningsbehov and scenario results for Jeksla.\n\n\n\n\n\n\n\n\nNedbørfelt\nVannforekomst ID\nParameter\nVann-Nett tilstand\nAvlastningsbehov fra observert data (%)\nAvlastningsbehov fra modellert data (%)\nReduksjon ScA (%)\nReduksjon ScB (%)\n\n\n\n\nJeksla\n002-599-R\nSS\nUndefined\n\n\n-67\n-72\n\n\nJeksla\n002-599-R\nTOC\nUndefined\n\n\n-2\n-2\n\n\nJeksla\n002-599-R\nTOTN\nBad\n-64\n-81\n-2\n-28\n\n\nJeksla\n002-599-R\nTOTP\nModerate\n-20\n-74\n-43\n-55",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Jeksla</span>"
+    ]
+  },
+  {
     "objectID": "romua.html",
     "href": "romua.html",
     "title": "9  Rømua",
@@ -401,6 +434,17 @@
     "title": "9  Rømua",
     "section": "9.2 Source apportionment",
     "text": "9.2 Source apportionment\n\n\n\n\n\n\nFigure 9.3: Annual nutrient fluxes for waterbody 002-3659-R (Rømua). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 9.4: Mean source-apportionment for waterbody 002-3659-R (Rømua) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Rømua</span>"
+    ]
+  },
+  {
+    "objectID": "romua.html#sec-romua-avlast",
+    "href": "romua.html#sec-romua-avlast",
+    "title": "9  Rømua",
+    "section": "9.3 Load reductions and scenarios",
+    "text": "9.3 Load reductions and scenarios\n\n\n\n\n\n\nFigure 9.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 9.6: Load reductions achieved in the Rømua catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 9.5).\n\n\n\n\n\n\n\nTable 9.3: Summary of avlastningsbehov and scenario results for Rømua.\n\n\n\n\n\n\n\n\nNedbørfelt\nVannforekomst ID\nParameter\nVann-Nett tilstand\nAvlastningsbehov fra observert data (%)\nAvlastningsbehov fra modellert data (%)\nReduksjon ScA (%)\nReduksjon ScB (%)\n\n\n\n\nRømua\n002-3659-R\nSS\nUndefined\n\n\n-73\n-79\n\n\nRømua\n002-3659-R\nTOC\nUndefined\n\n\n-7\n-7\n\n\nRømua\n002-3659-R\nTOTN\nPoor\n-67\n-81\n-2\n-30\n\n\nRømua\n002-3659-R\nTOTP\nPoor\n-46\n-58\n-48\n-64",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Rømua</span>"
@@ -440,6 +484,17 @@
     ]
   },
   {
+    "objectID": "aa.html#sec-aa-avlast",
+    "href": "aa.html#sec-aa-avlast",
+    "title": "10  Åa",
+    "section": "10.3 Load reductions and scenarios",
+    "text": "10.3 Load reductions and scenarios\n\n\n\n\n\n\nFigure 10.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 10.6: Load reductions achieved in the Åa catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 10.5).\n\n\n\n\n\n\n\nTable 10.3: Summary of avlastningsbehov and scenario results for Åa.\n\n\n\n\n\n\n\n\nNedbørfelt\nVannforekomst ID\nParameter\nVann-Nett tilstand\nAvlastningsbehov fra observert data (%)\nAvlastningsbehov fra modellert data (%)\nReduksjon ScA (%)\nReduksjon ScB (%)\n\n\n\n\nÅa\n002-3685-R\nSS\nUndefined\n\n\n-70\n-78\n\n\nÅa\n002-3685-R\nTOC\nUndefined\n\n\n0\n0\n\n\nÅa\n002-3685-R\nTOTN\nModerate\n-44\n-63\n-1\n-27\n\n\nÅa\n002-3685-R\nTOTP\nModerate\n-18\n-58\n-39\n-53",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Åa</span>"
+    ]
+  },
+  {
     "objectID": "gansaa.html",
     "href": "gansaa.html",
     "title": "11  Gansåa",
@@ -467,6 +522,17 @@
     "title": "11  Gansåa",
     "section": "11.2 Source apportionment",
     "text": "11.2 Source apportionment\n\n\n\n\n\n\nFigure 11.3: Annual nutrient fluxes for waterbody 002-3655-R (Gansåa). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.\n\n\n\n\n\n\n\n\n\nFigure 11.4: Mean source-apportionment for waterbody 002-3655-R (Gansåa) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gansåa</span>"
+    ]
+  },
+  {
+    "objectID": "gansaa.html#sec-gansaa-avlast",
+    "href": "gansaa.html#sec-gansaa-avlast",
+    "title": "11  Gansåa",
+    "section": "11.3 Load reductions and scenarios",
+    "text": "11.3 Load reductions and scenarios\n\n\n\n\n\n\nFigure 11.5: Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.\n\n\n\n\n\n\n\n\n\nFigure 11.6: Load reductions achieved in the Gansåa catchment by scenarios A and B of Wallhead et al. (2026). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (Figure 11.5).\n\n\n\n\n\n\n\nTable 11.3: Summary of avlastningsbehov and scenario results for Gansåa.\n\n\n\n\n\n\n\n\nNedbørfelt\nVannforekomst ID\nParameter\nVann-Nett tilstand\nAvlastningsbehov fra observert data (%)\nAvlastningsbehov fra modellert data (%)\nReduksjon ScA (%)\nReduksjon ScB (%)\n\n\n\n\nGansåa\n002-3655-R\nSS\nUndefined\n\n\n-72\n-78\n\n\nGansåa\n002-3655-R\nTOC\nUndefined\n\n\n-1\n-1\n\n\nGansåa\n002-3655-R\nTOTN\nModerate\n-24\n-36\n-2\n-16\n\n\nGansåa\n002-3655-R\nTOTP\nModerate\n-16\n-58\n-45\n-56",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Gansåa</span>"
