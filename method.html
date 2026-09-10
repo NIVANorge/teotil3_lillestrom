@@ -386,8 +386,8 @@ Table&nbsp;4.1: Mapping between parameter names used in Vannmiljø and standardi
 </div>
 </figure>
 </div>
-<p>Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 10. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 10 were flagged as outliers and removed from subsequent analysis. A threshold of 10 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.</p>
-<p><a href="#fig-leira-water-chem" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> shows raw water chemistry data from the lower Leira catchment at station 002-29659 (Leira ved Borgen bru). Measurements identified as outliers are shown in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.</p>
+<p>Extreme outliers in the time series for each parameter were identified using the double median absolute deviation (MAD) method with a modified z-score threshold of 20. The method calculates separate MAD values above and below the median, allowing robust outlier detection in skewed distributions without assuming normality. Observations with modified z-scores greater than 20 were flagged as outliers and removed from subsequent analysis. A threshold of 20 is substantially higher than the commonly used value of 3.5 and therefore represents a highly conservative screening criterion. As a result, only the most extreme departures from typical behaviour are identified as outliers, minimising the risk of incorrectly flagging valid observations.</p>
+<p><a href="#fig-leira-water-chem" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> shows raw water chemistry data from the lower Leira catchment at station <code>002-29659</code> (Leira ved Borgen bru). Measurements identified as outliers are shown in red. Monitoring at this location is representative of the wider dataset for Lillestrøm kommune, with extensive records for TOTN, TOTP, TOC and SS. By contrast, data for ammonium and nitrate are sparse, and monitoring of phosphorus fractions has been inconsistent, comprising varying combinations of SRP, TRP, DIP, TIP, and TDP depending on the site, contractor, and monitoring period.</p>
 <div id="fig-leira-water-chem" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-leira-water-chem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -463,44 +463,44 @@ Table&nbsp;4.2: Typical nutrient discharges per person per day. Based on data co
 <div aria-describedby="tbl-nuts-per-pers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <style type="text/css">
-#T_421b2 th.col_heading {
+#T_d8f08 th.col_heading {
   text-align: center;
 }
-#T_421b2_row0_col0, #T_421b2_row1_col0, #T_421b2_row2_col0, #T_421b2_row3_col0, #T_421b2_row4_col0 {
+#T_d8f08_row0_col0, #T_d8f08_row1_col0, #T_d8f08_row2_col0, #T_d8f08_row3_col0, #T_d8f08_row4_col0 {
   text-align: center;
 }
-#T_421b2_row0_col1, #T_421b2_row1_col1, #T_421b2_row2_col1, #T_421b2_row3_col1, #T_421b2_row4_col1 {
+#T_d8f08_row0_col1, #T_d8f08_row1_col1, #T_d8f08_row2_col1, #T_d8f08_row3_col1, #T_d8f08_row4_col1 {
   text-align: right;
 }
 </style>
 
-<table id="T_421b2" class="cell caption-top table table-sm table-striped small">
+<table id="T_d8f08" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_421b2_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
-<th id="T_421b2_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
+<th id="T_d8f08_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
+<th id="T_d8f08_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_421b2_row0_col0" class="data row0 col0">TOTN</td>
-<td id="T_421b2_row0_col1" class="data row0 col1">12.0</td>
+<td id="T_d8f08_row0_col0" class="data row0 col0">TOTN</td>
+<td id="T_d8f08_row0_col1" class="data row0 col1">12.0</td>
 </tr>
 <tr class="even">
-<td id="T_421b2_row1_col0" class="data row1 col0">TOTP</td>
-<td id="T_421b2_row1_col1" class="data row1 col1">1.8</td>
+<td id="T_d8f08_row1_col0" class="data row1 col0">TOTP</td>
+<td id="T_d8f08_row1_col1" class="data row1 col1">1.8</td>
 </tr>
 <tr class="odd">
-<td id="T_421b2_row2_col0" class="data row2 col0">BOF5</td>
-<td id="T_421b2_row2_col1" class="data row2 col1">60.0</td>
+<td id="T_d8f08_row2_col0" class="data row2 col0">BOF5</td>
+<td id="T_d8f08_row2_col1" class="data row2 col1">60.0</td>
 </tr>
 <tr class="even">
-<td id="T_421b2_row3_col0" class="data row3 col0">KOF</td>
-<td id="T_421b2_row3_col1" class="data row3 col1">120.0</td>
+<td id="T_d8f08_row3_col0" class="data row3 col0">KOF</td>
+<td id="T_d8f08_row3_col1" class="data row3 col1">120.0</td>
 </tr>
 <tr class="odd">
-<td id="T_421b2_row4_col0" class="data row4 col0">SS</td>
-<td id="T_421b2_row4_col1" class="data row4 col1">70.0</td>
+<td id="T_d8f08_row4_col0" class="data row4 col0">SS</td>
+<td id="T_d8f08_row4_col1" class="data row4 col1">70.0</td>
 </tr>
 </tbody>
 </table>
@@ -525,9 +525,11 @@ E = E_{ideal} \times (1 - R)
 </section>
 <section id="sec-teo-avlast" class="level3" data-number="4.6.2">
 <h3 data-number="4.6.2" class="anchored" data-anchor-id="sec-teo-avlast"><span class="header-section-number">4.6.2</span> Avlastningsbehov</h3>
+<p><strong>Add details of method for avlastningsbehov…</strong></p>
 </section>
 <section id="sec-teo-scens" class="level3" data-number="4.6.3">
 <h3 data-number="4.6.3" class="anchored" data-anchor-id="sec-teo-scens"><span class="header-section-number">4.6.3</span> Scenarios</h3>
+<p><strong>Describe scenarios…</strong></p>
 
 
 </section>
