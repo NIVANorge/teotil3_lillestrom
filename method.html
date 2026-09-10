@@ -250,13 +250,14 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-data-prep" id="toc-sec-data-prep" class="nav-link active" data-scroll-target="#sec-data-prep"><span class="header-section-number">4.1</span> Data preparation and cleaning</a></li>
   <li><a href="#sec-ann-concs" id="toc-sec-ann-concs" class="nav-link" data-scroll-target="#sec-ann-concs"><span class="header-section-number">4.2</span> Annual mean concentrations</a></li>
-  <li><a href="#sec-ann-loads" id="toc-sec-ann-loads" class="nav-link" data-scroll-target="#sec-ann-loads"><span class="header-section-number">4.3</span> Annual loads</a></li>
-  <li><a href="#sec-trend-tests" id="toc-sec-trend-tests" class="nav-link" data-scroll-target="#sec-trend-tests"><span class="header-section-number">4.4</span> Tests for trends</a></li>
-  <li><a href="#sec-teotil3-modelling" id="toc-sec-teotil3-modelling" class="nav-link" data-scroll-target="#sec-teotil3-modelling"><span class="header-section-number">4.5</span> TEOTIL3 modelling</a>
+  <li><a href="#sec-discharge-meth" id="toc-sec-discharge-meth" class="nav-link" data-scroll-target="#sec-discharge-meth"><span class="header-section-number">4.3</span> Water discharge</a></li>
+  <li><a href="#sec-ann-loads" id="toc-sec-ann-loads" class="nav-link" data-scroll-target="#sec-ann-loads"><span class="header-section-number">4.4</span> Annual loads</a></li>
+  <li><a href="#sec-trend-tests" id="toc-sec-trend-tests" class="nav-link" data-scroll-target="#sec-trend-tests"><span class="header-section-number">4.5</span> Tests for trends</a></li>
+  <li><a href="#sec-teotil3-modelling" id="toc-sec-teotil3-modelling" class="nav-link" data-scroll-target="#sec-teotil3-modelling"><span class="header-section-number">4.6</span> TEOTIL3 modelling</a>
   <ul class="collapse">
-  <li><a href="#sec-lillestrom-data" id="toc-sec-lillestrom-data" class="nav-link" data-scroll-target="#sec-lillestrom-data"><span class="header-section-number">4.5.1</span> Lillestrøm-specific wastewater inputs</a></li>
-  <li><a href="#sec-teo-avlast" id="toc-sec-teo-avlast" class="nav-link" data-scroll-target="#sec-teo-avlast"><span class="header-section-number">4.5.2</span> Avlastningsbehov</a></li>
-  <li><a href="#sec-teo-scens" id="toc-sec-teo-scens" class="nav-link" data-scroll-target="#sec-teo-scens"><span class="header-section-number">4.5.3</span> Scenarios</a></li>
+  <li><a href="#sec-lillestrom-data" id="toc-sec-lillestrom-data" class="nav-link" data-scroll-target="#sec-lillestrom-data"><span class="header-section-number">4.6.1</span> Lillestrøm-specific wastewater inputs</a></li>
+  <li><a href="#sec-teo-avlast" id="toc-sec-teo-avlast" class="nav-link" data-scroll-target="#sec-teo-avlast"><span class="header-section-number">4.6.2</span> Avlastningsbehov</a></li>
+  <li><a href="#sec-teo-scens" id="toc-sec-teo-scens" class="nav-link" data-scroll-target="#sec-teo-scens"><span class="header-section-number">4.6.3</span> Scenarios</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -405,32 +406,52 @@ Figure&nbsp;4.1: Concentrations measured at Vannmiljø station <code>002-29659</
 <p>To assess trends in concentration, outliers were removed from the dataset and annual mean concentrations calculated for each site and waterbody. To avoid biases due to limited monitoring, annual means were only calculated for years with at least 12 data points (i.e.&nbsp;at least 12 samples per year per station or waterbody).</p>
 <p>Annual mean concentrations for stations are calculated in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03a_annual_concs_stations.ipynb">notebook 03a</a> and for waterbodies in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/03b_annual_concs_waterbodies.ipynb">notebook 03b</a>.</p>
 </section>
-<section id="sec-ann-loads" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="sec-ann-loads"><span class="header-section-number">4.3</span> Annual loads</h2>
+<section id="sec-discharge-meth" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-discharge-meth"><span class="header-section-number">4.3</span> Water discharge</h2>
+<p><a href="#fig-nve-target-plot" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> compares simulations from NVE’s model underpinning the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> with observed discharge at stations <code>2.1185.0</code> (Sagelva) and <code>2.279.0</code> (Kråkfoss, Leira). The comparison period extends from 2015 to 2025 for Sagelva and from 1980 to 2025 for Kråkfoss. Overall, NVE’s model performs reasonably well, with Nash-Sutcliffe efficiencies of approximately 0.6 at both sites. However, results indicate a negative systematic bias (y-axis), suggesting that NVE’s model tends to underpredict discharge on average. Furthermore, the model substantially underestimates discharge variability (x-axis), producing a smoother signal with lower standard deviation than the observed series. This latter tendency is common in hydrological models.</p>
+<div id="fig-nve-target-plot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nve-target-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./plots/nve_target_plot.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nve-target-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Target plot comparing NVE’s discharge simulations to measured discharge at NVE stations <code>2.1185.0</code> (Sagelva) and <code>2.279.0</code> (Kråkfoss, Leira). The y-axis shows normalised bias between simulated and observed. The x-axis is the unbiased, normalised root mean square difference (RMSD) between simulated and observed data. The distance between a point and the origin is total RMSD. RMSD = 1 is shown by the solid circle (any point within this has positively correlated simulated and observed data and positive Nash-Sutcliffe scores); the dashed circle marks RMSD = 0.7.
+</figcaption>
+</figure>
+</div>
+<p>Based on this assessment, NVE’s modelled discharge appears to be suitable for estimating nutrient loads at monitoring stations where direct discharge measurements are not available (i.e.&nbsp;all stations listed in <a href="data-sources-models.html#tbl-chem-mon" class="quarto-xref">Table&nbsp;<span>3.1</span></a> except <code>002-46599</code>). However, to reduce bias in fluxes estimated using the GTS API, a correction factor for NVE’s flow simulations was calculated as:</p>
+<p><span id="eq-gts_factor"><span class="math display">\[
+f = \frac{Obs_{avg}}{Mod_{avg}} = \frac{1}{1 + bias}
+\tag{4.1}\]</span></span></p>
+<p>where <span class="math inline">\(f\)</span> is a dimensionless factor applied to simulations from the GTS API; <span class="math inline">\(Obs_{avg}\)</span> are mean observed flows at stations with discharge monitoring (<code>2.1185.0</code> and <code>2.279.0</code>); <span class="math inline">\(Mod_{avg}\)</span> are mean observed flows for the same stations calculated from the GTS API; and <span class="math inline">\(bias\)</span> is the estimated bias from <a href="#fig-nve-target-plot" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>.</p>
+<p>For station <code>2.1185.0</code> (Sagelva), the estimated correction factor is 1.19, while for station <code>2.279.0</code> (Kråkfoss, Leira) it is 1.22. Overall, it appears the GTS API underestimates mean flows in the Lillestrøm region by about 20 %. A bias correction factor of 1.2 was therefore applied to all flows from the GTS API before calculating annual nutrient fluxes.</p>
+</section>
+<section id="sec-ann-loads" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-ann-loads"><span class="header-section-number">4.4</span> Annual loads</h2>
 <p>Annual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (see <a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
-<p>Estimates of annual riverine loads were calculated according to <a href="#eq-ospar-annual" class="quarto-xref">Equation&nbsp;<span>4.1</span></a> following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.</p>
+<p>Estimates of annual riverine loads were calculated according to <a href="#eq-ospar-annual" class="quarto-xref">Equation&nbsp;<span>4.2</span></a> following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.</p>
 <p><span id="eq-ospar-annual"><span class="math display">\[
 L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
-\tag{4.1}\]</span></span></p>
+\tag{4.2}\]</span></span></p>
 <p>where <span class="math inline">\(L\)</span> is the annual load; <span class="math inline">\(Q_i\)</span> represents the water discharge on sampling day <span class="math inline">\(i\)</span>; <span class="math inline">\(C_i\)</span> is the concentration measured on day <span class="math inline">\(i\)</span>; <span class="math inline">\(t_i\)</span> is the time period from the midpoint between day <span class="math inline">\((i-1)\)</span> and day <span class="math inline">\(i\)</span> to the midpoint between day <span class="math inline">\(i\)</span> and day <span class="math inline">\((i+1)\)</span>, that is, half the number of days between the previous and subsequent sampling events; and <span class="math inline">\(Q_r\)</span> is the annual water volume.</p>
 <p>Annual nutrient loads estimated from manual sampling are subject to considerable uncertainty, particularly when sampling frequencies are low. This is especially true for particle-bound parameters such as TPP and SS, for which a substantial proportion of the total annual load may be transported during a small number of high-flow events. The uncertainty associated with load estimates depends primarily on (i) sampling frequency, (ii) the parameter of interest, and (iii) catchment characteristics that influence the speed and magnitude of hydrological responses. In general, more frequent sampling yields more accurate load estimates, and dissolved constituents such as DIN can be estimated with greater accuracy than particulate-bound constituents (TPP and SS), because their concentrations vary less during storm events. Similarly, load estimates are often more reliable for large catchments than for small ones, because larger catchments respond more slowly, reducing the likelihood that major transport events occur between sampling dates (<a href="https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2022WR032628">Slabon &amp; Hoffman, 2024</a>). As an example, <a href="https://www.sciencedirect.com/science/article/pii/S0048969712009059?via%3Dihub">Skarbøvik <em>et al.</em> (2012)</a> analysed data from the Numedalslågen catchment (5,500 km²) and found that SS loads estimated from manual sampling at frequencies ranging from weekly to monthly typically underestimated true annual loads by 30 to 70 %. The catchments considered in this study are substantially smaller than Numedalslågen (17 to 668 km²; <a href="intro.html#tbl-land-cover" class="quarto-xref">Table&nbsp;<span>2.2</span></a>), while sampling frequencies vary from approximately weekly to less than monthly. It is therefore likely that annual loads for particulate-bound parameters calculated from the measured data will underestimate true fluxes.</p>
 <p>Annual loads for stations are calculated in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb">notebook 04a</a> and for waterbodies in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb">notebook 04b</a>.</p>
 </section>
-<section id="sec-trend-tests" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="sec-trend-tests"><span class="header-section-number">4.4</span> Tests for trends</h2>
+<section id="sec-trend-tests" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-trend-tests"><span class="header-section-number">4.5</span> Tests for trends</h2>
 <p>Trends in annual mean concentrations and annual loads were evaluated using the Mann-Kendall test and Sen’s slope estimator (e.g.&nbsp;<a href="https://pubs.usgs.gov/publication/tm4A3">Helsel <em>et al.</em>, 2020</a>). The Mann-Kendall test is a non-parametric method that assesses the statistical significance of monotonic trends without assuming a specific data distribution. Sen’s slope estimator provides a robust estimate of the rate of change over time and is less sensitive to outliers than ordinary least squares regression. Together, these methods are widely applied in water quality studies because environmental monitoring data are often non-normally distributed, contain censored or extreme values, and may violate the assumptions of parametric trend analyses.</p>
 <p>In this report, trends are considered statistically “significant” for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing “tendencies”.</p>
 <p>Trends tests for stations are applied in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb">notebook 04a</a> and for waterbodies in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb">notebook 04b</a>.</p>
 </section>
-<section id="sec-teotil3-modelling" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="sec-teotil3-modelling"><span class="header-section-number">4.5</span> TEOTIL3 modelling</h2>
+<section id="sec-teotil3-modelling" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-teotil3-modelling"><span class="header-section-number">4.6</span> TEOTIL3 modelling</h2>
 <p>TEOTIL3 is applied annually at national scale as part of modelling work funded by Miljødirektoratet. For this project, standard TEOTIL3 input files were modified to include more detailed data for spredt and wastewater overflows provided by Lillestrøm kommune (see <a href="data-sources-models.html#sec-small-wastewater" class="quarto-xref"><span>Section 3.3.2</span></a>). TEOTIL3 was then run using the modified input files for the period from 2013 to 2024.</p>
-<section id="sec-lillestrom-data" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="sec-lillestrom-data"><span class="header-section-number">4.5.1</span> Lillestrøm-specific wastewater inputs</h3>
+<section id="sec-lillestrom-data" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="sec-lillestrom-data"><span class="header-section-number">4.6.1</span> Lillestrøm-specific wastewater inputs</h3>
 <p>The <strong>wastewater overflow</strong> dataset provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:</p>
 <p><span id="eq-overflow"><span class="math display">\[
 D = \frac{C \times P \times H}{24 \times 1000}
-\tag{4.2}\]</span></span></p>
+\tag{4.3}\]</span></span></p>
 <p>where <span class="math inline">\(D\)</span> is the nutrient discharge in kg; <span class="math inline">\(C\)</span> is the overflow capacity in p.e.; <span class="math inline">\(P\)</span> is the nutrient discharge per person per day in g; and <span class="math inline">\(H\)</span> is the number of hours of operation per year.</p>
 <p>Values for <span class="math inline">\(P\)</span>, the nutrient discharge per person per day, are based on data previously compiled by Norsk Vann (<a href="#tbl-nuts-per-pers" class="quarto-xref">Table&nbsp;<span>4.2</span></a>).</p>
 <div class="cell" data-execution_count="1">
@@ -442,44 +463,44 @@ Table&nbsp;4.2: Typical nutrient discharges per person per day. Based on data co
 <div aria-describedby="tbl-nuts-per-pers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <style type="text/css">
-#T_e7c0a th.col_heading {
+#T_1447c th.col_heading {
   text-align: center;
 }
-#T_e7c0a_row0_col0, #T_e7c0a_row1_col0, #T_e7c0a_row2_col0, #T_e7c0a_row3_col0, #T_e7c0a_row4_col0 {
+#T_1447c_row0_col0, #T_1447c_row1_col0, #T_1447c_row2_col0, #T_1447c_row3_col0, #T_1447c_row4_col0 {
   text-align: center;
 }
-#T_e7c0a_row0_col1, #T_e7c0a_row1_col1, #T_e7c0a_row2_col1, #T_e7c0a_row3_col1, #T_e7c0a_row4_col1 {
+#T_1447c_row0_col1, #T_1447c_row1_col1, #T_1447c_row2_col1, #T_1447c_row3_col1, #T_1447c_row4_col1 {
   text-align: right;
 }
 </style>
 
-<table id="T_e7c0a" class="cell caption-top table table-sm table-striped small">
+<table id="T_1447c" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_e7c0a_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
-<th id="T_e7c0a_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
+<th id="T_1447c_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
+<th id="T_1447c_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_e7c0a_row0_col0" class="data row0 col0">TOTN</td>
-<td id="T_e7c0a_row0_col1" class="data row0 col1">12.0</td>
+<td id="T_1447c_row0_col0" class="data row0 col0">TOTN</td>
+<td id="T_1447c_row0_col1" class="data row0 col1">12.0</td>
 </tr>
 <tr class="even">
-<td id="T_e7c0a_row1_col0" class="data row1 col0">TOTP</td>
-<td id="T_e7c0a_row1_col1" class="data row1 col1">1.8</td>
+<td id="T_1447c_row1_col0" class="data row1 col0">TOTP</td>
+<td id="T_1447c_row1_col1" class="data row1 col1">1.8</td>
 </tr>
 <tr class="odd">
-<td id="T_e7c0a_row2_col0" class="data row2 col0">BOF5</td>
-<td id="T_e7c0a_row2_col1" class="data row2 col1">60.0</td>
+<td id="T_1447c_row2_col0" class="data row2 col0">BOF5</td>
+<td id="T_1447c_row2_col1" class="data row2 col1">60.0</td>
 </tr>
 <tr class="even">
-<td id="T_e7c0a_row3_col0" class="data row3 col0">KOF</td>
-<td id="T_e7c0a_row3_col1" class="data row3 col1">120.0</td>
+<td id="T_1447c_row3_col0" class="data row3 col0">KOF</td>
+<td id="T_1447c_row3_col1" class="data row3 col1">120.0</td>
 </tr>
 <tr class="odd">
-<td id="T_e7c0a_row4_col0" class="data row4 col0">SS</td>
-<td id="T_e7c0a_row4_col1" class="data row4 col1">70.0</td>
+<td id="T_1447c_row4_col0" class="data row4 col0">SS</td>
+<td id="T_1447c_row4_col1" class="data row4 col1">70.0</td>
 </tr>
 </tbody>
 </table>
@@ -488,25 +509,25 @@ Table&nbsp;4.2: Typical nutrient discharges per person per day. Based on data co
 </figure>
 </div>
 </div>
-<p>Equation <a href="#eq-overflow" class="quarto-xref">Equation&nbsp;<span>4.2</span></a> can be used to estimate annual overflows for TOTN, TOTP, BOF5, KOF and SS. To estimate TOC, and fractions of N and P, we use the factors for <code>Urenset</code> wastewater from the <a href="https://github.com/NIVANorge/teotil3/blob/main/data/point_source_treatment_types.csv">TEOTIL3 database</a>.</p>
+<p>Equation <a href="#eq-overflow" class="quarto-xref">Equation&nbsp;<span>4.3</span></a> can be used to estimate annual overflows for TOTN, TOTP, BOF5, KOF and SS. To estimate TOC, and fractions of N and P, we use the factors for <code>Urenset</code> wastewater from the <a href="https://github.com/NIVANorge/teotil3/blob/main/data/point_source_treatment_types.csv">TEOTIL3 database</a>.</p>
 <p>Site-specific <strong>spredt</strong> inputs for Lillestrøm kommune were estimated in a similar way:</p>
 <p><span id="eq-spredt"><span class="math display">\[
 D = \frac{365.25 \times C \times P \times (1 - E)}{1000}
-\tag{4.3}\]</span></span></p>
+\tag{4.4}\]</span></span></p>
 <p>where <span class="math inline">\(D\)</span> is the annual nutrient discharge in kg; <span class="math inline">\(C\)</span> is the capacity in p.e.; <span class="math inline">\(P\)</span> is the nutrient discharge per person per day in g (from <a href="#tbl-nuts-per-pers" class="quarto-xref">Table&nbsp;<span>4.2</span></a>); and <span class="math inline">\(E\)</span> is the plant treatment efficiency (a dimensionless value between 0 and 1).</p>
 <p>The treatment efficiency, <span class="math inline">\(E\)</span>, is calculated from data published by NIBIO (<a href="https://nva.sikt.no/registration/0198cc7ed733-fcfcf849-8d97-4f41-995b-a9dfd63846f5">Hensel &amp; Mæhlum, 2025</a>):</p>
 <p><span id="eq-spredt-eff"><span class="math display">\[
 E = E_{ideal} \times (1 - R)
-\tag{4.4}\]</span></span></p>
+\tag{4.5}\]</span></span></p>
 <p>where <span class="math inline">\(E_{ideal}\)</span> is the best-case efficiency of a new or well-maintained plant, and <span class="math inline">\(R\)</span> is a reduction factor representing how much the efficiency declines for a plant of typical age and condition.</p>
 <p>It is important to note that the site-specific spredt dataset provided by Lillestrøm kommune represents a single point in time, whereas TEOTIL3 requires input data from 2013 to 2024. The Lillestrøm-specific spredt data therefore provides better spatial resolution than the standard TEOTIL3 input files, but with the downside that the model no longer captures changes in spredt inputs over time.</p>
 <p>Code to calculate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb">notebook 05</a>. <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb">Notebook 06</a> updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.</p>
 </section>
-<section id="sec-teo-avlast" class="level3" data-number="4.5.2">
-<h3 data-number="4.5.2" class="anchored" data-anchor-id="sec-teo-avlast"><span class="header-section-number">4.5.2</span> Avlastningsbehov</h3>
+<section id="sec-teo-avlast" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="sec-teo-avlast"><span class="header-section-number">4.6.2</span> Avlastningsbehov</h3>
 </section>
-<section id="sec-teo-scens" class="level3" data-number="4.5.3">
-<h3 data-number="4.5.3" class="anchored" data-anchor-id="sec-teo-scens"><span class="header-section-number">4.5.3</span> Scenarios</h3>
+<section id="sec-teo-scens" class="level3" data-number="4.6.3">
+<h3 data-number="4.6.3" class="anchored" data-anchor-id="sec-teo-scens"><span class="header-section-number">4.6.3</span> Scenarios</h3>
 
 
 </section>
