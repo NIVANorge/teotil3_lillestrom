@@ -103,3 +103,58 @@ df.style.format(fmt).hide(axis="index").set_properties(
 
 
 ![Mean source-apportionment for waterbody `002-3384-R` (Leira nedstrøms Krokfoss) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Leira_waterbody_002-3384-R.png){#fig-leira-src-app width=800 fig-align="center"}
+
+## Load reductions and scenarios {#sec-leira-avlast}
+
+![Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.](./plots/modelled/avlast_Leira_waterbody_002-3384-R.png){#fig-leira-avlast width=800 fig-align="center"}
+
+![Load reductions achieved in the Leira catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-leira-avlast).](./plots/modelled/Leira.png){#fig-leira-scens width=800 fig-align="center"}
+
+```{python}
+#| label: tbl-scen_summary-leira
+#| tbl-cap: "Summary of avlastningsbehov and scenario results for Leira."
+#| echo: false
+
+import pandas as pd
+
+catch = "Leira"
+
+# Read site data
+xl_path = r"./data/scenario_summary.xlsx"
+df = pd.read_excel(xl_path).query("`Nedbørfelt` == @catch")
+
+wfd_col_dict = {
+    "High": "#5893A9",
+    "Good": "#6FB22C",
+    "Moderate": "#FFF6A6",
+    "Poor": "#F6A800",
+    "Bad": "#E63D5C",
+}
+
+
+def color_wfd(val):
+    color = wfd_col_dict.get(val)
+    if not color:
+        return ""
+
+    text_color = "white" if val in ["Poor", "Bad"] else "black"
+    return f"background-color: {color}; color: black;"
+
+
+# Format
+txt_cols = ["Nedbørfelt", "Vannforekomst ID", "Parameter", "Vann-Nett tilstand"]
+num_cols = [c for c in df.columns if c not in txt_cols]
+df[num_cols] = df[num_cols].round().astype("Int64")
+
+# Style
+(
+    df.style.hide(axis="index")
+    .format(na_rep="")
+    .map(color_wfd, subset=["Vann-Nett tilstand"])
+    .set_table_styles(
+        [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
+    )
+    .set_properties(subset=txt_cols, **{"text-align": "center"})
+    .set_properties(subset=num_cols, **{"text-align": "right"})
+)
+```
