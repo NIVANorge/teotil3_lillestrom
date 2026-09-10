@@ -56,7 +56,7 @@ df.style.format(fmt).set_table_styles(
 
 ```{python}
 #| label: tbl-leira-pt-sources
-#| tbl-cap: "Point sources of nutrients within the Leira catchment."
+#| tbl-cap: "Industrial and municipal wastewater discharges within the Leira catchment."
 #| echo: false
 
 import pandas as pd

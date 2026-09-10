@@ -58,11 +58,11 @@ df.style.format(fmt).set_table_styles(
 ).map(lambda _: "font-weight: bold;", subset=pd.IndexSlice[["Totalt"], :])
 ```
 
-There are no major industrial discharges within the Sagelva catchment and the only municipal wastewater plant with design capacity ≥50 p.e. is Mariholtet sportsstue, which reports low discharges of nutrients (@tbl-sagelva-pt-sources).
+There are no major industrial discharges within the Sagelva catchment and the only municipal wastewater plant with design capacity ≥50 p.e. is Mariholtet sportsstue, but this reports low discharges of nutrients (@tbl-sagelva-pt-sources).
 
 ```{python}
 #| label: tbl-sagelva-pt-sources
-#| tbl-cap: "Point sources of nutrients within the Sagelva catchment."
+#| tbl-cap: "Industrial and municipal wastewater discharges within the Sagelva catchment."
 #| echo: false
 
 import pandas as pd
@@ -122,6 +122,8 @@ Given the uncertainties in both monitoring and modelling, it is reasonable to su
 
 ![Annual nutrient fluxes for waterbody `002-3899-R` (Fjellhamarelva - Sagelva). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Sagelva_waterbody_002-3899-R.png){#fig-teotil3-sagelva width=800 fig-align="center"}
 
-@fig-sagelva-src-app shows the mean percentage contribution from each source to annual fluxes for the period from 2020 to 2024. According to TEOTIL3, agriculture is the dominant source of TOTN, TOTP and SS, but there are significant contributions from urban runoff in the lower part of the catchment, which is densely populated. TOC fluxes are dominated by background inputs from forest areas in the south of the catchment (@fig-sagelva). The contribution from wastewater discharges in this catchment is small: about 5 % for TOTP and less than 3 % for TOTN, TOC and SS. There are no large municipal wastewater plants in this catchment, so the wastewater contribution to TOTP simulated by TEOTIL3 comes from spredt (1 %) and wastewater overflows (4 %). It is important to note, however, that the overflow dataset provided by Lillestrøm kommune only includes discharges within the kommune boundary, which only covers the northern-most part of the Sagelva catchment (@fig-catchments). The true contribution from wastewater overflows could be greater if discharges from neighbouring kommuner, such as Lørenskog, were included.
+@fig-sagelva-src-app shows the mean percentage contribution from each source to annual fluxes for the period from 2020 to 2024. According to TEOTIL3, agriculture is the dominant source of TOTN, TOTP and SS, but there are significant contributions from urban runoff in the lower part of the catchment, which is densely populated. TOC fluxes are dominated by background inputs from forest areas in the south of the catchment (@fig-sagelva). The contribution from wastewater discharges in this catchment is small: about 5 % for TOTP and less than 3 % for TOTN, TOC and SS. There are no large municipal wastewater plants in this catchment. The wastewater contribution to TOTP simulated by TEOTIL3 comes from spredt (1 %) and wastewater overflows (4 %). It is important to note, however, that the overflow dataset provided by Lillestrøm kommune only includes discharges within the kommune boundary, which only covers the northern-most part of the Sagelva catchment (@fig-catchments). The true contribution from wastewater overflows would be greater if discharges from neighbouring kommuner, such as Lørenskog, were included.
 
 ![Mean source-apportionment for waterbody `002-3899-R` (Fjellhamarelva - Sagelva) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Sagelva_waterbody_002-3899-R.png){#fig-sagelva-src-app width=800 fig-align="center"}
+
+## Load reductions and scenarios {#sec-sagelva-avlast}

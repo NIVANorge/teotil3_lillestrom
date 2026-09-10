@@ -57,7 +57,7 @@ df.style.format(fmt).set_table_styles(
 
 ```{python}
 #| label: tbl-nitelva-pt-sources
-#| tbl-cap: "Point sources of nutrients within the Nitelva catchment."
+#| tbl-cap: "Industrial and municipal wastewater discharges within the Nitelva catchment."
 #| echo: false
 
 import pandas as pd

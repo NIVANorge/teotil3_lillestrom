@@ -57,7 +57,7 @@ df.style.format(fmt).set_table_styles(
 
 ```{python}
 #| label: tbl-aa-pt-sources
-#| tbl-cap: "Point sources of nutrients within the Åa catchment."
+#| tbl-cap: "Industrial and municipal wastewater discharges within the Åa catchment."
 #| echo: false
 
 import pandas as pd
