@@ -188,7 +188,7 @@ The typical avlastningsbehov in each catchment is calculated as the median of an
 As well as calculating a median avlastningsbehov for each catchment, the *distribution* of annual avlastningsbehov provides useful information about the degree of interannual variation in the estimated reductions. These distributions are calculated for each catchment by applying Kernel Density Estimation (KDE) to the datasets of annual avlastningsbehov expressed as percentages:
 
 $$
-A_{%,i} = 100 \frac{L_i - L_{max}}{L_i}
+A_{pct,i} = 100 \frac{L_i - L_{max}}{L_i}
 $$ {#eq-ann-avlast-pct}
 
 As an example, consider @fig-leira-avlast, which shows estimated avlastningsbehov for Leira. Red curves on each plot show distributions of avlastningsbehov based on monitoring data, while blue curves show distributions based on modelling with TEOTIL3. Vertical dashed lines show the median value of each distribution, while the shape of curves indicates variability: broad, flat curves indicate the avlastningsbehov is poorly constrained i.e. in some years it may be significantly higher or lower than the median value; narrow, pointed curves indicate low variation i.e. the avlastningsbehov remains consistent from year to year.
