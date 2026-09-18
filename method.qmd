@@ -84,6 +84,16 @@ Trends tests for stations are applied in [notebook 04a](https://github.com/NIVAN
 
 TEOTIL3 is applied annually at national scale as part of modelling work funded by Miljødirektoratet. For this project, standard TEOTIL3 input files were modified to include more detailed data for spredt and wastewater overflows provided by Lillestrøm kommune (see @sec-small-wastewater). TEOTIL3 was then run using the modified input files for the period from 2013 to 2024.
 
+### Spatial resolution {#sec-spatial-res}
+
+TEOTIL3 uses NVE's [REGINE catchment dataset](https://www.nve.no/kart/kartdata/vassdragsdata/nedborfelt-regine/) to represent the Norwegian hydrological network. REGINE (REGIster over NEdbørfelt i Norge) provides a nationwide hydrological subdivision of Norway into interconnected catchment units and forms a spatial framework used in many Norwegian water quality assessments. The dataset covers the entire mainland and coastal zone and is organised as a hierarchical network of sub-catchments linked according to surface water flow pathways. Each REGINE unit is assigned a unique watercourse identifier that preserves upstream-downstream relationships within the river network, allowing nutrient transport and retention processes to be modelled consistently from headwaters to coast.
+
+In TEOTIL3, nutrient sources and landscape characteristics are aggregated to individual REGINE units and riverine transport is simulated using the connected catchment network. This approach provides a compromise between computational efficiency and spatial detail, enabling the model to represent local source contributions while maintaining complete coverage of large river basins. 
+
+Because the REGINE framework is hierarchical, results can be analysed at multiple spatial scales. However, TEOTIL3 is primarily designed for simulating medium to large river basins (typically 100s to 1000s of square kilometres) comprising many REGINE units. Of the catchments of interest in this study, Sagelva, Nitelva and Leira are well suited to modelling with TEOTIL3. Rømua and Åa are large enough (212 and 131 km², respectively), but each comprise just a single REGINE unit, which makes modelling using TEOTIL3 challenging. The catchments for Jeksla and Gansåa are small (17 and 25 km², respectively) and occupy less than one REGINE unit. Because they are not resolved by the REGINE network, they cannot be modelled explicitly with TEOTIL3. Model results for these catchments must therefore be estimated by area-scaling simulations for the surrounding area. This approach gives reasonable results on average, but adds uncertainty to the model results for Jeksla and Gansåa and, to a lesser extent, for Rømua and Åa.
+
+To improve the resolution of TEOTIL3 in small catchments, this study has compiled a more spatially detailed dataset of wastewater discharges than the one used in standard applications of TEOTIL3 (@sec-lillestrom-data). However, input data for other sources - especially agriculture - are underpinned by the same datasets used in national scale model runs. **It is important to keep in mind that these datasets have considerable uncertainty at the scale of individual REGINE units**.
+
 ### Lillestrøm-specific wastewater inputs {#sec-lillestrom-data}
 
 The **wastewater overflow** dataset provided by Lillestrøm kommune includes the location and number of people connected to each overflow, together with the number of hours of operation in each year. Annual discharges from each overflow can therefore be estimated as:
@@ -151,13 +161,88 @@ It is important to note that the site-specific spredt dataset provided by Lilles
 
 Code to calculate spredt inputs and wastewater overflows using data provided by Lillestrøm kommune is in [notebook 05](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/05_estimate_overflows_and_spredt.ipynb). [Notebook 06](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb) updates the standard TEOTIL3 input files using the Lillestrøm data and runs TEOTIL3 for the period from 2013 to 2024.
 
-### Avlastningsbehov {#sec-teo-avlast}
+## Avlastningsbehov {#sec-teo-avlast}
 
-**Add details of method for avlastningsbehov...**
+The avlastningsbehov for a catchment or waterbody is the amount by which nutrient inputs need to reduce to achieve Good Ecological Status (GES) for the water quality element of interest. For nutrients, the Water Framework Directive defines target concentrations for "good" status for TOTN and TOTP based on catchment typologies.
 
-### Scenarios {#sec-teo-scens}
+Given measured annual mean concentrations and a target concentration, the simplest way to estimate an avlastningsbehov is to calculate the percentage reduction in concentrations needed to achieve the target. For example, if the measured mean annual concentration of TOTP is 50 μg-P/l and the target for GES is 40 μg-P/l, a simplistic avlastningsbehov can be estimated as 20 %. This assumes a proportional relationship between nutrient inputs and observed concentrations and does not account for variability in hydrological conditions or nutrient retention processes.
 
-**Describe scenarios...**
+To assess whether load reductions for GES are practically achievable, it is usually necessary to convert concentration-based estimates into load reduction targets in tonnes. This requires estimates of annual water volume. For example, given a concentration target for GES, $C_{GES}$, and the annual water volume, $V$, the maximum annual load for GES, $L_{max}$, can be estimated as:
+
+$$
+L_{max} = C_{GES} \times V
+$$ {#eq-max-ann-load}
+
+Given present-day load estimated based either on monitoring data or modelling (e.g. with TEOTIL3), the avlastningsbehov in tonnes can be calculated as the difference between the present-day load and $L_{max}$:
+
+$$
+A_i = L_i - L_{max} = L_i - (C_{GES} \times V_i)
+$$ {#eq-ann-avlast}
+
+where $A_i$ is the estimated avlastningsbehov (in e.g. tonnes) to achieve GES in year $i$; $L_i$ is load estimate for year $i$ based on either monitoring or modelling; and $V_i$ is the annual water volume in year $i$. Note that negative values for $A_i$ in this equation indicate years in which estimated loads were already below the GES threshold and therefore no load reduction was required.
+
+In this study, we calculate time series of annual loads using both monitoring data and using TEOTIL3. We also have simulations of annual flow volume in each catchment based on data from the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (@sec-discharge). For each catchment and parameter, we estimate a time series of annual avlastningsbehov based on monitoring, $A^{mon}_i$, and on modelling, $A^{mod}_i$.
+
+The typical avlastningsbehov in each catchment is calculated as the median of annual values. This is done separately for monitoring and modelling to give two medians, $\tilde{A^{mon}}$ and $\tilde{A^{mod}}$. Since the median is the middle value when numbers are placed in ascending order, the median avlastningsbehov can be interpreted as the load reduction that would have achieved GES in half of the years considered. Differences between $\tilde{A^{mon}}$ and $\tilde{A^{mod}}$ reflect methodological uncertainties - for example limitations in the assumptions made by TEOTIL3, or whether the monitoring data are good enough to accurately measure "true" nutrient loads.
+
+As well as calculating a median avlastningsbehov for each catchment, the *distribution* of annual avlastningsbehov provides useful information about the degree of interannual variation in the estimated reductions. These distributions are calculated for each catchment by applying Kernel Density Estimation (KDE) to the datasets of annual avlastningsbehov expressed as percentages:
+
+$$
+A_{%,i} = 100 \frac{L_i - L_{max}}{L_i}
+$$ {#eq-ann-avlast-pct}
+
+As an example, consider @fig-leira-avlast, which shows estimated avlastningsbehov for Leira. Red curves on each plot show distributions of avlastningsbehov based on monitoring data, while blue curves show distributions based on modelling with TEOTIL3. Vertical dashed lines show the median value of each distribution, while the shape of curves indicates variability: broad, flat curves indicate the avlastningsbehov is poorly constrained i.e. in some years it may be significantly higher or lower than the median value; narrow, pointed curves indicate low variation i.e. the avlastningsbehov remains consistent from year to year.
+
+For TOTN in Leira, both distributions are narrow, indicating the avlastningsbehov is well-constrained. The median avlastningsbehov based on monitoring data is 42 %, compared to 55 % using TEOTIL3. For TOTP, the distributions are broader: TEOTIL3 assigns higher probabilities to avlastningsbehov in the 50 to 60 % range, while estimates based on monitoring are more like 45 to 55 %. Nevertheless, the median estimates are almost identical (54 % and 55 %).
+
+## Scenarios {#sec-teo-scens}
+
+[Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/) considered two scenarios of wastewater and agricultural measures designed to reduce nutrient loads to the Oslofjord:
+
+ * **Scenario A** is a medium ambition scenario designed to reflect implementation of measures covered by existing legislation. 
+    * For **agriculture**, measures are only applied within the five environmental requirement zones (miljøkravsonene): Viken 1 and 2 (Akershus, Østfold, Oslo and Buskerud, Gran municipality in the Inland); Innlandet 1 (Inland), and Vestfold & Telemark 1 and 2 (Grenland, Midtre Telemark and Vestfold). In the rest of the Oslofjord catchment, agricultural measures in scenario A represent those already in place in 2021. See @tbl-scen-agri-measures for list of agricultural measures considered in each scenario. 
+    * For **wastewater treatment**, scenario A assumes all treatment plants larger than 10 000 p.e. are upgraded to achieve minimum treatment efficiencies of 80 % for TOTN, 95 % for BOF5, 95 % for KOF, and 95 % for SS. Plants that already have better treatment efficiencies than this were not changed. For example, if a plant already has 85 % efficiency for TOTN in the historic data, it retained this efficiency in this scenario. In addition, wastewater overflows of 2 % were assumed for all treatment plants serving more than 1000 people.
+
+ * **Scenario B** is a more ambitious scenario designed to explore what could be achieved by expanding and intensifying existing measures to the whole Oslofjord catchment. It is important to note that **scenario B should not be interpreted as a proposal for future management**: it was originally designed by Miljødirektoratet to explore the maximum load reductions that could be achieved using traditional packages of measures. Scenario B includes all measures from scenario A plus:
+    * For **agriculture**, measures are expanded beyond the environmental requirement zones to cover the whole Oslofjord catchment. In addition, scenario B includes reductions to soil N and P excesses for all agricultural land (measures "P-AL-reduksjon" and "N-balansereduksjon"). See @tbl-scen-agri-measures for details.
+    * For **wastewater treatment**, plants with capacity >10 000 p.e. discharging directly to the Oslofjord were upgraded to achieve 85 % treatment efficiency for TOTN, while those with capacity between 5000 and 10 000 p.e. were upgraded to achieve 70 % efficiency for TOTN. In addition, wastewater overflows were reduced to 1 % for all plants serving more than 1000 people.
+
+```{python}
+#| label: tbl-scen-agri-measures
+#| tbl-cap: "Summary of agriculutral measures in scenarios A and B. After [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/)."
+#| echo: false
+
+import pandas as pd
+
+df = pd.read_excel("./data/oslomod_agri_scens_summary.xlsx", header=[0, 1])
+
+# Replace "Unnamed: ..." subheaders with empty strings
+new_cols = []
+for lvl0, lvl1 in df.columns:
+    if str(lvl1).startswith("Unnamed:"):
+        lvl1 = ""
+    new_cols.append((lvl0, lvl1))
+df.columns = pd.MultiIndex.from_tuples(new_cols)
+
+scenario_cols = [col for col in df.columns if col[0] in ["Scenario A", "Scenario B"]]
+other_cols = [col for col in df.columns if col[0] not in ["Scenario A", "Scenario B"]]
+
+styled_df = (
+    df.style.hide(axis="index")
+    .set_table_styles(
+        [
+            {"selector": "th.col_heading", "props": [("text-align", "center")]},
+            {"selector": "th.col_heading.level0", "props": [("text-align", "center")]},
+            {"selector": "th.col_heading.level1", "props": [("text-align", "center")]},
+        ]
+    )
+    .set_properties(subset=scenario_cols, **{"text-align": "center"}).set_properties(
+        subset=other_cols, **{"text-align": "left"}
+    )
+)
+
+styled_df
+```
 
 
 
