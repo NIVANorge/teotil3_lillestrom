@@ -56,7 +56,7 @@ df.style.format(fmt).set_table_styles(
 
 ```{python}
 #| label: tbl-romua-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Rømua catchment."
+#| tbl-cap: "Industrial and municipal wastewater discharges within the Rømua catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd

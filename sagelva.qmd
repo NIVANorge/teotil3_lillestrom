@@ -62,7 +62,7 @@ There are no major industrial discharges within the Sagelva catchment and the on
 
 ```{python}
 #| label: tbl-sagelva-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Sagelva catchment."
+#| tbl-cap: "Industrial and municipal wastewater discharges within the Sagelva catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd

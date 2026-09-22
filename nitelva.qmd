@@ -3,6 +3,8 @@ title: "Nitelva (including Sagelva)"
 number-sections: true
 ---
 
+Nitelva is a medium sized catchment (484 km²) that includes Sagelva as a tributary. Land cover is dominated by forest (75 %), but there are significant areas of urban and agricultural land located along the river valley and in the lower part of the catchment. See @fig-nitelva and @tbl-nitelva-land-cover. 25 % of the catchment in located below the marine limit and approximately 13 % of the land area - including most agricultural land - is underlain by marine deposits. For this reason, the catchment is classified as *leirpåvirket* (clay-influenced) under the Water Framework Directive (@tbl-leir-totp-bounds). 
+
 ![Maps of the Nitelva catchment (including Sagelva). Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/nitelva.png){#fig-nitelva width=800 fig-align="center"}
 
 ```{python}
@@ -54,10 +56,11 @@ df.style.format(fmt).set_table_styles(
 ).map(lambda _: "font-weight: bold;", subset=pd.IndexSlice[["Totalt"], :])
 ```
 
+Nitelva receives discharges from several municipal wastewater treatment plants, the largest of which is Nedre Romerike avløpsanlegg (NRA), located just upstream of the catchment outflow. A little further upstream there is also a decommissioned treatment plant at Slattum, which was operational until 2019. In the middle part of the catchment there are treatment plants at Rotnes and Åneby, and in the upper catchment is Harestua renseanlegg, which discharges to the northern end of Harestuvatnet. The catchment also receives significant nutrient inputs from Dynea Lillestrøm, a manufacturer of adhesives and industrial coatings that discharges close to the catchment outflow (@fig-nitelva and @tbl-nitelva-pt-sources). 
 
 ```{python}
 #| label: tbl-nitelva-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Nitelva catchment."
+#| tbl-cap: "Industrial and municipal wastewater discharges within the Nitelva catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd
@@ -95,6 +98,16 @@ df.style.format(fmt).hide(axis="index").set_properties(
 ```
 
 ## Monitoring data {#sec-nitelva-monitoring}
+
+The best monitoring data for the Lower Nitelva (waterbody ID `002-3891-R`) come from Vannmiljø station `002-30586` (Rud Nitelva), which has been monitored since the 1980s. Monitoring at this station stopped at the end of 2020, after which the best data come from station `002-79092` (Nitelva, Rud), located about 300 m upstream. The monitoring dataset for this waterbody is generally of good quality, except during 2021 and 2022, when the sampling frequency is low. About 5 km further upstream, Vannmiljø station `002-30578` (Kjellerholen Nitelva) also provides long-term data for waterbody `002-1638-R` (Nitelva Slattum-Kjeller), beginning in 1995 (@fig-nitelva).
+
+@fig-nitelva-ann-concs shows trends in mean annual concentrations estimated from the combined dataset for waterbody `002-3891-R`. Since the 1980s, there have been significant decreases in concentrations of TOTN (-37 μg-N/l/year on average), TOTP (-1 μg-P/l/year) and SS (-0.25 mg/l/year). There is also an increasing trend in concentrations of TOC (by an average of +0.03 mg-C/l/year). 
+
+Declining trends in TOTN concentration and increasing trends in TOC are also observed in Sagelva (@fig-sagelva-ann-concs) and for waterbody `002-1638-R` (Nitelva Slattum-Kjeller; see [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/plots/concs/ann_trends_waterbodies_002-1638-R.png)), both of which are only a short distance upstream of Nedre Nitelva (waterbody `002-3891-R`). However, decreasing trends in TOTP and SS concentrations are not observed at these locations, which implies reductions in TOTP and SS inputs may have occurred primarily along the Nitelva main stem, between waterbodies `002-1638-R` and `002-3891-R` (i.e. between the two blue triangles on @fig-nitelva).
+
+The increasing trend in TOC concentrations identified in several Nitelva subcatchments is consistent with patterns in TOC observed elsewhere in South-eastern Norway. These changes are at least partly driven by the increasing solubility of organic matter in forest and upland soils as catchments recover from acidification. This has led to "browning" of surface waters in many rivers and lakes previously affected by acidification, and also to "coastal darkening" in parts of Oslofjord and Skagerrak (e.g. [Frigstad *et al.*, 2023](https://www.sciencedirect.com/science/article/pii/S0272771422004516?via%3Dihub)).
+
+In terms of water quality status, recent annual concentrations of TOTN in the Lower Nitelva are typically towards the middle of the *Moderate* status band, which is an improvement compared to consistently *Poor* status during the decade prior to 2020. For TOTP, concentrations have generally been below 40 μg-P/l (the upper threshold for *Good* status) since the early 2000s. However, in recent years, TOTP concentrations close to the *Good/Moderate* boundary have been observed. In Vann-Nett, the waterbody is [currently assigned *Moderate* status for TOTP](https://vann-nett.no/waterbodies/002-3891-R/factsheet/environmental-status).
 
 ![Trends in annual mean concentrations for waterbody `002-3891-R` (Nedre Nitelva). Solid red lines show statistically significant linear trends ($p ≤ 0.05$); dashed red lines indicate weak evidence of a linear trend ($0.05 < p ≤ 0.10$); and dashed black lines indicate no statistically significant trend ($p > 0.10$). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (*bad*, *poor*, *moderate*, *good* and *high*).](./plots/concs/ann_trends_waterbodies_002-3891-R.png){#fig-nitelva-ann-concs width=800 fig-align="center"}
 

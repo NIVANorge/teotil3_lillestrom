@@ -10,6 +10,8 @@ Beldring S, Engeland K, Roald LA, Sælthun NR, Voksø A. 2003. *Estimation of pa
 
 Berge G & Hjertaas HW. 2024. *Kommunale avløp 2023. Ressursinnsats, gebyrer, utslipp, rensing og slamdisponering*. SSB rapport 2024/45. [Tilgjengelig på nett](https://www.ssb.no/natur-og-miljo/vann-og-avlop/artikler/kommunale-avlop-2023.ressursinnsats-gebyrer-utslipp-rensing-og-slamdisponering).
 
+Frigstad H, Andersen GS, Trannum HC, McGovern M, Naustvoll L, Kaste Ø, Deininger A, Hjermann DØ. 2023. *Three decades of change in the Skagerrak coastal ecosystem, shaped by eutrophication and coastal darkening*. Estuarine, Coastal and Shelf Science 283. [Tilgjengelig på nett](https://doi.org/10.1016/j.ecss.2022.108193).
+
 Helsel DR, Hirsch RM, Ryberg KR, Archfield SA, Gilroy EJ. 2020. *Statistical Methods in Water Resources*. U.S. Geological Survey Techniques and Methods, Book 4, Chapter A3. [Tilgjengelig på nett](https://doi.org/10.3133/tm4a3).
 
 Hensel GR & Mæhlum T. 2025. *Mindre avløpsanlegg i spredt bebyggelse - Renseeffekt og reduksjonsfaktorer* NIBIO rapport 11 41. [Tilgjengelig på nett](https://hdl.handle.net/11250/3183748).
