@@ -132,6 +132,8 @@ As described in @sec-ann-loads, uncertainties are expected to be especially larg
 
 ![Annual nutrient fluxes for waterbody `002-3891-R` (Nedre Nitelva). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Nitelva_waterbody_002-3891-R.png){#fig-teotil3-nitelva width=800 fig-align="center"}
 
+@fig-nitelva-src-app shows the mean percentage contribution from each source to annual fluxes for the period from 2020 to 2024. According to TEOTIL3, municipal wastewater discharges are the main source of TOTN, accounting for 45 % of the nitrogen flux to waterbody `002-3891-R`. Of this, rainwater and emergency overflows within Lillestrøm kommune account for 1 %, spredt avløp contributes an additional 0.5 %, and the remainder (43.5 %) comes from treated wastewater discharges from major municipal wastewater plants. The largest of these is NRA, with an average TOTN discharge of 180 tonnes/year between 2013 to 2024 (@tbl-nitelva-pt-sources), accounting for approximately one third of the TOTN load reaching waterbody `002-3891-R`. After NRA, the second largest point source of nitrogen to Nedre Nitelva is the industrial plant Dynea Lillestrøm, which contributes about 4 % of the TOTN load. Other significant sources of TOTN in the catchment include agriculture (22 %) and background runoff (19 %).
+
 
 ![Mean source-apportionment for waterbody `002-3891-R` (Nedre Nitelva) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Nitelva_waterbody_002-3891-R.png){#fig-nitelva-src-app width=800 fig-align="center"}
 
