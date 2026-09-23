@@ -142,7 +142,7 @@ For TOTP, the fluxes simulated by TEOTIL3 are generally higher than estimates ba
 
 The required TOTN reductions for GES of 10 to 20 % cannot be achieved by scenario A, but could plausibly be achieved by scenario B. For TOTP, scenarios A and B both comfortably exceed the 3 % reduction target estimated from the monitoring data, and scenario B achieves a TOTP reduction of 37 %, which is approximately equal to the avlastningsbehov for GES based on TEOTIL3 simulations. 
 
-A summary of the avlastningsbehovene for GES in Sagelva and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-sagelva.
+A summary of avlastningsbehovene for GES in Sagelva and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-sagelva.
 
 ![Load reductions achieved in the Sagelva catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-sagelva-avlast).](./plots/modelled/oslomod_scens_Sagelva.png){#fig-sagelva-scens width=800 fig-align="center"}
 
