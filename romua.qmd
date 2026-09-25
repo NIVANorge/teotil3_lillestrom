@@ -58,7 +58,7 @@ df.style.format(fmt).set_table_styles(
 ).map(lambda _: "font-weight: bold;", subset=pd.IndexSlice[["Totalt"], :])
 ```
 
-Rømua receives discharges from three small wastewater plants connected to the municipal network (@tbl-romua-pt-sources). All three are located in the central part of the catchment (@fig-romua) and typical annual nutrient discharges are small. There are no industrial discharges within the catchment and contributions from spredt avløp and wastewater overflows (from Lillestrøm kommune) are small.
+Rømua receives discharges from three small wastewater plants connected to the municipal network (@tbl-romua-pt-sources). All three are located in the central part of the catchment (@fig-romua) and typical annual nutrient discharges are small. There are no industrial discharges within the catchment and contributions from spredt avløp and wastewater overflows (from Lillestrøm kommune) are low.
 
 ```{python}
 #| label: tbl-romua-pt-sources
@@ -103,7 +103,7 @@ df.style.format(fmt).hide(axis="index").set_properties(
 
 The best monitoring data for Rømua come from Vannmiljø station `002-28960` (Rømua ved Lørenfallet), which is located approximately 4 km upstream from the confluence with Glomma. The site has been monitored since 1990.
 
-@fig-romua-ann-concs shows trends in mean annual concentrations estimated from the combined dataset for waterbody `002-3659-R` (Rømua). Concentrations of TOTN have been above 2000 μg-N/l for much of the past 30 years. However, there is a significant declining trend in TOTN (by -19 μg-N/l/year) and, since 2020, typical concentrations have been 1500 to 2000 μg-N/l, corresponding to *Poor* status under the WFD. There are no significant trends for TOTP and mean annual concentrations are typically between 75 and 125 μg-P/l, which corresponds to *Moderate* status. SS concentrations are broadly stable, and there is an increasing trend in TOC (in common with most other catchments in this region).
+@fig-romua-ann-concs shows trends in mean annual concentrations estimated from the combined dataset for waterbody `002-3659-R` (Rømua). Concentrations of TOTN have been above 2000 μg-N/l for much of the past 30 years. However, there is a significant declining trend in TOTN (by -19 μg-N/l/year) and, since 2020, typical concentrations have been between 1500 and 2000 μg-N/l, corresponding to *Poor* status under the WFD. There are no significant trends for TOTP and mean annual concentrations are typically between 75 and 125 μg-P/l. In Vann-Nett, the water quality status for TOTP is classified as *Poor* (although the threshold between *Moderate* and *Poor* is not specified). SS concentrations are broadly stable, and there is an increasing trend in TOC, in common with most other catchments in this region.
 
 ![Trends in annual mean concentrations for waterbody `002-3659-R` (Rømua). Solid red lines show statistically significant linear trends ($p ≤ 0.05$); dashed red lines indicate weak evidence of a linear trend ($0.05 < p ≤ 0.10$); and dashed black lines indicate no statistically significant trend ($p > 0.10$). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (*bad*, *poor*, *moderate*, *good* and *high*).](./plots/concs/ann_trends_waterbodies_002-3659-R.png){#fig-romua-ann-concs width=800 fig-align="center"}
 
