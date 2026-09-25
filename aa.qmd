@@ -3,6 +3,8 @@ title: "Åa"
 number-sections: true
 ---
 
+## Catchment overview {#sec-aa-overview}
+
 ![Maps of the Åa catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/åa.png){#fig-aa width=800 fig-align="center"}
 
 ```{python}

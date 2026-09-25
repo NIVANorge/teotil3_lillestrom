@@ -3,7 +3,9 @@ title: "Jeksla"
 number-sections: true
 ---
 
-Jeksla is a small tributary of Leira with a catchment area of just 17 km². Land cover is dominated by agriculture (39 %), forest (38 %) and urban areas (22 %). See @fig-jeksla and @tbl-jeksla-land-cover. More than 90 % of the catchment is below the marine limit and 46 % of the land area is underlain by marine deposits. The catchment is therefore classified as *leirpåvirket* (clay-influenced) and the *Good/Moderate* threshold for TOTP is set to 80 μg-P/l, which is double the GES threshold for e.g. Nitelva (@fig-marine-clay and @tbl-leir-totp-bounds).
+## Catchment overview {#sec-jeksla-overview}
+
+Jeksla is a small tributary of Leira with a catchment area of just 17 km². Land cover is dominated by agriculture (39 %), forest (38 %) and urban areas (22 %). See @fig-jeksla and @tbl-jeksla-land-cover. More than 90 % of the catchment is below the marine limit and 46 % of the land area is underlain by marine deposits. The catchment is therefore classified as *leirpåvirket* (clay-influenced) and the *Good/Moderate* threshold for TOTP is set to 80 μg-P/l (@fig-marine-clay and @tbl-leir-totp-bounds).
 
 ![Maps of the Jeksla catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/jeksla.png){#fig-jeksla width=500 fig-align="center"}
 

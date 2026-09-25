@@ -3,7 +3,7 @@ title: "Sagelva"
 number-sections: true
 ---
 
-## Catchment overview {#sec-overview}
+## Catchment overview {#sec-sagelva-overview}
 
 Sagelva is a small catchment (109 km²) draining to Nitelva in the western part of Lillestrøm kommune. Land cover is dominated by forest (71 %), but with significant urban (16 %) and agricultural (6 %) areas. See @fig-sagelva and @tbl-sagelva-land-cover. The catchment is classified as *leirpåvirket* (clay-influenced) under the Water Framework Directive and about 14 % of the catchment is underlain by marine sediments and clays (@tbl-leir-totp-bounds). 
 

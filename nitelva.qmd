@@ -3,6 +3,8 @@ title: "Nitelva (including Sagelva)"
 number-sections: true
 ---
 
+## Catchment overview {#sec-nitelva-overview}
+
 Nitelva is a medium sized catchment (484 km²) that includes Sagelva as a tributary. Land cover is dominated by forest (75 %), but there are significant areas of urban and agricultural land located along the river valley and in the lower part of the catchment. See @fig-nitelva and @tbl-nitelva-land-cover. 25 % of the catchment in located below the marine limit and approximately 13 % of the land area - including most agricultural land - is underlain by marine deposits. For this reason, the catchment is classified as *leirpåvirket* (clay-influenced) under the Water Framework Directive (@tbl-leir-totp-bounds). 
 
 ![Maps of the Nitelva catchment (including Sagelva). Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/nitelva.png){#fig-nitelva width=800 fig-align="center"}
