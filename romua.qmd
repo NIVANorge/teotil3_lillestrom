@@ -140,7 +140,7 @@ The three municipal wastewater treatment plants in the Rømua catchment (@tbl-ro
 
 Since the Rømua catchment is intensively farmed, the biggest potential to reduce nutrient fluxes comes from agricultural measures. Modelling undertaken by NIBIO shows that scenario A achieves only a 2 % reduction in catchment scale TOTN loads, but a 48 % reduction in TOTP. Under scenario B, nitrogen and phosphorous loads are reduced by 30 % and 64 %, respectively.
 
-Scenarios A and B both achieve the estimated avlastningsbehov of 46 % for TOTP (based on observed data). However, neither scenario comes close to the reduction target of 60 to 80 % for TOTN. Given the high measured nitrogen concentrations and the limited potential for load reductions at point sources, it seems unlikely that Rømua will achieve GES for TOTN.
+Scenarios A and B both achieve the estimated avlastningsbehov of 46 % for TOTP (based on observed data). However, neither scenario comes close to the reduction target of 60 to 80 % for TOTN. Despite the significant decreasing trend in TOTN (@fig-romua-ann-concs), high measured TOTN concentrations and limited potential for load reductions at point sources make it unlikely that Rømua will achieve GES for TOTN.
 
 A summary of avlastningsbehovene for GES in Rømua and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-romua.
 

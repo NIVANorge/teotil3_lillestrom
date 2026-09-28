@@ -2,3 +2,83 @@
 title: "Summary"
 number-sections: true
 ---
+
+
+```{python}
+#| label: tbl-overall-summary
+#| tbl-cap: "Summary of results for all catchments."
+#| echo: false
+
+import pandas as pd
+
+# Read summary data
+xl_path = r"./data/lillestrom_overall_summary.xlsx"
+df = pd.read_excel(xl_path)
+
+# Replace repeated catchment names with blanks
+df["Nedbørfelt"] = df["Nedbørfelt"].where(~df["Nedbørfelt"].duplicated(), "")
+
+wfd_col_dict = {
+    "Svært god": "#5893A9",
+    "God": "#6FB22C",
+    "Moderat": "#FFF6A6",
+    "Dårlig": "#F6A800",
+    "Svært dårlig": "#E63D5C",
+    "Udefinert": "#D9D9D9",
+}
+
+trend_col_dict = {
+    "Synkende": "#6FB22C",
+    "Ingen": "#D9D9D9",
+    "Økende": "#E63D5C",
+}
+
+scen_col_dict = {
+    "Ja": "#6FB22C",
+    "Nei": "#E63D5C",
+}
+
+
+def color_from_dict(col_dict):
+    def style_func(val):
+        color = col_dict.get(val)
+        if color is None:
+            return ""
+
+        text_color = "white" if color in ["#E63D5C", "#F6A800"] else "black"
+
+        return f"background-color: {color}; color: {text_color};"
+
+    return style_func
+
+
+(
+    df.style.hide(axis="index")
+    .format(na_rep="")
+    .map(
+        color_from_dict(wfd_col_dict),
+        subset=["Vann-Nett tilstand"],
+    )
+    .map(
+        color_from_dict(trend_col_dict),
+        subset=["Trend"],
+    )
+    .map(
+        color_from_dict(scen_col_dict),
+        subset=["Oppnådd Scenario A"],
+    )
+    .map(
+        color_from_dict(scen_col_dict),
+        subset=["Oppnådd Scenario B"],
+    )
+    .set_table_styles(
+        [
+            {
+                "selector": "th.col_heading",
+                "props": [("text-align", "center")],
+            }
+        ]
+    )
+    .set_properties(**{"text-align": "center"})
+)
+```
