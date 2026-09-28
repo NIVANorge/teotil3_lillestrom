@@ -103,20 +103,46 @@ df.style.format(fmt).hide(axis="index").set_properties(
 
 The best monitoring data for Rømua come from Vannmiljø station `002-28960` (Rømua ved Lørenfallet), which is located approximately 4 km upstream from the confluence with Glomma. The site has been monitored since 1990.
 
-@fig-romua-ann-concs shows trends in mean annual concentrations estimated from the combined dataset for waterbody `002-3659-R` (Rømua). Concentrations of TOTN have been above 2000 μg-N/l for much of the past 30 years. However, there is a significant declining trend in TOTN (by -19 μg-N/l/year) and, since 2020, typical concentrations have been between 1500 and 2000 μg-N/l, corresponding to *Poor* status under the WFD. There are no significant trends for TOTP and mean annual concentrations are typically between 75 and 125 μg-P/l. In Vann-Nett, the water quality status for TOTP is classified as *Poor* (although the threshold between *Moderate* and *Poor* is not specified). SS concentrations are broadly stable, and there is an increasing trend in TOC, in common with most other catchments in this region.
+@fig-romua-ann-concs shows trends in mean annual concentrations estimated from the combined dataset for waterbody `002-3659-R` (Rømua). Concentrations of TOTN have been above 2000 μg-N/l for much of the past 30 years. However, there is a significant declining trend in TOTN (by -19 μg-N/l/year) and, since 2020, typical concentrations have been between 1500 and 2000 μg-N/l, corresponding to *Poor* status under the WFD. There are no significant trends for TOTP and mean annual concentrations are typically between 75 and 175 μg-P/l. In Vann-Nett, the water quality status for TOTP is classified as *Poor* (although the threshold between *Moderate* and *Poor* is not specified). SS concentrations are broadly stable and there is an increasing trend in TOC (in common with most other catchments in this region).
 
 ![Trends in annual mean concentrations for waterbody `002-3659-R` (Rømua). Solid red lines show statistically significant linear trends ($p ≤ 0.05$); dashed red lines indicate weak evidence of a linear trend ($0.05 < p ≤ 0.10$); and dashed black lines indicate no statistically significant trend ($p > 0.10$). Background colours show thresholds for water quality status defined under the Water Framework Directive and taken from Vann-Nett, where available (*bad*, *poor*, *moderate*, *good* and *high*).](./plots/concs/ann_trends_waterbodies_002-3659-R.png){#fig-romua-ann-concs width=800 fig-align="center"}
 
 ## Source apportionment {#sec-romua-sources}
 
+@fig-teotil3-romua shows nutrient fluxes for Rømua estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). Note that even though the Rømua catchment is quite large (212 km²), it is represented by just a single REGINE unit in NVE's catchment dataset. For this reason, it is not well suited to modelling with TEOTIL3 and **results must be interpreted with caution** (@sec-spatial-res). 
+
+Monitored fluxes for Rømua show high variability, especially for TOTP and SS. This is as expected for a catchment dominated by phosphorus-rich clay soils and monitored at relatively low sampling frequency: because these constituents are transported predominantly during high-flow events, estimates derived from monitoring are sensitive to the timing of sample collection relative to floods (@sec-ann-loads). While the TEOTIL3 simulations are also uncertain, modelled fluxes are broadly compatible with those estimated from observed data.
+
+Based on @fig-teotil3-romua, typical annual nutrient fluxes for Rømua (waterbody `002-3659-R`) are:
+
+ * 200 to 500 tonnes/year for TOTN
+ * 5 to 30 tonnes/year for TOTP
+ * 1000 to 2000 tonnes/year for TOC
+ * 5000 to 20 000 tonnes/year for SS
+
 ![Annual nutrient fluxes for waterbody `002-3659-R` (Rømua). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Rømua_waterbody_002-3659-R.png){#fig-teotil3-romua width=800 fig-align="center"}
 
+@fig-romua-src-app shows the mean contribution of each source to annual fluxes during the period 2020 to 2024. According to TEOTIL3, agriculture contributes 84 % of the TOTN load, 91 % of the TOTP load, and 95 % of the SS load, while forests (background) contribute 95 % of the TOC load. These estimates seem plausible given the lack of significant point sources and the fact that roughly half the catchment comprises agricultural land underlain by phosphorous-rich clays. Wastewater inputs from spredt avløp are estimated to be small (contributing about 1 % of TOTP and 0.5 % of TOTN), and wastewater overflows from within Lillestrøm kommune are negligible.
 
 ![Mean source-apportionment for waterbody `002-3659-R` (Rømua) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %.](./plots/modelled/src_app_default_Rømua_waterbody_002-3659-R.png){#fig-romua-src-app width=800 fig-align="center"}
 
 ## Load reductions and scenarios {#sec-romua-avlast}
 
+During the decade from 2015 to 2024, the median annual flow volume at Rømua ved Lørenfallet (Vannmiljø station `002-28960`) was 93 Mm³/year. Taking the maximum concentrations for GES of 775 μg/l for N and 80 μg/l for P, the maximum annual load for *Good* status in a typical year is approximately 72 tonnes for TOTN and 7 tonnes for TOTP. Annual TOTN loads are often higher than this by a factor of 4 to 5, and TOTP loads by a factor of 2 to 3. This indicates that significant reductions will be required to reach GES.
+
+@fig-romua-avlast shows distributions of annual avlastningsbehov estimated for each year between 2015 and 2024. Red curves show distributions based on measured loads, while blue curves are based on model output from TEOTIL3, which must be interpreted with caution. Distributions for TOTN are generally narrow and pointed, with estimates from both monitoring and modelling in the range from 60 % and 80 %. For TOTP, the distributions are broader, indicating greater uncertainty in the annual estimates due to interannual variability. The median avlastningsbehov for TOTP based on monitoring is 46 %, compared to 58 % from TEOTIL3.
+
 ![Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.](./plots/modelled/avlast_Rømua_waterbody_002-3659-R.png){#fig-romua-avlast width=800 fig-align="center"}
+
+@fig-romua-scens shows load reductions achieved in the Rømua catchment under two management scenarios modelled by [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). The scenarios comprise packages of agricultural mitigation measures together with upgrades to municipal wastewater treatment plants (@sec-teo-scens).
+
+The three municipal wastewater treatment plants in the Rømua catchment (@tbl-romua-pt-sources) are not large enough to be affected the scenarios of Wallhead *et al.*, so the simulations do not show any reductions in wastewater inputs in this catchment. Furthermore, historic data from Lillestrøm kommune indicate that wastewater inputs from rainwater and emergency overflows are small. However, reductions of up to 1 % for could potentially be achieved by reducing inputs from spredt (@sec-romua-sources).
+
+Since the Rømua catchment is intensively farmed, the biggest potential to reduce nutrient fluxes comes from agricultural measures. Modelling undertaken by NIBIO shows that scenario A achieves only a 2 % reduction in catchment scale TOTN loads, but a 48 % reduction in TOTP. Under scenario B, nitrogen and phosphorous loads are reduced by 30 % and 64 %, respectively.
+
+Scenarios A and B both achieve the estimated avlastningsbehov of 46 % for TOTP (based on observed data). However, neither scenario comes close to the reduction target of 60 to 80 % for TOTN. Given the high measured nitrogen concentrations and the limited potential for load reductions at point sources, it seems unlikely that Rømua will achieve GES for TOTN.
+
+A summary of avlastningsbehovene for GES in Rømua and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-romua.
 
 ![Load reductions achieved in the Rømua catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-romua-avlast).](./plots/modelled/oslomod_scens_Rømua.png){#fig-romua-scens width=800 fig-align="center"}
 
