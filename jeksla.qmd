@@ -93,7 +93,7 @@ During the decade from 2015 to 2024, the median annual flow volume at Jeksla ved
 
 @fig-jeksla-avlast shows distributions of annual avlastningsbehov estimated for each year between 2015 and 2024. Red curves show distributions based on measured loads, while blue curves are based on model output from TEOTIL3, which must be interpreted with caution. Distributions for TOTN are sharp and narrow, indicating the avlastningsbehov is well-defined. Based on monitoring data, the median avlastningsbehov for GES for TOTN is 64 %, and almost always between 60 % and 70 %. For TOTP, the distribution based on monitoring is much broader, reflecting greater interannual variability in measured fluxes. The median avlastningsbehov for TOTP using observed data is 20 %, but for some years it is as high as 70 %.  
 
-![Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period.](./plots/modelled/avlast_Jeksla_waterbody_002-599-R.png){#fig-jeksla-avlast width=800 fig-align="center"}
+![Distributions of annual avlastningsbehovene (in percent) for the ten year period from 2015 to 2024 based on observed fluxes (red curves) and fluxes simulated by TEOTIL3 (blue curves). Vertical dashed lines show the median avlastningsbehov based on each dataset i.e. the load reduction that would have achieved GES in roughly half of the ten year period. Modelled results are approximate (see text).](./plots/modelled/avlast_Jeksla_waterbody_002-599-R.png){#fig-jeksla-avlast width=800 fig-align="center"}
 
 @fig-leira-scens shows load reductions achieved in the Jeksla catchment under two management scenarios modelled by [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). As described above, the estimated reductions are derived from modelled changes across a larger area that includes the Jeksla catchment, rather than from measures implemented specifically within the catchment itself. The scenarios comprise packages of agricultural mitigation measures together with upgrades to municipal wastewater treatment plants (@sec-teo-scens).
 
@@ -107,7 +107,7 @@ A summary of avlastningsbehovene for GES in Jeksla and the reductions achieved b
 
 ```{python}
 #| label: tbl-scen_summary-jeksla
-#| tbl-cap: "Summary of avlastningsbehov and scenario results for Jeksla."
+#| tbl-cap: "Summary of avlastningsbehov and scenario results for Jeksla. Model results are based on a wider area and are approximate at the scale of Jeksla (see text)."
 #| echo: false
 
 import pandas as pd
