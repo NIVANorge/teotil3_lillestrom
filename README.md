@@ -86,7 +86,7 @@ From the proposal:
 
 > Scenarioene som er utviklet for Oslofjord-modelleringsprosjektet vil bli brukt til å undersøke hvor mye næringsstofftilførselen til nedbørfeltene i Tabell 1 og regine-enheter i Lillestrøm kommune kan endre seg under (i) et scenario med middels ambisjon, og (ii) et scenario med høy ambisjon. Scenariene vurderer oppgraderinger av avløpsrenseanlegg og tiltakspakker for å redusere næringsstofftap fra jordbruk.
 > 
-> **Merk:** Jordbrukstiltak simulert av NIBIO for Oslofjord-prosjektet er underbygd av grove romlige datasett. Tildelingen av jordbrukstap til spesifikke REGINE-enheter er derfor usikker. Scenarieresultater for større nedbørfelt (Nitelva og Leira) vil sannsynligvis være robust. For nedbørfelt som dekker bare en REGINE-enhet (Rømua og Åa) representerer imidlertid resultatene fra jordbruksmodelleringen gjennomsnittlige forhold i regionen og fanger derfor ikke opp lokale effekter.
+> **Merk:** Jordbrukstiltak simulert av NIBIO for Oslofjord-prosjektet er underbygd av grove romlige datasett. Tildelingen av jordbrukstap til spesifikke REGINE-enheter er derfor usikker. Scenarieresultater for større nedbørfelt (Nittelva og Leira) vil sannsynligvis være robust. For nedbørfelt som dekker bare en REGINE-enhet (Rømua og Åa) representerer imidlertid resultatene fra jordbruksmodelleringen gjennomsnittlige forhold i regionen og fanger derfor ikke opp lokale effekter.
 
  * **In progress.**
 

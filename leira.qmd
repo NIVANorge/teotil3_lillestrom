@@ -5,7 +5,7 @@ number-sections: true
 
 ## Catchment overview {#sec-leira-overview}
 
-Leira is the largest catchment considered in this study (668 km²) and includes Jeksla as a tributary. Land cover is dominated by forest (65 %), but the lower catchment is predominantly agricultural (20 %). See @fig-leira and @tbl-leira-land-cover. 36 % of the catchment is located below the marine limit and 26 % is underlain by clay-rich marine deposits, including most of the agricultural land. According to the Water Framework Directive, Leira is classified as *leirpåvirket* (clay-influenced) and the *Good/Moderate* threshold for TOTP is set to 50 μg-P/l, which is higher than e.g. Nitelva (@fig-marine-clay and @tbl-leir-totp-bounds).
+Leira is the largest catchment considered in this study (668 km²) and includes Jeksla as a tributary. Land cover is dominated by forest (65 %), but the lower catchment is predominantly agricultural (20 %). See @fig-leira and @tbl-leira-land-cover. 36 % of the catchment is located below the marine limit and 26 % is underlain by clay-rich marine deposits, including most of the agricultural land. According to the Water Framework Directive, Leira is classified as *leirpåvirket* (clay-influenced) and the *Good/Moderate* threshold for TOTP is set to 50 μg-P/l, which is higher than e.g. Nittelva (@fig-marine-clay and @tbl-leir-totp-bounds).
 
 ![Maps of the Leira catchment. Left: Land cover based NIBIO's AR50 dataset. Right: Point source discharges from industry and municipal wastewater plants (≥50 p.e.).](./plots/leira.png){#fig-leira width=800 fig-align="center"}
 
@@ -126,7 +126,7 @@ The monitoring records for TOTP and SS show high variability. This is as expecte
  * 2500 to 5000 tonnes/year for TOC
  * 30 000 to 90 000 tonnes/year for SS
 
-It is interesting to note that, despite being substantially larger, loads of TOTN and TOC transported by Leira are similar to those measured in Nitelva (@sec-nitelva-sources). However, loads of TOTP and SS in Leira are significantly higher, probably due to the greater proportion of clay-rich sediments in the lower part of the catchment (@fig-marine-clay and @tbl-marine-clay).
+It is interesting to note that, despite being substantially larger, loads of TOTN and TOC transported by Leira are similar to those measured in Nittelva (@sec-nitelva-sources). However, loads of TOTP and SS in Leira are significantly higher, probably due to the greater proportion of clay-rich sediments in the lower part of the catchment (@fig-marine-clay and @tbl-marine-clay).
 
 ![Annual nutrient fluxes for waterbody `002-3384-R` (Leira nedstrøms Krokfoss). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3.](./plots/modelled/mod_vs_obs_default_Leira_waterbody_002-3384-R.png){#fig-teotil3-leira width=800 fig-align="center"}
 

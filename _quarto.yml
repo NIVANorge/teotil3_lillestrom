@@ -15,7 +15,7 @@ book:
     - part: Results
       chapters:
         - sagelva.qmd
-        - nitelva.qmd
+        - nittelva.qmd
         - leira.qmd
         - jeksla.qmd
         - romua.qmd

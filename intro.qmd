@@ -23,15 +23,15 @@ This chapter defines the area of interest for this project and provides a high l
 
 @tbl-catchments and @fig-catchments show the catchments of interest.
 
-| Catchment ID |   Name  | Outlet lon | Outlet lat |                            Comment                           |
-|:------------:|:-------:|:----------:|:----------:|:------------------------------------------------------------:|
-|       1      | Sagelva |  11.02384  |  59.95745  |                     Tributary to Nitelva                     |
-|       2      | Nitelva |  11.07092  |  59.93806  |            Just upstream of confluence with Leira            |
-|       3      |  Leira  |  11.07367  |  59.93905  |           Just upstream of confluence with Nitelva           |
-|       4      |  Rømua  |  11.20984  |  59.99055  |                    Single REGINE; no lakes                   |
-|       5      |  Jeksla |  11.09281  |  59.99753  | Small sub-catchment of Leira; not resolved by REGINE network |
-|       6      |    Åa   |  11.28279  |  59.99649  |                   Single REGINE; few lakes                   |
-|       7      |  Gansåa |  11.22130  |  59.86080  |                Not resolved by REGINE network                |
+| Catchment ID |   Name   | Outlet lon | Outlet lat |                            Comment                           |
+|:------------:|:-------: |:----------:|:----------:|:------------------------------------------------------------:|
+|       1      | Sagelva  |  11.02384  |  59.95745  |                     Tributary to Nittelva                    |
+|       2      | Nittelva |  11.07092  |  59.93806  |            Just upstream of confluence with Leira            |
+|       3      |  Leira   |  11.07367  |  59.93905  |           Just upstream of confluence with Nittelva          |
+|       4      |  Rømua   |  11.20984  |  59.99055  |                    Single REGINE; no lakes                   |
+|       5      |  Jeksla  |  11.09281  |  59.99753  | Small sub-catchment of Leira; not resolved by REGINE network |
+|       6      |    Åa    |  11.28279  |  59.99649  |                   Single REGINE; few lakes                   |
+|       7      |  Gansåa  |  11.22130  |  59.86080  |                Not resolved by REGINE network                |
 
 : Catchments considered in this study. {#tbl-catchments .striped}
 
@@ -43,7 +43,7 @@ This chapter defines the area of interest for this project and provides a high l
 
 @tbl-land-cover and @fig-land-cover show land cover proportions for each catchment.
 
- * Forest is the dominant land cover (≥65 %) for Leira, Nitelva, Sagelva, Åa and Gansåa.
+ * Forest is the dominant land cover (≥65 %) for Leira, Nittelva, Sagelva, Åa and Gansåa.
    
  * Agriculture is the dominant land cover for Rømua (49 %) and Jeksla (39 %), and also covers significant parts of Leira (20 %) and Åa (23 %).
 
@@ -140,7 +140,7 @@ df.style.format(fmt).set_table_styles(
 
 Major point sources are shown in @tbl-pt-sources. Nutrient inputs are the mean of reported discharges during the period from 2013 to 2024 (in tonnes).
 
- * The largest single point source is **Nedre Romerike avløpsanlegg (NRA)**, which discharges to Nitelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nitelva are renseanleggene at **Rotnes** and **Åneby**, further upstream. In Leira, significant wastewater discharges include **Gardermoen sentralrenseanlegg** and **Kløfta renseanlegg**, both in the lower-central part of the catchment.
+ * The largest single point source is **Nedre Romerike avløpsanlegg (NRA)**, which discharges to Nittelva just upstream of the confluence with Leira. Other significant wastewater discharges to Nittelva are renseanleggene at **Rotnes** and **Åneby**, further upstream. In Leira, significant wastewater discharges include **Gardermoen sentralrenseanlegg** and **Kløfta renseanlegg**, both in the lower-central part of the catchment.
    
  * The largest industrial point source is **Dynea Lillestrøm**, a manufacturer of adhesives and industrial coatings.
 
