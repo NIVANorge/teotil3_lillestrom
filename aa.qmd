@@ -145,7 +145,7 @@ Given the lack of point sources, the main scenario reductions in this catchment 
 
 A summary of avlastningsbehovene for GES in Åa and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-aa.
 
-![Load reductions achieved in the Åa catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-aa-avlast).](./plots/modelled/oslomod_scens_Åa.png){#fig-aa-scens width=800 fig-align="center"}
+![Load reductions achieved in the Åa catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-aa-avlast). For clarity, labels are omitted from bars representing less than 3 %.](./plots/modelled/oslomod_scens_Åa.png){#fig-aa-scens width=800 fig-align="center"}
 
 ```{python}
 #| label: tbl-scen_summary-aa

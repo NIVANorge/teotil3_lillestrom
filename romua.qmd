@@ -144,7 +144,7 @@ Scenarios A and B both achieve the estimated avlastningsbehov of 46 % for TOTP (
 
 A summary of avlastningsbehovene for GES in Rømua and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-romua.
 
-![Load reductions achieved in the Rømua catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-romua-avlast).](./plots/modelled/oslomod_scens_Rømua.png){#fig-romua-scens width=800 fig-align="center"}
+![Load reductions achieved in the Rømua catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-romua-avlast). For clarity, labels are omitted from bars representing less than 3 %.](./plots/modelled/oslomod_scens_Rømua.png){#fig-romua-scens width=800 fig-align="center"}
 
 ```{python}
 #| label: tbl-scen_summary-romua

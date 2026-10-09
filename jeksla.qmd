@@ -103,7 +103,7 @@ For agriculture, NIBIO's results for scenario A indicate load reductions of 2 % 
 
 A summary of avlastningsbehovene for GES in Jeksla and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-jeksla.
 
-![Load reductions achieved in the Jeksla catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-jeksla-avlast).](./plots/modelled/oslomod_scens_Jeksla.png){#fig-jeksla-scens width=800 fig-align="center"}
+![Load reductions achieved in the Jeksla catchment by scenarios A and B of [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). Black vertical lines on the plots for TOTN and TOTP show the median avlastningsbehov for GES estimated using observed data (@fig-jeksla-avlast). For clarity, labels are omitted from bars representing less than 3 %.](./plots/modelled/oslomod_scens_Jeksla.png){#fig-jeksla-scens width=800 fig-align="center"}
 
 ```{python}
 #| label: tbl-scen_summary-jeksla
