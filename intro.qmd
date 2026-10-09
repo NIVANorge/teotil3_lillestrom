@@ -146,7 +146,7 @@ Major point sources are shown in @tbl-pt-sources. Nutrient inputs are the mean o
 
 ```{python}
 #| label: tbl-pt-sources
-#| tbl-cap: "Main point sources of nutrients within the study area."
+#| tbl-cap: "Main point sources of nutrients within the study area. Values are mean annual discharges during the period from 2013 to 2024."
 #| echo: false
 
 import pandas as pd
@@ -170,6 +170,7 @@ df = df.rename(columns=rename_dict)
 val_cols = [f"{par} (tonn)" for par in pars]
 text_cols = list(rename_dict.values())
 df = df[text_cols + val_cols]
+df = df.fillna('-')
 
 # Format and style
 fmt = {c: "{:.2f}" for c in val_cols}

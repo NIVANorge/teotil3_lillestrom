@@ -58,7 +58,7 @@ For station `2.1185.0` (Sagelva), the estimated correction factor, $f$, is 1.19 
 
 ## Annual loads {#sec-ann-loads}
 
-Annual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (see @sec-discharge).
+Annual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (see @sec-discharge) and bias-corrected as described above.
 
 Estimates of annual riverine loads were calculated according to @eq-ospar-annual following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.
 
@@ -78,7 +78,7 @@ Trends in annual mean concentrations and annual loads were evaluated using the M
 
 In this report, trends are considered statistically "significant" for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing "tendencies".
 
-Trends tests for stations are applied in [notebook 04a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb) and for waterbodies in [notebook 04b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb).
+Trend tests for stations are applied in [notebook 04a](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb) and for waterbodies in [notebook 04b](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb).
 
 ## TEOTIL3 modelling {#sec-teotil3-modelling}
 
@@ -163,7 +163,7 @@ Code to calculate spredt inputs and wastewater overflows using data provided by 
 
 ## Avlastningsbehov {#sec-teo-avlast}
 
-The avlastningsbehov for a catchment or waterbody is the amount by which nutrient inputs need to reduce to achieve Good Ecological Status (GES) for the water quality element of interest. For nutrients, the Water Framework Directive defines target concentrations for "good" status for TOTN and TOTP based on catchment typologies.
+The avlastningsbehov for a catchment or waterbody is the amount by which nutrient inputs need to reduce to achieve Good Ecological Status (GES) for the water quality element of interest. For nutrients, the Water Framework Directive defines target concentrations for *Good* status for TOTN and TOTP based on catchment typologies.
 
 Given measured annual mean concentrations and a target concentration, the simplest way to estimate an avlastningsbehov is to calculate the percentage reduction in concentrations needed to achieve the target. For example, if the measured mean annual concentration of TOTP is 50 μg-P/l and the target for GES is 40 μg-P/l, a simplistic avlastningsbehov can be estimated as 20 %. This assumes a proportional relationship between nutrient inputs and observed concentrations and does not account for variability in hydrological conditions or nutrient retention processes.
 
@@ -181,9 +181,9 @@ $$ {#eq-ann-avlast}
 
 where $A_i$ is the estimated avlastningsbehov (in e.g. tonnes) to achieve GES in year $i$; $L_i$ is load estimate for year $i$ based on either monitoring or modelling; and $V_i$ is the annual water volume in year $i$. Note that negative values for $A_i$ in this equation indicate years in which estimated loads were already below the GES threshold and therefore no load reduction was required.
 
-In this study, we calculate time series of annual loads using both monitoring data and using TEOTIL3. We also have simulations of annual flow volume in each catchment based on data from the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (@sec-discharge). For each catchment and parameter, we estimate a time series of annual avlastningsbehov based on monitoring, $A^{mon}_i$, and on modelling, $A^{mod}_i$.
+In this study, we calculate time series of annual loads using both monitoring data and TEOTIL3. We also have simulations of annual flow volume in each catchment based on data from the [GTS API](https://api.nve.no/doc/gridtimeseries-data-gts/) (@sec-discharge). For each catchment and parameter, we estimate a time series of annual avlastningsbehov based on monitoring, $A^{mon}_i$, and on modelling, $A^{mod}_i$.
 
-The typical avlastningsbehov in each catchment is calculated as the median of annual values. This is done separately for monitoring and modelling to give two medians, $\tilde{A}^{mon}$ and $\tilde{A}^{mod}$. Since the median is the middle value when numbers are placed in ascending order, the median avlastningsbehov can be interpreted as the load reduction that would have achieved GES in half the years considered. Differences between $\tilde{A}^{mon}$ and $\tilde{A}^{mod}$ reflect methodological uncertainties - for example limitations in the assumptions made by TEOTIL3, or whether the monitoring data are good enough to accurately measure "true" nutrient loads.
+The typical avlastningsbehov in each catchment is calculated as the median of annual values. This is done separately for monitoring and modelling to give two medians, $\tilde{A}^{mon}$ and $\tilde{A}^{mod}$. Since the median is the middle value when numbers are placed in ascending order, the median avlastningsbehov can be interpreted as the load reduction that would have achieved GES in half the years considered. Differences between $\tilde{A}^{mon}$ and $\tilde{A}^{mod}$ reflect methodological uncertainties, such as limitations in the assumptions made by TEOTIL3, or whether the monitoring data are good enough to accurately measure "true" nutrient loads.
 
 As well as calculating a median avlastningsbehov for each catchment, the *distribution* of annual avlastningsbehov provides useful information about the degree of interannual variation in the estimated reductions. These distributions are calculated for each catchment by applying Kernel Density Estimation (KDE) to the datasets of annual avlastningsbehov expressed as percentages:
 
@@ -191,7 +191,7 @@ $$
 A^{pct}_{i} = 100 \frac{L_i - L_{max}}{L_i}
 $$ {#eq-ann-avlast-pct}
 
-As an example, consider @fig-leira-avlast, which shows estimated avlastningsbehov for Leira. Red curves on each plot show distributions of avlastningsbehov based on monitoring data, while blue curves show distributions based on modelling with TEOTIL3. Vertical dashed lines show the median value of each distribution, while the shape of curves indicates variability. Broad, flat curves suggest the avlastningsbehov is poorly constrained i.e. in some years it may be significantly higher or lower than the median value, whereas narrow, pointed curves indicate low variation i.e. the avlastningsbehov remains consistent from year to year.
+As an example, consider @fig-leira-avlast, which shows estimated avlastningsbehov for Leira. Red curves on each plot show distributions of avlastningsbehov based on monitoring data, while blue curves show distributions based on modelling with TEOTIL3. Vertical dashed lines show the median value of each distribution, while the shape of the curves indicates variability. Broad, flat curves suggest the avlastningsbehov is poorly constrained (i.e. in some years it may be significantly higher or lower than the median value), whereas narrow, pointed curves indicate low variation (i.e. the avlastningsbehov remains consistent from year to year).
 
 For TOTN in Leira, both distributions are narrow, indicating the avlastningsbehov is well-constrained. The median avlastningsbehov based on monitoring data is 42 %, compared to 55 % using TEOTIL3. For TOTP, the distributions are broader: TEOTIL3 assigns higher probabilities to avlastningsbehov in the 50 to 60 % range, while estimates based on monitoring are more like 45 to 55 %. Nevertheless, the median estimates are almost identical (54 % and 55 %).
 
@@ -200,7 +200,7 @@ For TOTN in Leira, both distributions are narrow, indicating the avlastningsbeho
 [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/) considered two scenarios of wastewater and agricultural measures designed to reduce nutrient loads to the Oslofjord:
 
  * **Scenario A** is a medium ambition scenario designed to reflect implementation of measures covered by existing legislation. 
-    * For **agriculture**, measures are only applied within the five environmental requirement zones (miljøkravsonene): Viken 1 and 2 (Akershus, Østfold, Oslo and Buskerud, Gran municipality in the Inland); Innlandet 1 (Inland); and Vestfold & Telemark 1 and 2 (Grenland, Midtre Telemark and Vestfold). In the rest of the Oslofjord catchment, agricultural measures in scenario A represent those already in place in 2021. See @tbl-scen-agri-measures for list of agricultural measures considered in each scenario. 
+    * For **agriculture**, measures are only applied within the five environmental requirement zones (miljøkravsonene): Viken 1 and 2 (Akershus, Østfold, Oslo and Buskerud, Gran municipality in Innlandet); Innlandet 1 (Innlandet); and Vestfold & Telemark 1 and 2 (Grenland, Midtre Telemark and Vestfold). In the rest of the Oslofjord catchment, agricultural measures in scenario A represent those already in place in 2021. See @tbl-scen-agri-measures for list of agricultural measures considered in each scenario. 
     * For **wastewater treatment**, scenario A assumes all treatment plants larger than 10 000 p.e. are upgraded to achieve minimum treatment efficiencies of 80 % for TOTN, 95 % for BOF5, 95 % for KOF, and 95 % for SS. Plants with treatment efficiencies exceeding these targets were assumed to retain their existing performance. For example, if a plant already had 85 % efficiency for TOTN in the historic data, it retained this efficiency in this scenario. In addition, annual wastewater overflows equivalent to 2 % of influent volume were assumed for all treatment plants serving more than 1,000 people.
 
 <br>
@@ -225,6 +225,7 @@ for lvl0, lvl1 in df.columns:
         lvl1 = ""
     new_cols.append((lvl0, lvl1))
 df.columns = pd.MultiIndex.from_tuples(new_cols)
+df = df.fillna("-")
 
 scenario_cols = [col for col in df.columns if col[0] in ["Scenario A", "Scenario B"]]
 other_cols = [col for col in df.columns if col[0] not in ["Scenario A", "Scenario B"]]
@@ -246,7 +247,7 @@ styled_df = (
 styled_df
 ```
 
-For full details of the Oslofjord scenarios modelling, see [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). It is important to note that **scenario B should not be interpreted as a recommendation for future management**: it was originally designed by Miljødirektoratet to explore maximum load reductions that could be achieved using traditional packages of measures. Commonly funded agricultural measures are effective at reducing losses of particulate material (SS and TPP), but are generally less effective for nitrogen. In the Oslofjord modelling work, [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/) showed that scenario A generally achieves sufficient reductions for phosphorus and particulate material, but not for nitrogen. Scenario B, meanwhile, achieves larger reductions than are necessary for phosphorus and particles, and approaches the reduction required for nitrogen. A more balanced future management scenario would therefore combine the reductions in particulate material and phosphorus achieved by scenario A with the reductions in nitrogen losses achieved by scenario B. 
+For full details of the Oslofjord scenarios modelling, see [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). It is important to note that **scenario B should not be interpreted as a recommendation for future management**: it was originally designed by Miljødirektoratet to explore maximum load reductions that could be achieved using traditional packages of measures. Commonly funded agricultural measures are effective at reducing losses of particulate material (SS and TPP), but are generally less effective for nitrogen. In the Oslofjord modelling work, [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/) showed that scenario A generally achieves sufficient reductions for phosphorus and particulate material, but not for nitrogen. Scenario B, meanwhile, achieves larger reductions than necessary for phosphorus and particles, and approaches the reduction required for nitrogen. A more balanced future management scenario would therefore combine the reductions in particulate material and phosphorus achieved by scenario A with the reductions in nitrogen losses achieved by scenario B. 
 
 For this project, it was not possible to re-run the scenarios from the Oslofjord modelling work. Instead, more detailed historical simulations have been set up for Lillestrøm by applying TEOTIL3 with Lillestrøm-specific input datasets (@sec-lillestrom-data). This provides a more refined historical baseline for Lillestrøm that can be evaluated alongside the higher-level results from the Oslofjord scenario modelling.
 

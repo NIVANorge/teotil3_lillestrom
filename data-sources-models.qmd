@@ -60,7 +60,7 @@ Waterbody status classes are missing in Vann-Nett for many of the waterbodies li
 
 ```{python}
 #| label: tbl-leir-totp-bounds
-#| tbl-cap: "Assumed boundary between *moderate* and *good* status for TOTP concentrations in catchments classified as *leirpåvirket* (clay-influenced; national waterbody type `R111`). After [Meland *et al.*, 2023](https://elveliv.no/wp-content/uploads/2022-vannovervaking-i-vo-leira-nitelva.pdf)"
+#| tbl-cap: "Assumed boundary between *moderate* and *good* status for TOTP concentrations in catchments classified as *leirpåvirket* (clay-influenced; national waterbody type `R111`). After [Meland *et al.* (2023)](https://elveliv.no/wp-content/uploads/2022-vannovervaking-i-vo-leira-nitelva.pdf)."
 #| echo: false
 
 import pandas as pd
