@@ -58,11 +58,11 @@ df.style.format(fmt).set_table_styles(
 ).map(lambda _: "font-weight: bold;", subset=pd.IndexSlice[["Totalt"], :])
 ```
 
-Rømua receives discharges from three small wastewater plants connected to the municipal network (@tbl-romua-pt-sources). All three are located in the central part of the catchment (@fig-romua) and typical annual nutrient discharges are small. There are no industrial discharges within the catchment and contributions from spredt avløp and wastewater overflows (from Lillestrøm kommune) are low.
+Rømua receives discharges from three small wastewater plants connected to the municipal network (@tbl-romua-pt-sources). All three are located in the central part of the catchment (@fig-romua) and typical annual nutrient discharges are small. There are no industrial discharges within the catchment and contributions from spredt avløp and wastewater overflows (from within Lillestrøm kommune) are low.
 
 ```{python}
 #| label: tbl-romua-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Rømua catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
+#| tbl-cap: "Industrial and municipal wastewater discharges (≥50 p.e.) within the Rømua catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd

@@ -66,7 +66,7 @@ Kløfta renseanlegg is an older chemically based treatment facility with relativ
 
 ```{python}
 #| label: tbl-leira-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Leira catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
+#| tbl-cap: "Industrial and municipal wastewater discharges (≥50 p.e.) within the Leira catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd
@@ -96,7 +96,7 @@ df = df[text_cols + val_cols]
 
 # Format and style
 fmt = {c: "{:.2f}" for c in val_cols}
-df.style.format(fmt).hide(axis="index").set_properties(
+df.style.format(fmt, na_rep="-").hide(axis="index").set_properties(
     subset=text_cols, **{"text-align": "center"}
 ).set_table_styles(
     [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
@@ -119,7 +119,7 @@ As with other catchments in this region, increasing TOC concentrations are partl
 
 @fig-teotil3-leira shows nutrient fluxes for Leira estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). Results from TEOTIL3 are broadly in agreement with the monitoring data for all parameters, although there is evidence that TEOTIL3 slightly overestimates fluxes of TOTN and TOC compared to the monitoring, and slightly underestimates fluxes of TOTP and SS. 
 
-The monitoring records for TOTP and SS show high variability. This is as expected, since high loads of particulate material and TPP can be transported during a small number of short-duration flow events. Taken together, monitoring and modelling provide a consistent picture of nutrient loads transported by the lower Leira (waterbody `002-3384-R`):
+The monitoring records for TOTP and SS show high variability. This is expected, since high loads of particulate material and TPP can be transported during a small number of short-duration flow events. Taken together, monitoring and modelling provide a consistent picture of nutrient loads transported by the lower Leira (waterbody `002-3384-R`):
 
  * 450 to 900 tonnes/year for TOTN
  * 25 to 100 tonnes/year for TOTP

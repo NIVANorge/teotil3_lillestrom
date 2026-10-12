@@ -62,7 +62,7 @@ There are no major industrial discharges within the Sagelva catchment and the on
 
 ```{python}
 #| label: tbl-sagelva-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Sagelva catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
+#| tbl-cap: "Industrial and municipal wastewater discharges (≥50 p.e.) within the Sagelva catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd
@@ -140,7 +140,7 @@ For TOTP, the fluxes simulated by TEOTIL3 are generally higher than estimates ba
 
 @fig-sagelva-scens shows load reductions achieved for the Sagelva catchment by two scenarios modelled by [Wallhead *et al.* (2026)](https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/). These scenarios considered packages of agricultural measures and upgrades to larger municipal wastewater treatment plants (@sec-teo-scens). Since there are no significant discharges from municipal wastewater plants to the Sagelva catchment, all reductions are achieved by agricultural measures. Furthermore, results from this study suggest that additional reductions of up to 4 % for TOTP and 2 % for TOTN could be achieved if rainwater overflows from Lillestrøm kommune were reduced to zero (@sec-sagelva-sources).
 
-The required TOTN reductions for GES of 10 to 20 % cannot be achieved by scenario A, but could plausibly be achieved by scenario B. For TOTP, scenarios A and B both comfortably exceed the 3 % reduction target estimated from the monitoring data, and scenario B achieves a TOTP reduction of 37 %, which is approximately equal to the avlastningsbehov for GES based on TEOTIL3 simulations. 
+The required TOTN reductions for GES of 10 to 20 % cannot be achieved by scenario A, but could plausibly be achieved by scenario B. For TOTP, scenarios A and B both comfortably exceed the 3 % reduction target estimated from the monitoring data, and scenario B achieves a TOTP reduction of 36 %, which is approximately equal to the avlastningsbehov for GES based on TEOTIL3 simulations. 
 
 A summary of avlastningsbehovene for GES in Sagelva and the reductions achieved by scenarios A and B is shown in @tbl-scen_summary-sagelva.
 

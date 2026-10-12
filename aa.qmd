@@ -62,7 +62,7 @@ There are no industrial discharges to Åa and the only municipal wastewater trea
 
 ```{python}
 #| label: tbl-aa-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Åa catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
+#| tbl-cap: "Industrial and municipal wastewater discharges (≥50 p.e.) within the Åa catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd
@@ -110,7 +110,7 @@ The best monitoring data for Åa come from Vannmiljø station `002-60929` (Foss�
 
 ## Source apportionment {#sec-aa-sources}
 
-@fig-teotil3-aa shows nutrient fluxes for Åa estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). Note that the Åa catchment is represented as just a single, small REGINE unit in NVE's catchment dataset. For this reason, it is not well suited to modelling with TEOTIL3 and **results must be interpreted with caution** (@sec-spatial-res).
+@fig-teotil3-aa shows nutrient fluxes for Åa estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). Note that the Åa catchment is represented by a single, small REGINE unit in NVE's catchment dataset. For this reason, it is not well suited to modelling with TEOTIL3 and **results must be interpreted with caution** (@sec-spatial-res).
 
 Fluxes simulated by TEOTIL3 are generally compatible with the highest values from the monitoring. Given the relatively low monitoring frequency, it is likely that load estimates based on monitoring underestimate true values, but it is also possible that TEOTIL3 is underestimating retention in this catchment (because TEOTIL3's retention calculations are not designed for single REGINEs). In addition, NIBIO's modelling of agricultural nutrient losses has high uncertainty at the scale of single REGINE units.
 
@@ -129,7 +129,7 @@ As expected from low frequency monitoring, the measured fluxes for Åa have high
 
 ## Load reductions and scenarios {#sec-aa-avlast}
 
-During the decade from 2015 to 2024, the median annual flow volume at Fossåa ved Sylta (Vannmiljø station `002-60929`) was 60 Mm³/year. Taking the maximum concentrations for GES of 775 μg/l for N and 50 μg/l for P, the maximum annual load for *Good* status in a typical year is approximately 47 tonnes for TOTN and 3 tonnes for TOTP. These values are roughly equivalent to the lowest values in the observed data, but for most years fluxes are considerably higher.
+During the decade from 2015 to 2024, the median annual flow volume at Fossåa ved Sylta (Vannmiljø station `002-60929`) was 60 Mm³/year. Taking the maximum concentrations for GES of 775 μg/l for N and 50 μg/l for P, the maximum annual load for *Good* status in a typical year is approximately 47 tonnes for TOTN and 3 tonnes for TOTP. These values are roughly equivalent to the lowest values in the observed data, but in most years fluxes are considerably higher.
 
 @fig-aa-avlast shows distributions of annual avlastningsbehov estimated for each year between 2015 and 2024. Red curves show distributions based on measured loads, while blue curves are based on model output from TEOTIL3, which must be interpreted with caution. Since annual loads simulated by TEOTIL3 are generally higher than those based on monitoring, avlastningsbehovene estimated using TEOTIL3 are also consistently higher. Given the limitations of both monitoring and modelling in this catchment, it is difficult to know which dataset is most representative. 
 

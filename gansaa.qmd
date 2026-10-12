@@ -64,7 +64,7 @@ There are no industrial discharges within this catchment and wastewater overflow
 
 ```{python}
 #| label: tbl-gansaa-pt-sources
-#| tbl-cap: "Industrial and municipal wastewater discharges within the Gansåa catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
+#| tbl-cap: "Industrial and municipal wastewater discharges (≥50 p.e.) within the Gansåa catchment. Values are mean annual discharges from 2013 to 2024, excluding overflows."
 #| echo: false
 
 import pandas as pd
@@ -111,7 +111,7 @@ The best monitoring data for Gansåa come from Vannmiljø station `002-60933` (G
 
 ## Source apportionment {#sec-gansaa-sources}
 
-@fig-teotil3-gansaa shows nutrient fluxes for Gansåa estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). Because the Gansåa catchment is small (25 km²) and occupies only part of a single REGINE unit, it is not possible to simulate nutrient fluxes explicitly using TEOTIL3 (see @sec-spatial-res for details). TEOTIL3's estimates of diffuse nutrient fluxes for Gansåa are therefore based on simulations from a wider area, scaled to match the size of the Gansåa catchment. **TEOTIL3 results for Gansåa are therefore approximate and must be interpreted with caution**, since they assume average land management and point inputs for REGINE `002.C5`, rather than using Gansåa-specific data.
+@fig-teotil3-gansaa shows nutrient fluxes for Gansåa estimated from observed data (black lines) together with source-apportioned fluxes simulated by TEOTIL3 (stacked bars). Because the Gansåa catchment is small (25 km²) and occupies only part of a single REGINE unit, it is not possible to simulate nutrient fluxes explicitly using TEOTIL3 (see @sec-spatial-res). TEOTIL3's estimates of diffuse nutrient fluxes for Gansåa are therefore based on simulations from a wider area, scaled to match the size of the Gansåa catchment. **TEOTIL3 results for Gansåa are therefore approximate and must be interpreted with caution**, since they assume average land management and point inputs for REGINE `002.C5`, rather than using Gansåa-specific data.
 
 Based on available monitoring data, typical nutrient fluxes for Gansåa (waterbody `002-3655-R`) are approximately:
 
@@ -122,7 +122,7 @@ Based on available monitoring data, typical nutrient fluxes for Gansåa (waterbo
 
 ![Annual nutrient fluxes for waterbody `002-3655-R` (Gansåa). Black lines show fluxes estimated from monitoring data; stacked bars show source-apportioned fluxes simulated by TEOTIL3. TEOTIL3 results are approximate (see text).](./plots/modelled/mod_vs_obs_default_Gansåa_waterbody_002-3655-R.png){#fig-teotil3-gansaa width=800 fig-align="center"}
 
-@fig-gansåa-src-app shows the mean contribution of each source to annual fluxes during the period 2020 to 2024. As noted above, source apportionment is based on data from a wider area (REGINE `002.C5`), so results are approximate. According to TEOTIL3, agriculture is the main source of TOTN, TOTP and SS inputs to REGINE `002.C5`, while background areas, predominantly forests and marshland, contribute most of the TOC. Background sources also make significant contributions to TOTN (40 %), TOTP (16 %) and SS (7 %). 
+@fig-gansaa-src-app shows the mean contribution of each source to annual fluxes during the period 2020 to 2024. As noted above, source apportionment is based on data from a wider area (REGINE `002.C5`), so results are approximate. According to TEOTIL3, agriculture is the main source of TOTN, TOTP and SS inputs to REGINE `002.C5`, while background areas, predominantly forests and marshland, contribute most of the TOC. Background sources also make significant contributions to TOTN (40 %), TOTP (16 %) and SS (7 %). 
 
 Wastewater inputs contribute approximately 10 % of the TOTN and TOTP to REGINE `002.C5`. For TOTN, this can be divided into 6.5 % from municipal wastewater discharges and 3.5 % from spredt avløp. For TOTP, the split is 1.5 % and 8.5 %, respectively. Note, however, that these figures likely underestimate the true contribution from municipal wastewater to the Gansåa catchment. This is because inputs from Dalen renseanlegg to Gansåa are proportionally greater than the average over REGINE `002.C5` as a whole.
 
