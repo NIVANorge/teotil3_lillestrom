@@ -429,7 +429,7 @@ f = \frac{Obs_{avg}}{Mod_{avg}} = \frac{1}{1 + bias}
 </section>
 <section id="sec-ann-loads" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="sec-ann-loads"><span class="header-section-number">4.4</span> Annual loads</h2>
-<p>Annual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (see <a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>).</p>
+<p>Annual loads were estimated for each monitoring station and waterbody using the cleaned concentration dataset, after removing outliers and retaining only years with at least 12 samples per site or waterbody. Daily flow data for each site were downloaded from NVE via the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (see <a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>) and bias-corrected as described above.</p>
 <p>Estimates of annual riverine loads were calculated according to <a href="#eq-ospar-annual" class="quarto-xref">Equation&nbsp;<span>4.2</span></a> following the recommendations in OSPAR Agreement 2014:04 (§6.13b). This is the same method used by national monitoring programmes such as Elveovervåkingsprogrammet and is designed to account for irregular sampling intervals and the influence of high-flow events.</p>
 <p><span id="eq-ospar-annual"><span class="math display">\[
 L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
@@ -442,7 +442,7 @@ L = Q_r \frac{\sum_{i=1}^{n} C_i Q_i t_i}{\sum_{i=1}^{n} Q_i t_i}
 <h2 data-number="4.5" class="anchored" data-anchor-id="sec-trend-tests"><span class="header-section-number">4.5</span> Tests for trends</h2>
 <p>Trends in annual mean concentrations and annual loads were evaluated using the Mann-Kendall test and Sen’s slope estimator (e.g.&nbsp;<a href="https://pubs.usgs.gov/publication/tm4A3">Helsel <em>et al.</em>, 2020</a>). The Mann-Kendall test is a non-parametric method that assesses the statistical significance of monotonic trends without assuming a specific data distribution. Sen’s slope estimator provides a robust estimate of the rate of change over time and is less sensitive to outliers than ordinary least squares regression. Together, these methods are widely applied in water quality studies because environmental monitoring data are often non-normally distributed, contain censored or extreme values, and may violate the assumptions of parametric trend analyses.</p>
 <p>In this report, trends are considered statistically “significant” for Mann-Kendall p-values ≤0.05. Results with p-values greater than 0.05 but ≤0.10 are also noted and described as increasing or decreasing “tendencies”.</p>
-<p>Trends tests for stations are applied in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb">notebook 04a</a> and for waterbodies in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb">notebook 04b</a>.</p>
+<p>Trend tests for stations are applied in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04a_annual_loads_stations.ipynb">notebook 04a</a> and for waterbodies in <a href="https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/04b_annual_loads_waterbodies.ipynb">notebook 04b</a>.</p>
 </section>
 <section id="sec-teotil3-modelling" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="sec-teotil3-modelling"><span class="header-section-number">4.6</span> TEOTIL3 modelling</h2>
@@ -471,44 +471,44 @@ Table&nbsp;4.2: Typical nutrient discharges per person per day. Based on data co
 <div aria-describedby="tbl-nuts-per-pers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
 <style type="text/css">
-#T_85397 th.col_heading {
+#T_4f9b5 th.col_heading {
   text-align: center;
 }
-#T_85397_row0_col0, #T_85397_row1_col0, #T_85397_row2_col0, #T_85397_row3_col0, #T_85397_row4_col0 {
+#T_4f9b5_row0_col0, #T_4f9b5_row1_col0, #T_4f9b5_row2_col0, #T_4f9b5_row3_col0, #T_4f9b5_row4_col0 {
   text-align: center;
 }
-#T_85397_row0_col1, #T_85397_row1_col1, #T_85397_row2_col1, #T_85397_row3_col1, #T_85397_row4_col1 {
+#T_4f9b5_row0_col1, #T_4f9b5_row1_col1, #T_4f9b5_row2_col1, #T_4f9b5_row3_col1, #T_4f9b5_row4_col1 {
   text-align: right;
 }
 </style>
 
-<table id="T_85397" class="cell caption-top table table-sm table-striped small">
+<table id="T_4f9b5" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_85397_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
-<th id="T_85397_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
+<th id="T_4f9b5_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Parameter</th>
+<th id="T_4f9b5_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Discharge (g/pers/døgn)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_85397_row0_col0" class="data row0 col0">TOTN</td>
-<td id="T_85397_row0_col1" class="data row0 col1">12.0</td>
+<td id="T_4f9b5_row0_col0" class="data row0 col0">TOTN</td>
+<td id="T_4f9b5_row0_col1" class="data row0 col1">12.0</td>
 </tr>
 <tr class="even">
-<td id="T_85397_row1_col0" class="data row1 col0">TOTP</td>
-<td id="T_85397_row1_col1" class="data row1 col1">1.8</td>
+<td id="T_4f9b5_row1_col0" class="data row1 col0">TOTP</td>
+<td id="T_4f9b5_row1_col1" class="data row1 col1">1.8</td>
 </tr>
 <tr class="odd">
-<td id="T_85397_row2_col0" class="data row2 col0">BOF5</td>
-<td id="T_85397_row2_col1" class="data row2 col1">60.0</td>
+<td id="T_4f9b5_row2_col0" class="data row2 col0">BOF5</td>
+<td id="T_4f9b5_row2_col1" class="data row2 col1">60.0</td>
 </tr>
 <tr class="even">
-<td id="T_85397_row3_col0" class="data row3 col0">KOF</td>
-<td id="T_85397_row3_col1" class="data row3 col1">120.0</td>
+<td id="T_4f9b5_row3_col0" class="data row3 col0">KOF</td>
+<td id="T_4f9b5_row3_col1" class="data row3 col1">120.0</td>
 </tr>
 <tr class="odd">
-<td id="T_85397_row4_col0" class="data row4 col0">SS</td>
-<td id="T_85397_row4_col1" class="data row4 col1">70.0</td>
+<td id="T_4f9b5_row4_col0" class="data row4 col0">SS</td>
+<td id="T_4f9b5_row4_col1" class="data row4 col1">70.0</td>
 </tr>
 </tbody>
 </table>
@@ -534,7 +534,7 @@ E = E_{ideal} \times (1 - R)
 </section>
 <section id="sec-teo-avlast" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="sec-teo-avlast"><span class="header-section-number">4.7</span> Avlastningsbehov</h2>
-<p>The avlastningsbehov for a catchment or waterbody is the amount by which nutrient inputs need to reduce to achieve Good Ecological Status (GES) for the water quality element of interest. For nutrients, the Water Framework Directive defines target concentrations for “good” status for TOTN and TOTP based on catchment typologies.</p>
+<p>The avlastningsbehov for a catchment or waterbody is the amount by which nutrient inputs need to reduce to achieve Good Ecological Status (GES) for the water quality element of interest. For nutrients, the Water Framework Directive defines target concentrations for <em>Good</em> status for TOTN and TOTP based on catchment typologies.</p>
 <p>Given measured annual mean concentrations and a target concentration, the simplest way to estimate an avlastningsbehov is to calculate the percentage reduction in concentrations needed to achieve the target. For example, if the measured mean annual concentration of TOTP is 50 μg-P/l and the target for GES is 40 μg-P/l, a simplistic avlastningsbehov can be estimated as 20 %. This assumes a proportional relationship between nutrient inputs and observed concentrations and does not account for variability in hydrological conditions or nutrient retention processes.</p>
 <p>To assess whether load reductions for GES are practically achievable, it is usually necessary to convert concentration-based estimates into load reduction targets in tonnes. This requires estimates of annual water volume. For example, given a concentration target for GES, <span class="math inline">\(C_{GES}\)</span>, and the annual water volume, <span class="math inline">\(V\)</span>, the maximum annual load for GES, <span class="math inline">\(L_{max}\)</span>, can be estimated as:</p>
 <p><span id="eq-max-ann-load"><span class="math display">\[
@@ -545,13 +545,13 @@ L_{max} = C_{GES} \times V
 A_i = L_i - L_{max} = L_i - (C_{GES} \times V_i)
 \tag{4.7}\]</span></span></p>
 <p>where <span class="math inline">\(A_i\)</span> is the estimated avlastningsbehov (in e.g.&nbsp;tonnes) to achieve GES in year <span class="math inline">\(i\)</span>; <span class="math inline">\(L_i\)</span> is load estimate for year <span class="math inline">\(i\)</span> based on either monitoring or modelling; and <span class="math inline">\(V_i\)</span> is the annual water volume in year <span class="math inline">\(i\)</span>. Note that negative values for <span class="math inline">\(A_i\)</span> in this equation indicate years in which estimated loads were already below the GES threshold and therefore no load reduction was required.</p>
-<p>In this study, we calculate time series of annual loads using both monitoring data and using TEOTIL3. We also have simulations of annual flow volume in each catchment based on data from the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (<a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>). For each catchment and parameter, we estimate a time series of annual avlastningsbehov based on monitoring, <span class="math inline">\(A^{mon}_i\)</span>, and on modelling, <span class="math inline">\(A^{mod}_i\)</span>.</p>
-<p>The typical avlastningsbehov in each catchment is calculated as the median of annual values. This is done separately for monitoring and modelling to give two medians, <span class="math inline">\(\tilde{A}^{mon}\)</span> and <span class="math inline">\(\tilde{A}^{mod}\)</span>. Since the median is the middle value when numbers are placed in ascending order, the median avlastningsbehov can be interpreted as the load reduction that would have achieved GES in half the years considered. Differences between <span class="math inline">\(\tilde{A}^{mon}\)</span> and <span class="math inline">\(\tilde{A}^{mod}\)</span> reflect methodological uncertainties - for example limitations in the assumptions made by TEOTIL3, or whether the monitoring data are good enough to accurately measure “true” nutrient loads.</p>
+<p>In this study, we calculate time series of annual loads using both monitoring data and TEOTIL3. We also have simulations of annual flow volume in each catchment based on data from the <a href="https://api.nve.no/doc/gridtimeseries-data-gts/">GTS API</a> (<a href="data-sources-models.html#sec-discharge" class="quarto-xref"><span>Section 3.2</span></a>). For each catchment and parameter, we estimate a time series of annual avlastningsbehov based on monitoring, <span class="math inline">\(A^{mon}_i\)</span>, and on modelling, <span class="math inline">\(A^{mod}_i\)</span>.</p>
+<p>The typical avlastningsbehov in each catchment is calculated as the median of annual values. This is done separately for monitoring and modelling to give two medians, <span class="math inline">\(\tilde{A}^{mon}\)</span> and <span class="math inline">\(\tilde{A}^{mod}\)</span>. Since the median is the middle value when numbers are placed in ascending order, the median avlastningsbehov can be interpreted as the load reduction that would have achieved GES in half the years considered. Differences between <span class="math inline">\(\tilde{A}^{mon}\)</span> and <span class="math inline">\(\tilde{A}^{mod}\)</span> reflect methodological uncertainties, such as limitations in the assumptions made by TEOTIL3, or whether the monitoring data are good enough to accurately measure “true” nutrient loads.</p>
 <p>As well as calculating a median avlastningsbehov for each catchment, the <em>distribution</em> of annual avlastningsbehov provides useful information about the degree of interannual variation in the estimated reductions. These distributions are calculated for each catchment by applying Kernel Density Estimation (KDE) to the datasets of annual avlastningsbehov expressed as percentages:</p>
 <p><span id="eq-ann-avlast-pct"><span class="math display">\[
 A^{pct}_{i} = 100 \frac{L_i - L_{max}}{L_i}
 \tag{4.8}\]</span></span></p>
-<p>As an example, consider <a href="leira.html#fig-leira-avlast" class="quarto-xref">Figure&nbsp;<span>7.5</span></a>, which shows estimated avlastningsbehov for Leira. Red curves on each plot show distributions of avlastningsbehov based on monitoring data, while blue curves show distributions based on modelling with TEOTIL3. Vertical dashed lines show the median value of each distribution, while the shape of curves indicates variability. Broad, flat curves suggest the avlastningsbehov is poorly constrained i.e.&nbsp;in some years it may be significantly higher or lower than the median value, whereas narrow, pointed curves indicate low variation i.e.&nbsp;the avlastningsbehov remains consistent from year to year.</p>
+<p>As an example, consider <a href="leira.html#fig-leira-avlast" class="quarto-xref">Figure&nbsp;<span>7.5</span></a>, which shows estimated avlastningsbehov for Leira. Red curves on each plot show distributions of avlastningsbehov based on monitoring data, while blue curves show distributions based on modelling with TEOTIL3. Vertical dashed lines show the median value of each distribution, while the shape of the curves indicates variability. Broad, flat curves suggest the avlastningsbehov is poorly constrained (i.e.&nbsp;in some years it may be significantly higher or lower than the median value), whereas narrow, pointed curves indicate low variation (i.e.&nbsp;the avlastningsbehov remains consistent from year to year).</p>
 <p>For TOTN in Leira, both distributions are narrow, indicating the avlastningsbehov is well-constrained. The median avlastningsbehov based on monitoring data is 42 %, compared to 55 % using TEOTIL3. For TOTP, the distributions are broader: TEOTIL3 assigns higher probabilities to avlastningsbehov in the 50 to 60 % range, while estimates based on monitoring are more like 45 to 55 %. Nevertheless, the median estimates are almost identical (54 % and 55 %).</p>
 </section>
 <section id="sec-teo-scens" class="level2" data-number="4.8">
@@ -560,7 +560,7 @@ A^{pct}_{i} = 100 \frac{L_i - L_{max}}{L_i}
 <ul>
 <li><strong>Scenario A</strong> is a medium ambition scenario designed to reflect implementation of measures covered by existing legislation.
 <ul>
-<li>For <strong>agriculture</strong>, measures are only applied within the five environmental requirement zones (miljøkravsonene): Viken 1 and 2 (Akershus, Østfold, Oslo and Buskerud, Gran municipality in the Inland); Innlandet 1 (Inland); and Vestfold &amp; Telemark 1 and 2 (Grenland, Midtre Telemark and Vestfold). In the rest of the Oslofjord catchment, agricultural measures in scenario A represent those already in place in 2021. See <a href="#tbl-scen-agri-measures" class="quarto-xref">Table&nbsp;<span>4.3</span></a> for list of agricultural measures considered in each scenario.</li>
+<li>For <strong>agriculture</strong>, measures are only applied within the five environmental requirement zones (miljøkravsonene): Viken 1 and 2 (Akershus, Østfold, Oslo and Buskerud, Gran municipality in Innlandet); Innlandet 1 (Innlandet); and Vestfold &amp; Telemark 1 and 2 (Grenland, Midtre Telemark and Vestfold). In the rest of the Oslofjord catchment, agricultural measures in scenario A represent those already in place in 2021. See <a href="#tbl-scen-agri-measures" class="quarto-xref">Table&nbsp;<span>4.3</span></a> for list of agricultural measures considered in each scenario.</li>
 <li>For <strong>wastewater treatment</strong>, scenario A assumes all treatment plants larger than 10 000 p.e. are upgraded to achieve minimum treatment efficiencies of 80 % for TOTN, 95 % for BOF5, 95 % for KOF, and 95 % for SS. Plants with treatment efficiencies exceeding these targets were assumed to retain their existing performance. For example, if a plant already had 85 % efficiency for TOTN in the historic data, it retained this efficiency in this scenario. In addition, annual wastewater overflows equivalent to 2 % of influent volume were assumed for all treatment plants serving more than 1,000 people.</li>
 </ul></li>
 </ul>
@@ -581,94 +581,94 @@ Table&nbsp;4.3: Summary of agricultural measures in scenarios A and B. After <a 
 <div aria-describedby="tbl-scen-agri-measures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="2">
 <style type="text/css">
-#T_45349 th.col_heading {
+#T_0e2c7 th.col_heading {
   text-align: center;
 }
-#T_45349 th.col_heading.level0 {
+#T_0e2c7 th.col_heading.level0 {
   text-align: center;
 }
-#T_45349 th.col_heading.level1 {
+#T_0e2c7 th.col_heading.level1 {
   text-align: center;
 }
-#T_45349_row0_col0, #T_45349_row0_col1, #T_45349_row0_col2, #T_45349_row0_col3, #T_45349_row1_col0, #T_45349_row1_col1, #T_45349_row1_col2, #T_45349_row1_col3, #T_45349_row2_col0, #T_45349_row2_col1, #T_45349_row2_col2, #T_45349_row2_col3, #T_45349_row3_col0, #T_45349_row3_col1, #T_45349_row3_col2, #T_45349_row3_col3, #T_45349_row4_col0, #T_45349_row4_col1, #T_45349_row4_col2, #T_45349_row4_col3, #T_45349_row5_col0, #T_45349_row5_col1, #T_45349_row5_col2, #T_45349_row5_col3, #T_45349_row6_col0, #T_45349_row6_col1, #T_45349_row6_col2, #T_45349_row6_col3, #T_45349_row7_col0, #T_45349_row7_col1, #T_45349_row7_col2, #T_45349_row7_col3, #T_45349_row8_col0, #T_45349_row8_col1, #T_45349_row8_col2, #T_45349_row8_col3, #T_45349_row9_col0, #T_45349_row9_col1, #T_45349_row9_col2, #T_45349_row9_col3 {
+#T_0e2c7_row0_col0, #T_0e2c7_row0_col1, #T_0e2c7_row0_col2, #T_0e2c7_row0_col3, #T_0e2c7_row1_col0, #T_0e2c7_row1_col1, #T_0e2c7_row1_col2, #T_0e2c7_row1_col3, #T_0e2c7_row2_col0, #T_0e2c7_row2_col1, #T_0e2c7_row2_col2, #T_0e2c7_row2_col3, #T_0e2c7_row3_col0, #T_0e2c7_row3_col1, #T_0e2c7_row3_col2, #T_0e2c7_row3_col3, #T_0e2c7_row4_col0, #T_0e2c7_row4_col1, #T_0e2c7_row4_col2, #T_0e2c7_row4_col3, #T_0e2c7_row5_col0, #T_0e2c7_row5_col1, #T_0e2c7_row5_col2, #T_0e2c7_row5_col3, #T_0e2c7_row6_col0, #T_0e2c7_row6_col1, #T_0e2c7_row6_col2, #T_0e2c7_row6_col3, #T_0e2c7_row7_col0, #T_0e2c7_row7_col1, #T_0e2c7_row7_col2, #T_0e2c7_row7_col3, #T_0e2c7_row8_col0, #T_0e2c7_row8_col1, #T_0e2c7_row8_col2, #T_0e2c7_row8_col3, #T_0e2c7_row9_col0, #T_0e2c7_row9_col1, #T_0e2c7_row9_col2, #T_0e2c7_row9_col3 {
   text-align: left;
 }
 </style>
 
-<table id="T_45349" class="cell caption-top table table-sm table-striped small">
+<table id="T_0e2c7" class="cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th id="T_45349_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Tiltak&nbsp;</th>
-<th colspan="2" id="T_45349_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Området&nbsp;</th>
-<th id="T_45349_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Forutsetninger&nbsp;</th>
+<th id="T_0e2c7_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Tiltak&nbsp;</th>
+<th colspan="2" id="T_0e2c7_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Området&nbsp;</th>
+<th id="T_0e2c7_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Forutsetninger&nbsp;</th>
 </tr>
 <tr class="even">
-<th id="T_45349_level1_col0" class="col_heading level1 col0" data-quarto-table-cell-role="th"></th>
-<th id="T_45349_level1_col1" class="col_heading level1 col1" data-quarto-table-cell-role="th">Scenario A&nbsp;</th>
-<th id="T_45349_level1_col2" class="col_heading level1 col2" data-quarto-table-cell-role="th">Scenario B&nbsp;</th>
-<th id="T_45349_level1_col3" class="col_heading level1 col3" data-quarto-table-cell-role="th"></th>
+<th id="T_0e2c7_level1_col0" class="col_heading level1 col0" data-quarto-table-cell-role="th"></th>
+<th id="T_0e2c7_level1_col1" class="col_heading level1 col1" data-quarto-table-cell-role="th">Scenario A&nbsp;</th>
+<th id="T_0e2c7_level1_col2" class="col_heading level1 col2" data-quarto-table-cell-role="th">Scenario B&nbsp;</th>
+<th id="T_0e2c7_level1_col3" class="col_heading level1 col3" data-quarto-table-cell-role="th"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td id="T_45349_row0_col0" class="data row0 col0">Ingen jordarbeiding rundt kummer innenfor 2 m fra kummen&nbsp;</td>
-<td id="T_45349_row0_col1" class="data row0 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
-<td id="T_45349_row0_col2" class="data row0 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row0_col3" class="data row0 col3">Ytterligere gjennomføring av dette tiltaket påvirker 65% av åpenåkerarealet. Det er i AGRITIL-SPC lagt inn en renseeffekt av 2 m bred grasdekt kantsone rundt kum lik 10 % for SS&nbsp;</td>
+<td id="T_0e2c7_row0_col0" class="data row0 col0">Ingen jordarbeiding rundt kummer innenfor 2 m fra kummen&nbsp;</td>
+<td id="T_0e2c7_row0_col1" class="data row0 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
+<td id="T_0e2c7_row0_col2" class="data row0 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row0_col3" class="data row0 col3">Ytterligere gjennomføring av dette tiltaket påvirker 65% av åpenåkerarealet. Det er i AGRITIL-SPC lagt inn en renseeffekt av 2 m bred grasdekt kantsone rundt kum lik 10 % for SS&nbsp;</td>
 </tr>
 <tr class="even">
-<td id="T_45349_row1_col0" class="data row1 col0">Ingen jordarbeiding om høsten i erosjonsrisikoklasse 3-4 på alt areal med dyrka mark&nbsp;</td>
-<td id="T_45349_row1_col1" class="data row1 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
-<td id="T_45349_row1_col2" class="data row1 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row1_col3" class="data row1 col3">Lett høstharving er tillatt ifølge miljøkravene, men det er valgt å beregne med stubb på alt kornareal i disse erosjonsrisikoklassene. Eng i klasse 3-4 kan ikke høstpløyes.&nbsp;</td>
+<td id="T_0e2c7_row1_col0" class="data row1 col0">Ingen jordarbeiding om høsten i erosjonsrisikoklasse 3-4 på alt areal med dyrka mark&nbsp;</td>
+<td id="T_0e2c7_row1_col1" class="data row1 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
+<td id="T_0e2c7_row1_col2" class="data row1 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row1_col3" class="data row1 col3">Lett høstharving er tillatt ifølge miljøkravene, men det er valgt å beregne med stubb på alt kornareal i disse erosjonsrisikoklassene. Eng i klasse 3-4 kan ikke høstpløyes.&nbsp;</td>
 </tr>
 <tr class="odd">
-<td id="T_45349_row2_col0" class="data row2 col0">Ingen jordarbeiding om høsten på alt kornareal i erosjonsrisikoklasse 1-2&nbsp;</td>
-<td id="T_45349_row2_col1" class="data row2 col1">-&nbsp;</td>
-<td id="T_45349_row2_col2" class="data row2 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row2_col3" class="data row2 col3">nan</td>
+<td id="T_0e2c7_row2_col0" class="data row2 col0">Ingen jordarbeiding om høsten på alt kornareal i erosjonsrisikoklasse 1-2&nbsp;</td>
+<td id="T_0e2c7_row2_col1" class="data row2 col1">-&nbsp;</td>
+<td id="T_0e2c7_row2_col2" class="data row2 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row2_col3" class="data row2 col3">-</td>
 </tr>
 <tr class="even">
-<td id="T_45349_row3_col0" class="data row3 col0">Gras i&nbsp;dråg, 6 m bredde&nbsp;</td>
-<td id="T_45349_row3_col1" class="data row3 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
-<td id="T_45349_row3_col2" class="data row3 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row3_col3" class="data row3 col3">Scenario A: I Vestfold er det åpnet for 20 m stubb i&nbsp;dråg, og andre løsninger på potet og grønnsaker. I Innlandet kreves gras i&nbsp;dråg&nbsp;kun dersom det velges 60 m bred kantsone av stubb mot vassdrag i stedet for grasdekt kantsone. Dette forenkles til å regne med gras i&nbsp;dråg&nbsp;i Viken 1 og 2 og Vestfold &amp; Telemark 1 og 2, men ikke i Innlandet.&nbsp;</td>
+<td id="T_0e2c7_row3_col0" class="data row3 col0">Gras i&nbsp;dråg, 6 m bredde&nbsp;</td>
+<td id="T_0e2c7_row3_col1" class="data row3 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
+<td id="T_0e2c7_row3_col2" class="data row3 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row3_col3" class="data row3 col3">Scenario A: I Vestfold er det åpnet for 20 m stubb i&nbsp;dråg, og andre løsninger på potet og grønnsaker. I Innlandet kreves gras i&nbsp;dråg&nbsp;kun dersom det velges 60 m bred kantsone av stubb mot vassdrag i stedet for grasdekt kantsone. Dette forenkles til å regne med gras i&nbsp;dråg&nbsp;i Viken 1 og 2 og Vestfold &amp; Telemark 1 og 2, men ikke i Innlandet.&nbsp;</td>
 </tr>
 <tr class="odd">
-<td id="T_45349_row4_col0" class="data row4 col0">Grasdekt kantsone langs alle vassdrag, 6 m bredde, på alt åpenåkerareal&nbsp;</td>
-<td id="T_45349_row4_col1" class="data row4 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
-<td id="T_45349_row4_col2" class="data row4 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row4_col3" class="data row4 col3">Krav om 2 m obligatorisk naturlig kantsone allerede er innfridd ved faktisk drift 2021. Forskriftene åpner for at en i stedet kan velge 20 m stubb i Viken og i Vestfold &amp; Telemark, og 60 m stubb i Innlandet, men modellen kan ikke beregne effekter av dette. Derfor forutsetter vi grasdekt kantsone overalt (noe som vil gi noe overvurdert effekt).&nbsp;</td>
+<td id="T_0e2c7_row4_col0" class="data row4 col0">Grasdekt kantsone langs alle vassdrag, 6 m bredde, på alt åpenåkerareal&nbsp;</td>
+<td id="T_0e2c7_row4_col1" class="data row4 col1">Alle&nbsp;miljøkravsoner&nbsp;</td>
+<td id="T_0e2c7_row4_col2" class="data row4 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row4_col3" class="data row4 col3">Krav om 2 m obligatorisk naturlig kantsone allerede er innfridd ved faktisk drift 2021. Forskriftene åpner for at en i stedet kan velge 20 m stubb i Viken og i Vestfold &amp; Telemark, og 60 m stubb i Innlandet, men modellen kan ikke beregne effekter av dette. Derfor forutsetter vi grasdekt kantsone overalt (noe som vil gi noe overvurdert effekt).&nbsp;</td>
 </tr>
 <tr class="even">
-<td id="T_45349_row5_col0" class="data row5 col0">60 % plantedekke (inkludert stubb, gras,&nbsp;direktesådd&nbsp;fangvekst og høstkorn, lett høstharving til høstkorn eller høstoljevekster)&nbsp;</td>
-<td id="T_45349_row5_col1" class="data row5 col1">Viken 2&nbsp;og&nbsp;Vestfold &amp; Telemark 2&nbsp;</td>
-<td id="T_45349_row5_col2" class="data row5 col2">-&nbsp;</td>
-<td id="T_45349_row5_col3" class="data row5 col3">I Vestfold &amp; Telemark 2 er 20 % fangvekst et alternativ til 60 % plantedekke (forskriften legger opp til valgfrihet mellom disse to), men vi velger for enkelhets skyld samme tilnærming som for Viken 2. Kravet gjelder egentlig på hvert enkelt foretaks areal, men modellene opererer ikke på så liten skala, så kravet gjøres om til å gjelde på REGINE-skala.&nbsp;</td>
+<td id="T_0e2c7_row5_col0" class="data row5 col0">60 % plantedekke (inkludert stubb, gras,&nbsp;direktesådd&nbsp;fangvekst og høstkorn, lett høstharving til høstkorn eller høstoljevekster)&nbsp;</td>
+<td id="T_0e2c7_row5_col1" class="data row5 col1">Viken 2&nbsp;og&nbsp;Vestfold &amp; Telemark 2&nbsp;</td>
+<td id="T_0e2c7_row5_col2" class="data row5 col2">-&nbsp;</td>
+<td id="T_0e2c7_row5_col3" class="data row5 col3">I Vestfold &amp; Telemark 2 er 20 % fangvekst et alternativ til 60 % plantedekke (forskriften legger opp til valgfrihet mellom disse to), men vi velger for enkelhets skyld samme tilnærming som for Viken 2. Kravet gjelder egentlig på hvert enkelt foretaks areal, men modellene opererer ikke på så liten skala, så kravet gjøres om til å gjelde på REGINE-skala.&nbsp;</td>
 </tr>
 <tr class="odd">
-<td id="T_45349_row6_col0" class="data row6 col0">Fangvekst på 80% av arealet med tidligkulturer av potet og grønnsaker&nbsp;</td>
-<td id="T_45349_row6_col1" class="data row6 col1">Vestfold &amp; Telemark 1&nbsp;og&nbsp;2&nbsp;</td>
-<td id="T_45349_row6_col2" class="data row6 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row6_col3" class="data row6 col3">Tidligkulturer utgjør 32 % av totalt areal med potet og grønnsaker, jf. Kværnø&nbsp;&amp;&nbsp;Bechmann (2024), dvs. at det blir fangvekst på 26 % av totalt areal med potet og grønnsaker.&nbsp;</td>
+<td id="T_0e2c7_row6_col0" class="data row6 col0">Fangvekst på 80% av arealet med tidligkulturer av potet og grønnsaker&nbsp;</td>
+<td id="T_0e2c7_row6_col1" class="data row6 col1">Vestfold &amp; Telemark 1&nbsp;og&nbsp;2&nbsp;</td>
+<td id="T_0e2c7_row6_col2" class="data row6 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row6_col3" class="data row6 col3">Tidligkulturer utgjør 32 % av totalt areal med potet og grønnsaker, jf. Kværnø&nbsp;&amp;&nbsp;Bechmann (2024), dvs. at det blir fangvekst på 26 % av totalt areal med potet og grønnsaker.&nbsp;</td>
 </tr>
 <tr class="even">
-<td id="T_45349_row7_col0" class="data row7 col0">Fangvekst&nbsp;på&nbsp;50%&nbsp;av&nbsp;kornarealet&nbsp;</td>
-<td id="T_45349_row7_col1" class="data row7 col1">-&nbsp;</td>
-<td id="T_45349_row7_col2" class="data row7 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row7_col3" class="data row7 col3">Ikke der det er høstkorn&nbsp;</td>
+<td id="T_0e2c7_row7_col0" class="data row7 col0">Fangvekst&nbsp;på&nbsp;50%&nbsp;av&nbsp;kornarealet&nbsp;</td>
+<td id="T_0e2c7_row7_col1" class="data row7 col1">-&nbsp;</td>
+<td id="T_0e2c7_row7_col2" class="data row7 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row7_col3" class="data row7 col3">Ikke der det er høstkorn&nbsp;</td>
 </tr>
 <tr class="odd">
-<td id="T_45349_row8_col0" class="data row8 col0">P-AL-reduksjon&nbsp;</td>
-<td id="T_45349_row8_col1" class="data row8 col1">-&nbsp;</td>
-<td id="T_45349_row8_col2" class="data row8 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row8_col3" class="data row8 col3">Det er beregnet hva gjennomsnittlig P-AL vil bli i hver REGINE-enhet i 2040, gitt at P-balansen holdes på -1,5 kg P/daa fra 2021. Beregningen er basert på tall fra&nbsp;Øgaard&nbsp;et al. (2016).&nbsp;</td>
+<td id="T_0e2c7_row8_col0" class="data row8 col0">P-AL-reduksjon&nbsp;</td>
+<td id="T_0e2c7_row8_col1" class="data row8 col1">-&nbsp;</td>
+<td id="T_0e2c7_row8_col2" class="data row8 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row8_col3" class="data row8 col3">Det er beregnet hva gjennomsnittlig P-AL vil bli i hver REGINE-enhet i 2040, gitt at P-balansen holdes på -1,5 kg P/daa fra 2021. Beregningen er basert på tall fra&nbsp;Øgaard&nbsp;et al. (2016).&nbsp;</td>
 </tr>
 <tr class="even">
-<td id="T_45349_row9_col0" class="data row9 col0">N-balansereduksjon&nbsp;</td>
-<td id="T_45349_row9_col1" class="data row9 col1">-&nbsp;</td>
-<td id="T_45349_row9_col2" class="data row9 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
-<td id="T_45349_row9_col3" class="data row9 col3">Gjennomsnittlig N-balanse settes til maksimalt +2,5 kg/daa&nbsp;</td>
+<td id="T_0e2c7_row9_col0" class="data row9 col0">N-balansereduksjon&nbsp;</td>
+<td id="T_0e2c7_row9_col1" class="data row9 col1">-&nbsp;</td>
+<td id="T_0e2c7_row9_col2" class="data row9 col2">Hele&nbsp;nedbørfelt&nbsp;</td>
+<td id="T_0e2c7_row9_col3" class="data row9 col3">Gjennomsnittlig N-balanse settes til maksimalt +2,5 kg/daa&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -677,7 +677,7 @@ Table&nbsp;4.3: Summary of agricultural measures in scenarios A and B. After <a 
 </figure>
 </div>
 </div>
-<p>For full details of the Oslofjord scenarios modelling, see <a href="https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/">Wallhead <em>et al.</em> (2026)</a>. It is important to note that <strong>scenario B should not be interpreted as a recommendation for future management</strong>: it was originally designed by Miljødirektoratet to explore maximum load reductions that could be achieved using traditional packages of measures. Commonly funded agricultural measures are effective at reducing losses of particulate material (SS and TPP), but are generally less effective for nitrogen. In the Oslofjord modelling work, <a href="https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/">Wallhead <em>et al.</em> (2026)</a> showed that scenario A generally achieves sufficient reductions for phosphorus and particulate material, but not for nitrogen. Scenario B, meanwhile, achieves larger reductions than are necessary for phosphorus and particles, and approaches the reduction required for nitrogen. A more balanced future management scenario would therefore combine the reductions in particulate material and phosphorus achieved by scenario A with the reductions in nitrogen losses achieved by scenario B.</p>
+<p>For full details of the Oslofjord scenarios modelling, see <a href="https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/">Wallhead <em>et al.</em> (2026)</a>. It is important to note that <strong>scenario B should not be interpreted as a recommendation for future management</strong>: it was originally designed by Miljødirektoratet to explore maximum load reductions that could be achieved using traditional packages of measures. Commonly funded agricultural measures are effective at reducing losses of particulate material (SS and TPP), but are generally less effective for nitrogen. In the Oslofjord modelling work, <a href="https://www.miljodirektoratet.no/publikasjoner/2026/april-2026/modellering-av-oslofjorden-scenarier-med-redusert-menneskelig-belastning-for-a-oppna-god-okologisk-tilstand/">Wallhead <em>et al.</em> (2026)</a> showed that scenario A generally achieves sufficient reductions for phosphorus and particulate material, but not for nitrogen. Scenario B, meanwhile, achieves larger reductions than necessary for phosphorus and particles, and approaches the reduction required for nitrogen. A more balanced future management scenario would therefore combine the reductions in particulate material and phosphorus achieved by scenario A with the reductions in nitrogen losses achieved by scenario B.</p>
 <p>For this project, it was not possible to re-run the scenarios from the Oslofjord modelling work. Instead, more detailed historical simulations have been set up for Lillestrøm by applying TEOTIL3 with Lillestrøm-specific input datasets (<a href="#sec-lillestrom-data" class="quarto-xref"><span>Section 4.6.2</span></a>). This provides a more refined historical baseline for Lillestrøm that can be evaluated alongside the higher-level results from the Oslofjord scenario modelling.</p>
 <p>When comparing avlastningsbehovene for Lillestrøm catchments to reductions achieved by the Oslofjord scenarios modelling, it is important to remember that the scenarios themselves are not proposals for future management. For example, for Sagelva, the estimated avlastningsbehov for GES for TOTN is between 8 and 19 % (<a href="sagelva.html#tbl-scen_summary-sagelva" class="quarto-xref">Table&nbsp;<span>5.3</span></a>). Scenario A fails to achieve this, but scenario B is sufficient (<a href="sagelva.html#fig-sagelva-scens" class="quarto-xref">Figure&nbsp;<span>5.6</span></a>). The interpretation is that measures achieving reductions in nitrogen loads <em>comparable to scenario B</em> will be needed to achieve GES for TOTN in Sagelva. However, the necessary reductions may be achievable through more targeted and efficient combinations of measures focused specifically on nitrogen, rather than through the broader suite of interventions represented by Scenario B.</p>
 
