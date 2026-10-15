@@ -18,7 +18,8 @@ Direct links to code notebooks are given below:
  * [Notebook 06: Build model input files and run TEOTIL3](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/06_build_input_run_model.ipynb)
  * [Notebook 07a: Compare TEOTIL3 to observed data for monitoring stations](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07a_compare_teotil3_stations.ipynb)
  * [Notebook 07b: Compare TEOTIL3 to observed data for waterbodies](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07b_compare_teotil3_waterbodies.ipynb)
-   
+ * [Notebook 08: Create maps and plots for each catchment](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/08_catchment_data.ipynb)
+ * [Notebook 09: Explore avlastningsbehov and scenarios](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/09_avlast_scens.ipynb)
 
 ## Project tasks
 
@@ -78,7 +79,7 @@ From the proposal:
 > 
 > **Merk:** TEOTIL3 er egnet for vurderinger i store nedbørfelt som dekker flere REGINE-enheter. Noen av nedbørfeltene fremhevet av Lillestrøm kommune er enten svært små (f.eks. Jeksla, 17 km2) eller opptar bare én REGINE-enhet (Rømua og Åa) – se Tabell 1. TEOTIL3 forventes ikke å gi gode resultater for disse nedbørfeltene, men modellen vil bli brukt så langt det er rimelig for å evaluere de viktigste næringsstoffkildene.
 
- * **Notebooks 07a and 07b** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07a_compare_teotil3_stations.ipynb) and [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07b_compare_teotil3_waterbodies.ipynb)) compare measured loads to source-apportioned annual fluxes simulated by TEOTIL3 (see example below for Leira).
+ * **Notebooks 07a and 07b** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07a_compare_teotil3_stations.ipynb) and [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/07b_compare_teotil3_waterbodies.ipynb)) compare measured loads to source-apportioned annual fluxes simulated by TEOTIL3.
 
 ### Task 5: Scenarios of reduced nutrient inputs
 
@@ -88,7 +89,7 @@ From the proposal:
 > 
 > **Merk:** Jordbrukstiltak simulert av NIBIO for Oslofjord-prosjektet er underbygd av grove romlige datasett. Tildelingen av jordbrukstap til spesifikke REGINE-enheter er derfor usikker. Scenarieresultater for større nedbørfelt (Nittelva og Leira) vil sannsynligvis være robust. For nedbørfelt som dekker bare en REGINE-enhet (Rømua og Åa) representerer imidlertid resultatene fra jordbruksmodelleringen gjennomsnittlige forhold i regionen og fanger derfor ikke opp lokale effekter.
 
- * **In progress.**
+ * **Notebook 09** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/09_avlast_scens.ipynb)) explores reductions achieved by the Oslofjord scenarios in catchments around Lillestrøm kommune.
 
 ### Task 6: Load reductions for Good Ecological Status
 
@@ -98,4 +99,4 @@ From the proposal:
 > 
 > Merk at TEOTIL3 bare kan brukes til å estimere avlastningsbehov der (i) modellen kan simulere dagens forhold på en tilstrekkelig måte (evaluert i oppgave 4), og (ii) for vannforekomster med et tilstrekkelig stort oppstrøms område (dvs. de vannforekomstene som ligger lengst nedstrøms i hvert nedbørfelt av interesse).
 
- * **In progress.**
+ * **Notebook 09** ([here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/code/09_avlast_scens.ipynb)) estimates avlastningsbehov based on both observed and modelled data.

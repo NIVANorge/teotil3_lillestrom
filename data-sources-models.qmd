@@ -5,7 +5,7 @@ number-sections: true
 
 ## Water chemistry {#sec-water-chem}
 
-Water chemistry data are available from [Vannmiljø](https://vannmiljo.miljodirektoratet.no/), the national water chemistry database maintained by Miljødirektoratet. At the start of this project, Lillestrøm kommune provided a list monitoring stations with good quality data in each catchment of interest. 
+Water chemistry data are available from [Vannmiljø](https://vannmiljo.miljodirektoratet.no/), the national water chemistry database maintained by Miljødirektoratet. At the start of this project, Lillestrøm kommune provided a list of monitoring stations with good quality data in each catchment of interest. 
 
 Catchments in Norway are also divided into waterbodies according to Vannforskriften, which is Norway's implementation of the EU Water Framework Directive (WFD). The [Vann-nett portal](https://vann-nett.no/) uses data from Vannmiljø to assign each waterbody a status (*high*, *good*, *moderate*, *poor* or *bad*) based thresholds defined in Vannforskriften for each parameter or quality element.
 

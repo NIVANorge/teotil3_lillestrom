@@ -85,7 +85,7 @@ Based on available monitoring data, typical nutrient fluxes for Jeksla (waterbod
 
 Wastewater discharges are estimated to provide 2.5 % of the TOTN flux, of which 1.5 % comes from spredt avløp and 1 % from rainwater and emergency overflows. For TOTP, spredt avløp contributes 2.5 % and wastewater overflows 1.5 %, making the total wastewater contribution for TOTP about 4 %. Urban areas, most notably the settlements at Kløfta and Lindeberg, also make a significant contribution: roughly 10 % for TOTN, TOTP & TOC, and 6 % for SS.
 
-![Mean source-apportionment for waterbody `002-599-R` (Jeksla) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %. Results are approximate (see text)](./plots/modelled/src_app_default_Jeksla_waterbody_002-599-R.png){#fig-jeksla-src-app width=800 fig-align="center"}
+![Mean source-apportionment for waterbody `002-599-R` (Jeksla) based on TEOTIL3 simulations from 2020 to 2024. For clarity, labels are omitted for sources contributing less than 3 %. Results are approximate (see text).](./plots/modelled/src_app_default_Jeksla_waterbody_002-599-R.png){#fig-jeksla-src-app width=800 fig-align="center"}
 
 ## Load reductions and scenarios {#sec-jeksla-avlast}
 

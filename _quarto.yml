@@ -29,3 +29,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+  docx:
+    toc: true
+    lang: nb-NO
+    reference-doc: niva_report_styles.docx

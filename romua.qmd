@@ -92,7 +92,7 @@ df = df[text_cols + val_cols]
 
 # Format and style
 fmt = {c: "{:.2f}" for c in val_cols}
-df.style.format(fmt).hide(axis="index").set_properties(
+df.style.format(fmt, na_rep="-").hide(axis="index").set_properties(
     subset=text_cols, **{"text-align": "center"}
 ).set_table_styles(
     [{"selector": "th.col_heading", "props": [("text-align", "center")]}]
