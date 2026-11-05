@@ -19,6 +19,10 @@ Lillestrøm kommune is currently developing River Basin Management Plans for cat
 
 Sample JE. 2026. *Water quality trends in catchments draining to Lillestrøm kommune: analysis of monitoring and model data*. NIVA project 260150. [Available online](https://nivanorge.github.io/teotil3_lillestrom/).
 
+## Final PDF
+
+The final deliverable from this project, a PDF report (in Norwegian), is available [here](https://nva.sikt.no/registration/01a0f70545d8-5d188784-3db7-42b8-b69d-7e249fb2a785).
+
 ## Proposal {#sec-proposal}
 
 An overview of tasks defined in the project proposal is [here](https://github.com/NIVANorge/teotil3_lillestrom/blob/main/README.md#project-tasks).
